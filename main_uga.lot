@@ -1,0 +1,34 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {french}{}
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Number of underestimated live migrations and the ratio of the overestimation, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{26}{table.caption.9}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Accuracy measurements, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. The M.A.P.E. value is in percentage (\%), and the R.M.S.E. in seconds. \relax }}{27}{table.caption.10}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Number of VM live migrations performed, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. \relax }}{28}{table.caption.11}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Comparison of energy consumption (MWh), where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{29}{table.caption.12}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Extra seconds during migrations compared to the case when there is no congestion, where ``W'' stands for ``Workload'', ``G'' for Google and, ``A'' for Azure. ``avg.'' for the average of the observations, ``max.'' for the maximum value, ``abs.'' for the absolute value, and ``rel.'' for the relative value.\relax }}{30}{table.caption.13}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Wasted energy in the migrations (Wh) in comparison to the perfect scenario where the migration process have full access to the network links. In the table ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{31}{table.caption.14}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Main notations for the IT model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)\relax }}{40}{table.caption.15}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Main notations for the Electrical part model of each $DC^d$ ($1\leq d\leq D$) during each time step $k$ ($0\leq k<K$)\relax }}{42}{table.caption.16}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Emissions (in $g\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq.kWh^{-1}$) for both PV usage and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.\relax }}{53}{table.caption.19}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Total emissions for the different scenarios.\relax }}{56}{table.caption.23}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Average DC load throughout the year \relax }}{57}{table.caption.24}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Results of the sustainability metrics for the experiments\relax }}{58}{table.caption.25}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Evaluating sizing for different years using the MAPE metric (values are in \%) \relax }}{58}{table.caption.26}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {french}{}
+\babel@toc {english}{}

@@ -1,0 +1,1815 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{acun2022holistic}{article}{}
+      \name{author}{8}{}{%
+        {{hash=ba5122142098739e3e4330f086ebc45f}{%
+           family={Acun},
+           familyi={A\bibinitperiod},
+           given={Bilge},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c271e6dd638994066846eb0ec13895d1}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ddc8eb8f3ab0ee8c704d62f530a1a357}{%
+           family={Kazhamiaka},
+           familyi={K\bibinitperiod},
+           given={Fiodar},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0fc8a18db58efd3a1b829f536b5de678}{%
+           family={Maeng},
+           familyi={M\bibinitperiod},
+           given={Kiwan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=774dff4042212990a9990ae6c5966eb3}{%
+           family={Chakkaravarthy},
+           familyi={C\bibinitperiod},
+           given={Manoj},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f0849c97164c16fd75df73410c5db135}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Udit},
+           giveni={U\bibinitperiod}}}%
+        {{hash=d423f545c47a8c65a465fcd5649bcbbc}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ecfcd63e3355514161783ebe821cd42d}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Carole-Jean},
+           giveni={C\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c733a96cc2cda5354ea4d0ec16eb9c50}
+      \strng{fullhash}{da9ffef125963e2da313e465a8826f39}
+      \strng{bibnamehash}{0589f5fab60bd598b4ec6f43d354016f}
+      \strng{authorbibnamehash}{0589f5fab60bd598b4ec6f43d354016f}
+      \strng{authornamehash}{c733a96cc2cda5354ea4d0ec16eb9c50}
+      \strng{authorfullhash}{da9ffef125963e2da313e465a8826f39}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems}
+      \field{title}{Carbon Explorer: A Holistic Approach for Designing Carbon Aware Datacenters}
+      \field{year}{2023}
+    \endentry
+    \entry{ahvar22_estimating_cloud_cons}{article}{}
+      \name{author}{3}{}{%
+        {{hash=323a756a31d089e413c6e32bc225fa0c}{%
+           family={Ahvar},
+           familyi={A\bibinitperiod},
+           given={Ehsan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2c1cb98d4fe4be027c77e60e497dbb35}{%
+           family={Orgerie},
+           familyi={O\bibinitperiod},
+           given={Anne-Cécile},
+           giveni={A\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=33426448932f47b014c193edf5b02cb3}{%
+           family={Lebre},
+           familyi={L\bibinitperiod},
+           given={Adrien},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25bee161c9709630b674bfcd4ba79828}
+      \strng{fullhash}{67a05588ceb47be3cfc57f33f8fe1c62}
+      \strng{bibnamehash}{67a05588ceb47be3cfc57f33f8fe1c62}
+      \strng{authorbibnamehash}{67a05588ceb47be3cfc57f33f8fe1c62}
+      \strng{authornamehash}{25bee161c9709630b674bfcd4ba79828}
+      \strng{authorfullhash}{67a05588ceb47be3cfc57f33f8fe1c62}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Sustainable Computing}
+      \field{number}{2}
+      \field{title}{Estimating Energy Consumption of Cloud, Fog, and Edge Computing Infrastructures}
+      \field{volume}{7}
+      \field{year}{2022}
+      \field{pages}{277\bibrangedash 288}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/TSUSC.2019.2905900
+      \endverb
+    \endentry
+    \entry{ALI2021110907}{article}{}
+      \name{author}{5}{}{%
+        {{hash=9990e0e4a9913f02a5a61f6d334780da}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Hashim},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2afe24b85ad88c6924d97513c7cb112c}{%
+           family={Zakarya},
+           familyi={Z\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=560e52c26589bf81975e2677ec62152e}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Izaz\bibnamedelima Ur},
+           giveni={I\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=4d67240e4226f5de339ccdf22b074013}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Ayaz\bibnamedelima Ali},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=029e03ba4e08a5605b31a31f86375741}{%
+           family={Buyya},
+           familyi={B\bibinitperiod},
+           given={Rajkumar},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{117c75367dd9ed44fbc8e10387ee2470}
+      \strng{fullhash}{a3313596ed454d3e8b19e1e8f69b9cd9}
+      \strng{bibnamehash}{a3313596ed454d3e8b19e1e8f69b9cd9}
+      \strng{authorbibnamehash}{a3313596ed454d3e8b19e1e8f69b9cd9}
+      \strng{authornamehash}{117c75367dd9ed44fbc8e10387ee2470}
+      \strng{authorfullhash}{a3313596ed454d3e8b19e1e8f69b9cd9}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0164-1212}
+      \field{journaltitle}{Journal of Systems and Software}
+      \field{title}{FollowMe@LS: Electricity price and source aware resource management in geographically distributed heterogeneous datacenters}
+      \field{volume}{175}
+      \field{year}{2021}
+      \field{pages}{110907}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jss.2021.110907
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0164121221000042
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0164121221000042
+      \endverb
+      \keyw{Datacenters,Performance,Migrations,Energy efficiency,Clouds}
+    \endentry
+    \entry{batteries_baumman}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6eb57666cda87c956dc705a8eea4004b}{%
+           family={Baumann},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2017ea2b624914b12405ff0e3d9feec9}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=699cd49d5eb2a00ac7a6fbe12ef31de0}{%
+           family={Weil},
+           familyi={W\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=57bf017f198f6d574f9f155e34f1f43c}{%
+           family={Grunwald},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{01454fc93a53c841170c1eb96daf2972}
+      \strng{fullhash}{5d828fe44347d7a57b7e1a475e7011ec}
+      \strng{bibnamehash}{5d828fe44347d7a57b7e1a475e7011ec}
+      \strng{authorbibnamehash}{5d828fe44347d7a57b7e1a475e7011ec}
+      \strng{authornamehash}{01454fc93a53c841170c1eb96daf2972}
+      \strng{authorfullhash}{5d828fe44347d7a57b7e1a475e7011ec}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energy Technology}
+      \field{number}{7}
+      \field{title}{{ $CO_2$ Footprint and Life-Cycle Costs of Electrochemical Energy Storage for Stationary Grid Applications}}
+      \field{volume}{5}
+      \field{year}{2017}
+      \field{pages}{1071\bibrangedash 1083}
+      \range{pages}{13}
+      \verb{doi}
+      \verb https://doi.org/10.1002/ente.201600622
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/ente.201600622
+      \endverb
+    \endentry
+    \entry{manal2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=4d0f8a1e258c745f5a9c95703b9f716e}{%
+           family={Benaissa},
+           familyi={B\bibinitperiod},
+           given={Manal},
+           giveni={M\bibinitperiod}}}%
+        {{hash=91b9d476e74a621d72bdcf23f3d0e3c4}{%
+           family={Nicod},
+           familyi={N\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=2f623ee8953214cb42240cfccb621f93}{%
+           family={Da\bibnamedelima Costa},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Georges},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f67d2bddc8da05a2de994cbc167b69b5}
+      \strng{fullhash}{481de65512c4d01f3eb67131fdb3ecbe}
+      \strng{bibnamehash}{481de65512c4d01f3eb67131fdb3ecbe}
+      \strng{authorbibnamehash}{481de65512c4d01f3eb67131fdb3ecbe}
+      \strng{authornamehash}{f67d2bddc8da05a2de994cbc167b69b5}
+      \strng{authorfullhash}{481de65512c4d01f3eb67131fdb3ecbe}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Workshop on Cloud Computing (WCC)}
+      \field{title}{Standalone Data-Center Sizing Combating the Over-Provisioning of the IT and Electrical Parts}
+      \field{year}{2022}
+    \endentry
+    \entry{NEMESIS}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=3f9acac6e64646061cf6d03f10cfb2c3}{%
+           family={Camus},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=eb9160efa8eed43d76492e587a132b05}{%
+           family={Dufossé},
+           familyi={D\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3cb9c1536034881ef14576eb83ad3128}{%
+           family={Blavette},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62121e2f2ce05d170fc0bb2eccaf25a6}{%
+           family={Quinson},
+           familyi={Q\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=253f7db8ef1fb7a82c8744b0c0d7312e}{%
+           family={Orgerie},
+           familyi={O\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Lyon, France}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f795035723b3da4302f3a9964e0a23bc}
+      \strng{fullhash}{454edfc3e21a8deb845752f69a5e3c74}
+      \strng{bibnamehash}{454edfc3e21a8deb845752f69a5e3c74}
+      \strng{authorbibnamehash}{454edfc3e21a8deb845752f69a5e3c74}
+      \strng{authornamehash}{f795035723b3da4302f3a9964e0a23bc}
+      \strng{authorfullhash}{454edfc3e21a8deb845752f69a5e3c74}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 30th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)}
+      \field{title}{{Network-Aware Energy-Efficient Virtual Machine Management in Distributed Cloud Infrastructures with On-Site Photovoltaic Production}}
+      \field{year}{2018}
+      \field{pages}{86\bibrangedash 92}
+      \range{pages}{7}
+    \endentry
+    \entry{SAGITTA}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=3cd2422d8c1ee7306850895938593094}{%
+           family={Camus},
+           familyi={C\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d3fb077c694c6b4b0beaf632461259fb}{%
+           family={Dufoss{é}},
+           familyi={D\bibinitperiod},
+           given={Fanny},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f52bf785e7a19be991c97b65c4c6c969}{%
+           family={Orgerie},
+           familyi={O\bibinitperiod},
+           given={AnneC{é}cile},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Porto, Portugal}%
+      }
+      \list{publisher}{1}{%
+        {SMARTGREENS}%
+      }
+      \strng{namehash}{96679892d2afa03021d392a3b5b1ef2a}
+      \strng{fullhash}{03ab11f92bcfa9182a351807684c982b}
+      \strng{bibnamehash}{03ab11f92bcfa9182a351807684c982b}
+      \strng{authorbibnamehash}{03ab11f92bcfa9182a351807684c982b}
+      \strng{authornamehash}{96679892d2afa03021d392a3b5b1ef2a}
+      \strng{authorfullhash}{03ab11f92bcfa9182a351807684c982b}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{SMARTGREENS 2017 - International Conference on Smart Cities and Green ICT Systems}}
+      \field{title}{{A stochastic approach for optimizing green energy consumption in distributed clouds}}
+      \field{year}{2017}
+    \endentry
+    \entry{CASANOVA20142899}{article}{}
+      \name{author}{5}{}{%
+        {{hash=cc1c6413cff9668f903be2a147031654}{%
+           family={Casanova},
+           familyi={C\bibinitperiod},
+           given={Henri},
+           giveni={H\bibinitperiod}}}%
+        {{hash=492dad4df32ca017fe88dd786d8e96d2}{%
+           family={Giersch},
+           familyi={G\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cd663ca86f9396d7db2d7d3b247b6703}{%
+           family={Legrand},
+           familyi={L\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod}}}%
+        {{hash=43b72999c3d40d0cfd232ae41380f2b2}{%
+           family={Quinson},
+           familyi={Q\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a992070cc0742a1b940feafa14f81d73}{%
+           family={Suter},
+           familyi={S\bibinitperiod},
+           given={Frédéric},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{c41c6ccb49a36751ae0dbb2c76228929}
+      \strng{fullhash}{eb65391ee09a94bc3f5ffc93b5be8eea}
+      \strng{bibnamehash}{eb65391ee09a94bc3f5ffc93b5be8eea}
+      \strng{authorbibnamehash}{eb65391ee09a94bc3f5ffc93b5be8eea}
+      \strng{authornamehash}{c41c6ccb49a36751ae0dbb2c76228929}
+      \strng{authorfullhash}{eb65391ee09a94bc3f5ffc93b5be8eea}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0743-7315}
+      \field{journaltitle}{Journal of Parallel and Distributed Computing}
+      \field{number}{10}
+      \field{title}{Versatile, scalable, and accurate simulation of distributed applications and platforms}
+      \field{volume}{74}
+      \field{year}{2014}
+      \field{pages}{2899\bibrangedash 2917}
+      \range{pages}{19}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jpdc.2014.06.008
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0743731514001105
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0743731514001105
+      \endverb
+    \endentry
+    \entry{DACOSTA2018_grog}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2f623ee8953214cb42240cfccb621f93}{%
+           family={{Da Costa}},
+           familyi={D\bibinitperiod},
+           given={Georges},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e8a6315386bca1ca91fc75d92260bed6}{%
+           family={Grange},
+           familyi={G\bibinitperiod},
+           given={Léo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8238d6fbd274ce553ad6a9239e0fae61}{%
+           family={{de Courchelle}},
+           familyi={d\bibinitperiod},
+           given={Inès},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc0b7c25ed16d8070223661585f0d39f}
+      \strng{fullhash}{880e160cdf66e23b6b64c8b2c06af27c}
+      \strng{bibnamehash}{880e160cdf66e23b6b64c8b2c06af27c}
+      \strng{authorbibnamehash}{880e160cdf66e23b6b64c8b2c06af27c}
+      \strng{authornamehash}{cc0b7c25ed16d8070223661585f0d39f}
+      \strng{authorfullhash}{880e160cdf66e23b6b64c8b2c06af27c}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2210-5379}
+      \field{journaltitle}{Sustainable Computing: Informatics and Systems}
+      \field{title}{Modeling, classifying and generating large-scale Google-like workload}
+      \field{volume}{19}
+      \field{year}{2018}
+      \field{pages}{305\bibrangedash 314}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.suscom.2017.12.004
+      \endverb
+      \keyw{Workload analysis,Workload generation,Classification,Large scale,Google dataset,Reproducible experiments}
+    \endentry
+    \entry{feldmann2021implications}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=a2f03739ecbec5fd41971c58f390f197}{%
+           family={Feldmann},
+           familyi={F\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c1447471c280ee11a92c0cfa378ad0a1}{%
+           family={Gasser},
+           familyi={G\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod}}}%
+        {{hash=429e252ba409980e9479f2b7a86bba3b}{%
+           family={Lichtblau},
+           familyi={L\bibinitperiod},
+           given={Franziska},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3709a29d134119431c7773e6cfcb2bf5}{%
+           family={Pujol},
+           familyi={P\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=fe7f28262bc406ec8fddd6d4a99ff82b}{%
+           family={Poese},
+           familyi={P\bibinitperiod},
+           given={Igmar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=653cf3c51dfdabf4af3f26b58cdd52fe}{%
+           family={Dietzel},
+           familyi={D\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d7951d6cfd9bc35f93a52957063e67eb}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=523f5f6d90894490f1dac6c2d649dbd7}{%
+           family={Wichtlhuber},
+           familyi={W\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8737fe432b34bf0da4c9051179c3ae13}{%
+           family={Tapiador},
+           familyi={T\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cd7d19d6b432a34fba27fab0c4b9ca39}{%
+           family={Vallina-Rodriguez},
+           familyi={V\bibinithyphendelim R\bibinitperiod},
+           given={Narseo},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {VDE}%
+      }
+      \strng{namehash}{756b507eec48cf9a3586058b59d55f35}
+      \strng{fullhash}{e4b56e677da22cbd2b8f74613abda804}
+      \strng{bibnamehash}{307d5051db7871cdca75f9b162386dfc}
+      \strng{authorbibnamehash}{307d5051db7871cdca75f9b162386dfc}
+      \strng{authornamehash}{756b507eec48cf9a3586058b59d55f35}
+      \strng{authorfullhash}{e4b56e677da22cbd2b8f74613abda804}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Broadband Coverage in Germany; 15th ITG-Symposium}
+      \field{title}{The Lockdown Effect: Implications of the COVID-19 Pandemic on the Internet Traffic}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+    \endentry
+    \entry{power_to_the_people}{article}{}
+      \name{author}{1}{}{%
+        {{hash=99dfe7b286ec44aadcb04aaf4e75446f}{%
+           family={Frazelle},
+           familyi={F\bibinitperiod},
+           given={Jessie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{fullhash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{bibnamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{authorbibnamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{authornamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{authorfullhash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Queue}
+      \field{number}{2}
+      \field{title}{{Power to the People}}
+      \field{volume}{18}
+      \field{year}{2020}
+      \field{pages}{5\bibrangedash 18}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/3400899.3402527
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3400899.3402527
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3400899.3402527
+      \endverb
+    \endentry
+    \entry{GELARO2017MERRA2}{article}{}
+      \name{author}{31}{}{%
+        {{hash=ca44bd377d83977387c47fc8d6c883f3}{%
+           family={Gelaro},
+           familyi={G\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c56f7314b95d0cb6164a1bc76d33cc93}{%
+           family={McCarty},
+           familyi={M\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f761caa70e58749607b5a9982d1f0bc4}{%
+           family={Suárez},
+           familyi={S\bibinitperiod},
+           given={Max\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=6f3b7700774f55b85585ebafe5371ec0}{%
+           family={Todling},
+           familyi={T\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a5d2735e59653238e5527018912f008a}{%
+           family={Molod},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e5fdecaa022dccdfa370d18d13c975aa}{%
+           family={Takacs},
+           familyi={T\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+        {{hash=aacea70c83aae4adaf8414d8597a2a06}{%
+           family={Randles},
+           familyi={R\bibinitperiod},
+           given={Cynthia\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f16d8e869899d1dd0a41f326bfc23996}{%
+           family={Darmenov},
+           familyi={D\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=559eeadd771cdf4e43ee3bbbb9d7e4aa}{%
+           family={Bosilovich},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a899c64e57cb3df09584e0db17829899}{%
+           family={Reichle},
+           familyi={R\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9f5a5c2e8f596ece9d19d5bb21a452b6}{%
+           family={Wargan},
+           familyi={W\bibinitperiod},
+           given={Krzysztof},
+           giveni={K\bibinitperiod}}}%
+        {{hash=84788b4438f4e490d2312493a88b138d}{%
+           family={Coy},
+           familyi={C\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+        {{hash=84bf2c6d5345ac2b72cc6b6a83ed7812}{%
+           family={Cullather},
+           familyi={C\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7b803b53030a0c16a2c5e4d6c535a1c6}{%
+           family={Draper},
+           familyi={D\bibinitperiod},
+           given={Clara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8a5ee256523f9b8c762e27a61016d8c8}{%
+           family={Akella},
+           familyi={A\bibinitperiod},
+           given={Santha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=16d72c08a06e7d7630a27e05328083c7}{%
+           family={Buchard},
+           familyi={B\bibinitperiod},
+           given={Virginie},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e39a4bdbb25c3a3a6b95133a9c0d7632}{%
+           family={Conaty},
+           familyi={C\bibinitperiod},
+           given={Austin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=012a2706c8cfaefedd072ed235b86cda}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Arlindo\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={da},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=696af0f4cf091320a42e0ee90fd1a6a0}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=6ea54c0637bb292bf697287208678323}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Gi-Kong},
+           giveni={G\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=ffcbaa080ab424cef54038674f01f6d7}{%
+           family={Koster},
+           familyi={K\bibinitperiod},
+           given={Randal},
+           giveni={R\bibinitperiod}}}%
+        {{hash=85ed8d2319c6d576f58a204afe070f12}{%
+           family={Lucchesi},
+           familyi={L\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=512bf8e453d0684a1c30befcb2c69ad7}{%
+           family={Merkova},
+           familyi={M\bibinitperiod},
+           given={Dagmar},
+           giveni={D\bibinitperiod}}}%
+        {{hash=10cc834a0ffa4e4e31161844404d4047}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Jon\bibnamedelima Eric},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=f6c8c2f18cf6695e24604498ae9d5244}{%
+           family={Partyka},
+           familyi={P\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod}}}%
+        {{hash=087c079695990f5ad13629c51e40843c}{%
+           family={Pawson},
+           familyi={P\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4fc77ee2d2730b6218064caece2affcd}{%
+           family={Putman},
+           familyi={P\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f50b1cde4eeda6b4e6b6f9a710289978}{%
+           family={Rienecker},
+           familyi={R\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1430e7311a97e93dd2047e85a65ad635}{%
+           family={Schubert},
+           familyi={S\bibinitperiod},
+           given={Siegfried\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=c1e05582f294bd9549d65fbf888d2bb3}{%
+           family={Sienkiewicz},
+           familyi={S\bibinitperiod},
+           given={Meta},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b44f42d7580d958fe3ef32a7217ff039}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{d11609a5ba683a7d801423b03054fd8c}
+      \strng{fullhash}{3e72dbc04938a460ded540b69731b544}
+      \strng{bibnamehash}{184e22779b5076cdbd58fc3fea119f68}
+      \strng{authorbibnamehash}{184e22779b5076cdbd58fc3fea119f68}
+      \strng{authornamehash}{d11609a5ba683a7d801423b03054fd8c}
+      \strng{authorfullhash}{3e72dbc04938a460ded540b69731b544}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Climate}
+      \field{number}{14}
+      \field{title}{The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2)}
+      \field{volume}{30}
+      \field{year}{2017}
+      \field{pages}{5419\bibrangedash 5454}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1175/JCLI-D-16-0758.1
+      \endverb
+    \endentry
+    \entry{greenpeace2017}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7628ecff54896cb076074261828e6623}{%
+           family={{Greenpeace}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Greenpeace International}%
+      }
+      \strng{namehash}{7628ecff54896cb076074261828e6623}
+      \strng{fullhash}{7628ecff54896cb076074261828e6623}
+      \strng{bibnamehash}{7628ecff54896cb076074261828e6623}
+      \strng{authorbibnamehash}{7628ecff54896cb076074261828e6623}
+      \strng{authornamehash}{7628ecff54896cb076074261828e6623}
+      \strng{authorfullhash}{7628ecff54896cb076074261828e6623}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Clicking Clean}}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb www.greenpeace.org/international/publication/6826/clicking-clean-2017/
+      \endverb
+      \verb{url}
+      \verb www.greenpeace.org/international/publication/6826/clicking-clean-2017/
+      \endverb
+    \endentry
+    \entry{hadary2020protean}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=7a5bf1dbff894f2cd491478fb4ac477b}{%
+           family={Hadary},
+           familyi={H\bibinitperiod},
+           given={Ori},
+           giveni={O\bibinitperiod}}}%
+        {{hash=05b384e35323de0f4bf0dcd022133068}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=eddd7868fc3d9e38f199ae168f2ad763}{%
+           family={Menache},
+           familyi={M\bibinitperiod},
+           given={Ishai},
+           giveni={I\bibinitperiod}}}%
+        {{hash=fb6b0d2e53cc22ad22dd808e799c6c5a}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Abhisek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=50961dd4d533a60dce76325be506c167}{%
+           family={Greeff},
+           familyi={G\bibinitperiod},
+           given={Esaias\bibnamedelima E},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c570dc24004c360c7aa3bd6fd4ff707a}{%
+           family={Dion},
+           familyi={D\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b1dc309bcafc12461aa6e879419d9400}{%
+           family={Dorminey},
+           familyi={D\bibinitperiod},
+           given={Star},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2285ab1c3aed440f17a6c70f490234c1}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Shailesh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f532a47a63f16b583c4455dea6a8018e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=919fb8726d3288990df583cebfbfadf6}{%
+           family={Russinovich},
+           familyi={R\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d650f0298f0c65a87493f5b0d79079f}
+      \strng{fullhash}{0b592d31ef9df22735fe3d136c1954e3}
+      \strng{bibnamehash}{0e648e70a390ae3b3fcd5c0976481c32}
+      \strng{authorbibnamehash}{0e648e70a390ae3b3fcd5c0976481c32}
+      \strng{authornamehash}{9d650f0298f0c65a87493f5b0d79079f}
+      \strng{authorfullhash}{0b592d31ef9df22735fe3d136c1954e3}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{14th {USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 20)}
+      \field{title}{Protean: {VM} Allocation Service at Scale}
+      \field{year}{2020}
+      \field{pages}{845\bibrangedash 861}
+      \range{pages}{17}
+    \endentry
+    \entry{2021NICOD_ILP}{article}{}
+      \name{author}{4}{}{%
+        {{hash=cd48084dc3088ad43253f7049b2dc48e}{%
+           family={Haddad},
+           familyi={H\bibinitperiod},
+           given={Maroua},
+           giveni={M\bibinitperiod}}}%
+        {{hash=91b9d476e74a621d72bdcf23f3d0e3c4}{%
+           family={Nicod},
+           familyi={N\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=1d412b6acfe44b112e83cb7c02ae7abd}{%
+           family={Péra},
+           familyi={P\bibinitperiod},
+           given={Marie-Cécile},
+           giveni={M\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=eceecee52f72d0dc0bbb7a07d76be773}{%
+           family={Varnier},
+           familyi={V\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{74ff239bf8120b58ba22d1313798b096}
+      \strng{fullhash}{334defbd4567cc10dc255f620246032e}
+      \strng{bibnamehash}{334defbd4567cc10dc255f620246032e}
+      \strng{authorbibnamehash}{334defbd4567cc10dc255f620246032e}
+      \strng{authornamehash}{74ff239bf8120b58ba22d1313798b096}
+      \strng{authorfullhash}{334defbd4567cc10dc255f620246032e}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Scheduling}
+      \field{title}{Stand-alone renewable power system scheduling for a green data center using integer linear programming}
+      \field{volume}{24}
+      \field{year}{2021}
+      \field{pages}{523\bibrangedash 541}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/s10951-021-00700-y
+      \endverb
+    \endentry
+    \entry{HADDAD2021100505}{article}{}
+      \name{author}{8}{}{%
+        {{hash=15d9ac5ea4b44d83acb1d18d5e672836}{%
+           family={Haddad},
+           familyi={H\bibinitperiod},
+           given={Marwa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2f623ee8953214cb42240cfccb621f93}{%
+           family={{Da Costa}},
+           familyi={D\bibinitperiod},
+           given={Georges},
+           giveni={G\bibinitperiod}}}%
+        {{hash=91b9d476e74a621d72bdcf23f3d0e3c4}{%
+           family={Nicod},
+           familyi={N\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=1d412b6acfe44b112e83cb7c02ae7abd}{%
+           family={Péra},
+           familyi={P\bibinitperiod},
+           given={Marie-Cécile},
+           giveni={M\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=9433187754b18cbf2066a0151c033016}{%
+           family={Pierson},
+           familyi={P\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3a2aeca1254de3dbe32140663eec281c}{%
+           family={Rehn-Sonigo},
+           familyi={R\bibinithyphendelim S\bibinitperiod},
+           given={Veronika},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1a99ead211ef37e723693c1587689303}{%
+           family={Stolf},
+           familyi={S\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=eceecee52f72d0dc0bbb7a07d76be773}{%
+           family={Varnier},
+           familyi={V\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{92f5dba661a4bb21cd40936156fb6dc9}
+      \strng{fullhash}{4cac56184802ea20f97f7ce36577b86e}
+      \strng{bibnamehash}{a17b6ebed36695cc1d252968899498ef}
+      \strng{authorbibnamehash}{a17b6ebed36695cc1d252968899498ef}
+      \strng{authornamehash}{92f5dba661a4bb21cd40936156fb6dc9}
+      \strng{authorfullhash}{4cac56184802ea20f97f7ce36577b86e}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2210-5379}
+      \field{journaltitle}{Sustainable Computing: Informatics and Systems}
+      \field{title}{Combined IT and power supply infrastructure sizing for standalone green data centers}
+      \field{volume}{30}
+      \field{year}{2021}
+      \field{pages}{100505}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.suscom.2020.100505
+      \endverb
+    \endentry
+    \entry{energy_network_devices}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2b227e9f0ecc545a2c9cdfcbde1a69f3}{%
+           family={Hlavacs},
+           familyi={H\bibinitperiod},
+           given={Helmut},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2f623ee8953214cb42240cfccb621f93}{%
+           family={Da\bibnamedelima Costa},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Georges},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9433187754b18cbf2066a0151c033016}{%
+           family={Pierson},
+           familyi={P\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{407c3b3ecc952a7a4d2c7cb7b111a332}
+      \strng{fullhash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \strng{bibnamehash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \strng{authorbibnamehash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \strng{authornamehash}{407c3b3ecc952a7a4d2c7cb7b111a332}
+      \strng{authorfullhash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2009 International Conference on Computational Science and Engineering}
+      \field{title}{{Energy Consumption of Residential and Professional Switches}}
+      \field{volume}{1}
+      \field{year}{2009}
+      \field{pages}{240\bibrangedash 246}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/CSE.2009.244
+      \endverb
+    \endentry
+    \entry{Hlavacs2009_energy_network_devices}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2b227e9f0ecc545a2c9cdfcbde1a69f3}{%
+           family={Hlavacs},
+           familyi={H\bibinitperiod},
+           given={Helmut},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2f623ee8953214cb42240cfccb621f93}{%
+           family={Da\bibnamedelima Costa},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Georges},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9433187754b18cbf2066a0151c033016}{%
+           family={Pierson},
+           familyi={P\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{407c3b3ecc952a7a4d2c7cb7b111a332}
+      \strng{fullhash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \strng{bibnamehash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \strng{authorbibnamehash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \strng{authornamehash}{407c3b3ecc952a7a4d2c7cb7b111a332}
+      \strng{authorfullhash}{0c918199ee4dd2adf7fcb48b5f4c66ad}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2009 International Conference on Computational Science and Engineering}
+      \field{title}{{Energy Consumption of Residential and Professional Switches}}
+      \field{volume}{1}
+      \field{year}{2009}
+      \field{pages}{240\bibrangedash 246}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/CSE.2009.244
+      \endverb
+    \endentry
+    \entry{koot2021usage}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cf0d9c25fecebad730f346f35cc2cbc0}{%
+           family={Koot},
+           familyi={K\bibinitperiod},
+           given={Martijn},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3e3a2c654b47ab652149c9331a0622b2}{%
+           family={Wijnhoven},
+           familyi={W\bibinitperiod},
+           given={Fons},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{fullhash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{bibnamehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{authorbibnamehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{authornamehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{authorfullhash}{d95408625913ff9dd1105d02546d8c65}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Energy}
+      \field{title}{Usage impact on data center electricity needs: A system dynamic forecasting model}
+      \field{volume}{291}
+      \field{year}{2021}
+      \field{pages}{116798}
+      \range{pages}{1}
+    \endentry
+    \entry{masanet2020recalibrating}{article}{}
+      \name{author}{5}{}{%
+        {{hash=f60849884bee24169fdade67f4446732}{%
+           family={Masanet},
+           familyi={M\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8096724142e90c2bbd9770089f76969b}{%
+           family={Shehabi},
+           familyi={S\bibinitperiod},
+           given={Arman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=43514fc3264df0756440cc8aa45b5556}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Nuoa},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2912904f92df0eacbcb2f7fbeaedfaea}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1120ab390aacef8b6273606f9224131f}{%
+           family={Koomey},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{6bf4e7bfb6687766914748c756d98ea2}
+      \strng{fullhash}{945efed2e485d54521243e9a7acb67c7}
+      \strng{bibnamehash}{945efed2e485d54521243e9a7acb67c7}
+      \strng{authorbibnamehash}{945efed2e485d54521243e9a7acb67c7}
+      \strng{authornamehash}{6bf4e7bfb6687766914748c756d98ea2}
+      \strng{authorfullhash}{945efed2e485d54521243e9a7acb67c7}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6481}
+      \field{title}{Recalibrating global data center energy-use estimates}
+      \field{volume}{367}
+      \field{year}{2020}
+      \field{pages}{984\bibrangedash 986}
+      \range{pages}{3}
+    \endentry
+    \entry{muralidhar2020energy}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f1b7e1db6a041f0af097df7b53404042}{%
+           family={Muralidhar},
+           familyi={M\bibinitperiod},
+           given={Rajeev},
+           giveni={R\bibinitperiod}}}%
+        {{hash=41c254a23f97a65c9d5b3b147959aea8}{%
+           family={Borovica-Gajic},
+           familyi={B\bibinithyphendelim G\bibinitperiod},
+           given={Renata},
+           giveni={R\bibinitperiod}}}%
+        {{hash=029e03ba4e08a5605b31a31f86375741}{%
+           family={Buyya},
+           familyi={B\bibinitperiod},
+           given={Rajkumar},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a457e34dca9f7f53a1e864fc3b81477}
+      \strng{fullhash}{46b9bba802aeeb22ff4be30c9f07fcbe}
+      \strng{bibnamehash}{46b9bba802aeeb22ff4be30c9f07fcbe}
+      \strng{authorbibnamehash}{46b9bba802aeeb22ff4be30c9f07fcbe}
+      \strng{authornamehash}{4a457e34dca9f7f53a1e864fc3b81477}
+      \strng{authorfullhash}{46b9bba802aeeb22ff4be30c9f07fcbe}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2007.09976}
+      \field{title}{Energy Efficient Computing Systems: Architectures, Abstractions and Modeling to Techniques and Standards}
+      \field{year}{2020}
+    \endentry
+    \entry{Niaz2022_curtailment}{article}{}
+      \name{author}{4}{}{%
+        {{hash=80e6cef1327c147f2a5683440e1d51cc}{%
+           family={Niaz},
+           familyi={N\bibinitperiod},
+           given={Haider},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5ffdcf4a296213b36c57e5bb782d8efb}{%
+           family={Shams},
+           familyi={S\bibinitperiod},
+           given={Mohammad\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=60d7f9165f666f50695af71201e8d10a}{%
+           family={Zarei},
+           familyi={Z\bibinitperiod},
+           given={Mohammadamin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=17bf9d077e032e92a7467928e8edb013}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi Jay},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb3b187026655c397541b6d84474f662}
+      \strng{fullhash}{3ee53bbfb2259f11a7d448b0577a61cd}
+      \strng{bibnamehash}{3ee53bbfb2259f11a7d448b0577a61cd}
+      \strng{authorbibnamehash}{3ee53bbfb2259f11a7d448b0577a61cd}
+      \strng{authornamehash}{fb3b187026655c397541b6d84474f662}
+      \strng{authorfullhash}{3ee53bbfb2259f11a7d448b0577a61cd}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{title}{Leveraging renewable oversupply using a chance-constrained optimization approach for a sustainable datacenter and hydrogen refueling station: Case study of California}
+      \field{volume}{540}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1016/j.jpowsour.2022.231558
+      \endverb
+    \endentry
+    \entry{padma2021_fogdcs_rural}{article}{}
+      \name{author}{3}{}{%
+        {{hash=26588251b82d1ccdd18c95f8d77be3bb}{%
+           family={Priya},
+           familyi={P\bibinitperiod},
+           given={Padma},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e1e1d3d40573127e9ee0480caf1283d6}{%
+           family={R.},
+           familyi={R\bibinitperiod}}}%
+        {{hash=3b4ff8acee5e43d04b36a3ab1e565f12}{%
+           family={Rekha},
+           familyi={R\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{96c27bd2b6c0ce11fbd0fc382420ea0b}
+      \strng{fullhash}{6464fe847a8f8033d721ed5113ac4936}
+      \strng{bibnamehash}{6464fe847a8f8033d721ed5113ac4936}
+      \strng{authorbibnamehash}{6464fe847a8f8033d721ed5113ac4936}
+      \strng{authornamehash}{96c27bd2b6c0ce11fbd0fc382420ea0b}
+      \strng{authorfullhash}{6464fe847a8f8033d721ed5113ac4936}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wireless Networks}
+      \field{number}{8}
+      \field{title}{Sustainability modelling and green energy optimisation in microgrid powered distributed {FogMicroDataCenters} in rural area}
+      \field{volume}{27}
+      \field{year}{2021}
+      \field{pages}{5519\bibrangedash 5532}
+      \range{pages}{14}
+    \endentry
+    \entry{bateries_RAHMAN}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f229b7a457248ba1285bbb3571a0407c}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Md\bibnamedelima Mustafizur},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fa11c4b2a8b67fcf9297853defff8e33}{%
+           family={Oni},
+           familyi={O\bibinitperiod},
+           given={Abayomi\bibnamedelima Olufemi},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=79c8ccbe26f2d456b3db296a743e01c5}{%
+           family={Gemechu},
+           familyi={G\bibinitperiod},
+           given={Eskinder},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d6e7552c865637927e1649455d2326f4}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{36638f6fdf6557a8ec56b68f1e8f2839}
+      \strng{fullhash}{02c116d84704f15bb2a33f5fc003876b}
+      \strng{bibnamehash}{02c116d84704f15bb2a33f5fc003876b}
+      \strng{authorbibnamehash}{02c116d84704f15bb2a33f5fc003876b}
+      \strng{authornamehash}{36638f6fdf6557a8ec56b68f1e8f2839}
+      \strng{authorfullhash}{02c116d84704f15bb2a33f5fc003876b}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0196-8904}
+      \field{journaltitle}{Energy Conversion and Management}
+      \field{title}{{Assessment of energy storage technologies: A review}}
+      \field{volume}{223}
+      \field{year}{2020}
+      \field{pages}{113295}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.enconman.2020.113295
+      \endverb
+      \keyw{Energy storage,Levelized cost of electricity,Life cycle assessment,Power network,Techno-economic assessment}
+    \endentry
+    \entry{reddy2017_metrics}{article}{}
+      \name{author}{5}{}{%
+        {{hash=e63f41ca57a569b4ec2605f5d2568856}{%
+           family={Reddy},
+           familyi={R\bibinitperiod},
+           given={V.\bibnamedelimi Dinesh},
+           giveni={V\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=d0820a033af5660ba1b3d24ccb5628aa}{%
+           family={Setz},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a6441d4afb00a827b656378f48f67d70}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={G.\bibnamedelimi Subrahmanya\bibnamedelimb V.\bibnamedelimi R.\bibnamedelimi K.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=ccb8d5fe0a7daef3fbce0e89ba845af7}{%
+           family={Gangadharan},
+           familyi={G\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=61c9418bf8975db8e23b20012c036b6a}{%
+           family={Aiello},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e92ee0fb5da3e06ae2eda593f85593b3}
+      \strng{fullhash}{6980043a3ceb49b615bcd0632df0afcc}
+      \strng{bibnamehash}{6980043a3ceb49b615bcd0632df0afcc}
+      \strng{authorbibnamehash}{6980043a3ceb49b615bcd0632df0afcc}
+      \strng{authornamehash}{e92ee0fb5da3e06ae2eda593f85593b3}
+      \strng{authorfullhash}{6980043a3ceb49b615bcd0632df0afcc}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Sustainable Computing}
+      \field{number}{3}
+      \field{title}{Metrics for Sustainable Data Centers}
+      \field{volume}{2}
+      \field{year}{2017}
+      \field{pages}{290\bibrangedash 303}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TSUSC.2017.2701883
+      \endverb
+    \endentry
+    \entry{google2011traces}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7df1d010f4f6a8db8c3a27926d4f90c0}{%
+           family={Reiss},
+           familyi={R\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5f3c579f3b21ba42d76c7a3ee89b6ca2}{%
+           family={Wilkes},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=342435ffd774a2cb4365f2ee48831e91}{%
+           family={Hellerstein},
+           familyi={H\bibinitperiod},
+           given={Joseph\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{763a82797afeea2beae1782564bd8302}
+      \strng{fullhash}{850f4c3981c548ae4e918498e32f503f}
+      \strng{bibnamehash}{850f4c3981c548ae4e918498e32f503f}
+      \strng{authorbibnamehash}{850f4c3981c548ae4e918498e32f503f}
+      \strng{authornamehash}{763a82797afeea2beae1782564bd8302}
+      \strng{authorfullhash}{850f4c3981c548ae4e918498e32f503f}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Google Inc., White Paper}
+      \field{title}{Google cluster-usage traces: format+ schema}
+      \field{year}{2011}
+    \endentry
+    \entry{Richter2021_netzero_dcs}{article}{}
+      \name{author}{7}{}{%
+        {{hash=c3c884fa59b0adab43589a1c30143247}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=358e80767d4174d5fde0a25cc9241657}{%
+           family={Lombardi},
+           familyi={L\bibinitperiod},
+           given={Pio},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6f613099a863769cceb096e9d5881844}{%
+           family={Arendarski},
+           familyi={A\bibinitperiod},
+           given={Bartlomiej},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1ae34fdadcf8f290f10551ca01a5cda7}{%
+           family={Naumann},
+           familyi={N\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+        {{hash=550e0cadae31a3285087b73c845af8f5}{%
+           family={Hoepfner},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=523621f58930dae695d4cecccb765ce7}{%
+           family={Komarnicki},
+           familyi={K\bibinitperiod},
+           given={Przemyslaw},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3fb16b485dbb0e1a4de9d7e7ada57a0f}{%
+           family={Pantaleo},
+           familyi={P\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d6225492b3f844267e477325ef47354}
+      \strng{fullhash}{2593ab231510d942ffc4eae98d36b14f}
+      \strng{bibnamehash}{7f78f57445427d22b33a1861e1b4e301}
+      \strng{authorbibnamehash}{7f78f57445427d22b33a1861e1b4e301}
+      \strng{authornamehash}{8d6225492b3f844267e477325ef47354}
+      \strng{authorfullhash}{2593ab231510d942ffc4eae98d36b14f}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energies}
+      \field{number}{17}
+      \field{title}{A vision for energy decarbonization: Planning sustainable tertiary sites as net-zero energy systems}
+      \field{volume}{14}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.3390/en14175577
+      \endverb
+    \endentry
+    \entry{roach2021_microsoftazure}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0845d3bc806b07836e056327f7c97881}{%
+           family={Roach},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0845d3bc806b07836e056327f7c97881}
+      \strng{fullhash}{0845d3bc806b07836e056327f7c97881}
+      \strng{bibnamehash}{0845d3bc806b07836e056327f7c97881}
+      \strng{authorbibnamehash}{0845d3bc806b07836e056327f7c97881}
+      \strng{authornamehash}{0845d3bc806b07836e056327f7c97881}
+      \strng{authorfullhash}{0845d3bc806b07836e056327f7c97881}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{journaltitle}{Microsoft Innovation Stories}
+      \field{month}{4}
+      \field{title}{Microsoft’s virtual datacenter grounds ``the cloud'' in reality}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://news.microsoft.com/innovation-stories/microsofts-virtual-datacenter-grounds-the-cloud-in-reality/
+      \endverb
+      \verb{url}
+      \verb https://news.microsoft.com/innovation-stories/microsofts-virtual-datacenter-grounds-the-cloud-in-reality/
+      \endverb
+    \endentry
+    \entry{sheme2018_batsize}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=cf96ae96df5976045d140c965f2ce687}{%
+           family={Sheme},
+           familyi={S\bibinitperiod},
+           given={Enida},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ff60db599ae0b9f86d40e271a49c8e0d}{%
+           family={Lafond},
+           familyi={L\bibinitperiod},
+           given={S{é}bastien},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4e9b207fb4f937933488d64b739551eb}{%
+           family={Minarolli},
+           familyi={M\bibinitperiod},
+           given={Dorian},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3e059cc5ac47f7fe67d66951e9ed0f96}{%
+           family={Me{ç}e},
+           familyi={M\bibinitperiod},
+           given={Elinda\bibnamedelima Kajo},
+           giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e443ecaf8d2588f8647b3a0951e82d07}{%
+           family={Holmbacka},
+           familyi={H\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=3349cc7f2eb505daba5932f95cc339c2}{%
+           family={Barolli},
+           familyi={B\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7f04261da308d4cf489f1f4acd03effa}{%
+           family={Xhafa},
+           familyi={X\bibinitperiod},
+           given={Fatos},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e175e0937024b1070f005b754647b028}{%
+           family={Javaid},
+           familyi={J\bibinitperiod},
+           given={Nadeem},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2fa00aa0e675e2874f0fc0eedad8c8dd}{%
+           family={Spaho},
+           familyi={S\bibinitperiod},
+           given={Evjola},
+           giveni={E\bibinitperiod}}}%
+        {{hash=a80c829b30c0c8d628d878f2eaee9e14}{%
+           family={Kolici},
+           familyi={K\bibinitperiod},
+           given={Vladi},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{949596b59436af0f7d5fc4c07f31384e}
+      \strng{fullhash}{c022ff3cd0e3ab7f5cb1503ba08d548e}
+      \strng{bibnamehash}{c022ff3cd0e3ab7f5cb1503ba08d548e}
+      \strng{authorbibnamehash}{c022ff3cd0e3ab7f5cb1503ba08d548e}
+      \strng{authornamehash}{949596b59436af0f7d5fc4c07f31384e}
+      \strng{authorfullhash}{c022ff3cd0e3ab7f5cb1503ba08d548e}
+      \strng{editorbibnamehash}{be74e4aabe108a222ac785cbfb38f504}
+      \strng{editornamehash}{4af3588df4747b584f4c31e510514c62}
+      \strng{editorfullhash}{be74e4aabe108a222ac785cbfb38f504}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The use of renewable energy is a major trend to meet datacenters energy needs. However, its intermittent nature requires energy storage devices to store the over produced energy when not being used. Thus, the green coverage value, representing the fraction of total energy consumption covered by renewable energy, is increased. In this paper, we analyze the impact of using different battery sizes to optimize renewable energy usage. We have built a battery simulation tool able to provide the battery state, track the amount of stored and used energy by the battery as a function of the energy consumed by a datacenter and the energy produced by solar panels. We show the impact of battery size on the green coverage percentage, green energy loss, and brown energy taken from the traditional grid. A comparison of these metrics is made for three different geographical locations at 10{\$}{\$}^{\{}{\backslash}circ \}{\$}{\$}∘, 35{\$}{\$}^{\{}{\backslash}circ \}{\$}{\$}∘, and 60{\$}{\$}^{\{}{\backslash}circ \}{\$}{\$}∘latitude. We discuss the competitiveness of constructing datacenters in different geographical locations based on the results.}
+      \field{booktitle}{Advances in Internet, Data {\&} Web Technologies}
+      \field{isbn}{978-3-319-75928-9}
+      \field{title}{Battery Size Impact in Green Coverage of Datacenters Powered by Renewable Energy: A Latitude Comparison}
+      \field{year}{2018}
+      \field{pages}{548\bibrangedash 559}
+      \range{pages}{12}
+    \endentry
+    \entry{SONG2022326}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f47cc1ff1ed8ea8025326fb247ba534f}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c0e0cc69b5d8b790c08edec9ac82e0ef}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Peimeng},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b87ac0cae6d6578d82c25cf26688acc0}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yanfeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=95542a0e2400dc8af1b7f804fc1a0a63}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Ge},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{511d7bd3611c08e21faa5a719affd125}
+      \strng{fullhash}{6fcf05f55ab4450e555e31281fd7e9f1}
+      \strng{bibnamehash}{6fcf05f55ab4450e555e31281fd7e9f1}
+      \strng{authorbibnamehash}{6fcf05f55ab4450e555e31281fd7e9f1}
+      \strng{authornamehash}{511d7bd3611c08e21faa5a719affd125}
+      \strng{authorfullhash}{6fcf05f55ab4450e555e31281fd7e9f1}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0167-739X}
+      \field{journaltitle}{Future Generation Computer Systems}
+      \field{title}{Versatility or validity: A comprehensive review on simulation of Datacenters powered by Renewable Energy mix}
+      \field{volume}{136}
+      \field{year}{2022}
+      \field{pages}{326\bibrangedash 341}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.future.2022.06.008
+      \endverb
+    \endentry
+    \entry{velho2013simgridparameters}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1b725b3a688ab6a34e8e537d01c0d805}{%
+           family={Velho},
+           familyi={V\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c593266cda700eb0ad11bb42c2d012ec}{%
+           family={Schnorr},
+           familyi={S\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cc1c6413cff9668f903be2a147031654}{%
+           family={Casanova},
+           familyi={C\bibinitperiod},
+           given={Henri},
+           giveni={H\bibinitperiod}}}%
+        {{hash=cd663ca86f9396d7db2d7d3b247b6703}{%
+           family={Legrand},
+           familyi={L\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{72946fe02306b88095edbac5014e8fda}
+      \strng{fullhash}{3863e2a12e37f8652b32822660e16c57}
+      \strng{bibnamehash}{3863e2a12e37f8652b32822660e16c57}
+      \strng{authorbibnamehash}{3863e2a12e37f8652b32822660e16c57}
+      \strng{authornamehash}{72946fe02306b88095edbac5014e8fda}
+      \strng{authorfullhash}{3863e2a12e37f8652b32822660e16c57}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM Transactions on Modeling and Computer Simulation}}
+      \field{month}{10}
+      \field{number}{4}
+      \field{title}{{On the Validity of Flow-level TCP Network Models for Grid and Cloud Simulations}}
+      \field{volume}{23}
+      \field{year}{2013}
+      \verb{file}
+      \verb https://hal.inria.fr/hal-00872476/file/tomacs.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://hal.inria.fr/hal-00872476
+      \endverb
+      \verb{url}
+      \verb https://hal.inria.fr/hal-00872476
+      \endverb
+    \endentry
+    \entry{solar_co2}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4c2b01e9051be6cfaf404fb69aa4f497}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=a6425771faf6e611fc191a58bf753113}{%
+           family={Mastroianni},
+           familyi={M\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8a15752f066059961e01c9969c9647d1}{%
+           family={Hinsch},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{7bf62f84ea11c6d4ba233732787a131f}
+      \strng{fullhash}{db8bf4edd900c5f1bb2ec9b11004fe5e}
+      \strng{bibnamehash}{db8bf4edd900c5f1bb2ec9b11004fe5e}
+      \strng{authorbibnamehash}{db8bf4edd900c5f1bb2ec9b11004fe5e}
+      \strng{authornamehash}{7bf62f84ea11c6d4ba233732787a131f}
+      \strng{authorfullhash}{db8bf4edd900c5f1bb2ec9b11004fe5e}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Joule}
+      \field{number}{4}
+      \field{title}{{Reverse Manufacturing Enables Perovskite Photovoltaics to Reach the Carbon Footprint Limit of a Glass Substrate}}
+      \field{volume}{4}
+      \field{year}{2020}
+      \field{pages}{882\bibrangedash 901}
+      \range{pages}{20}
+    \endentry
+    \entry{walsh2022_azurepue}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8830b825e1849be94926929c43446533}{%
+           family={Walsh},
+           familyi={W\bibinitperiod},
+           given={Noelle},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{8830b825e1849be94926929c43446533}
+      \strng{fullhash}{8830b825e1849be94926929c43446533}
+      \strng{bibnamehash}{8830b825e1849be94926929c43446533}
+      \strng{authorbibnamehash}{8830b825e1849be94926929c43446533}
+      \strng{authornamehash}{8830b825e1849be94926929c43446533}
+      \strng{authorfullhash}{8830b825e1849be94926929c43446533}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{journaltitle}{Microsoft Azure Blog}
+      \field{month}{4}
+      \field{title}{How Microsoft measures datacenter water and energy use to improve Azure Cloud sustainability}
+      \field{urlday}{22}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/en-us/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/en-us/blog/how-microsoft-measures-datacenter-water-and-energy-use-to-improve-azure-cloud-sustainability/
+      \endverb
+    \endentry
+    \entry{wang2012_EDCS}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=ae66067c3dea21e00e9c5b777faa1a4e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod}}}%
+        {{hash=44ee9137e00277de852e8ba364feb585}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Chuangang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3ea69b36106e2d57b178fcb4acb43f39}{%
+           family={Sivasubramaniam},
+           familyi={S\bibinitperiod},
+           given={Anand},
+           giveni={A\bibinitperiod}}}%
+        {{hash=305882cfee01adc884bf60e267899dea}{%
+           family={Urgaonkar},
+           familyi={U\bibinitperiod},
+           given={Bhuvan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2846e6678fa157fa75a606f61e69f904}{%
+           family={Fathy},
+           familyi={F\bibinitperiod},
+           given={Hosam},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London, England, UK}%
+      }
+      \strng{namehash}{64fc2a15ce03a258266730b198def0a3}
+      \strng{fullhash}{8ed580d67c83cdb5eb29c9175ceed300}
+      \strng{bibnamehash}{8ed580d67c83cdb5eb29c9175ceed300}
+      \strng{authorbibnamehash}{8ed580d67c83cdb5eb29c9175ceed300}
+      \strng{authornamehash}{64fc2a15ce03a258266730b198def0a3}
+      \strng{authorfullhash}{8ed580d67c83cdb5eb29c9175ceed300}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 12th ACM SIGMETRICS/PERFORMANCE Joint International Conference on Measurement and Modeling of Computer Systems}
+      \field{series}{SIGMETRICS '12}
+      \field{title}{{Energy Storage in Datacenters: What, Where, and How Much?}}
+      \field{year}{2012}
+      \field{pages}{187\bibrangedash 198}
+      \range{pages}{12}
+      \keyw{energy storage,power provisioning,cost reduction,datacenters}
+    \endentry
+    \entry{XU2020191}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7dcf24fd2719d15e009b32c4536c2f85}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Minxian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=029e03ba4e08a5605b31a31f86375741}{%
+           family={Buyya},
+           familyi={B\bibinitperiod},
+           given={Rajkumar},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d4de5c170f8b9ba68a6e7dec0fce71ae}
+      \strng{fullhash}{d4de5c170f8b9ba68a6e7dec0fce71ae}
+      \strng{bibnamehash}{d4de5c170f8b9ba68a6e7dec0fce71ae}
+      \strng{authorbibnamehash}{d4de5c170f8b9ba68a6e7dec0fce71ae}
+      \strng{authornamehash}{d4de5c170f8b9ba68a6e7dec0fce71ae}
+      \strng{authorfullhash}{d4de5c170f8b9ba68a6e7dec0fce71ae}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0743-7315}
+      \field{journaltitle}{Journal of Parallel and Distributed Computing}
+      \field{title}{Managing renewable energy and carbon footprint in multi-cloud computing environments}
+      \field{volume}{135}
+      \field{year}{2020}
+      \field{pages}{191\bibrangedash 202}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jpdc.2019.09.015
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0743731519303132
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0743731519303132
+      \endverb
+    \endentry
+    \entry{YUE2014pv_carbon}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e0fea2453cd127b6b7d3af84e403dd20}{%
+           family={Yue},
+           familyi={Y\bibinitperiod},
+           given={Dajun},
+           giveni={D\bibinitperiod}}}%
+        {{hash=25d7afe062fcfc6297b7a7cf93c21f51}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Fengqi},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d8cc827925df92a9dcce786fffed567f}{%
+           family={Darling},
+           familyi={D\bibinitperiod},
+           given={Seth\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{357f4d7b081a566983fbb52495c3f9eb}
+      \strng{fullhash}{22cee214db58cbf380eafea263e50d4d}
+      \strng{bibnamehash}{22cee214db58cbf380eafea263e50d4d}
+      \strng{authorbibnamehash}{22cee214db58cbf380eafea263e50d4d}
+      \strng{authornamehash}{357f4d7b081a566983fbb52495c3f9eb}
+      \strng{authorfullhash}{22cee214db58cbf380eafea263e50d4d}
+      \field{sortinit}{Y}
+      \field{sortinithash}{6ae2ff5458ff901249c2745238c951b7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0038-092X}
+      \field{journaltitle}{Solar Energy}
+      \field{title}{Domestic and overseas manufacturing scenarios of silicon-based photovoltaics: Life cycle energy and environmental comparative analysis}
+      \field{volume}{105}
+      \field{year}{2014}
+      \field{pages}{669\bibrangedash 678}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.solener.2014.04.008
+      \endverb
+      \keyw{Life cycle assessment,Silicon-based photovoltaics,Manufacturing,Renewable energy}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

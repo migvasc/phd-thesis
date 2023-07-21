@@ -1,0 +1,111 @@
+% *** SPECIFIC MACROS ***
+% specific macro definition for the paper
+%
+% requires amsthm, amssymb, siunitx
+
+% theorem-like environment
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}{Proposition}[chapter]
+\newtheorem{defn}{Definition}[chapter]
+
+% physical units
+\DeclareSIUnit{\flops}{Flop\per\second}
+
+% unify ≥, ≤ symbols
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+% asymptotic complexity (Landau) notations
+\newcommand{\landauO}{\ensuremath{\operatorname{\mathcal{O}}}}
+\newcommand{\landauOmega}{\ensuremath{\operatorname{\Omega}}}
+\newcommand{\landauTheta}{\ensuremath{\operatorname{\Theta}}}
+\newcommand{\landauo}{\ensuremath{\operatorname{o}}}
+\newcommand{\landauomega}{\ensuremath{\operatorname{\omega}}}
+\newcommand{\landauorder}{\ensuremath{\operatorname{\sim}}}
+
+% scheduling notations
+\newcommand{\graham}[3]{\mbox{\ensuremath{#1\mid#2\mid#3}}}
+\newcommand{\Cmax}{\ensuremath{C_{\max}}}
+
+% complexity classes
+\newcommand{\cNP}{\textbf{NP}}  % bold notations
+\newcommand{\cP}{\textbf{P}}
+% \newcommand{\cNP}{\ensuremath{\mathcal{N\!P}}}  % round notations
+% \newcommand{\cP}{\ensuremath{\mathcal{P}}}
+
+% common notations
+\newcommand{\indicator}[1]{\ensuremath{\mathbf{1}_{#1}}}
+%
+\newcommand{\cpu}[1]{\ensuremath{\protect\overline{#1}}}
+\newcommand{\gpu}[1]{\ensuremath{\protect\underline{#1}}}
+\newcommand{\taskset}{\ensuremath{\mathcal{T}}}
+%
+\newcommand{\cpuset}{\ensuremath{\mathcal{C}}}
+\newcommand{\gpuset}{\ensuremath{\mathcal{G}}}
+\newcommand{\cpuwork}{\ensuremath{W_\cpuset}}
+\newcommand{\gpuwork}{\ensuremath{W_\gpuset}}
+%
+\newcommand{\starpu}{StarPU\@}
+\newcommand{\xkaapi}{XKaapi}
+%
+\newcommand{\algheft}{\textsc{HEFT}\@}
+
+% 'independent tasks' notations
+\newcommand{\ompss}{OmpSs}
+%
+\newcommand{\dgemm}{\texttt{DGEMM}\@}
+\newcommand{\dgeqrf}{\texttt{DGEQRF}\@}
+\newcommand{\dgessm}{\texttt{DGESSM}\@}
+\newcommand{\dgetrf}{\texttt{DGETRF}\@}
+\newcommand{\dormqr}{\texttt{DORMQR}\@}
+\newcommand{\dpotrf}{\texttt{DPOTRF}\@}
+\newcommand{\dssssm}{\texttt{DSSSSM}\@}
+\newcommand{\dsyrk}{\texttt{DSYRK}\@}
+\newcommand{\dtrsm}{\texttt{DTRSM}\@}
+\newcommand{\dtsmqr}{\texttt{DTSMQR}\@}
+\newcommand{\dtsqrt}{\texttt{DTSQRT}\@}
+\newcommand{\dtstrf}{\texttt{DTSTRF}\@}
+%
+\newcommand{\algaccel}{\textsc{Accel}}
+\newcommand{\algdada}{\textsc{DADA}\@}
+\newcommand{\algdual}{\mbox{\textsc{DA}-2}}
+\newcommand{\algdynprog}{\mbox{\textsc{DP}-4/3}}
+
+% 'moldable tasks' notations
+\newcommand{\canonical}[2]{\ensuremath{\gamma\left(#1,#2\right)}}
+\newcommand{\ilp}{\ensuremath{(ILP)}}
+\newcommand{\solref}{\ensuremath{\sigma_{\text{ref}}}}
+\newcommand{\solstruct}{\ensuremath{\sigma_{\text{struct}}}}
+\newcommand{\oversolstruct}{\ensuremath{\overline{\sigma}_{\text{struct}}}}
+\newcommand{\taskgroup}[1]{\ensuremath{\taskset^{(#1)}}}
+\newcommand{\muempty}{\ensuremath{\mu_{\emptyset}}}
+%
+\newcommand{\algmoldilp}{\mbox{\textsc{APPROX}-3/2}}
+\newcommand{\algmoldpoly}{\mbox{\textsc{APPROX}-2}}
+%
+\newcommand{\stratLPT}{\textbf{LPT}\@}
+\newcommand{\stratSPT}{\textbf{SPT}\@}
+\newcommand{\stratRATIO}{\textbf{RATIO}\@}
+\newcommand{\stratEFT}{\textbf{EFT}\@}
+\newcommand{\stratSEQ}{\textbf{SEQ}\@}
+\newcommand{\stratPAR}{\textbf{PAR}\@}
+\newcommand{\heur}[1]{Heuristic~#1\@}
+%
+\newcommand{\cplex}{CPLEX\@}
+\newcommand{\glpk}{GLPK\@}
+\newcommand{\gurobi}{Gurobi}
+\newcommand{\julia}{Julia}
+\newcommand{\jump}{JuMP\@}
+\newcommand{\macosx}{Mac~OS~X\@}
+\newcommand{\python}{Python}
+
+% 'geometric constraining'/'unidimentional problems' notations
+\newcommand{\nodes}{\ensuremath{\mathcal{V}}}
+\newcommand{\io}[1]{\ensuremath{#1^{\text{\textit{I/O}}}}}
+\newcommand{\compute}[1]{\ensuremath{#1^{\text{C}}}}
+\newcommand{\IOnodes}{\ensuremath{\io{\nodes}}}
+\newcommand{\Cnodes}{\ensuremath{\compute{\nodes}}}
+\newcommand{\jobset}{\ensuremath{\mathcal{J}}}
+%
+\newcommand{\dist}[2]{\ensuremath{\operatorname{dist}\left(#1,#2\right)}}

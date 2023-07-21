@@ -1,0 +1,128 @@
+
+% --- ENCODING / FONTS ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+
+\usepackage{todonotes}
+\usetikzlibrary{arrows, shapes, positioning}
+
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{hyperref,url}
+\usepackage{tikz}
+\usepackage{calculus}
+\usepackage{calculator}
+\usepackage{listings}
+\usepackage{xurl}\usepackage{todonotes}
+\usepackage{epsfig}
+%\usepackage{subcaption}
+\usepackage{calc}
+
+\usepackage{multicol}
+\usepackage{pslatex}
+\usepackage{url}
+\usepackage{siunitx}
+\usepackage{chemformula} % for writing CO2 correctly
+\usepackage{comment}
+\usepackage{epsfig}
+
+% --- LAYOUT ---------------------------
+
+\usepackage{typearea}  % custom margins for backcover
+\usepackage[a4paper]{sty/uga}  % UGA title page style (see titlepage.tex)
+\usepackage{setspace}
+
+% ToC: ensure page numbers stay within margins
+%\RedeclareSectionCommands[tocpagenumberbox=\mbox]{part,chapter,section,subsection,subsubsection}
+
+% --- GRAPHICS / FIGURES ---------------
+
+\usepackage{graphicx}
+\usepackage{standalone}
+%\usepackage[tight,footnotesize]{subfig}
+%\usepackage[]{tocloft}
+
+\usepackage{tikz}
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\usepackage{xcolor}
+%\usepackage{sty/cbfcolors}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{babel}  % avoid annoying interaction of babel with tikz
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{graphs,graphs.standard}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+
+% --- LISTINGS / ALGORITHMS ------------
+
+%\usepackage[linesnumbered,ruled]{algorithm2e}  % pseudo-code
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% --- MATHEMATICS TYPESETTING ----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amstext}
+
+\newtheorem{proposition}{Proposition}
+
+% --- ENHANCED TABLES ------------------
+
+\usepackage{booktabs}  % publication quality tables
+\usepackage{multirow}  % mergeable rows
+
+% --- MISC. PACKAGES -------------------
+
+\usepackage{comment}
+%\usepackage[inline]{enumitem}  % enhanced enumerations
+%\usepackage[binary-units]{siunitx}  % correct units for physical quantities
+
+% --- PDF SUPPORT ----------------------
+
+\usepackage{url}
+%\usepackage[pdfusetitle]{hyperref}  % import as last package
+%\usepackage[pdfusetitle]{hyperref}  % import as last package
+% \usepackage{kpfonts}
+% \usepackage{microtype}
+
+% --- i18n, l10n -----------------------
+
+\usepackage[french,english]{babel}  % load default language last
+\usepackage[french,english]{isodate}  % load default language last
+
+% --- DOCUMENT SETTING -----------------
+
+\usepackage[%
+	figuresep=colon,          % label separator for captions
+	hangfigurecaption=true,   % use hanging figure label (within margin)
+	hangsection=true,         % use hanging section label (within margin)
+	hangsubsection=true,      % use hanging subsection label (within margin)
+	colorize=full,            % define color mode
+	colortheme=bluemagenta,   % what colors to use
+    configurebiblatex=true,%
+	bibsys=biber,             % citation management engine
+	bibfile=references,       % bibtex default file
+	bibstyle=numeric,      % reference style
+]{cleanthesis}
+
+%\addbibresource{presentations.bib}  % supplementary bib resource
+%\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}  % capitalize last names
+
+
+\hypersetup{
+	unicode=true,
+	plainpages=false,
+	colorlinks=false,
+	pdfborder={0 0 0},
+	breaklinks=true,  % allow line breaks inside links
+	bookmarksnumbered=true,
+	bookmarksopen=true,
+}

@@ -1,0 +1,800 @@
+\section{Introduction}
+
+%In order to reduce the environmental impact of data centers' operation, major cloud players committed to include renewable energy in their operation, such as Google, Apple, Microsoft, Amazon AWS, and Facebook \cite{Greenpeace2017}. \mv{Furthermore, solar energy costs have fallen 85\% (and are expected to keep decreasing) and its deployment increased over than 10 times from 2010 to 2019 \cite{ipcc2022_data_pv}. Moreover, the solar irradiation has a lower variation than wind speed \cite{krakauer2017prediction_accuracy}, which can increase the accuracy of predictions for the workload scheduling decision.} 
+
+On the previous chapter, we saw the adoption of the carbon-aware technique follow-the-renewables applied to a multi-cloud distributed over a country, and the drawbacks it presents if not used properly, as network congestion and extra energy consumption. Now, the reader will be presented to another strategy: sizing (or dimensioning) the renewable infrastructure to reduce the carbon footprint of the cloud operation. This strategy consists in defining how much investments needs to be made, for example defining the area of solar panels (when considering solar power), the number of wind turbines, and the capacity of the energy storage devices (as lithium-ion batteries) that needs to be manufactured. 
+
+The scenario considered has some differences to better represent modern cloud providers. First, it is considered that the DCs are geographically distributed over the world, which represents real cloud providers as Google, Microsoft, Facebook and so on, as can be seen in Figure X. Many reasons justifies the need for geographically distributed DCs: i) meet the demand for the ever increasing number of users; ii) redundancy, for example if there is a problem in some region the workload can be shifted to another location; iii) reduce the latency or response time for the users. This geographic distribution also allows to better harvest the renewables sources, since there is a more variable climate conditions, solar irradiation levels is different between the countries, as well as the wind received. Second, many locations in the world have the presence of low carbon intensive sources in their local electricity grid, therefore in reality there is not only green and brown classification (as seen in the previous chapter) but many shades of the colors. Classifying between brown and green made sense in the previous scenario since it was considered only a single country, and the renewable energy was less carbon intensive than the local electricity grid. Finally, energy storage devices can be used to store the overproduction of renewable energy and use it when opportune.
+
+One point that cannot be neglected is that manufacturing the renewable infrastructure also presents a environmental impact: batteries have an ideal level of charge that can improve their lifetime, which can reduce the replacement frequency, but on the other hand, causes them to be oversized \cite{batteries_baumman}, and their recycles rates still need to improve \cite{bateries_RAHMAN}; and considering the current state-of-the-art PVs, if they produce 40\% of the global electricity by 2050, they will consume about 5\% of today’s ${CO_2}$ budget \cite{solar_co2}.
+
+%\dc{Follow-the-renewables approaches \cite{shuja2016sustainable} are another option for reducing the environmental impact of cloud operations. It incorporates information on the availability of renewable energy in the scheduling decision. This way, the workload can be allocated or migrated to locations with more green energy.}
+
+In this chapter, we explore the adoption of both strategies, sizing the PVs and batteries and scheduling with follow-the-renewables to reduce the carbon footprint of operating existing cloud platforms. More specifically, this chapter presents the following contributions: 
+
+\begin{itemize}
+    
+    \item the two sub-problems---PVs and batteries sizing, and workload scheduling--- are modeled as a single problem, which allows evaluating scenarios such as: should the battery capacity or the PV area be increased, or should the workload be scheduled in a data center located in another part of the world?
+    
+    \item we propose a model that uses a linear programming approach (LP) with real variables, allowing us to optimally solve the problem we address in polynomial time using classical LP solvers. This allows a large number of scenarios to be evaluated over broad time horizons (i.e., one year) to take the seasonal behavior of renewable energy production into account. This model can be extended to multiple scenarios, and it may help decision-makers evaluate which regions need more investment to reduce the cloud operation's environmental impact.
+
+\end{itemize}
+
+%\tdjmn{Be careful: the third aspect of our contribution means that we are able to give metrics to really help the decision maker to make his invest... In my opinion this part of the job that our approach can be used to help the decision maker but it is a perspective. It is a possible use, but we do not compare scenarios to compare solution and to show our approach can give solution that we can not imagine without us...}
+
+\bigskip
+
+The remainder of the chapter is organized as follows: Section~\ref{sec:problemStatement_ccgrid} defines the problem addressed, the assumptions, the models, and the objective function. Details about the problem constraints and how to optimally solve the problem are given in Section~\ref{sec:optimalresolution_ccgrid}. Comprehensive experiments, presented in Section~\ref{sec:experiments_ccgrid}, are discussed in Section~\ref{sec:analysis-discussion_ccgrid} before we conclude in Section~\ref{sec:conclusion_ccgrid}. 
+
+\section{Problem statement}
+\label{sec:problemStatement_ccgrid}
+
+In this section the reader will find a description of the addressed problem and hypothesis. The next two sections further details the modeling, notations, and the optimal approach to solve the decision problem that we tackle within the chapter. 
+
+%\subsection{Framework}
+
+%\label{se:framework}
+
+\subsection{Addressed problem}
+\label{sec:addressedproblem_ccgrid}
+
+As mentioned earlier, the goal is to reduce the carbon footprint of an existing cloud platform both in its operation and sizing the renewable infrastructure. The considered cloud platform consists of several data centers spread worldwide, in both hemispheres and on all continents. The solution that will be proposed aims to design an additional solar-based power supply infrastructure to the classical power grid connection and to define an optimal way to operate the global IT cloud platform by scheduling its workload. To green the cloud infrastructure and reduce its carbon footprint, we have to reduce the usage of high-carbon intensive energy to operate the data centers. Using renewable energy is a promising option, however the carbon footprint of manufacturing needs to be taken into account.
+
+Another problem is that the location where the DC is installed determines how sustainable it can be. First, the carbon intensity of the energy consumed from the local electricity grid depends on how it is produced: natural gas, coal combustion, hydraulic or nuclear energy. Second, each location has different climate conditions and the renewable power production will also have different efficiency, for example, solar power will be higher in locations that receive more solar irradiation which depending if its near or far from the tropics.  Therefore, powering the cloud federation is a balance or mix between using low-carbon electricity from the local grid and using its solar panels, with the understanding that batteries are mandatory to mitigate intrinsic solar power intermittency. 
+
+The current decision problem aims at defining the additional renewable power supply architecture from solar energy to reduce the carbon footprint of the global cloud infrastructure. It is assumed that: i) the data centers are already in operation and the sizing will only define the area of PV panels and the capacity of the batteries; ii) the DCs can be supplied from power of the local electricity grid, power from the PV panels or power stored in the batteries; iii) job submission is centralized; iv) 
+100\% of the jobs must be completed in time (no delay); v) no migration of jobs; vi) jobs can be executed in any of the data centers; vii) cloud platform is homogeneous regarding the IT part (number of servers, CPU cores and model, network equipment), but the total power consumption of the DCs is different because of the power used for cooling the DCs at each geographic location. Finally, the following inputs are considered:
+
+\begin{itemize}
+    \item specifications of the cloud infrastructure 
+    \begin{itemize}
+        \item number of servers, CPU cores per server, network switches
+        \item power consumption of the servers (static and dynamic) and network equipment
+        \item Power Usage Effectiveness (PUE) to represent cooling needs
+    \end{itemize}
+    
+    \item specifications of the renewable infrastructure
+    \begin{itemize}
+        \item manufacturing carbon footprint
+        \item technical parameters: batteries charge/discharge ratio and Max Depth of Discharge, PV efficiency to convert solar irradiation to power
+    \end{itemize}
+    \item weather conditions (solar irradiation) in areas where each data center operates for the federation (time series of 1 year with one value for every hour)
+    \item carbon intensity of the local electricity grid in g CO2 eq per kWh for each DC
+    \item the workload computing demand from clients (time series of 1 year with one value for every hour)
+
+\end{itemize}
+
+% TODO add asxumptions as in the slide? 
+Now, the models and notations will be introduced before the objective function to optimize.
+
+\subsection{Models and notations}
+\label{sec:modelsnotations_ccgrid}
+
+\begin{table}[!t]
+\caption{Main notations for the IT model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)\label{table:variablesIT}}
+\begin{center}
+\begin{tabular}{l p{6cm}}
+%Notations & Meaning\\
+
+$\Delta t$ & time duration of each time slot in unit of time [$u.t$] \\
+$\mathcal{H}$ & decision horizon $\mathcal{H} = K\Delta t$ \\
+$K$ & number of time slots $\Delta t = 1\,\text{h} = 1\,u.t.$ \\ 
+$k$ & time slot between dates $k\Delta t$ and $(k+1)\Delta t$ excluded \\ \\
+$DC^d$ & a specific data center $d$ of the cloud federation \\
+$\mathcal{DC}$ & the set of all data centers $\{DC^d \ | \ d=1, \ldots, D\}$ \\
+$C^d$ & number of CPU cores within $DC^d$ \\
+\\
+$Pcore$ & dynamic power consumption of one CPU core at 100\% of utilisation \\
+$Pidle^d$ & static power consumption of all the servers of $DC^d$ \\
+$Pintranet^d$ & power consumption of network devices of the $DC^d$  \\
+$P_k^d$ & the power demand to perform tasks on $DC^d$ during time slot $k$ \\ 
+$PUE^d$ & Power Usage Effectiveness of data center $d$\\ 
+\\
+$\mathcal{T}$ & the workload to perform ($ = \{ T_i\ |\ 1\leq i\leq N\}$) \\
+$T_i$ & task $i$ of the workload $\mathcal{T}$ ($1\leq i\leq N$) \\
+$r_i$ & release date of tasks $T_i$\\
+$p_i$ & processing time of tasks $T_i$\\
+$c_i$ & number of cores needed to execute task $T_i$\\ 
+$w_k$ & number of cores needed during the $k$th time slot \\
+$w_k^d$ & number of cores needed during the $k$th time slot on $DC^d$\\ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
+% Moreover, there are some inconsistencies/unclarities, for example K should be a number of slots (=no unit) but in the text it is a number of hours
+
+To propose a solution in terms of job operations, a decision horizon $\mathcal{H}$ is defined where job scheduling decisions can be taken. To do so, we propose to discretize $\mathcal{H}$ into $K$ indivisible time slots whose duration is $\Delta t$ such that $\mathcal{H} = K\times\Delta t$. To simplify the notations, we consider $\Delta t = 1 u.t.$ (unit of time). In our experiments, we will assume that $\Delta t = 1h$ such that $K = 8760\,h$ with $\mathcal{H} = 1$ year. 
+Let $k$ be the index of the time slot that addresses any time instant $t$ such that $k\Delta t\leq t < (k+1)\Delta t$ with $0\leq k< K$. 
+
+
+\subsubsection{IT part model} 
+
+Let $\mathcal{DC} = \{DC^d \ | \ d=1, \ldots, D\}$ be the set of data centers in the cloud federation. Considering a given data center $DC^d$, let $C^d$ be its number of CPU cores and $Pcore$ the energy used to power one core.
+
+%Considering the cores that are needed to execute tasks during a given time slot $k$ on $DC^d$, the power demands of $P_k^d$, $Pcore$ being the power that one core is consuming to run. 
+
+The power consumption of a cloud data center can be classified as static or dynamic~\cite{ahvar22_estimating_cloud_cons}. For the static part, the current model considers the idle power consumption $Pidle^d$ of the servers, the Power Usage Effectiveness (PUE) to represent the power consumption used to cool the DC infrastructure, and the power consumption of the network switches $Pintranet^d$ that interconnect the servers in each data center $DC^d$. Regarding the latter, cloud data centers usually adopt the fat-tree topology to interconnect servers in the DC~\cite{ahvar22_estimating_cloud_cons}. In this topology, one can compute the number of network switches needed to match the number of servers. The power consumption of the network switches is considered to be static based on actual measurements, which have shown that the consumption does not change significantly with the device usage~\cite{Hlavacs2009_energy_network_devices}. Moreover, each geographic location has different cooling needs, therefore each DC has a specific $PUE^d$ value. 
+
+Finally, the dynamic part of the power consumption is represented by the additional power demand generated by using the CPU cores in each data center --- to execute the workload $ w^d_k$ assigned to the DC $d$ at time slot $k$ . Equation~\eqref{eq:power_cons} represents the power consumption of each DC for each step $k$ ($0\leq k<K$):
+
+\begin{equation} \label{eq:power_cons}
+   P^d_k  = PUE^d \times \big( Pidle^d + Pintranet^d + Pcore \times w^d_k\big)
+\end{equation}
+
+
+
+\subsubsection{Workload model}
+
+Considering the workload that needs to be executed, let $\mathcal{T} = \{T_i \ | \ i=1, \ldots, N\}$ be the set of $N$ tasks that have to finish in time during the time horizon $\mathcal{H}$. Each task $T_i$ has the following properties: i) release date $r_i$; ii)  processing time $p_i$;  and iii) needs $c_i$ CPU cores at 100\% of usage to be executed. Let $w_k$ be the total number of CPU cores needed to compute tasks during the time slot $k$ in order to complete the workload in time. At each time step, $w_k$ is the sum over all cores required by the tasks executed in time slot $k$, and given that the tasks will be scheduled to the DCs,  $w_k^d$ is the sum of the number of cores used to execute the allocated workload in $\mathcal{DC}$ (with $1\leq d\leq D)$ and $0\leq k<K$) as shown by Equation~\eqref{eq:wk}:
+
+\begin{equation} \label{eq:wk}
+    w_k = \sum_{T_i|r_i\leq k\Delta t<r_i+p_i} c_i = \sum_d w_k^d
+\end{equation}
+
+
+%==========================================================================%
+\subsubsection{Electrical part model}
+%==========================================================================%
+
+\begin{table}[t]
+\caption{Main notations for the Electrical part model of each $DC^d$ ($1\leq d\leq D$) during each time step $k$ ($0\leq k<K$)\label{table:variablesElec}}
+\begin{center}
+\begin{tabular}{l p{6cm}}
+%Notations & Meaning\\
+$I^d_k$ & solar irradiation at time slot $k$ [$Wh/m^2$] \\
+$Apv^d$ & surface area of photovoltaic panels of DC $DC^d$ [$m^2$] \\ 
+$\eta_{pv}$ & PV efficiency (in \%) in converting solar irradiation to power \\
+\\
+$Pgrid_k^d$ & power consumed from the grid at time slot $k$ [$W$]\\
+$Pre_k^d$ & power generated from the PVs at time slot $k$ [$W$] \\
+\\
+$BAT^d$ & battery capacity installed in $DC^d$ [$Wh$] \\
+$B_k^k$ & battery level of energy at the time $k\times\Delta t$ [$Wh$] \\
+$Pch_k^d$ & power charged in the batteries during time slot $k$ [$W$]\\
+$Pdch_k^d$ & power discharged from the batteries during time slot $k$ [$W$] \\
+$\eta_{ch}$ & efficiency of the charging process  \\
+$\eta_{dch}$ & efficiency of the discharging process  \\
+
+\end{tabular}
+\end{center}
+\end{table}
+
+The power supply of the whole cloud platform $\mathcal{DC}$ has three sources: i) the renewable energy generated by the solar panels (PVs) installed on each $DC^d$ site; ii)  the classical electrical grid $Pgrid_k^d$ of each country on which $DC^d\in\mathcal{D}$ is hosted --- used as backup when the power from the renewable infrastructure is not enough; and iii) energy discharged from the energy storage devices. The storage devices are mandatory to mitigate the intermittency of solar power by either storing the overproduction when the sun shines or to provide energy during the night period when the solar panels does not produce power. Lithium-Ion batteries have been chosen to play this role because of their good efficiency in terms of costs, power and energy density, charge and discharge rates, and self-discharge~\cite{wang2012_EDCS}. To model the fact that the cloud platform will not sell back energy to the grid, there is the constraint that the power from the grid ($Pgrid^d_k$) is always positive. 
+
+% DCs may chose to be fully supplied by the regular electrical grid if the PV power production is not enough, or if the stored energy in the batteries is not sufficient.
+Regarding the renewable power production, it depends on the solar irradiation $I^d_k$ received at the location of $DC^d$ during the time slot $k$, on the surface area of the solar panels $Apv^d$ and on the efficiency $\eta_{pv}$ of the PVs. Equation~\eqref{eq:predk} models the on-site renewable power production.
+
+\begin{equation} \label{eq:predk}
+    Pre^d_{k}= I^d_k \times Apv^d \times \eta_{pv}
+\end{equation}
+
+Batteries are systematically installed next to the PVs for the reason mentioned above. Let $B^d_k$ be the battery level of energy, that is, amount of energy (in $Wh$) at time $k\time\Delta t$ stored in batteries of capacity $BAT^d$ installed in $DC^d$ ($B^d_0 = Binit^d$ being the amount of energy at the beginning the time horizon $\mathcal{H}$). The variable $Pch_k^d$ represents the power charged in the batteries of DC $d$ during the time slot $k$ (and $Pdch_k^d$ is the power discharged from the batteries). It is not possible to charge and discharge simultaneously: if $Pch^d_k$ is greater than zero, $Pdch^d_k$ equals zero and vice versa. Regarding the batteries modeling, the charging and discharging process have an efficiency $\eta_{ch}$ and $\eta_{dch}$ less than 1. Lithium-Ion batteries have a low value for daily self-discharge (0.5\,\% per day)~\cite{wang2012_EDCS}, thus this property was not modeled. Finally, to increase the lifetime, the batteries cannot be discharged more than its Maximum Depth of Discharge. 
+
+Equation~\eqref{eq:bdk} models the battery in terms of the level of energy:
+
+\begin{equation} \label{eq:bdk}
+  B^d_k = B^d_{k-1}  + Pch^d_{k-1} \times \eta_{ch} \times \Delta{t} - \frac{Pdch^d_{k-1}}{\eta_{dch}} \times \Delta{t}
+\end{equation}
+with $0.2\times BAT^d \leq B^d_k\leq 0.8\times BAT^d$ for any time slot $k$ and $DC^d$ ($0\leq k<K$ and $1\leq d\leq D$) --- this last restriction models the Max Depth of Discharge property to increase the battery lifespan. The modeling of the batteries and PVs are based on~\cite{2021NICOD_ILP}.
+
+
+%==========================================================================%
+\subsubsection{Footprint model} \label{sec:footprintmodel_ccgrid}
+%==========================================================================%
+
+
+In the current model, carbon emissions of operating the cloud platform originate from three sources: (i) consuming power from the regular electrical grid and manufacturing of both (ii) the photovoltaic panels, and (iii) the batteries. Equation~\eqref{eq:fpgrid} models the carbon footprint of the regular local electrical grid, defined by the carbon intensity of the power grid $gridCO2^d$ in the region of data center $DC^d$  times the amount of energy used during the time slot $k$.
+
+\begin{equation} \label{eq:fpgrid}
+FPgrid_k^d = Pgrid_k^d\times \Delta t \times gridCO2^d
+\end{equation}
+
+It is considered that the power from local electricity grid may originate from multiple sources, and the $gridCO2^d$ is an input that represents its average carbon intensity during the year: the value will be low if it is supplied by solar, wind power, hydroelectric or nuclear power. On the other hand, the value will be higher if it is supplied by coal, oil, biomass, or natural gas.
+
+For the carbon footprint of the PVs, in order to account for the fact that the amount of solar irradiation received is not homogeneous for different geographic regions, one must also consider the expected power output that PVs can produce over their lifetime relative to the cost of manufacturing. Therefore, the carbon footprint of PVs is also related to the location of each data center. The carbon footprint thus defined is modeled by Equation~\eqref{eq:pvco2}:
+
+\begin{equation} \label{eq:pvco2}
+   pvCO2^d =  \frac{FPpv_{1m2}}{expectedEpv^d} 
+\end{equation}
+
+where $FPpv_{1m2}$ is the emissions of manufacturing $1\,m^2$ PV in $g\,\ch{CO2}-eq$, and $expectedEpv^d$ is the expected energy production in $Wh$ that $1\,m^2$ of the PV during its lifetime at the location of $DC^d$. As a result, the unit of this metric is expressed in $g\,\ch{CO2}-eq.Wh^{-1}$, and so, the total emissions from the PVs are related to its power production, as shown in Equation~\eqref{eq:fppvdk}. 
+
+\begin{equation} \label{eq:fppvdk}
+   FPpv^d_k =  pvCO2^d \times Pre_k^d \times \Delta t
+\end{equation}
+
+Regarding the batteries' carbon footprint $FPbat^d$ of the DC $DC^d$, it is related to their capacity $BAT^d$ in $kWh$ and carbon emissions of the manufacturing process $batCOS$ in $g\,\ch{CO2}-eq.kWh^{-1}$, as seen in Equation~\eqref{eq:fbat}. To be consistent with the calculation of $FPpv^d_k$, $batCO2$ is the share of the carbon footprint of the battery type chosen for a capacity of $1\,kWh$ over the time horizon of $\mathcal{H}$, assuming a battery has a lifetime of 10 years.  Thus, given that we are considering 1 year of cloud operation, $batCO2$ is the tenth of the total carbon footprint of the considered battery.
+
+\begin{equation} \label{eq:fbat}
+   FPbat^d =  BAT^d \times batCO2
+\end{equation}
+
+% However, the way this paper includes these manufacturing carbon emissions is questionable. For the solar panels, the authors distribute them over the predicted lifetime and bake in the expected electricity production (with the reasoning that not all locations will produce the same amount of solar energy). This gives a value of carbon emission per kWh produced, representing the carbon footprint (and gives an idea where it is more worth to have solar panels). This value is then used again to calculate the carbon emissions per year based on how many kWh were actually produced (Equation 7). For the batteries, the carbons emissions are simply divided by the number of lifetime years. Why this difference? It may also be more or less worth it to have batteries depending on the location (and this is actually what the evaluation is showing – so it there really a need for making the solar panels equations more complicated as the optimizer seems to be able to handle it). Moreover, why  spread the carbon emissions over the lifetime? The emissions are going to be done as soon as the solar panel is produced, no matter how long it is used. The authors should motivate why they made these choices. Finally, is the carbon emission for the grid also taking into account the manufacturing part? This should be indicated as if it doesn’t then using a “green” grid will appear artificially greener compared to adding solar panels to the DC. 
+
+These modifications regarding the lifetime of PVs and batteries were necessary because we are considering only one year of cloud operation. If we use the total carbon emissions for manufacturing the PVs and batteries, the solver will find a solution where there is few to no PV or batteries, because using the regular electrical grid would be less carbon-intensive.  
+
+\subsection{Objective function}
+\label{sec:objectivefunction_ccgrid}
+
+Now that the models have been introduced, the objective function can be defined (see Equation~\eqref{eq:FPALL}). It consists of minimizing the carbon footprint of the globally distributed cloud federation in order to reduce as much as possible carbon emissions, which come from both the consumption of electricity from the power grid, as well as from the manufacturing of photovoltaic panels and batteries with $k$ and $d$ defined as follows: $0\leq k< K$ and $1\leq d\leq D$.
+
+\begin{equation} \label{eq:FPALL}
+\text{minimize }\sum_{k=0}^{K-1} \sum_{d=1}^D ( FPgrid^d_k +  FPpv^d_k) + \sum_{d=1}^D FPbat^d
+\end{equation}
+
+%   ___        _   _                 _ 
+%  / _ \ _ __ | |_(_)_ __ ___   __ _| |
+% | | | | '_ \| __| | '_ ` _ \ / _` | |
+% | |_| | |_) | |_| | | | | | | (_| | |
+%  \___/| .__/ \__|_|_| |_| |_|\__,_|_|
+%       |_|                            
+%                      _       _   _             
+%  _ __ ___  ___  ___ | |_   _| |_(_) ___  _ __  
+% | '__/ _ \/ __|/ _ \| | | | | __| |/ _ \| '_ \ 
+% | | |  __/\__ \ (_) | | |_| | |_| | (_) | | | |
+% |_|  \___||___/\___/|_|\__,_|\__|_|\___/|_| |_|
+%
+\section{Optimal resolution}
+\label{sec:optimalresolution_ccgrid}
+
+%\tdjmn{The mapping problem that associates one task to one core has been simplified as the addressed problem is a sizing problem, the time slot is quite long and the solution addressed is a coarse grain problem and the number of available cores is enough to address the workload in time.}
+
+%\tdjmn{Mention that the linear program is not a MILP. notamment pour les cores utiles à l'exécution des workload qui n'est pas forcément entier, mais étant donné les tailles mise en jeu, on aura un ordre de grandeur donné par le PL. En plus c'est une phase de dimensionnement qui admet un part d'approximation étant donné qu'on devra assumer un autre workload de même type et une autre météo.}
+
+The models presented in the previous section consist of several linear equations. We show in this section that constraints governing the use of the globally distributed cloud platform can be expressed as linear expressions. New real variables are introduced to finalize the linear program that needs to be solved to achieve the targeted objective. The solution obtained after solving the linear program is optimal in nature and computed in polynomial time, as long as the variables are not integers. Polynomial time is mandatory if we consider the number of variables needed for a time horizon $\mathcal{H}$ as long as one year. We assume to choose real positive values for all variables even if variables denote discrete objects like cores. Indeed, $w_k^d$ is the number of cores needed to run tasks on $DC^d$ during time slot $k$. Considering the size of the cloud with its thousands of cores, the decimal part of each $w_k^d$ can be neglected. Having the solution with more or less than a core on a given DC does not change the order of magnitude for the PV and battery sizing process.
+
+%\tdjmn{to be validated if this remarks is enough clear or if it can disturb the reviewer. I remains the todos written during the meeting just above this paragraph if needed...}
+
+The globally distributed cloud platform that we plan to optimally size, as mentioned in the problem statement (Section~\ref{sec:problemStatement}), has only one goal: completing a given amount of work during a given year and knowing the weather conditions during the same year. We present a set of constraints that must be respected to make this mission possible. Some constraints are explicit, and some are implicit to avoid the addition of integer variables which would transform this LP into a MILP whose solving process would not scale at all.
+
+\subsection{Constraints to address the workload}
+
+Since the distributed cloud federation configuration is defined a priori by a set of existing cloud DCs at each chosen location, the amount of work to be performed must respect each data center's computational capabilities $DC^d$. Equation~\eqref{eq:wkcd} expresses that the number of cores that are switched on does not exceed the existing number of cores of $DC^d$:
+
+\begin{equation}\label{eq:wkcd}
+    w_k^d \leq C^d
+\end{equation}
+
+% Migration was not included in the modeling, it uses a binary
+% variable M and, tasks have duration of 1 hour
+
+%\begin{equation}\label{eq:mig1}
+%    w^d_k - w^d_{k-1} \leq M(w_k - w_{k-1}) + Mr^d_k - Ms^d_k + \delta W^d
+%\end{equation}
+
+%with $M$ is $0$ if $w_k\leq w_{k-1}$ and 1 otherwise, $Mr^d_k$ is the number of migrated cores that $DC^d$ receives at time slot $k$ and $Ms^d_k$ is the number of migrated cores that $DC^d$ sends at time slot $k$
+
+%\begin{itemize}
+ %   \item $w^d_k - w^d_{k-1} \leq M(w_k - w_{k-1}) + Mr^d_k - Ms^d_k + \delta W^d$ with $M$ is $0$ if $w_k\leq w_{k-1}$ and 1 otherwise, $Mr^d_k$ is the number of migrated cores that $DC^d$ receive at time slot $k$ and $Ms^d_k$ is the number of migrated cores that $DC^d$ send at time slot $k$
+ %   \item $w^d_k - w^d_{k-1} \leq M(w_k - w_{k-1}) + \delta W^d$ with $M$ is $0$ if $w_k\leq w_{k-1}$ and 1 otherwise, $\delta W^d$ is the maximum possible variation of the workload in one time step depending 
+   % \item $w_k = \sum_d w_k^d + \frac{1}{2}\sum_d(Ms^d_k + Mr^d_k)$
+   % \item $w_k^d-w_{k-1}^d\leq Start_k+\delta W$ where $Start_k$ is the amount of cores that start at the beginning of the time slot $k$
+   % \item $w_{k-1}^d-w_k^d \leq End_k+\delta W$ where is the amount of cores that end at the beginning of the time slot $k$
+%\end{itemize}
+
+
+
+
+\subsection{Constraints to reach the power demand}
+
+% Also the final equation (Equation 1) of the “IT part” is actually giving the total consumption of the datacenter (not only the IT equipment) since the PUE value is used. But the text in IV.B implies that this is not the case as it refers to P^d_k as only for the IT part and still mentions that the facility energy is included by referring to Equation 1. This is confusing. 
+
+
+
+The electric part of each DC has to supply the DC power demand using renewable energy ($Pre_k^d$), from batteries ($Pdch_k^d$ and $Pch_k^d$) and/or from the classical grid ($Pgrid_k^d$). Equation~\eqref{eq:pkdconstraint} presents the restriction for the power consumption.
+
+%First of all, the electric part of each DC has to power supply the IT part using renewable energy ($Pre_k^d$) from batteries ($Pdch_k^d$ and $Pch_k^d$) and/or from the classical grid ($Pgrid_k^d$). If the IT part of $DC^d$ needs a power $P^d_k$ at each time slot, the power to run the facilities of $DC^d$ also must be taken into account. The consumption of these facilities is a percentage that is included in the PUE value as shown in Equation~\eqref{eq:power_cons}. Equation~\eqref{eq:pkdconstraint} presents the restriction for the power consumption:
+
+
+\begin{equation} \label{eq:pkdconstraint}
+    P^d_k \leq Pre^d_k + Pgrid^d_k + Pdch_k^d - Pch_k^d
+\end{equation}
+%% this was already defined before
+% where $Pch_k^d$ is the power to charge the battery at each time of time slot, $k$ on $DC^d$ and $Pdch_k^d$ is the power to discharge the battery at each moment of time slot $k$ on $DC^d$. 
+
+\subsection{Constraints on batteries}
+
+%The batteries are defined by variables that the linear program aims at  finding by providing an optimal sizing of the platform. 
+The batteries are defined by their capacity, which is different for each DC and depends on how the intermittency of the renewable energies is managed on each site. The other quantities concerning the batteries depend on the total capacity of the batteries, DC by DC. This allows realistic behaviors for the batteries to be assumed. These limitations concern the practical level of use of the energy stored in the batteries, which cannot be completely emptied, for example. In addition, the power to charge or discharge a battery is also limited by the level of energy remaining in the associated battery, so that it is not possible to reach a forbidden energy level. Equations~\eqref{eq:batlimit}, \eqref{eq:pchlimit} and~\eqref{eq:pdchlimit} express these constraints:
+
+\begin{equation} \label{eq:batlimit}
+0.2\times BAT^d\leq B_k^d\leq 0.8\times BAT^d
+\end{equation}
+\begin{equation} \label{eq:pchlimit}
+Pch^d_k \times \Delta t \times \eta_{ch} \leq 0.8\times BAT^d - B^d_{k-1}
+\end{equation}
+\begin{equation} \label{eq:pdchlimit}
+Pdch^d_k \times \Delta t\ / \ \eta_{dch} \leq B^d_{k-1} - 0.2\times BAT^d
+\end{equation}
+
+%\tdmv{Describe  not using binary variables}
+%\tdjmn{Add this part in constraint part because is there that we will give how the cloud is able to work...}
+
+One may notice that we are not modeling any restrictions for charging and discharging simultaneously. Such restrictions would require the usage of binary variables that would significantly increase the required computational time to find the optimal solution to the problem. We performed experiments with a shorter duration (around 1 month), and the sizing results were the same between both versions: using and not using binary variables. Furthermore, it is possible to calculate an alternative solution for the linear program where there would be no charge and discharge at the same time slot by increasing or decreasing the value of the variables $Pch_k^d$ and $Pdch_k^d$.
+
+%\subsection{Additional constraints}
+
+\subsection{Linear program}
+
+This following linear program (LP) summarises what has been described before concerning the model that has to be respected to solve the tackled problem. All variables given by the solution obtained after the solving process are used to completely define both the renewable power supply part and the core operating process of the distributed low carbon cloud federation and the way each DC is used time slot by time slot for one year on the considered weather conditions. Comprehensive experiments have been led to highlight the pertinence of the approach. These experiments are shown in the next section, and a discussion is proposed in Section~\ref{sec:analysis-discussion}.
+
+%\tdjmn{Battery size $BAT^d$ and surface of PV $Apv^d$ defined the totally size of the platform. When implementing a workload to perform on a such platform has to respect the constraint and to allocate tasks where energy is available (sun of battery). Sections Expe + Results show how a distributed platform looks like considering our constraints.}
+
+\begin{equation}\nonumber
+    \text{(LP)}\left\{
+    \begin{array}{ll}
+        \text{minimize}\displaystyle\sum_{k=0}^{K-1}\sum_{d=1}^D (FPgrid^d_k\!+\!FPpv^d_k)\!+\!\sum_{d=1}^D FPbat^d \label{eq:lp}\\ \\
+        \text{s.t. } \ \ \ \ 
+\eqref{eq:power_cons}\,\eqref{eq:predk}\,\eqref{eq:bdk}\,\eqref{eq:fpgrid}\,\eqref{eq:fppvdk}\,\eqref{eq:fbat}\,\eqref{eq:wkcd}\,\eqref{eq:pkdconstraint}\,\eqref{eq:batlimit}\,\eqref{eq:pchlimit}\,\eqref{eq:pdchlimit} %\nonumber
+    \end{array}
+    \right.
+\end{equation}
+
+where all variables are positive real variables. 
+
+%To complete the amount of work the solution A data center \tddc{Finish this sentence}
+
+%\begin{itemize}
+ %   \item $Start_k$
+  %  \item $End_k$
+%\end{itemize}
+
+
+%  _____                      _                      _       
+% | ____|_  ___ __   ___ _ __(_)_ __ ___   ___ _ __ | |_ ___ 
+% |  _| \ \/ / '_ \ / _ \ '__| | '_ ` _ \ / _ \ '_ \| __/ __|
+% | |___ >  <| |_) |  __/ |  | | | | | | |  __/ | | | |_\__ \
+% |_____/_/\_\ .__/ \___|_|  |_|_| |_| |_|\___|_| |_|\__|___/
+%            |_|                                             
+%
+
+\section{Experiments}
+\label{sec:experiments_ccgrid}
+
+
+
+ In this section, we present the settings and the results of our experiments. 
+More details for reproducing the experiments can be found in Appendix~\ref{appendix:artifact}.
+
+
+
+%In this section, we present the inputs that we used to run the experiments and the obtained results. The source code, the inputs, and the instructions to reproduce the experiments are available in a public Git repository\footnote{Link to repository omitted due to the double-blind review process}. 
+%\tdfd{define settings (values coming from the colab)}
+
+
+%\tdmv{Extracted from the experiments:}
+\subsection{Settings}
+
+
+\label{sec:settings_ccgrid}
+
+
+%\tdfd{time slots are still 1 hour?}
+%\tdvs{in the model they are defined to be 1 hour. If this is not true anymore, don't forget to change it there.}
+\subsubsection{Cloud infrastructure}
+
+The servers are homogeneous and based on equipment of real cloud infrastructure: the Taurus server of the Grid'5000 testbed\footnote{\url{https://www.grid5000.fr/w/Lyon:Hardware\#taurus}}. The servers are equipped with two Intel Xeon E2630 CPUs, with a total of 12 cores. For modeling the power consumption of the servers, real measurements conducted by~\cite{ahvar22_estimating_cloud_cons} were considered: in the idle state, each server consumes 97\,W, and their maximum power consumption (when using 100\% of the 12 cores) is 220\,W. The value of Pcore is 10.25\,W, and it was obtained by linear interpolation between the power consumption of the idle and the fully used state.
+
+Each data center is equipped with 23,200 servers (and a total of 278,400 cores). This number matches what can be seen in production data centers of major cloud players: Microsoft operates over 4 million servers distributed over 200 DCs~\cite{roach2021_microsoftazure}. %The total power consumption from the servers of each data center when idle is 2.25\,MW, and their maximum power consumption is 5.1\,MW.
+
+%For the current experiments, 
+We considered a network with a 48-ary fat-tree topology linked by 2,880 switches with 48 ports each.
+%, that is, the network switches have 48 ports, and the total number of switches is 2,880.
+The power consumption of the switches was based on real measurements by~\citet{Hlavacs2009_energy_network_devices}: the HP ProCurve 2810-48G was selected, with 48 ports and approximately 52W per device. %In total, the power consumption of the network equipment is 149.76\,kW for each DC.
+
+For the location of the data centers, it was based on the real cloud infrastructure of Microsoft Azure\footnote{Azure global infrastructure: \url{https://infrastructuremap.microsoft.com/}.}, and different regions in different continents, hemispheres, and time zones were selected. Figure~\ref{fig:dc_location} presents the details of the locations.
+
+
+% - Table III is somewhat meaningless without a map projection. Showing a map instead of a table could convey the location context better.
+
+
+\begin{figure}[!htbp]
+\begin{picture}(200,165)
+\put(0,0){
+\includegraphics[width=.5\textwidth]{images/locations.pdf}}
+\put(40,45){São Paulo}
+\put(120,40){Johannesburg}
+\put(200,30){Canberra}
+\put(200,70){Singapore}
+\put(200,105){Seoul}
+\put(45,105){Virginia}
+\put(110,117){Paris}
+\put(130,95){Dubai}
+\put(170,85){Pune}
+\end{picture}
+\caption{Selected locations for the data centers.}
+\label{fig:dc_location}
+\end{figure}
+
+
+
+
+
+
+We used values for the PUE inspired by real data from Microsoft Azure for each region: for the Americas, the PUE is 1.17 (DCs São Paulo and Virginia), Asia Pacific has a PUE of 1.405 (DCs Pune, Canberra, Singapore, and Seoul), and for the Europe region, Middle East, Africa the PUE is 1.185 (DCs Johannesburg, Dubai, and Paris)~\cite{walsh2022_azurepue}. 
+
+
+% \tdvs{Why do we use P.U.E ant not PUE in the notations? For everything else we don't use points : PV, DC, MW, ... Second question: P.U.E or P.U.E.? Both are used....}
+
+
+%\begin{table}
+  
+ % \caption{Selected locations for the data centers.}\label{tab:dcs} \centering
+
+  %\begin{tabular}{|l|r|r|}
+    
+  %\hline
+
+  %\textbf{Location} &  \textbf{Latitude} & \textbf{Longitude} \\
+ % \hline
+  %Johannesburg & -26.20500 & 28.04972 \\
+ % \hline
+ % Pune & 18.52143 & 73.85445 \\
+%  \hline
+%  Canberra & -35.29759 & 149.10127\\
+%  \hline
+%  Dubai & 25.26535& 55.29249 \\
+ % \hline
+ % Singapore & 1.35711 & 103.8195\\
+ % \hline     
+ % Seoul & 37.56668 &  126.97829 \\
+% \hline
+%  Virginia  & 37.12322& -78.49277 \\
+ % \hline
+ % São Paulo &  -23.48620 &  -46.50092  \\
+%  \hline 
+%  Paris &  48.85889 & 2.32004 \\
+ % \hline
+    
+%\end{tabular}
+%\end{table}
+
+
+
+\subsubsection{Workload}
+
+The workload used was generated using the Grog generator\footnote{\url{https://pypi.org/project/grog/}},  a workload generator based on analysis of properties of the execution trace made available by Google in 2011~\cite{DACOSTA2018_grog}. For reproducibility purposes, the parameters regarding the number of tasks were set to 350,000, the duration was 30 days, and it was executed 12 times (1 per month). The tasks have a duration of one hour.
+
+
+\subsubsection{Photovoltaic power production}
+
+Global Solar Horizontal Irradiation (in Wh/m$^{2}$) data was collected from the MERRA-2 project~\cite{GELARO2017MERRA2}, since it provides information for anywhere on earth. Figure~\ref{fig:pv_ghi} illustrates different solar irradiation of each location throughout the year 2021.%\tddc[noinline]{Figure 1 is too small. Make its width as close to linewidth as possible}
+
+ \begin{figure}[!htbp]
+  \centering
+   {\epsfig{file = images/pv_ghi.pdf, width = \linewidth}}
+  \caption{Average daily solar irradiation per location throughout the year 2021.}
+  \label{fig:pv_ghi}
+\end{figure}
+
+\subsubsection{Carbon footprint}
+
+For solar panels, it is considered a lifetime of 30 years, and manufacturing $1 m^2$ emits $250 kg\,\ch{CO2}-eq$, inspired from real measurements~\cite{YUE2014pv_carbon}. To compute the emissions in the form of $g\,\ch{CO2}-eq.kWh^{-1}$ as stated in Section~\ref{sec:footprintmodel}, we considered the total solar irradiation that was produced during the year 2021 multiplied by 30 (to account for the PV module lifetime of 30 years). For the electrical grid, we also considered the real-world data of the carbon footprint ($g\,\ch{CO2}-eq.kWh^{-1}$). Table~\ref{tab:carbonfootprint} lists the carbon emission values for each region.
+
+
+\begin{table}
+  
+  \caption{Emissions (in $g\,\ch{CO2}-eq.kWh^{-1}$) for both PV usage and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.}\label{tab:carbonfootprint} \centering
+
+  \begin{tabular}{|l|r|r|}
+    
+  \hline
+
+  \textbf{Location} &  \textbf{Grid} & \textbf{PV} \\
+  \hline
+  Johannesburg & 900.6 & 24.90 \\
+  \hline
+  Pune & 702.8 & 27.96 \\
+  \hline
+  Canberra & 667.0 & 29.71 \\
+  \hline
+  Dubai & 530.0  & 24.84 \\
+  \hline
+  Singapore & 495.0 & 36.19 \\
+  \hline     
+  Seoul & 415.6 & 34.00 \\
+  \hline
+  Virginia  & 342.8 & 31.71 \\
+  \hline
+  São Paulo &  61.7 & 27.99\\
+  \hline 
+  Paris &  52.6  & 39.93 \\
+  \hline  
+
+\end{tabular}  
+\end{table}
+
+Regarding the batteries, the emissions are only considered for the manufacturing step---$59 kg\,\ch{CO2}-eq$ per kWh. In our experiments, the considered lifetime of the batteries is ten years. Therefore, the input used is equal to $5.9 kg\,\ch{CO2}-eq$ per kWh, given that we simulated one year.
+
+
+\subsubsection{Execution environment}
+We ran the experiments on a machine with an Intel i9-11950H CPU, and 32 GB of RAM. The solver used was the Gurobi Optimizer (version 9.5.2). The execution time for solving the LP with the inputs listed in the previous sections --- which resulted in a total of 394,263 variables --- was in the order of 30 seconds.
+%The experiments were executed on a machine with the following configurations: Intel i9-11950H CPU, and 32 GB of RAM. The solver program used for solving the LP was the Gurobi Optimizer (version 9.5.2). The execution time for solving the LP with the inputs listed in the previous sections---which resulted in a total of 394,263 variables---was in the order of 30 seconds.
+
+
+\subsection{Results}
+
+In this section, we present the results in terms of the computed optimal area of the PVs and capacity of the batteries, the source of energy that was consumed by the DCs operation (grid, batteries, or PV panels), and the total emissions of the cloud operation, generated from both manufacturing PVs and batteries, and power consumption of the regular electrical grid. Furthermore, to assess the solution computed by the LP, we compare it with two other scenarios: i) only power from the regular electrical grid is used to supply the DCs (represent current DCs), and ii) only power generated from the PV panels, and stored and discharged from the batteries are used to supply the DCs. Finally, we present an evaluation using metrics to assess the environmental impact of the results.
+
+
+\begin{figure}[!htbp]
+  \centering
+  {\epsfig{file = images/sizing.pdf, width = .5\textwidth}}
+  \caption{Optimal result for the area of PV panels and capacity of the batteries.}
+  \label{fig:sizing}
+\end{figure}
+
+Figure~\ref{fig:sizing} illustrates the area of the photovoltaic panels and the capacity of the batteries computed from the LP using the inputs described in Section~\ref{sec:experiments}. %These results can be explained by the characteristics of each location in terms of how carbon intensive is the power from the regular electricity grid and how much solar irradiation is received throughout the year: the DCs where the local electricity grid is low-carbon intensive, as São Paulo and Paris, had the smallest area of PVs and capacity of batteries. On the other hand, the DCs with a high-carbon-intensive grid had the highest computed areas and batteries to avoid using the local grid. Singapore had the highest PV area for two reasons: i) the electricity from the regular grid is carbon intensive, and ii) in the year 2021 it was the second worst location in terms of solar irradiation received (Paris was the location that received the less solar irradiation). 
+
+To analyze the sources of energy that supplied the DCs operation, we present in Figure~\ref{fig:energy_ratio_daily} the percentage that each source (grid, renewable, and batteries) was used to daily supply the DCs throughout the year. Figure~\ref{fig:power_ratio_hourly} is a fine-grain visualization of the DC operation regarding the power consumed or produced: it illustrates hour-by-hour the DC total power demand, how much power was consumed from the  grid, discharged from the batteries, and produced by the PV panels.
+
+
+%Figure~\ref{fig:energy_ratio_daily} illustrates the source of the energy that supplied the DCs operation throughout the simulated year: for each day, it is possible to see the share  %For most data centers, the primary energy source is the power produced from the locally installed photovoltaic panels and stored in the batteries. The usage of grid electricity in the DCs of Virginia, Seoul, and Canberra can be justified by the seasonal intermittency of renewable energy: for Virginia and Seoul --- that is in the northern hemisphere of the globe --- the winter occurs during the first and last months of the year, and for Canberra --- that is in the southern hemisphere of the globe --- the winter occurs during the middle months of the year. The exceptions are the data centers of São Paulo and Paris, where most of the energy consumed was from the regular electrical grid, given that it is low-carbon intensive.
+
+
+\begin{figure}[t]
+  \centering
+   {\epsfig{file = images/energy_ratio.pdf, width = .47\textwidth}}
+  \caption{Composition of the DCs' daily energy consumption throughout the year considering the different sources of energy, where 1.0 is the DC's total energy consumption.}
+  \label{fig:energy_ratio_daily}
+\end{figure}
+
+
+%Figure~\ref{fig:power_ratio_hourly} is a fine-grain visualization of the DC operation regarding the power consumed or produced: it illustrates hour-by-hour the DC total power demand, how much power was consumed from the local electricity grid, discharged from the batteries, and produced by the solar panels. %We can observe how the batteries are used: the power is discharged when there is insufficient renewable power production to supply the DC. It is also possible to observe that the PVs are overproducing power---the PV power production is higher than the DC power demand at some instants of time---to store the electricity in the batteries to use when opportune.
+
+
+
+ \begin{figure}[t]
+  \centering
+   {\epsfig{file = images/power_source_hour.pdf, width = .5\textwidth}}
+  \caption{Composition of the DCs' hourly power consumption throughout the first day of the year. Time follows the Universal Time (UT) standard.}
+  \label{fig:power_ratio_hourly}
+\end{figure}
+
+ %The use of the follow-the-renewables approach in a cloud that has data centers distributed across the world can also be observed in Figure~\ref{fig:power_ratio_hourly}: at the instant of time 11 hours (UT), the photovoltaic production in Seoul decreases because the sun is setting. We can also observe that the power consumption of this data center --- which is directly related to the executed workload --- decreases. At the same instant of time, the power consumption in the data center of São Paulo increases, which suggests that the workload was scheduled to be executed there instead of the data center of Seoul, probably to avoid discharging its batteries or using the carbon-intensive local electricity grid at that instant of time. The same behavior can be observed for the data centers Paris and Seoul for the instant of time 8h (UT), and Virginia and Pune for the instant of time 12h (UT).
+
+%\tddc{Shouldn't it be UTC for Coordinated Universal Time instead of UT?}
+%\tdmv{The source of data for irradiation is in UT: https://www.soda-pro.com/web-services/meteo-data/merra/info}
+
+In order to assess the optimal solution of the LP, we compared it with two other scenarios in terms of total carbon emissions ($t\,\ch{CO2}-eq$): i) the DCs are only supplied by power from the regular electrical grid, and ii) the DCs are only supplied by power from the photovoltaic panels and batteries. Table~\ref{tab:emissions} presents the results. In comparison with the first scenario (only grid power), the reduction in the \ch{CO2} emissions was approximately 85\%, and it was approximately 30\% for the second scenario (only renewable power).
+
+
+% Second figure illustrates more detailed
+
+\begin{table}[!ht]
+\caption{Total emissions for the different scenarios.}\label{tab:emissions} \centering
+\begin{tabular}{|p{5cm}|r|}
+  \hline
+  \textbf{Scenarios} & \textbf{Emissions ($t\,\ch{CO2}-eq$)}   \\
+  \hline
+  Electrical grid                    & 201211.3    \\
+  \hline
+  PV and batteries  &                  42370.6 \\ %40054.1 \\
+  \hline
+  PV, batteries, and grid            &  29600.6   \\
+  \hline
+
+
+\end{tabular}
+\end{table}
+
+%The results shown in Figure~\ref{fig:energy_ratio_daily} can be used to justify these reduction values in comparison to the solution computed by the LP: for the first scenario, the data centers in Paris and São Paulo are already supplied mostly from the energy of the local electricity grid, therefore they didn't have a high reduction in emissions in comparison to the other DCs. On the other hand, for the second scenario, the power from the PVs and batteries already supplies the majority of the DC's power demand, so the additional emissions resulted from manufacturing additional PVs and batteries for the DCs of  Seoul, Virginia, Canberra, São Paulo and Paris --- which is the location that receives the less amount of solar irradiation throughout the year, needing a high area of PV panels to produce power.
+
+
+To further evaluate these scenarios, we present in Table~\ref{tab:dcutilization} results in terms of the average load each DC executed throughout the year. Equation~\eqref{eq:dcload} represents how the metric was computed for each DC $d$.
+
+\begin{equation}\label{eq:dcload}
+\frac{\sum_k w^d_k} {C^d \times K }
+\end{equation}
+
+
+\begin{table}[!ht]
+  
+  \caption{Average DC load throughout the year }\label{tab:dcutilization} \centering
+
+  \begin{tabular}{|l|r|r|r|}
+   \hline
+    
+  \textbf{Location} &   \textbf{Grid} & \textbf{PV + Bat} & \textbf{PV + Bat + Grid}  \\
+  \hline
+  Johannesburg & 0 & 79.31  & 86.20  \\
+  \hline
+  Pune  & 10.25 &  82.07 & 89.34   \\
+  \hline
+  Canberra  & 99.72 & 66.62 & 67.95 \\
+  \hline
+  Dubai   & 99.97 & 93.93 & 95.11   \\
+  \hline
+  Singapore & 99.93 & 72.6  & 85.18 \\
+  \hline     
+  Seoul    & 99.99 & 81.87 & 65.39      \\
+  \hline
+  Virginia   & 100.0 & 88.54 & 75.51 \\
+  \hline
+  São Paulo   & 100.0 & 63.67 & 59.06 \\
+  \hline 
+  Paris    & 100.0 & 81.24  &  86.11    \\
+  \hline  
+
+\end{tabular}  
+\end{table}
+
+
+
+% \subsubsection{Metrics}
+
+%\tdjmn{Are solutions acceptable ? so which metrics can help the decision marker to accept the plan ? energy waste... everything for the discussion below...}
+
+% possible metrics:
+%\tdmv{suggestion of possible metrics:}
+
+To evaluate the environmental impact of the solution, we used metrics extracted from \cite{reddy2017_metrics}. The first metric, the Green Energy Coefficient (or GEC), is the ratio between the total green power generated and the DC total energy consumption, and it can illustrate the oversizing of the green power supply infrastructure. The second metric is the \ch{CO2} savings, which represents the emissions reduction after DC equipment upgrade or flexibility mechanisms. \ch{CO2} savings is computed as seen in Equation~\ref{eq:co2savings}, where: $CO2_{current}$ represents the system studied after the modifications (the result of the linear program for the sizing of PVs and batteries) and $CO2_{baseline}$ the system in its original state. Here, it was considered that $CO2_{baseline}$ has the same workload allocation of  $CO2_{current}$; the difference between the two is that  $CO2_{baseline}$ does not have PVs and batteries, and thus only consumes power from the grid. Table~\ref{tab:metrics} shows the computed values for both metrics. 
+
+
+
+
+
+
+\begin{equation} \label{eq:co2savings}
+  CO2_{savings} = \left( 1 -  \frac{CO2_{current}} {CO2_{baseline}} \right) \times 100 
+\end {equation}
+
+
+
+\begin{table}[!ht]
+  
+  \caption{Results of the sustainability metrics for the experiments}\label{tab:metrics} \centering
+
+  \begin{tabular}{|l|r|r|}
+    
+  \hline
+
+  \textbf{Location} &  \textbf{GEC} & \textbf{\ch{CO2} savings (\%)} \\
+  \hline
+  Johannesburg & 1.47 & 93.93 \\
+  \hline
+  Pune & 1.45 & 91.5 \\
+  \hline
+  Canberra & 1.57 & 89.59 \\
+  \hline
+  Dubai & 1.59  & 89.1 \\
+  \hline
+  Singapore & 1.42 & 85.75 \\
+  \hline     
+  Seoul & 1.53 & 82.51 \\
+  \hline
+  Virginia  & 1.46 & 75.99 \\
+  \hline
+  São Paulo &  0.5 & 20.05 \\
+  \hline 
+  Paris &  0.24  & 5.25 \\
+  \hline  
+
+\end{tabular}  
+\end{table}
+
+
+In order to assess the robustness of the sizing process for the area of PV panels and the capacity of the batteries, it is necessary to take into account other meteorological conditions, given that the DCs will operate for decades and not only for one year. The metric selected is the Mean Absolute Percentage Error (MAPE)  defined by: $ \frac{1}{n}\sum_{i=1}^{n}  \frac{| R_{i} - F_{i}|}{R_{i}}$, where $n$ represents the number of values being considered, $i$ the index of the value being considered, $R_{i}$ the real value for the year, and $F_{i}$ the estimated value (in this case, the computed sizing for the year 2021 that was used in the experiments). Table~\ref{tab:years_MAPE} presents the results of the MAPE for both the area of PV and capacity of the batteries when we solve the LP using as input the solar irradiation for the years 2018, 2019, and 2020. Results indicate a variation of less than 10\% in the different DCs over the years.
+
+
+
+\begin{table}[!ht]
+  
+  \caption{Evaluating sizing for different years using the MAPE metric (values are in \%) }\label{tab:years_MAPE} \centering
+
+  \begin{tabular}{|l|r|r|}
+   \hline
+    
+  \textbf{Location} &   \textbf{PV Area} & \textbf{Battery Capacity} \\
+  \hline
+  Johannesburg & 1.72 & 1.64  \\
+  \hline
+  Pune  & 3.72 & 0.76  \\
+  \hline
+  Canberra  & 8.62 & 4.25 \\
+  \hline
+  Dubai   & 2.31 & 2.88   \\
+  \hline
+  Singapore & 7.22 & 0.34 \\
+  \hline     
+  Seoul    & 3.15 & 1.11 \\
+  \hline
+  Virginia   & 2.2 & 0.87 \\
+  \hline
+  São Paulo   & 5.81 & 8.05 \\
+  \hline 
+  Paris    & 2.76 & 0     \\
+  \hline  
+
+\end{tabular}  
+\end{table}
+
+
+
+%     _                _           _                       _ 
+%    / \   _ __   __ _| |_   _ ___(_)___    __ _ _ __   __| |
+%   / _ \ | '_ \ / _` | | | | / __| / __|  / _` | '_ \ / _` |
+%  / ___ \| | | | (_| | | |_| \__ \ \__ \ | (_| | | | | (_| |
+% /_/   \_\_| |_|\__,_|_|\__, |___/_|___/  \__,_|_| |_|\__,_|
+%                        |___/                               
+%  ____  _                        _             
+% |  _ \(_)___  ___ _   _ ___ ___(_) ___  _ __  
+% | | | | / __|/ __| | | / __/ __| |/ _ \| '_ \ 
+% | |_| | \__ \ (__| |_| \__ \__ \ | (_) | | | |
+% |____/|_|___/\___|\__,_|___/___/_|\___/|_| |_|
+%
+\section{Analysis and Discussion}
+\label{sec:analysis-discussion_ccgrid}
+
+These results permit the evaluation of the carbon footprint impact of different electricity supply policies for Clouds. On the one hand, as shown in Table~\ref{tab:emissions}, there is a significant reduction to obtain by including renewable energy in the electricity sources of DCs. We observe a 5-fold decrease in the footprint in our experiments. % This reduction is intuitive
+Many Cloud providers have committed to using 100\% renewable energy supplies for their DCs in the following years. On the other hand, this objective of 100\% renewable is, in our opinion, more ideological than pragmatic, and there is more benefit to obtain by combining grid and renewable electricity. We observe in our experiments a further reduction of a fourth in the optimal solution compared to the 100\% renewable scenario. This study thus gives further insight into the debate of energy sources in Clouds.
+
+
+The locations used in this paper for the different DCs allow us to benefit from the diversity of latitudes, hemispheres, and climates, as shown in Figure~\ref{fig:dc_location}. This variety of longitudes and hemispheres permits mitigation of the impact of seasonal and daily variations of solar irradiation on electricity production and always has at least some DCs with good PV production, as shown in Figure~\ref{fig:pv_ghi}. The diversity of climates is highlighted by the case of Singapore's solar production, which is the second lowest with Paris, while its location close to the equator could permit better irradiation.
+
+
+% The locations used in this paper for the different DCs allow us to benefit from the diversity of latitudes, hemispheres, and climates. As shown in Figure~\ref{fig:dc_location}, the model includes 3 DCs in the southern hemisphere, 5 in the northern one, and Singapore almost on the equator. Considering the longitudes, two DCs are on the American continent, two on the African and European longitudes, while the 4 last ones are geographically distributed on the Asian and the Australian continents. This variety of longitudes and hemispheres permits mitigation of the impact of seasonal and daily variations of solar irradiation on electricity production and always has at least some DCs with good PV production, as shown in Figure~\ref{fig:pv_ghi}. The diversity of climates is highlighted by the case of Singapore's solar production, which is the second lowest with Paris, while its location close to the equator could permit better irradiation.
+
+As indicated in Table~\ref{tab:carbonfootprint}, we observe significant heterogeneity in the carbon footprint of grid electricity of the different DCs, %Paris and S\~ao Paulo have the lowest electricity footprint, close to 50 g \ch{CO2}-eq/kWh, four DCs with a grid footprint between 300 and 600 g \ch{CO2}-eq/kWh (Virginia, Seoul, Singapore, and Dubai), Pune just over 700 g \ch{CO2}-eq/kWh and the most carbon-intensive grid electricity is in Johannesburg with more than 900 g \ch{CO2}-eq/kWh.
+%This heterogeneity 
+which results in two categories for the optimal solution: i) Paris and S\~ao Paulo, DCs with a reduced number of PVs and batteries (no battery in Paris), and ii) the other locations have quite similar sizes of PV and batteries. In the second category, the larger PV area is mainly associated with low solar irradiation. It might appear counterintuitive to allocate more PVs to locations with lower solar production, but this is more comprehensive considering the static part of the power consumption of DCs. When the workload is mainly sent to locations with solar production, the electricity consumption of DC also includes a static part for the idle consumption of servers and the interconnection network, as referred to in Equation~\eqref{eq:power_cons}. This static electricity consumption implies either using the carbon-intensive grid or a sizing of PV and batteries that matches the demand, even during winter days of low PV production. This results in a large PV and battery sizing --- the PVs are producing up to 1.6 times the DC energy consumption  as seen in Table~\ref{tab:metrics} --- and, as shown in Figure~\ref{fig:energy_ratio_daily}, the grid energy consumption of these DCs is very low. 
+
+
+The results for Paris and S\~ao Paulo show the carbon footprint of ESDs compared to grid electricity. There is a small benefit in S\~ao Paulo for intensive usage, so with reduced sizing, there is no benefit in Paris to using batteries. The PV sizing on these DCs is reduced, probably due to the fact that little energy can be stored in case of overproduction.
+
+The detail of hourly electricity consumption is highlighted in Figure~\ref{fig:power_ratio_hourly}. The workload is allocated in DCs with PV production. If all this production is used, or the corresponding DCs are full, then the allocation is driven by the battery state of charge, and when none of these possibilities are available, the allocation is for the DC with the lowest grid electricity footprint. For example, in the last hours, the electricity consumption of the different DCs is furnished by battery discharge, in the limit of a state of charge, and the remaining is allocated in the DCs of Paris, S\~ao Paulo, and Virginia. Thus, the DC of Virginia consumes grid electricity in two cases: either when Paris and S\~ao Paulo DC are full (from hours 10 to 24), or when the DC is empty and only local electricity can be used (hours 3, 5, and 6 in Figure~\ref{fig:power_ratio_hourly}). The follow-the-sun approach can be partially observed between hour 7 and 8, when Seoul PV production fall and the workload is transferred to Paris, with grid consumption.  Then, at hour 10, the same append between PV production in Singapore and grid electricity in S\~ao Paulo and at hour 11 between Pune and Virginia. The figure also shows the impact of location, season, and PV sizing on the solar production between Pune and Canberra, large PV production in the best hours, and the tiny production in Paris.
+
+Table~\ref{tab:dcutilization} presents the impact of the different scenarios for energy sources on the load of the different DCs. In the first scenario, the workload is only allocated based on the grid electricity footprint. Thus, we could expect the workload order to be the same as the footprint order per kWh. However, the consumption does not only depend on the workload but also the PUE of the different DCs. We can thus observe a higher workload in Dubai compared to Singapore, considering that Dubai has electricity with a slightly higher footprint but the lowest PUE. Globally, the range of values highlights the workload variations, requesting at least 4 DCs, at most 8, and most of the time 7. The second scenario considers a model without grid electricity. The allocation is surprisingly distinct from the solar irradiation of the different DCs. For example, the DC of Paris has the lowest yearly irradiation but the median workload in this scenario. Its workload is higher than the one in Johannesburg, which has the second-highest yearly irradiation and is on a similar longitude. The workload is thus not only driven by yearly irradiation. The extremely low PV production in Paris during winter, associated with the static part of the electricity consumption in each data center, implies a high sizing of PV and battery, which lead to a high production during the other seasons that permit a large workload. On Johannesburg, the seasonal variation is lower, so static constraints do not drive PV sizing. Another surprising result is that the DCs with the lowest workload in this scenario are the 4 in the southern hemisphere (including Singapore). This contradicts the intuition of ``follow-the-summer'' allocation. The case of S\~ao Paulo and Canberra could be similar to the one of Johannesburg with the value of the minimal daily production in Virginia and Seoul. The largest workload concerns DCs with the more stable production (Dubai and Pune) and the lowest minimum daily production (Virginia, Paris, and Seoul). Finally, for the last complete scenario, the DCs with the largest workload are the 3 with the largest irradiation (Dubai, Pune, and Johannesburg), followed by Paris with the lowest grid electricity footprint. The only surprise is the workload of S\~ao Paulo, which is low considering its low grid electricity footprint and high solar irradiation, and the workload of Singapore, which is high considering its low PV production. Concerning S\~ao Paulo, this is probably because it has the second-lowest grid footprint. This implies a low battery sizing, thus a low PV sizing, and finally, it mainly receives workload only when no more DC can provide electricity from PV or battery discharge, and when the DC of Paris is full, that makes many constraints. Considering Singapore, it is probably due to its position close to the equator, which implies no ``winter'' season, and its large PV sizing. Finally, the reduction of carbon footprint of each DC between the complete scenario (PV + bat + grid) and the scenario with only grid electricity is showed in Table~\ref{tab:metrics}. It shows a small decrease in Paris and S\~ao Paulo, and a large decrease in the other locations, correlated to the electricity footprint.
+
+%\tdfd{add comments on the results on the different years}
+%\tdmv{suggestion of intuitive and non intuitive results}
+
+%Intuitive:
+
+%\begin{itemize}
+
+  %\item Regions with carbon-intensive grid energy needed more PV and batteries, and regions with low carbon-intensive (as Paris and São Paulo) didn't need as much (Figure 2).
+  %\item Most data centers are supplied by solar energy to avoid using the grid because it is carbon intensive. With the exception of Paris and São Paulo (with low-carbon intensive electricity), the usage of grid power happened in the winter, when there is less solar irradiation in the location of the DCs (figure 3)
+  %\item When the solar power production rate for a time slot drops at a given DC x, the power consumption at dc x also drops, and the power consumption increases at the next time slot at a DC y (follow the renewables approach as seen in Figure 4)
+  %\item Using only power from the grid generate significantly more carbon emissions (table 5)
+%  \item the locations with the highest carbon-intensive grid had the highest co2 savings
+%  \end{itemize}
+
+ 
+%Non-intuitive:
+
+%\begin{itemize}
+%\item the scenarion with grid + pv and batteries resulted in less carbon emissions than the scenarion with full pv and batteries, because the emissions from manufacturing are often neglected (table 5)
+%\item in the full grid scenario, Dubai had a higher average load than Singapore, even if it had a lower carbon-intensive grid  (table 6), because of difference of the PUE value, that is, even if the energy is less carbon-intensive, more power will be consumed to cool the DC
+%\item São Paulo has the second most lower carbon-intensive regular grid, however was the DC less used (with the smaller average load) (table 6), maybe other regions receive more irradiance, or because they produce more green energy given that they have more pvs and batteries, and therefore use less the grid
+%\end{itemize}
+
+
+% other Items that can be discussed
+%\begin{itemize}
+  
+%\item Fanny comments on intuitive results of table 6.
+%\item Considering the specific characteristics of each region (solar irradiation received throughout the year, energy mix of the regular electricity grid, and the carbon emissions) it is possible to find a better solution than the naive approach of considering 100\% PVs and batteries
+%\item the global scenario of modern cloud computing allows us to explore the follow-the-renewables approach and use more green energy (low carbon energy), specifically to deal with the question of intermittency between the seasons and throughout the day (day/night)
+%\item Solving the two problems at once: scheduling and sizing, allows for a better result because it includes both operations of the IT part (scheduling the workload) and the electrical part (charging or discharging the batteries)
+%\item Metrics shows that including PV and batteries are able to reduce the \ch{CO2} emissions significantly, and for some regions that already have green, there is not a great impact so that decision-makers could prioritize some regions
+%moved to conclusion \item flexibility to model other scenarios: more DCs, other values for carbon emissions, carbon emissions per time slot, other workloads, etc ...
+  
+%\end{itemize}
+
+
+%   ____                 _           _             
+%  / ___|___  _ __   ___| |_   _ ___(_) ___  _ __  
+% | |   / _ \| '_ \ / __| | | | / __| |/ _ \| '_ \ 
+% | |__| (_) | | | | (__| | |_| \__ \ | (_) | | | |
+%  \____\___/|_| |_|\___|_|\__,_|___/_|\___/|_| |_|
+%
+\section{Summary}
+\label{sec:conclusion_ccgrid}
+
+In this paper, we tackled the problem of greening a distributed cloud data center (DC) federation to lower its carbon footprint. The IT part of the cloud platform already exists, and the idea is to add the equipment on site to introduce renewable energy into the brown energy from the classical grid into the power supply of the DCs. Since the sun is shining everywhere on earth, we have proposed photovoltaic panels (PVs) to produce renewable energy and batteries as storage devices to mitigate the intrinsic intermittency of this energy during the day. The question is how to size the PV array and associated battery size, given an existing federation of DCs distributed around the earth.
+We have provided a formulation of the problem as a linear program. The particularity of our formulation is that we do not need integer variables; a solution is possible using only real variables given our objective and the context of the problem. As a result, the linear program allows to optimally solve large problem sizes, e.g., minimize the carbon footprint of a nine-site federation, each with its own weather conditions, upon a one-year horizon, hour by hour. We have demonstrated that our program is able to calculate the optimal sizing for PVs and batteries in just a few minutes. Numerous experiments have brought forward results that we have analyzed and discussed to explain what these results express. As an example, an interesting result, depending on the DC locations considered, the optimal solution to reduce the carbon footprint is a hybrid configuration between using PVs and the regular electrical grid. Moreover, batteries are not always mandatory in each location. As an example, an interesting result, depending on the DC locations considered, the optimal solution to reduce the carbon footprint is to maintain an energy mix through a hybrid configuration including both PVs and a classical grid where the production is low carbon instead of proposing an all renewable platform. Moreover, batteries are not always mandatory in each location. Furthermore
+Finally, our model has the flexibility to be extended to assess other scenarios (more DCs, other locations, values for  carbon emissions, or workloads) and it may help decision-makers build their strategy to reduce the environmental impact of the cloud operation. 
+
+In future work, we plan to propose a sizing process that also includes the IT part. Since this investment has been made for years, another perspective is to introduce uncertainty into this sizing process to obtain a more robust distributed DC platform that can provide satisfying service to clients even if the weather conditions change and the submitted workload evolves. The goal always being to remain as virtuous as possible.

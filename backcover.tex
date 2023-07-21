@@ -1,0 +1,41 @@
+\areaset[0pt]{\paperwidth}{\paperheight}  % hack to reset margins
+%
+\newlength{\bcmargin}\setlength{\bcmargin}{1.4cm}  % back cover margin length
+%
+\centering
+%
+\null\vspace*{\dimexpr\bcmargin-\headsep\relax}
+%
+\begin{minipage}{\dimexpr\paperwidth-\bcmargin-\bcmargin\relax}
+%
+\pdfbookmark[0]{Back Cover}{Back Cover}
+%
+\noindent{\usekomafont{section}Abstract}\par
+%
+%\let\par\relax
+%\begin{tiny}
+\begin{spacing}{1.0}
+{\footnotesize
+\input{abstract-en}
+}
+\end{spacing}
+%\end{tiny}
+%Some text
+%
+\vspace{3ex}\hrule\vspace{2ex}
+%
+\begin{otherlanguage}{french}
+%
+\noindent{\usekomafont{section}Résumé}\par
+%
+%\let\par\relax
+\begin{spacing}{1.0}
+{\footnotesize
+\input{abstract-fr}
+}
+\end{spacing}
+%Some text
+%
+\end{otherlanguage}
+%
+\end{minipage}
