@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  21 JUL 2023 11:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  26 JUL 2023 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main_uga
+**main_uga.tex
 (./main_uga.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
@@ -2156,27 +2156,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-
-! LaTeX Error: File `img/logo_Univ_Grenoble' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 \MakeUGthesePDG
-                      % actually generate the title page
-? 
-
-! LaTeX Error: File `img/logo_uga' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 \MakeUGthesePDG
-                      % actually generate the title page
-? 
+<imgs/logo_Univ_Grenoble.pdf, id=30, 148.3944pt x 148.3944pt>
+File: imgs/logo_Univ_Grenoble.pdf Graphic file (type pdf)
+<use imgs/logo_Univ_Grenoble.pdf>
+Package pdftex.def Info: imgs/logo_Univ_Grenoble.pdf  used on input line 52.
+(pdftex.def)             Requested size: 148.39403pt x 148.39403pt.
+<imgs/logo_uga.png, id=32, 1711.39375pt x 1109.14375pt>
+File: imgs/logo_uga.png Graphic file (type png)
+<use imgs/logo_uga.png>
+Package pdftex.def Info: imgs/logo_uga.png  used on input line 52.
+(pdftex.def)             Requested size: 87.79436pt x 56.9055pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.89993pt on input line 52.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -2190,10 +2179,6 @@ LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
 (Font)              scaled to size 9.89993pt on input line 52.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.19989pt on input line 52.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <18> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 52.
-LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 (Font)              scaled to size 16.19989pt on input line 52.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 16.19989pt on input line 52.
@@ -2224,9 +2209,9 @@ Underfull \vbox (badness 10000) detected at line 52
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warning (ext4): dest
-ination with the same identifier (name{page.}) has been already used, duplicate
- ignored
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imgs/logo_Univ_Grenoble.
+pdf> <./imgs/logo_uga.png>]pdfTeX warning (ext4): destination with the same ide
+ntifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.55 \clearpage{\pagestyle{empty}\cleardoublepage
@@ -2355,7 +2340,7 @@ chapter without number
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Overfull \hbox (7.98851pt too wide) in paragraph at lines 24--24
+Overfull \hbox (7.98851pt too wide) in paragraph at lines 26--26
  \T1/bch/m/n/10.95 (-20) lar grid. Source for grid emis-sions: elec-tric-i-tyMa
 p, climate-transparency.org.[] []  
  []
@@ -2432,7 +2417,7 @@ Overfull \hbox (10.94998pt too wide) in paragraph at lines 21--21
  []
 
 (./chap-smartgreens.tex [9] [10] [11] [12]
-<images/topology.PNG, id=398, 722.7pt x 722.7pt>
+<images/topology.PNG, id=414, 722.7pt x 722.7pt>
 File: images/topology.PNG Graphic file (type png)
 <use images/topology.PNG>
 Package pdftex.def Info: images/topology.PNG  used on input line 88.
@@ -2463,7 +2448,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [18] [19] [20]
-<images/workloads.png, id=460, 505.89pt x 505.89pt>
+<images/workloads.png, id=476, 505.89pt x 505.89pt>
 File: images/workloads.png Graphic file (type png)
 <use images/workloads.png>
 Package pdftex.def Info: images/workloads.png  used on input line 245.
@@ -2472,7 +2457,7 @@ Package pdftex.def Info: images/workloads.png  used on input line 245.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22 <./images/workloads.png (PNG copy)>]
-<images/pv_pow_photovolta.pdf, id=478, 722.7pt x 433.62pt>
+<images/pv_pow_photovolta.pdf, id=494, 722.7pt x 433.62pt>
 File: images/pv_pow_photovolta.pdf Graphic file (type pdf)
 <use images/pv_pow_photovolta.pdf>
 Package pdftex.def Info: images/pv_pow_photovolta.pdf  used on input line 261.
@@ -2510,103 +2495,429 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 chapter 4.
 
-Overfull \hbox (10.94998pt too wide) in paragraph at lines 32--32
+Overfull \hbox (10.94998pt too wide) in paragraph at lines 29--29
 [][][][][][][][] 
  []
 
-(./chap-ccgrid.tex [35] [36] [37] [38] [39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
-[41]
-Underfull \hbox (badness 2221) in paragraph at lines 145--146
+(./chap-ccgrid.tex [35] [36] [37] [38] [39] [40]
+Underfull \hbox (badness 2221) in paragraph at lines 129--130
 []|\T1/bch/m/n/10.95 (+20) solar ir-ra-di-a-tion at time slot $\OML/lmm/m/it/10
 .95 k$
  []
 
+[41] [42] [43] [44] [45]
+Underfull \vbox (badness 1314) has occurred while \output is active []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
-[43] [44] [45] [46]
-
-LaTeX Warning: Reference `sec:problemStatement' on page 47 undefined on input l
-ine 249.
-
-
-Underfull \vbox (badness 7540) has occurred while \output is active []
-
- [47]
-[48]
-
-LaTeX Warning: Reference `sec:analysis-discussion' on page 49 undefined on inpu
-t line 320.
-
-
-LaTeX Warning: Reference `appendix:artifact' on page 49 undefined on input line
- 358.
-
-[49]
-<images/locations.pdf, id=721, 722.7pt x 433.62pt>
+ [46]
+[47] [48] [49]
+<images/locations.pdf, id=740, 722.7pt x 433.62pt>
 File: images/locations.pdf Graphic file (type pdf)
 <use images/locations.pdf>
-Package pdftex.def Info: images/locations.pdf  used on input line 395.
-(pdftex.def)             Requested size: 197.391pt x 118.43535pt.
+Package pdftex.def Info: images/locations.pdf  used on input line 294.
+(pdftex.def)             Requested size: 394.78203pt x 236.8707pt.
  [50]
-<images/pv_ghi.pdf, id=734, 722.7pt x 722.7pt>
+<images/pv_ghi.pdf, id=754, 722.7pt x 722.7pt>
 File: images/pv_ghi.pdf Graphic file (type pdf)
 <use images/pv_ghi.pdf>
-Package pdftex.def Info: images/pv_ghi.pdf  used on input line 466.
+Package pdftex.def Info: images/pv_ghi.pdf  used on input line 324.
 (pdftex.def)             Requested size: 394.78203pt x 394.78448pt.
- [51 <./images/locations.pdf>]
 
-LaTeX Warning: Reference `sec:footprintmodel' on page 52 undefined on input lin
-e 473.
+Underfull \vbox (badness 1137) has occurred while \output is active []
 
-[52 <./images/pv_ghi.pdf>]
-Underfull \vbox (badness 2393) has occurred while \output is active []
-
- [53]
-<images/sizing.pdf, id=767, 722.7pt x 433.62pt>
+ [51 <./images/locations.pdf>] [52 <./images/pv_ghi.pdf>] [53]
+<images/sizing.pdf, id=786, 722.7pt x 433.62pt>
 File: images/sizing.pdf Graphic file (type pdf)
 <use images/sizing.pdf>
-Package pdftex.def Info: images/sizing.pdf  used on input line 523.
-(pdftex.def)             Requested size: 197.391pt x 118.43535pt.
-
-
-LaTeX Warning: Reference `sec:experiments' on page 54 undefined on input line 5
-28.
-
-<images/energy_ratio.pdf, id=771, 722.7pt x 1517.67pt>
+Package pdftex.def Info: images/sizing.pdf  used on input line 378.
+(pdftex.def)             Requested size: 394.78203pt x 236.8707pt.
+ [54 <./images/sizing.pdf>]
+<images/energy_ratio.pdf, id=800, 722.7pt x 1517.67pt>
 File: images/energy_ratio.pdf Graphic file (type pdf)
 <use images/energy_ratio.pdf>
-Package pdftex.def Info: images/energy_ratio.pdf  used on input line 538.
-(pdftex.def)             Requested size: 185.54803pt x 389.6523pt.
-<images/power_source_hour.pdf, id=772, 867.24pt x 1662.21pt>
+Package pdftex.def Info: images/energy_ratio.pdf  used on input line 390.
+(pdftex.def)             Requested size: 315.82681pt x 663.23795pt.
+
+
+LaTeX Warning: Float too large for page by 60.63766pt on input line 393.
+
+<images/power_source_hour.pdf, id=801, 867.24pt x 1662.21pt>
 File: images/power_source_hour.pdf Graphic file (type pdf)
 <use images/power_source_hour.pdf>
-Package pdftex.def Info: images/power_source_hour.pdf  used on input line 550.
-(pdftex.def)             Requested size: 197.391pt x 378.31824pt.
-[54 <./images/sizing.pdf>]
+Package pdftex.def Info: images/power_source_hour.pdf  used on input line 400.
+(pdftex.def)             Requested size: 335.56712pt x 643.16129pt.
+
+LaTeX Warning: Float too large for page by 40.561pt on input line 403.
+
+[55] [56 <./images/energy_ratio.pdf>] [57 <./images/power_source_hour.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55 <./images/energy_ratio.pdf>] [56 <./images/power_source_hour.pdf>] [57] [5
-8] [59]
-[60]
+ [58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+[60]
+Underfull \vbox (badness 2326) has occurred while \output is active []
 
  [61]
-[62]) (./chap-conclusion.tex [63] [64
+[62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+[64]) [65] [66
 
 
 ]
 chapter 5.
 
+Overfull \hbox (10.94998pt too wide) in paragraph at lines 40--40
+[][][][][][][][] 
+ []
+
+(./chap-extension-ccgrid.tex [67]
+
+LaTeX Warning: Reference `fig:pv_boxplots' on page 68 undefined on input line 2
+1.
+
+
+LaTeX Warning: Reference `fig:pv_boxplots' on page 68 undefined on input line 2
+1.
+
+[68]
+<images/pv_boxplots_1980_2009.pdf, id=899, 722.7pt x 433.62pt>
+File: images/pv_boxplots_1980_2009.pdf Graphic file (type pdf)
+<use images/pv_boxplots_1980_2009.pdf>
+Package pdftex.def Info: images/pv_boxplots_1980_2009.pdf  used on input line 2
+6.
+(pdftex.def)             Requested size: 260.55757pt x 156.33466pt.
+<images/bat_boxplots_1980_2009.pdf, id=900, 722.7pt x 433.62pt>
+File: images/bat_boxplots_1980_2009.pdf Graphic file (type pdf)
+<use images/bat_boxplots_1980_2009.pdf>
+Package pdftex.def Info: images/bat_boxplots_1980_2009.pdf  used on input line 
+34.
+(pdftex.def)             Requested size: 260.55757pt x 156.33466pt.
+
+
+LaTeX Warning: Reference `fig:pv_boxplots' on page 69 undefined on input line 4
+0.
+
+
+LaTeX Warning: Reference `fig:bat_boxplots' on page 69 undefined on input line 
+40.
+
+[69 <./images/pv_boxplots_1980_2009.pdf> <./images/bat_boxplots_1980_2009.pdf>]
+
+LaTeX Warning: Reference `tab:co2_10y' on page 70 undefined on input line 48.
+
+
+Underfull \vbox (badness 3148) has occurred while \output is active []
+
+ [70]
+
+LaTeX Warning: Reference `eq:wt_power_prod' on page 71 undefined on input line 
+82.
+
+
+LaTeX Warning: Citation 'li2020_wtlca' on page 71 undefined on input line 96.
+
+
+LaTeX Warning: Reference `eq:wt_power_prod' on page 71 undefined on input line 
+96.
+
+
+LaTeX Warning: Reference `tab:co2_pv_wt_grid' on page 71 undefined on input lin
+e 96.
+
+
+LaTeX Warning: Reference `eq:fp_using_wt' on page 71 undefined on input line 96
+.
+
+[71]
+
+LaTeX Warning: Reference `eq:new_pv_power' on page 72 undefined on input line 1
+40.
+
+
+LaTeX Warning: Reference `eq:new_renewable_power' on page 72 undefined on input
+ line 140.
+
+[72]
+
+LaTeX Warning: Reference `eq:new_obj_co2' on page 73 undefined on input line 15
+1.
+
+
+LaTeX Warning: Reference `tab:total_wind_and_pv_co2' on page 73 undefined on in
+put line 157.
+
+
+LaTeX Warning: Reference `tab:results_wt' on page 73 undefined on input line 17
+8.
+
+[73]
+
+LaTeX Warning: Reference `fig:wind_bat' on page 74 undefined on input line 214.
+
+
+
+LaTeX Warning: Reference `fig:wind_pv' on page 74 undefined on input line 214.
+
+<images/pv_area_vs_wind_turbines.png, id=948, 602.25pt x 652.68843pt>
+File: images/pv_area_vs_wind_turbines.png Graphic file (type png)
+<use images/pv_area_vs_wind_turbines.png>
+Package pdftex.def Info: images/pv_area_vs_wind_turbines.png  used on input lin
+e 218.
+(pdftex.def)             Requested size: 197.391pt x 213.92384pt.
+<images/bat_cap_wind_turbine.png, id=949, 602.25pt x 652.68843pt>
+File: images/bat_cap_wind_turbine.png Graphic file (type png)
+<use images/bat_cap_wind_turbine.png>
+Package pdftex.def Info: images/bat_cap_wind_turbine.png  used on input line 22
+6.
+(pdftex.def)             Requested size: 197.391pt x 213.92384pt.
+
+Underfull \vbox (badness 7704) has occurred while \output is active []
+
+ [74 <./images/pv_area_vs_wind_turbines.png (PNG copy)>]
+
+LaTeX Warning: Reference `tab:grid_emissions_hist' on page 75 undefined on inpu
+t line 239.
+
+
+Overfull \hbox (31.525pt too wide) in paragraph at lines 246--271
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75 <./images/bat_cap_wind_turbine.png (PNG copy)>]
+
+LaTeX Warning: Reference `tab:co2_grid_granularities' on page 76 undefined on i
+nput line 277.
+
+
+LaTeX Warning: Reference `fig:pv_grid_co2_sizing' on page 76 undefined on input
+ line 277.
+
+
+LaTeX Warning: Reference `fig:bat_grid_co2_sizing' on page 76 undefined on inpu
+t line 277.
+
+[76]
+<images/sizing_pv_grid_co2.png, id=967, 752.8125pt x 622.57594pt>
+File: images/sizing_pv_grid_co2.png Graphic file (type png)
+<use images/sizing_pv_grid_co2.png>
+Package pdftex.def Info: images/sizing_pv_grid_co2.png  used on input line 301.
+
+(pdftex.def)             Requested size: 394.78203pt x 326.49628pt.
+<images/sizing_bat_grid_co2.png, id=968, 903.375pt x 622.57594pt>
+File: images/sizing_bat_grid_co2.png Graphic file (type png)
+<use images/sizing_bat_grid_co2.png>
+Package pdftex.def Info: images/sizing_bat_grid_co2.png  used on input line 309
+.
+(pdftex.def)             Requested size: 394.78203pt x 272.07231pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77 <./images/sizing_pv_grid_co2.png (PNG copy)>] [78 <./images/sizing_bat_gri
+d_co2.png (PNG copy)>]
+
+LaTeX Warning: Reference `tab:workload_emissions' on page 79 undefined on input
+ line 347.
+
+
+LaTeX Warning: Reference `tab:dcu_years' on page 79 undefined on input line 364
+.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
+
+LaTeX Warning: Reference `tab:mapes_pv' on page 80 undefined on input line 401.
+
+
+
+LaTeX Warning: Reference `tab:mapes_bat' on page 80 undefined on input line 401
+.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+
+LaTeX Warning: Citation 'gupta2021_chasingcarbon' on page 81 undefined on input
+ line 469.
+
+[81]
+
+LaTeX Warning: Reference `tab:servers_specs' on page 82 undefined on input line
+ 474.
+
+[82]
+
+LaTeX Warning: Reference `eq:dc_cpu_capacity' on page 83 undefined on input lin
+e 517.
+
+
+LaTeX Warning: Reference `eq:rep_only_existing_servers' on page 83 undefined on
+ input line 524.
+
+[83]
+
+LaTeX Warning: Reference `eq:workload_gen' on page 84 undefined on input line 5
+32.
+
+
+LaTeX Warning: Reference `eq:wkgen' on page 84 undefined on input line 545.
+
+
+LaTeX Warning: Reference `eq:power_servers_gen' on page 84 undefined on input l
+ine 557.
+
+
+LaTeX Warning: Reference `eq:power_cons_gen' on page 84 undefined on input line
+ 557.
+
+[84]
+
+LaTeX Warning: Reference `eq:workload_category' on page 85 undefined on input l
+ine 570.
+
+
+LaTeX Warning: Reference `eq:co2_new_servers' on page 85 undefined on input lin
+e 579.
+
+
+LaTeX Warning: Reference `eq:co2_rep_servers' on page 85 undefined on input lin
+e 587.
+
+
+LaTeX Warning: Reference `eq:amortizedCO2' on page 85 undefined on input line 5
+87.
+
+
+LaTeX Warning: Reference `eq:co2_existing_servers' on page 85 undefined on inpu
+t line 607.
+
+
+LaTeX Warning: Reference `eq:serverCO2' on page 85 undefined on input line 607.
+
+
+[85]
+
+LaTeX Warning: Reference `eq:new_obj_co2_servers' on page 86 undefined on input
+ line 623.
+
+
+Overfull \hbox (26.22293pt too wide) detected at line 627
+[] [] []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 FPgrid[] \OT1/lmr/m/n/10.95 + \
+OML/lmm/m/it/10.95 FPpv[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10.95 FPwt[]\OT1/l
+mr/m/n/10.95 ) + [] \OML/lmm/m/it/10.95 FPbat[] \OT1/lmr/m/n/10.95 + \OML/lmm/m
+/it/10.95 FPns[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10.95 FPrep[] \OT1/lmr/m/n/
+10.95 + \OML/lmm/m/it/10.95 FPes[]
+ []
+
+
+LaTeX Warning: Reference `eq:low_bound_bat' on page 86 undefined on input line 
+629.
+
+
+LaTeX Warning: Reference `eq:low_bound_pv' on page 86 undefined on input line 6
+29.
+
+
+LaTeX Warning: Reference `eq:low_bound_wt' on page 86 undefined on input line 6
+29.
+
+[86]
+
+LaTeX Warning: Reference `fig:dc_evolution_year_by_year' on page 87 undefined o
+n input line 644.
+
+
+LaTeX Warning: Reference `fig:dc_evolution_optimal' on page 87 undefined on inp
+ut line 644.
+
+<images/dc_evolution_year_by_year.pdf, id=1038, 722.7pt x 1734.48pt>
+File: images/dc_evolution_year_by_year.pdf Graphic file (type pdf)
+<use images/dc_evolution_year_by_year.pdf>
+Package pdftex.def Info: images/dc_evolution_year_by_year.pdf  used on input li
+ne 653.
+(pdftex.def)             Requested size: 197.391pt x 473.7414pt.
+<images/dc_evolution_optimal.pdf, id=1039, 722.7pt x 1734.48pt>
+File: images/dc_evolution_optimal.pdf Graphic file (type pdf)
+<use images/dc_evolution_optimal.pdf>
+Package pdftex.def Info: images/dc_evolution_optimal.pdf  used on input line 65
+9.
+(pdftex.def)             Requested size: 197.391pt x 473.7414pt.
+
+LaTeX Warning: Citation 'jordan2015_pvdegradationrate' on page 87 undefined on 
+input line 668.
+
+
+Overfull \hbox (80.39963pt too wide) in paragraph at lines 668--669
+\T1/bch/m/n/10.95 (-20) The me-dian of PV mod-ules degra-da-tion is around 0.5%
+ per year [[]]. 
+ []
+
+
+LaTeX Warning: Reference `eq:pricegrid' on page 87 undefined on input line 680.
+
+
+
+LaTeX Warning: Reference `tab:grid_price' on page 87 undefined on input line 68
+0.
+
+[87] [88 <./images/dc_evolution_year_by_year.pdf> <./images/dc_evolution_optima
+l.pdf>]
+
+LaTeX Warning: Reference `eq:pricebat' on page 89 undefined on input line 719.
+
+
+LaTeX Warning: Reference `eq:pricepv' on page 89 undefined on input line 726.
+
+[89]
+
+LaTeX Warning: Reference `eq:pricewt' on page 90 undefined on input line 735.
+
+
+LaTeX Warning: Reference `eq:objective_price' on page 90 undefined on input lin
+e 742.
+
+
+LaTeX Warning: Reference `tab:total_price' on page 90 undefined on input line 7
+48.
+
+
+LaTeX Warning: Reference `eq:objective_price' on page 90 undefined on input lin
+e 748.
+
+[90] [91]
+
+LaTeX Warning: Reference `eq:alpha' on page 92 undefined on input line 814.
+
+
+LaTeX Warning: Reference `eq:beta' on page 92 undefined on input line 816.
+
+
+LaTeX Warning: Reference `eq:beta_capacity' on page 92 undefined on input line 
+823.
+
+
+LaTeX Warning: Reference `tab:flex_scheduling' on page 92 undefined on input li
+ne 852.
+
+[92]) (./chap-conclusion.tex [93] [94
+
+
+]
+chapter 6.
+
 Overfull \hbox (10.94998pt too wide) in paragraph at lines 1--1
 [][][][][][][][] 
  []
 
-[65])) [66]
+[95])) [96]
 chapter without number
 [1
 
@@ -2669,21 +2980,41 @@ Package rerunfilecheck Info: File `main_uga.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main_uga
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main_uga.run.xml'.
 \openout1 = `main_uga.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 52181 strings out of 481239
- 1050682 string characters out of 5920378
- 1896727 words of memory out of 5000000
- 65850 multiletter control sequences out of 15000+600000
- 800264 words of font info for 444 fonts, out of 8000000 for 9000
+ 52388 strings out of 481239
+ 1054742 string characters out of 5920378
+ 1896732 words of memory out of 5000000
+ 65943 multiletter control sequences out of 15000+600000
+ 804380 words of font info for 457 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,21n,107p,10099b,3495s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
-st, replaced by a fixed one
+ 76i,21n,107p,10103b,3495s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
 , replaced by a fixed one
@@ -2709,6 +3040,12 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
+pdfTeX warning (dest): name{chapter*.27} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
+, replaced by a fixed one
+
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvip
 s/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
 re/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
@@ -2729,10 +3066,10 @@ lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share
 /texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/bookman/ubkli8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
-bo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main_uga.pdf (89 pages, 1775254 bytes).
+r8a.pfb>
+Output written on main_uga.pdf (119 pages, 2401575 bytes).
 PDF statistics:
- 1234 PDF objects out of 1440 (max. 8388607)
- 236 named destinations out of 1000 (max. 500000)
- 87645 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 1548 PDF objects out of 1728 (max. 8388607)
+ 336 named destinations out of 1000 (max. 500000)
+ 89331 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -21,8 +21,17 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Selected locations for the data centers.\relax }}{51}{figure.caption.17}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Average daily solar irradiation per location throughout the year 2021.\relax }}{52}{figure.caption.18}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Optimal result for the area of PV panels and capacity of the batteries.\relax }}{54}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Composition of the DCs' daily energy consumption throughout the year considering the different sources of energy, where 1.0 is the DC's total energy consumption.\relax }}{55}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Composition of the DCs' hourly power consumption throughout the first day of the year. Time follows the Universal Time (UT) standard.\relax }}{56}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Composition of the DCs' daily energy consumption throughout the year considering the different sources of energy, where 1.0 is the DC's total energy consumption.\relax }}{56}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Composition of the DCs' hourly power consumption throughout the first day of the year. Time follows the Universal Time (UT) standard.\relax }}{57}{figure.caption.22}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Different PV sizing using irradiation from 30 years (1980 - 2009).\relax }}{69}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Different battery sizing using irradiation from 30 years (1980 - 2009).\relax }}{69}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces PV Area sizing when the WT are and are not included \relax }}{74}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Battery capacity sizing when the WT are and are not included \relax }}{75}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces PV sizing with different granularity for grid \ch {CO2} emissions data\relax }}{77}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Battery sizing with different granularity for grid \ch {CO2} emissions data \relax }}{78}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Sizing with information of the current year.\relax }}{88}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Sizing knowing all information of the 10 years.\relax }}{88}{figure.caption.45}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {french}{}

@@ -39,30 +39,41 @@
 \contentsline {section}{\numberline {4.2}Problem statement}{37}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Addressed problem}{37}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Models and notations}{39}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}IT part model}{41}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}IT part model}{39}{subsubsection.4.2.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2.2}Workload model}{41}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}Electrical part model}{43}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Electrical part model}{42}{subsubsection.4.2.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.2.4}Footprint model}{44}{subsubsection.4.2.2.4}%
-\contentsline {subsection}{\numberline {4.2.3}Objective function}{46}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Objective function}{45}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Optimal resolution}{46}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Constraints to address the workload}{47}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Constraints to reach the power demand}{48}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Constraints on batteries}{48}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Linear program}{49}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Experiments}{50}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Settings}{50}{subsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Cloud infrastructure}{50}{subsubsection.4.4.1.1}%
+\contentsline {subsection}{\numberline {4.3.2}Constraints to reach the power demand}{47}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Constraints on batteries}{47}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Linear program}{48}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Experiments}{49}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Settings}{49}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Cloud infrastructure}{49}{subsubsection.4.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.4.1.2}Workload}{51}{subsubsection.4.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.4.1.3}Photovoltaic power production}{52}{subsubsection.4.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.4.1.4}Carbon footprint}{52}{subsubsection.4.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Photovoltaic power production}{51}{subsubsection.4.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.4.1.4}Carbon footprint}{53}{subsubsection.4.4.1.4}%
 \contentsline {subsubsection}{\numberline {4.4.1.5}Execution environment}{53}{subsubsection.4.4.1.5}%
 \contentsline {subsection}{\numberline {4.4.2}Results}{54}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Analysis and Discussion}{58}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Summary}{62}{section.4.6}%
-\contentsline {chapter}{\numberline {5}General Discussion}{65}{chapter.5}%
-\contentsline {section}{\numberline {5.1}General Remarks and Future Research Directions}{65}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Work Dissemination}{65}{section.5.2}%
+\contentsline {section}{\numberline {4.5}Analysis and Discussion}{60}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Summary}{64}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Long-term evaluation of sizing the DC operation}{67}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{67}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Validating sensibility/robustness of the LP to uncertainties}{68}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Uncertainty related to the climate: solar irradiation}{68}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Uncertainty related to the climate: wind speed}{71}{subsubsection.5.1.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}Uncertainty related to the emissions from the local electricity grid}{75}{subsubsection.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}Uncertainty related to the workload}{78}{subsubsection.5.1.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.1.5}Adding Additional servers}{82}{subsubsection.5.1.1.5}%
+\contentsline {subsection}{\numberline {5.1.2}Including degradation in the modeling}{87}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Evaluating the monetary costs of including renewable infrastructures}{87}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Flexibility in the scheduling to reduce carbon emissions}{91}{subsection.5.1.4}%
+\contentsline {chapter}{\numberline {6}General Discussion}{95}{chapter.6}%
+\contentsline {section}{\numberline {6.1}General Remarks and Future Research Directions}{95}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Work Dissemination}{95}{section.6.2}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.27}%
+\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.50}%
 \babel@toc {french}{}
 \babel@toc {english}{}

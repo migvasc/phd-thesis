@@ -1,0 +1,101 @@
+----------------------- REVIEW 1 ---------------------
+SUBMISSION: 3624
+TITLE: Optimal sizing of a globally distributed low carbon cloud federation
+AUTHORS: Miguel Vasconcelos, Daniel Cordeiro, Georges Da Costa, Fanny Dufossé, Jean-Marc Nicod and Veronika Rehn-Sonigo
+
+----------- Paper summary -----------
+Building, sizing, and powering cloud data centers to reduce overall carbon emissions is the important problem that this paper addresses. It builds a detailed linear programming model to account for various aspects of the DC location, workload, batteries, solar panel emobided emissions, etc. This model is then used for analyzing tradeoffs of different DC locations and what sorts of energy mix should power them. The model is rich and realistic and will be useful in similar future endevours.
+----------- Strengths -----------
+- Rich detailed linear programming model, which considers many factors (including workloads). Easy to understand. 
+- Good feasibility analysis of solar+battery based cloud platforms, showing a 26% energy reduction vs. pure solar.
+- Analysis and discussion of various location/energy tradeoffs can potentially inform future cloud DCs.
+----------- Weaknesses -----------
+- Misses relevant related work like Carbon Explorer
+- Being a large and detailed model, it naturally needs to make many assumptions
+- Assumes pure batch workloads that can be run anywhere. Workloads' exponential growth, burtiness, and other capacity planning are not considered.
+----------- Detailed review -----------
+The main objective is to reduce the carbon footprint of a global collection of data centers that could be operated by large cloud providers. Overall, this is a good application of linear programming for understanding the tradeoffs and feasibility of different energy sources (solar, battery, grid). The model is simple to understand, well explained, and covers many aspects. It can potentially be used for "what-if" analysis and explore data center tradeoffs in the future. As a modeling exercise, it identifies the major factors such as DC location grid properties, battery specifics (such as minimum discharge), embodied carbon of associated with manufacturing of solar panels, etc. The constraints and assumptions are largely realistic and thoughtfully chosen. 
+
+The IT model is essentially capacity planning (sizing the data center in terms of number of CPU cores), and depends on the workload and affects the power consumption via the PUE, idle, network, and per-core power. The paper assumes constant PUE, which isnt accurate, since it strongly depends on the climate and varies over the year, based on when free-air cooling can be used. Also, the carbon emissions of manufacturing IT equipment is not considered? 
+
+
+The workload model is a simple batch job arrival/departure process. It would be nice to have location-constrained workloads which cannot be simply moved around between data centers. Also, workloads can be very bursty and we also may need to account for the exponential growth in workloads that the paper mentions right in the very first paragraph. Accounting for this stochasticity is a major challenge. Different workloads other than google cluster trace would have been ideal. But as a starting point, the paper's workload assumptions seem fine. 
+
+
+It would have been great to see more "ablation" and sensitivity analysis of the model itself. What is the slack associated with various constraints for instance, and what are the key factors affecting DC sizing? Do we get very different solutions if, for example, the battery model is simplified? 
+
+The Carbon Explorer work from Facebook is similar and very related to this paper. It should be discussed in the related work atleast.
+----------- Recommendation -----------
+SCORE: 6 (accept)
+----- TEXT:
+Simple, well explained LP model tackling a new and important problem.
+
+
+
+----------------------- REVIEW 2 ---------------------
+SUBMISSION: 3624
+TITLE: Optimal sizing of a globally distributed low carbon cloud federation
+AUTHORS: Miguel Vasconcelos, Daniel Cordeiro, Georges Da Costa, Fanny Dufossé, Jean-Marc Nicod and Veronika Rehn-Sonigo
+
+----------- Paper summary -----------
+This paper is about greening an existing set of datacenters by investigating powering them with solar panels. It considers the carbon footprint of the electricity consumption and the manufacturing of the solar panels and associated batteries.
+----------- Strengths -----------
++ The topic of the paper is interesting and relevant (greening existing infrastructures)
++ Considering the whole cloud federation and manufacturing emissions is interesting
++ Evaluation conducted with real-world based data
+----------- Weaknesses -----------
+- The way manufacturing emissions are included is questionable
+- Motivation of some assumptions is lacking
+- Hard to read/issues with notations
+----------- Detailed review -----------
+This paper is about greening an existing set of datacenters by investigating whether it is worth (carbon-emission wise) to add solar panels and batteries to them, and if yes, how these should be dimensioned. This topic is indeed very relevant and interesting as datacenters consume a lot of energy. Moreover, it is also relevant to consider the carbon emissions of manufacturing the solar panels and batteries are these are not negligible (and this is too often forgotten in the literature). 
+
+However, the way this paper includes these manufacturing carbon emissions is questionable. For the solar panels, the authors distribute them over the predicted lifetime and bake in the expected electricity production (with the reasoning that not all locations will produce the same amount of solar energy). This gives a value of carbon emission per kWh produced, representing the carbon footprint (and gives an idea where it is more worth to have solar panels). This value is then used again to calculate the carbon emissions per year based on how many kWh were actually produced (Equation 7). For the batteries, the carbons emissions are simply divided by the number of lifetime years. Why this difference? It may also be more or less worth it to have batteries depending on the location (and this is actually what the evaluation is showing – so it there really a need for making the solar panels equations more complicated as the optimizer seems to be able to handle it). Moreover, why 
+spread the carbon emissions over the lifetime? The emissions are going to be done as soon as the solar panel is produced, no matter how long it is used. The authors should motivate why they made these choices. Finally, is the carbon emission for the grid also taking into account the manufacturing part? This should be indicated as if it doesn’t then using a “green” grid will appear artificially greener compared to adding solar panels to the DC. 
+
+Another concern is that the assumptions about knowledge of workload and weather are strong as they need to be known in advance for the whole time horizon. The authors present results about the weather one (but only in Section V) but what about the workload? Isn’t it increasing every year as more and more applications and customers use the cloud? It should be clearer why these assumptions are reasonable when they are introduced.
+
+The evaluation is extensive and builds on real-world data. The paper presents a lot of different results and some would benefit from a more comprehensive analysis (e.g. the ones from the environmental impact metrics). Regarding the comparison of the total carbon emissions (Table V) and given the results from Table VI, it would be interesting to see the impact of shutting down the Johannesburg DC and a significant part of the Pune one for the grid scenario, are these are receiving no or very little workload and have the highest carbon emissions for the grid. 
+
+The notations are hard to read due to long variable names and lots of indexes. The authors should consider shortening the names and check whether all indexes are needed. For example, since the datacenters are homogeneous, why is the ^d needed for C^d, Pidle^d, etc…
+Moreover, there are some inconsistencies/unclarities, for example K should be a number of slots (=no unit) but in the text it is a number of hours, and Pcore is described as the energy used to power one core but it is actually the difference between energy consumption for full load and the idle one. 
+Also the final equation (Equation 1) of the “IT part” is actually giving the total consumption of the datacenter (not only the IT equipment) since the PUE value is used. But the text in IV.B implies that this is not the case as it refers to P^d_k as only for the IT part and still mentions that the facility energy is included by referring to Equation 1. This is confusing. 
+
+Other comments:
+There is no related work about follow-the-renewables workload scheduling.
+The paper title is misleading as it reads as the paper is about sizing of cloud federations. Also the paper does not back-up the claim that it would lead to a low-carbon system, but that you can lower the carbon emissions, which is different. 
+P9 “more comprehensive” -> “more understandable”
+----------- Recommendation -----------
+SCORE: 4 (borderline)
+----- TEXT:
+Interesting work but some choices made require a more thorough motivation.
+
+
+
+----------------------- REVIEW 3 ---------------------
+SUBMISSION: 3624
+TITLE: Optimal sizing of a globally distributed low carbon cloud federation
+AUTHORS: Miguel Vasconcelos, Daniel Cordeiro, Georges Da Costa, Fanny Dufossé, Jean-Marc Nicod and Veronika Rehn-Sonigo
+
+----------- Paper summary -----------
+The paper dives into the grey energy perspective in supplying data centres with produced equipment and its power supply. It combines that problem with spatial workload shifting in order to maximise the green-ness of computation across DCs through optimisation. Although green cloud computing research has been done for a while, more results can still be expected. The paper uses formal notations to express the optimisation problem over a timeslotted period and a tree-shaped DC topology. Modelling and simulation experiments are conducted.
+----------- Strengths -----------
+- The paper is based on a comparative analysis of recent related work.
+- The electrotechnical considerations are laid out in depth, such as battery behaviour and sunshine periods.
+- Effort has been made to make the experiments reproducible.
+- Results are discussed in detail.
+----------- Weaknesses -----------
+- The paper uses a simple workload model, and validates with synthetically generated workloads.
+- Renewable energy is modelled exclusively as a property of the PVs, not taking a renewable share in the grid into account.
+----------- Detailed review -----------
+- Although the title refers to a global perspective, the work only considers different sunshine periods at each location. The combined time-shifting and place-shifting methods by e.g. Schooler's work on carbon-aware computing are not referenced. They could offset a wrongly sized DC. In practice, even large DC's by AWS and others have already reported resource shortages for specialised applications (e.g. GPU-intensive), requiring a multi-DC deployment. This global hosting aspect is not discussed.
+- The low percentage of 5% renewables in the introduction is very country-specific, and the 2019 data is old. There are many DC locations with much higher percentage, especially now 3-4 years on. 
+- PVs are introduced without much context in the introduction section. They are probably one source of local electricity production, but there are others, such as a local windfarm next to a DC. The significance of PVs in this context should be better explained.
+- Scheduling typically refers to the temporal perspective whereas placement refers to the spatial one. Hence, the second sub-problem would more adequately be called placement instead of scheduling.
+- The workload model assumes jobs with predefined deadlines. While this simplification is always good for scheduling approaches, it contrasts the varying workload models in clouds that encompass a lot of ad-hoc requests and interactive applications. In conjunction with the assumption of homogeneous DC sizing, this limits the applicability of the approach in practice.
+- Section III-B introduces a split between 100% renewable PV and 0% renewable grid. However, many grids already have a significant share of renewables in their energy mix offered to businesses such as DCs.
+- Table III is somewhat meaningless without a map projection. Showing a map instead of a table could convey the location context better.
+----------- Recommendation -----------
+SCORE: 5 (weak accept)
+----- TEXT:
+Well-formulated and systematic work approach with some unnecessarily simplified assumptions.

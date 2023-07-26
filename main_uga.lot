@@ -24,10 +24,27 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Main notations for the IT model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)\relax }}{40}{table.caption.15}%
 \contentsline {table}{\numberline {4.2}{\ignorespaces Main notations for the Electrical part model of each $DC^d$ ($1\leq d\leq D$) during each time step $k$ ($0\leq k<K$)\relax }}{42}{table.caption.16}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Emissions (in $g\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq.kWh^{-1}$) for both PV usage and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.\relax }}{53}{table.caption.19}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Total emissions for the different scenarios.\relax }}{56}{table.caption.23}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Average DC load throughout the year \relax }}{57}{table.caption.24}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Results of the sustainability metrics for the experiments\relax }}{58}{table.caption.25}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Evaluating sizing for different years using the MAPE metric (values are in \%) \relax }}{58}{table.caption.26}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Total emissions for the different scenarios.\relax }}{55}{table.caption.23}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Average DC load throughout the year \relax }}{58}{table.caption.24}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Results of the sustainability metrics for the experiments\relax }}{59}{table.caption.25}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Evaluating sizing for different years using the MAPE metric (values are in \%) \relax }}{60}{table.caption.26}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Emissions (in kt \ch {CO2}-eq) for the different scenarios\relax }}{70}{table.caption.29}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Emissions (in $g\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq.kWh^{-1}$) for PV usage, WT usage, and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.\relax }}{72}{table.caption.30}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Total emissions (tons of \ch {CO2} for different scenarios \relax }}{73}{table.caption.31}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Computed number of WT for each location\relax }}{74}{table.caption.32}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Comparison of local electricity grid access to information \relax }}{76}{table.caption.35}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Total emissions (tons of \ch {CO2}) for different scenarios \relax }}{77}{table.caption.36}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Difference in total emissions (tons of \ch {CO2}) between using avg. co2 of the year vs co2 per hour for the different years. Values greater than zero represents that using co2 values per hour increased the total emissions.\relax }}{78}{table.caption.39}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Increase in \ch {CO2} emissions considering the evolving workload (values are in \%) \relax }}{79}{table.caption.40}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Average DC load throughout the year \relax }}{80}{table.caption.41}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces MAPE for the PV sizing for the different years \relax }}{81}{table.caption.42}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces MAPE for the battery sizing for the different years \relax }}{81}{table.caption.43}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces Servers specifications for different generations\relax }}{82}{table.caption.44}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces Local grid electricity price (\$ per kWh) for each location. Source: \url { https://www.globalpetrolprices.com/electricity_prices/}\relax }}{89}{table.caption.46}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces Total costs (millions of \$) for different scenarios \relax }}{91}{table.caption.47}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces Total emissions (tons of CO2 for different scenarios \relax }}{91}{table.caption.48}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces Initial results regarding the relative total carbon emissions reduction (in \%) for different values of $\alpha $ (how much of the workload to delay) and $\beta $ (how long to delay the workload).\relax }}{92}{table.caption.49}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {french}{}
