@@ -24,14 +24,16 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Composition of the DCs' daily energy consumption throughout the year considering the different sources of energy, where 1.0 is the DC's total energy consumption.\relax }}{56}{figure.caption.21}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Composition of the DCs' hourly power consumption throughout the first day of the year. Time follows the Universal Time (UT) standard.\relax }}{57}{figure.caption.22}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Different PV sizing using irradiation from 30 years (1980 - 2009).\relax }}{69}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Different battery sizing using irradiation from 30 years (1980 - 2009).\relax }}{69}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces PV Area sizing when the WT are and are not included \relax }}{74}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Battery capacity sizing when the WT are and are not included \relax }}{75}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces PV sizing with different granularity for grid \ch {CO2} emissions data\relax }}{77}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Battery sizing with different granularity for grid \ch {CO2} emissions data \relax }}{78}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Sizing with information of the current year.\relax }}{88}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Sizing knowing all information of the 10 years.\relax }}{88}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Average solar irradiation from 1980 to 2019 per location.\relax }}{71}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces PV Area sizing when the WT are and are not included \relax }}{76}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Battery capacity sizing when the WT are and are not included \relax }}{76}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Different values for the solar irradiation input from 1980 to 2019. The data in yellow represents the median and in purple the average of the 30 years. \relax }}{79}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces PV sizing with different granularity for grid \ch {CO2} emissions data\relax }}{83}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Battery sizing with different granularity for grid \ch {CO2} emissions data \relax }}{84}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Different PV sizing using irradiation from 30 years (1980 - 2009).\relax }}{85}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Different battery sizing using irradiation from 30 years (1980 - 2009).\relax }}{85}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Sizing with information of the current year.\relax }}{101}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Sizing knowing all information of the 10 years.\relax }}{101}{figure.caption.49}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {french}{}

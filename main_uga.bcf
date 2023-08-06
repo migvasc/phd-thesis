@@ -2233,12 +2233,15 @@
     <bcf:citekey order="48">GELARO2017MERRA2</bcf:citekey>
     <bcf:citekey order="49">YUE2014pv_carbon</bcf:citekey>
     <bcf:citekey order="50">reddy2017_metrics</bcf:citekey>
-    <bcf:citekey order="51">HADDAD2021100505</bcf:citekey>
-    <bcf:citekey order="52">li2020_wtlca</bcf:citekey>
+    <bcf:citekey order="51">masanet2020recalibrating</bcf:citekey>
+    <bcf:citekey order="52">masanet2020recalibrating</bcf:citekey>
     <bcf:citekey order="53">gupta2021_chasingcarbon</bcf:citekey>
-    <bcf:citekey order="54">masanet2020recalibrating</bcf:citekey>
-    <bcf:citekey order="55">masanet2020recalibrating</bcf:citekey>
-    <bcf:citekey order="56">jordan2015_pvdegradationrate</bcf:citekey>
+    <bcf:citekey order="54">nrel_lifecycle_2021</bcf:citekey>
+    <bcf:citekey order="55">HADDAD2021100505</bcf:citekey>
+    <bcf:citekey order="56">era5_wind_2022</bcf:citekey>
+    <bcf:citekey order="57">GELARO2017MERRA2</bcf:citekey>
+    <bcf:citekey order="58">pv_lcoe_calc</bcf:citekey>
+    <bcf:citekey order="59">battery_lcos_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

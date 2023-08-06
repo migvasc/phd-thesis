@@ -171,6 +171,54 @@
       \endverb
       \keyw{Datacenters,Performance,Migrations,Energy efficiency,Clouds}
     \endentry
+    \entry{pv_lcoe_calc}{software}{}
+      \name{author}{5}{}{%
+        {{hash=3abd44ac5394ffd5490af346d4f4d5ee}{%
+           family={Andrews},
+           familyi={A\bibinitperiod},
+           given={SJ},
+           giveni={S\bibinitperiod}}}%
+        {{hash=661af25efdcede2da6f1d84feee822d2}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2cde75c161445d00d65c9a25c3fd4479}{%
+           family={Deceglie},
+           familyi={D\bibinitperiod},
+           given={MG},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d20c3e6b0be86b5f8678be42bf1c86dc}{%
+           family={Horowitz},
+           familyi={H\bibinitperiod},
+           given={KA},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bdbbc2960d74dd97de5fafc9b57a2102}{%
+           family={Silverman},
+           familyi={S\bibinitperiod},
+           given={TJ},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{5537e10af02261a96fcc74f15a9c6b28}
+      \strng{fullhash}{ddebb39d5ff3b31b13c5eaa10083da01}
+      \strng{bibnamehash}{ddebb39d5ff3b31b13c5eaa10083da01}
+      \strng{authorbibnamehash}{ddebb39d5ff3b31b13c5eaa10083da01}
+      \strng{authornamehash}{5537e10af02261a96fcc74f15a9c6b28}
+      \strng{authorfullhash}{ddebb39d5ff3b31b13c5eaa10083da01}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NREL Comparative PV LCOE Calculator}
+      \field{version}{2.0.0}
+      \verb{urlraw}
+      \verb https://www.nrel.gov/pv/lcoe-calculator/
+      \endverb
+      \verb{url}
+      \verb https://www.nrel.gov/pv/lcoe-calculator/
+      \endverb
+      \warn{\item Entry 'pv_lcoe_calc' (references.bib): Invalid format '2021-8' of date field 'date' - ignoring}
+    \endentry
     \entry{batteries_baumman}{article}{}
       \name{author}{4}{}{%
         {{hash=6eb57666cda87c956dc705a8eea4004b}{%
@@ -760,6 +808,81 @@
       \verb www.greenpeace.org/international/publication/6826/clicking-clean-2017/
       \endverb
     \endentry
+    \entry{gupta2021_chasingcarbon}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=3c20a99e7df2ff8f86bcad379b948546}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=03f38c879ca0bc9f1dcbada69ea0519a}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=aa5a7c8780167efaa3ed45566a0806a0}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4f4db77b6ec2126550b47850a31fcb0b}{%
+           family={Tse},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=39c01afaaee20212b5e2bac6d6a68cd8}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={H.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1bb3c31c4d35e8390e60cb3d6e88d1ba}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c57b0e0564307c47202de1d331e5f514}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a86e97589af4ebc957e84399c0ba5a1c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Los Alamitos, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society}%
+      }
+      \strng{namehash}{346839e320ca8c7bc46e489135c387ca}
+      \strng{fullhash}{3bb75fa1e3a92a694666eb7335e0f13e}
+      \strng{bibnamehash}{7d22bb15e8d4a53a961553c1c128f0de}
+      \strng{authorbibnamehash}{7d22bb15e8d4a53a961553c1c128f0de}
+      \strng{authornamehash}{346839e320ca8c7bc46e489135c387ca}
+      \strng{authorfullhash}{3bb75fa1e3a92a694666eb7335e0f13e}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 IEEE International Symposium on High-Performance Computer Architecture (HPCA)}
+      \field{title}{Chasing Carbon: The Elusive Environmental Footprint of Computing}
+      \field{year}{2021}
+      \field{pages}{854\bibrangedash 867}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/HPCA51647.2021.00076
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.ieeecomputersociety.org/10.1109/HPCA51647.2021.00076
+      \endverb
+      \verb{url}
+      \verb https://doi.ieeecomputersociety.org/10.1109/HPCA51647.2021.00076
+      \endverb
+      \keyw{technological innovation;energy consumption;software algorithms;carbon dioxide;computer architecture;hardware;software}
+    \endentry
     \entry{hadary2020protean}{inproceedings}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -939,6 +1062,98 @@
       \verb{doi}
       \verb 10.1016/j.suscom.2020.100505
       \endverb
+    \endentry
+    \entry{era5_wind_2022}{misc}{}
+      \name{author}{15}{}{%
+        {{hash=8d0c04eee02fe8eb64bb53218781a74d}{%
+           family={Hersbach},
+           familyi={H\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=62acd7119bbc00c41409f6b461c365e5}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1d083e500b4f0abc9ea8f8945135a673}{%
+           family={Berrisford},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ce0b8c075c97f69a90b95fffa3359d9f}{%
+           family={Biavati},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=88e22d0bbf28d196018e5e1517ca7129}{%
+           family={Horányi},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=eebcbf9c7f53d0626e56cd552676f48d}{%
+           family={Muñoz\bibnamedelima Sabater},
+           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6087e76fd8f74f49cb84b475e7ffc698}{%
+           family={Nicolas},
+           familyi={N\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cb7fc5871a636d075633c3b89249db75}{%
+           family={Peubey},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=879b261fad8078815c1cc0ba63c96354}{%
+           family={Radu},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4d7d47a76766e444ab443b13909f7403}{%
+           family={Rozum},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=83e96e513dbf9a16e0396c8b46b5356e}{%
+           family={Schepers},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2ed619dc8b6a63f9103c032ae61abc9d}{%
+           family={Simmons},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3432b43c814b32b4183ec73f55e99f43}{%
+           family={Soci},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8337076e4e5f9c1d34e0721d61cb6aef}{%
+           family={Dee},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ce544c6d593f63901acd88b9aedde15b}{%
+           family={Thépaut},
+           familyi={T\bibinitperiod},
+           given={J-N.},
+           giveni={J\bibinithyphendelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9184eca5bf4b0934548bc7564d8edafa}
+      \strng{fullhash}{08eecc4bde013617087895e8ab55c5e3}
+      \strng{bibnamehash}{b18c7040b5220c2d243b2bbd23a6c065}
+      \strng{authorbibnamehash}{b18c7040b5220c2d243b2bbd23a6c065}
+      \strng{authornamehash}{9184eca5bf4b0934548bc7564d8edafa}
+      \strng{authorfullhash}{08eecc4bde013617087895e8ab55c5e3}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{DOI:10.24381/cds.adbb2d47 (Accessed on 03-08-2023)}
+      \field{title}{ERA5 hourly data on single levels from 1940 to present. Copernicus Climate Change Service (C3S) Climate Data Store (CDS)}
+      \field{year}{2023}
     \endentry
     \entry{energy_network_devices}{inproceedings}{}
       \name{author}{3}{}{%
@@ -1333,6 +1548,36 @@
       \field{title}{Google cluster-usage traces: format+ schema}
       \field{year}{2011}
     \endentry
+    \entry{nrel_lifecycle_2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d7378f9ff77ab4f03c7cee5a100789e4}{%
+           family={Renewable\bibnamedelimb Energy\bibnamedelima (NREL)},
+           familyi={R\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={National\bibnamedelima Laboratory},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{d7378f9ff77ab4f03c7cee5a100789e4}
+      \strng{fullhash}{d7378f9ff77ab4f03c7cee5a100789e4}
+      \strng{bibnamehash}{d7378f9ff77ab4f03c7cee5a100789e4}
+      \strng{authorbibnamehash}{d7378f9ff77ab4f03c7cee5a100789e4}
+      \strng{authornamehash}{d7378f9ff77ab4f03c7cee5a100789e4}
+      \strng{authorfullhash}{d7378f9ff77ab4f03c7cee5a100789e4}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Life Cycle Greenhouse Gas Emissions from Electricity Generation: Update. NREL/FS-6A50-80580}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.osti.gov/biblio/1820320
+      \endverb
+      \verb{url}
+      \verb https://www.osti.gov/biblio/1820320
+      \endverb
+    \endentry
     \entry{Richter2021_netzero_dcs}{article}{}
       \name{author}{7}{}{%
         {{hash=c3c884fa59b0adab43589a1c30143247}{%
@@ -1601,6 +1846,63 @@
       \endverb
       \verb{url}
       \verb https://hal.inria.fr/hal-00872476
+      \endverb
+    \endentry
+    \entry{battery_lcos_2022}{report}{}
+      \name{author}{6}{}{%
+        {{hash=c8baeeea6e9ef3d3f1e62d4dada6b55d}{%
+           family={Viswanathan},
+           familyi={V\bibinitperiod},
+           given={Vilayanur},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ed85f19eeb5c8b63b53eae868fd98d80}{%
+           family={Mongird},
+           familyi={M\bibinitperiod},
+           given={Kendall},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d9b5382242b0fa062028794ca60b5d9b}{%
+           family={Franks},
+           familyi={F\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c9a3728dcc2397d1bab78a791b51779b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={X},
+           giveni={X\bibinitperiod}}}%
+        {{hash=198b7d4153ecc2ea32ee5fb7a18157c5}{%
+           family={Sprenkle},
+           familyi={S\bibinitperiod},
+           given={V},
+           giveni={V\bibinitperiod}}}%
+        {{hash=2b61bdbc48cae441d40b82979fb72398}{%
+           family={Baxter},
+           familyi={B\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Pacific Northwest National Laboratory}%
+      }
+      \strng{namehash}{1bbfdaf239b7eb9f920e45d1856bc9a3}
+      \strng{fullhash}{060f9d0a10e6a0db87267ce8b24b4ef7}
+      \strng{bibnamehash}{718c3cf6e1fed6864fa51d5cb6de6ca3}
+      \strng{authorbibnamehash}{718c3cf6e1fed6864fa51d5cb6de6ca3}
+      \strng{authornamehash}{1bbfdaf239b7eb9f920e45d1856bc9a3}
+      \strng{authorfullhash}{060f9d0a10e6a0db87267ce8b24b4ef7}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{PNNL-33283}
+      \field{title}{2022 Grid Energy Storage Technology Cost and Performance Assessment}
+      \field{type}{techreport}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.pnnl.gov/sites/default/files/media/file/Final\%20-\%20ESGC\%20Cost\%20Performance\%20Report\%2012-11-2020.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.pnnl.gov/sites/default/files/media/file/Final%5C%20-%5C%20ESGC%5C%20Cost%5C%20Performance%5C%20Report%5C%2012-11-2020.pdf
       \endverb
     \endentry
     \entry{solar_co2}{article}{}
