@@ -18,8 +18,8 @@
 
 \long\def\Universite#1{\gdef\@Universite{#1}}
 %\def\@Universite{\includesvg[width=4cm]{img/logo_uga}}
-\def\@Universite{\includegraphics[height=2cm,clip]{imgs/logo_uga}}
-\long\def\EcoleDoctorale#1{\gdef\@EcoleDoctorale{dans les \'Ecoles Doctorales {\bfseries#1} et {\bfseries{}Programa de Pós-Graduação do IME/USP}}}
+\def\@Universite{\includesvg[width=.9\textwidth]{imgs/logo_uga}}
+\long\def\EcoleDoctorale#1{\gdef\@EcoleDoctorale{dans les \'Ecoles Doctorales {\bfseries{} Mathématiques, Sciences et Technologies de l'Information, Informatique (MSTII)} et {\bfseries{} Programa de Pós-Graduação em Sistemas de Informação (PPgSI EACH-USP)}}}
 \def\@EcoleDoctorale{}
 \long\def\Grade#1{\gdef\@Grade{\uppercase{#1}}}
 \def\@Grade{\uppercase{Docteur de l'Universit\'e de Grenoble} \\[0.3em] préparée dans le cadre d’une cotutelle entre l’Université de Grenoble et l'Universidade de São Paulo}
@@ -167,7 +167,7 @@
 \fbox{\colorbox[gray]{.87}{\parbox[t][28cm][b]{5.7cm}{\hfil\@UniversityLogo\hfil\par\vskip5mm}}\hskip5mm\parbox[t][28cm]{12.8cm}{
        \vskip3mm plus1fil
              \hfill\@ThesisHead
-       \vskip3mm plus1fil
+       \vfill
              {\bfseries\fontsize{16}{18}\selectfont\@ThesisType}
        \vskip3mm plus1fil
              \@ThesisInOrderToGet

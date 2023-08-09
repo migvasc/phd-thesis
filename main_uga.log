@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  6 AUG 2023 17:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  9 AUG 2023 15:57
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **main_uga
 (./main_uga.tex
@@ -1095,7 +1095,7 @@ Package: svg 2020/01/13 v2.02e (include SVG pictures)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
@@ -1103,8 +1103,22 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \svg@box=\box146
 \c@svg@param@lastpage=\count338
 \c@svg@param@currpage=\count339
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/transparent/transparent.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "main_uga.w18")...executed.
+
+ (./main_uga.w18)
+runsystem(rm -- "main_uga.w18")...executed.
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
 
 )
@@ -2174,11 +2188,17 @@ File: imgs/logo_Univ_Grenoble.pdf Graphic file (type pdf)
 <use imgs/logo_Univ_Grenoble.pdf>
 Package pdftex.def Info: imgs/logo_Univ_Grenoble.pdf  used on input line 52.
 (pdftex.def)             Requested size: 148.39403pt x 148.39403pt.
-<imgs/logo_uga.png, id=32, 1711.39375pt x 1109.14375pt>
-File: imgs/logo_uga.png Graphic file (type png)
-<use imgs/logo_uga.png>
-Package pdftex.def Info: imgs/logo_uga.png  used on input line 52.
-(pdftex.def)             Requested size: 87.79436pt x 56.9055pt.
+Package svg Info: Last page of `./svg-inkscape/logo_uga_svg-tex.pdf' is 1 on in
+put line 52.
+
+(./svg-inkscape/logo_uga_svg-tex.pdf_tex
+<./svg-inkscape/logo_uga_svg-tex.pdf, id=33, page=1, 600.09871pt x 95.48654pt>
+File: ./svg-inkscape/logo_uga_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/logo_uga_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/logo_uga_svg-tex.pdf , page1 used on in
+put line 56.
+(pdftex.def)             Requested size: 355.3014pt x 56.53471pt.
+)
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.89993pt on input line 52.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -2223,20 +2243,19 @@ Underfull \vbox (badness 10000) detected at line 52
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imgs/logo_Univ_Grenoble.
-pdf> <./imgs/logo_uga.png>]pdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.}) has been already used, duplicate ignored
+pdf> <./svg-inkscape/logo_uga_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/logo_uga_svg-tex.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>])pdfTeX warning (ext4): destination with the same identifier (name{page.}) ha
+s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 \clearpage{\pagestyle{empty}\cleardoublepage
-                                                 } [2
+l.80 \cleardoublepage
+                      [2
 
 
-
-]) (./dedication.tex)
-[1
-
-
-] [2
+] (./dedication.tex) [1] [2
 
 
 ] (./epigraph.tex
@@ -2435,7 +2454,7 @@ Overfull \hbox (10.94998pt too wide) in paragraph at lines 21--21
  []
 
 (./chap-smartgreens.tex [9] [10] [11] [12]
-<images/topology.PNG, id=536, 722.7pt x 722.7pt>
+<images/topology.PNG, id=633, 722.7pt x 722.7pt>
 File: images/topology.PNG Graphic file (type png)
 <use images/topology.PNG>
 Package pdftex.def Info: images/topology.PNG  used on input line 88.
@@ -2466,7 +2485,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [18] [19] [20]
-<images/workloads.png, id=598, 505.89pt x 505.89pt>
+<images/workloads.png, id=695, 505.89pt x 505.89pt>
 File: images/workloads.png Graphic file (type png)
 <use images/workloads.png>
 Package pdftex.def Info: images/workloads.png  used on input line 245.
@@ -2475,7 +2494,7 @@ Package pdftex.def Info: images/workloads.png  used on input line 245.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22 <./images/workloads.png (PNG copy)>]
-<images/pv_pow_photovolta.pdf, id=616, 722.7pt x 433.62pt>
+<images/pv_pow_photovolta.pdf, id=713, 722.7pt x 433.62pt>
 File: images/pv_pow_photovolta.pdf Graphic file (type pdf)
 <use images/pv_pow_photovolta.pdf>
 Package pdftex.def Info: images/pv_pow_photovolta.pdf  used on input line 261.
@@ -2528,13 +2547,13 @@ Underfull \vbox (badness 1314) has occurred while \output is active []
 
  [46]
 [47] [48] [49]
-<images/locations.pdf, id=862, 722.7pt x 433.62pt>
+<images/locations.pdf, id=959, 722.7pt x 433.62pt>
 File: images/locations.pdf Graphic file (type pdf)
 <use images/locations.pdf>
 Package pdftex.def Info: images/locations.pdf  used on input line 294.
 (pdftex.def)             Requested size: 394.78203pt x 236.8707pt.
  [50]
-<images/pv_ghi.pdf, id=876, 722.7pt x 722.7pt>
+<images/pv_ghi.pdf, id=973, 722.7pt x 722.7pt>
 File: images/pv_ghi.pdf Graphic file (type pdf)
 <use images/pv_ghi.pdf>
 Package pdftex.def Info: images/pv_ghi.pdf  used on input line 324.
@@ -2543,13 +2562,13 @@ Package pdftex.def Info: images/pv_ghi.pdf  used on input line 324.
 Underfull \vbox (badness 1137) has occurred while \output is active []
 
  [51 <./images/locations.pdf>] [52 <./images/pv_ghi.pdf>] [53]
-<images/sizing.pdf, id=908, 722.7pt x 433.62pt>
+<images/sizing.pdf, id=1005, 722.7pt x 433.62pt>
 File: images/sizing.pdf Graphic file (type pdf)
 <use images/sizing.pdf>
 Package pdftex.def Info: images/sizing.pdf  used on input line 378.
 (pdftex.def)             Requested size: 394.78203pt x 236.8707pt.
  [54 <./images/sizing.pdf>]
-<images/energy_ratio.pdf, id=922, 722.7pt x 1517.67pt>
+<images/energy_ratio.pdf, id=1019, 722.7pt x 1517.67pt>
 File: images/energy_ratio.pdf Graphic file (type pdf)
 <use images/energy_ratio.pdf>
 Package pdftex.def Info: images/energy_ratio.pdf  used on input line 390.
@@ -2558,7 +2577,7 @@ Package pdftex.def Info: images/energy_ratio.pdf  used on input line 390.
 
 LaTeX Warning: Float too large for page by 60.63766pt on input line 393.
 
-<images/power_source_hour.pdf, id=923, 867.24pt x 1662.21pt>
+<images/power_source_hour.pdf, id=1020, 867.24pt x 1662.21pt>
 File: images/power_source_hour.pdf Graphic file (type pdf)
 <use images/power_source_hour.pdf>
 Package pdftex.def Info: images/power_source_hour.pdf  used on input line 400.
@@ -2592,13 +2611,13 @@ Overfull \hbox (10.94998pt too wide) in paragraph at lines 40--40
  []
 
 (./chap-extension-ccgrid.tex [67] [68] [69] [70]
-<images/pv_daily_ghi_avg.pdf, id=1038, 722.7pt x 722.7pt>
+<images/pv_daily_ghi_avg.pdf, id=1135, 722.7pt x 722.7pt>
 File: images/pv_daily_ghi_avg.pdf Graphic file (type pdf)
 <use images/pv_daily_ghi_avg.pdf>
 Package pdftex.def Info: images/pv_daily_ghi_avg.pdf  used on input line 66.
 (pdftex.def)             Requested size: 315.82681pt x 315.82759pt.
  [71 <./images/pv_daily_ghi_avg.pdf>] [72] [73] [74]
-<images/pv_sizing_after_wt.pdf, id=1085, 722.7pt x 433.62pt>
+<images/pv_sizing_after_wt.pdf, id=1182, 722.7pt x 433.62pt>
 File: images/pv_sizing_after_wt.pdf Graphic file (type pdf)
 <use images/pv_sizing_after_wt.pdf>
 Package pdftex.def Info: images/pv_sizing_after_wt.pdf  used on input line 201.
@@ -2608,7 +2627,7 @@ Package pdftex.def Info: images/pv_sizing_after_wt.pdf  used on input line 201.
 Underfull \vbox (badness 4205) has occurred while \output is active []
 
  [75]
-<images/bat_sizing_after_wt.pdf, id=1090, 722.7pt x 433.62pt>
+<images/bat_sizing_after_wt.pdf, id=1187, 722.7pt x 433.62pt>
 File: images/bat_sizing_after_wt.pdf Graphic file (type pdf)
 <use images/bat_sizing_after_wt.pdf>
 Package pdftex.def Info: images/bat_sizing_after_wt.pdf  used on input line 209
@@ -2619,7 +2638,7 @@ Package pdftex.def Info: images/bat_sizing_after_wt.pdf  used on input line 209
 Underfull \vbox (badness 1097) has occurred while \output is active []
 
  [77]
-<images/pv_daily_ghi_avg_median.pdf, id=1113, 722.7pt x 722.7pt>
+<images/pv_daily_ghi_avg_median.pdf, id=1210, 722.7pt x 722.7pt>
 File: images/pv_daily_ghi_avg_median.pdf Graphic file (type pdf)
 <use images/pv_daily_ghi_avg_median.pdf>
 Package pdftex.def Info: images/pv_daily_ghi_avg_median.pdf  used on input line
@@ -2635,7 +2654,7 @@ Overfull \hbox (31.525pt too wide) in paragraph at lines 272--298
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81]
-<images/sizing_pv_grid_co2.png, id=1144, 752.8125pt x 622.57594pt>
+<images/sizing_pv_grid_co2.png, id=1241, 752.8125pt x 622.57594pt>
 File: images/sizing_pv_grid_co2.png Graphic file (type png)
 <use images/sizing_pv_grid_co2.png>
 Package pdftex.def Info: images/sizing_pv_grid_co2.png  used on input line 379.
@@ -2645,7 +2664,7 @@ Package pdftex.def Info: images/sizing_pv_grid_co2.png  used on input line 379.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [82]
-<images/sizing_bat_grid_co2.png, id=1149, 903.375pt x 622.57594pt>
+<images/sizing_bat_grid_co2.png, id=1246, 903.375pt x 622.57594pt>
 File: images/sizing_bat_grid_co2.png Graphic file (type png)
 <use images/sizing_bat_grid_co2.png>
 Package pdftex.def Info: images/sizing_bat_grid_co2.png  used on input line 387
@@ -2656,13 +2675,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [83 <./images/sizing_pv_grid_co2.png (PNG copy)>] [84 <./images/sizing_bat_gri
 d_co2.png (PNG copy)>]
-<images/pv_boxplots_1980_2009.pdf, id=1160, 722.7pt x 433.62pt>
+<images/pv_boxplots_1980_2009.pdf, id=1257, 722.7pt x 433.62pt>
 File: images/pv_boxplots_1980_2009.pdf Graphic file (type pdf)
 <use images/pv_boxplots_1980_2009.pdf>
 Package pdftex.def Info: images/pv_boxplots_1980_2009.pdf  used on input line 4
 23.
 (pdftex.def)             Requested size: 315.82681pt x 189.49655pt.
-<images/bat_boxplots_1980_2009.pdf, id=1161, 722.7pt x 433.62pt>
+<images/bat_boxplots_1980_2009.pdf, id=1258, 722.7pt x 433.62pt>
 File: images/bat_boxplots_1980_2009.pdf Graphic file (type pdf)
 <use images/bat_boxplots_1980_2009.pdf>
 Package pdftex.def Info: images/bat_boxplots_1980_2009.pdf  used on input line 
@@ -2692,13 +2711,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [92]
 [93] [94] [95] [96] [97] [98] [99]
-<images/dc_evolution_year_by_year.pdf, id=1296, 722.7pt x 1734.48pt>
+<images/dc_evolution_year_by_year.pdf, id=1393, 722.7pt x 1734.48pt>
 File: images/dc_evolution_year_by_year.pdf Graphic file (type pdf)
 <use images/dc_evolution_year_by_year.pdf>
 Package pdftex.def Info: images/dc_evolution_year_by_year.pdf  used on input li
 ne 843.
 (pdftex.def)             Requested size: 197.391pt x 473.7414pt.
-<images/dc_evolution_optimal.pdf, id=1297, 722.7pt x 1734.48pt>
+<images/dc_evolution_optimal.pdf, id=1394, 722.7pt x 1734.48pt>
 File: images/dc_evolution_optimal.pdf Graphic file (type pdf)
 <use images/dc_evolution_optimal.pdf>
 Package pdftex.def Info: images/dc_evolution_optimal.pdf  used on input line 84
@@ -2787,11 +2806,11 @@ Package logreq Info: Writing requests to 'main_uga.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 52478 strings out of 481239
- 1056674 string characters out of 5920378
- 1902188 words of memory out of 5000000
- 65992 multiletter control sequences out of 15000+600000
- 804318 words of font info for 459 fonts, out of 8000000 for 9000
+ 52583 strings out of 481239
+ 1058801 string characters out of 5920378
+ 1903484 words of memory out of 5000000
+ 66078 multiletter control sequences out of 15000+600000
+ 803221 words of font info for 458 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,21n,107p,10099b,3495s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
@@ -2845,9 +2864,9 @@ lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share
 s/type1/urw/bookman/ubkli8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
 r8a.pfb>
-Output written on main_uga.pdf (128 pages, 2566297 bytes).
+Output written on main_uga.pdf (128 pages, 2847555 bytes).
 PDF statistics:
- 1838 PDF objects out of 2073 (max. 8388607)
+ 1935 PDF objects out of 2073 (max. 8388607)
  369 named destinations out of 1000 (max. 500000)
- 88501 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 88500 words of extra memory for PDF output out of 89155 (max. 10000000)
 
