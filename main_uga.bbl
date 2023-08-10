@@ -1796,6 +1796,42 @@
       \verb 10.1016/j.future.2022.06.008
       \endverb
     \endentry
+    \entry{nrel_wt_costs_2021}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e0b5bab2de5954339ac14f8f66ee2282}{%
+           family={Stehly},
+           familyi={S\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod}}}%
+        {{hash=94beb6eccb75ca6561c9317b870a78bf}{%
+           family={Duffy},
+           familyi={D\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d29b064b9a1a44ee73ac419504cf36e}
+      \strng{fullhash}{5d29b064b9a1a44ee73ac419504cf36e}
+      \strng{bibnamehash}{5d29b064b9a1a44ee73ac419504cf36e}
+      \strng{authorbibnamehash}{5d29b064b9a1a44ee73ac419504cf36e}
+      \strng{authornamehash}{5d29b064b9a1a44ee73ac419504cf36e}
+      \strng{authorfullhash}{5d29b064b9a1a44ee73ac419504cf36e}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{2021 Cost of Wind Energy Review [Slides]}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.2172/1907623
+      \endverb
+      \verb{urlraw}
+      \verb https://www.osti.gov/biblio/1907623
+      \endverb
+      \verb{url}
+      \verb https://www.osti.gov/biblio/1907623
+      \endverb
+    \endentry
     \entry{velho2013simgridparameters}{article}{}
       \name{author}{4}{}{%
         {{hash=1b725b3a688ab6a34e8e537d01c0d805}{%

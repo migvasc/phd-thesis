@@ -176,7 +176,6 @@ It is considered that the power from local electricity grid may originate from m
 
 For the carbon footprint of the PVs, in order to account the different climate conditions at each region, in particular the solar irradiation received, one must also consider the expected power output that PVs can produce over their lifetime, as using a single year may cause over or under-sizing of the PV infrastructure. Therefore, the carbon footprint of PVs is also related to the location of each data center. Equation~\eqref{eq:pvco2} models the carbon footprint for PVs:
 
-
 \begin{equation} \label{eq:pvco2}
    pvCO2^d =  \frac{FPpv_{1m2}}{expectedEpv^d} 
 \end{equation}
@@ -414,7 +413,7 @@ In order to assess the optimal solution of the LP, we compared it with two other
   \hline
   Electrical grid                    & 201211.3    \\
   \hline
-  PV and batteries  &                  42370.6 \\ %40054.1 \\
+  PV and batteries  &                  42370.6 \\ 
   \hline
   PV, batteries, and grid            &  29600.6   \\
   \hline

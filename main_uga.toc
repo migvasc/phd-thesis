@@ -11,7 +11,7 @@
 \contentsline {chapter}{\nonumberline Abstract / \foreignlanguage {french}{Résumé}}{vii}{chapter*.2}%
 \babel@toc {french}{}
 \babel@toc {english}{}
-\contentsline {chapter}{{Contents}}{xiii}{section*.5}%
+\contentsline {chapter}{{Contents}}{xv}{section*.5}%
 \vspace \bigskipamount 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Contributions}{1}{section.1.1}%
@@ -70,7 +70,7 @@
 \contentsline {subsection}{\numberline {5.3.1}Updates in the model}{72}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Experiments}{74}{subsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{74}{subsubsection.5.3.2.1}%
-\contentsline {subsubsection}{\numberline {5.3.2.2}Results}{74}{subsubsection.5.3.2.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}Results}{75}{subsubsection.5.3.2.2}%
 \contentsline {section}{\numberline {5.4}Validating sensibility of the Linear Program to uncertainties}{76}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Updates in the model}{77}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Experiments}{78}{subsection.5.5.1}%
@@ -83,20 +83,20 @@
 \contentsline {subsubsection}{\numberline {5.7.1.2}Results}{87}{subsubsection.5.7.1.2}%
 \contentsline {section}{\numberline {5.8}Monetary costs of reducing the carbon emissions}{88}{section.5.8}%
 \contentsline {subsection}{\numberline {5.8.1}Updates in the model}{88}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Experiments}{89}{subsection.5.8.2}%
-\contentsline {subsubsection}{\numberline {5.8.2.1}Settings}{89}{subsubsection.5.8.2.1}%
-\contentsline {subsubsection}{\numberline {5.8.2.2}Results}{92}{subsubsection.5.8.2.2}%
-\contentsline {subsection}{\numberline {5.8.3}Adding or replacing servers considering new generations}{93}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.2}Experiments}{90}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}Settings}{90}{subsubsection.5.8.2.1}%
+\contentsline {subsubsection}{\numberline {5.8.2.2}Results}{93}{subsubsection.5.8.2.2}%
+\contentsline {subsection}{\numberline {5.8.3}Adding or replacing servers considering new generations}{94}{subsection.5.8.3}%
 \contentsline {subsection}{\numberline {5.8.4}Updates in the model}{94}{subsection.5.8.4}%
 \contentsline {subsection}{\numberline {5.8.5}Experiments}{98}{subsection.5.8.5}%
 \contentsline {subsubsection}{\numberline {5.8.5.1}Settings}{98}{subsubsection.5.8.5.1}%
-\contentsline {subsubsection}{\numberline {5.8.5.2}Results}{99}{subsubsection.5.8.5.2}%
-\contentsline {section}{\numberline {5.9}Discussion}{100}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Summary}{100}{section.5.10}%
-\contentsline {chapter}{\numberline {6}General Discussion}{103}{chapter.6}%
-\contentsline {section}{\numberline {6.1}General Remarks and Future Research Directions}{103}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Work Dissemination}{103}{section.6.2}%
+\contentsline {subsubsection}{\numberline {5.8.5.2}Results}{100}{subsubsection.5.8.5.2}%
+\contentsline {section}{\numberline {5.9}Discussion}{101}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Summary}{101}{section.5.10}%
+\contentsline {chapter}{\numberline {6}General Discussion}{105}{chapter.6}%
+\contentsline {section}{\numberline {6.1}General Remarks and Future Research Directions}{105}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Work Dissemination}{105}{section.6.2}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.50}%
+\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.51}%
 \babel@toc {french}{}
 \babel@toc {english}{}

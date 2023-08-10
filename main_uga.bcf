@@ -2241,7 +2241,8 @@
     <bcf:citekey order="56">era5_wind_2022</bcf:citekey>
     <bcf:citekey order="57">GELARO2017MERRA2</bcf:citekey>
     <bcf:citekey order="58">pv_lcoe_calc</bcf:citekey>
-    <bcf:citekey order="59">battery_lcos_2022</bcf:citekey>
+    <bcf:citekey order="59">nrel_wt_costs_2021</bcf:citekey>
+    <bcf:citekey order="60">battery_lcos_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

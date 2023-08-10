@@ -141,7 +141,7 @@ Finally, the objective function also needs to be modified in order to include th
 
 The cloud infrastructure, the workload, grid emissions, and the execution environment are the same as in Section \ref{sec:settings_ccgrid}. The solar irradiation values, and emissions from PV panels and batteries are the same as Section \ref{sec:ex_lca_pv}. For the \ch{CO2} emissions of the wind turbines, it is considered that it emits $13 g\,\ch{CO2}-eq.Wh^{-1}$ taking into account its life cycle. The source for the values was the same as in Section \ref{sec:ex_lca_pv}, the analysis from NREL that evaluated more than 3000 studies.
 
-For the wind speed data, we used values from the ERA5 data-source \cite{era5_wind_2022}. They provide values for the 100m v-component of wind (air horizontal speed towards the east) and 100m u-component of wind (air horizontal speed towards the north). To transform these values into wind speed, we need to execute the following computation using the Pitagora's theorem: $ w_s = \sqrt{ v^2 + u^2} $, where $w_s$ is the wind speed, $u$ the value of the u-component and $v$ the value of the v-component.
+For the wind speed data, we used values from the ERA5 data-source \cite{era5_wind_2022}. They provide values for the 100m v-component of wind (air horizontal speed towards the east) and 100m u-component of wind (air horizontal speed towards the north) --- both values are at 100m height. To transform these values into wind speed, we need to execute the following computation using the Pitagora's theorem: $ w_s = \sqrt{ v^2 + u^2} $, where $w_s$ is the wind speed, $u$ the value of the u-component and $v$ the value of the v-component.
 
 \subsubsection{Results}
 
@@ -160,14 +160,13 @@ To evaluate the impact of including WT, we compare the sizing for using only PVs
 \end{tabular}  
 \end{table}
 
-Table~\ref{tab:results_wt} presents the number of WTs  built at each location. 
+Table~\ref{tab:results_wt} presents the number of WTs  built at each location.
 
 \begin{table}[H]
   
   \caption{Computed number of WT for each location}\label{tab:results_wt} \centering
-
   \begin{tabular}{|l|r|}
-   \hline
+  \hline
     
   \textbf{Location} &   \textbf{Number of WT} \\
   \hline
@@ -219,7 +218,7 @@ Given the presence of low-carbon intensive sources in some countries, the emissi
 
 \section{Updates in the model}
 
-To model this variation in the emissions of the electricity grid, we need to change this input to be a time series. For the locations where data is not available at fine-grain, hour by hour for example, a pre-processing of the data is needed, for example, if the region it only provides daily data, one can assume that for the 24 hours of the day the grid emissions  will be the same value. It is also necessary to change the model, and Equation~\eqref{eq:fpgrid_timeseries} represents this modification where $gridCO2^d_k$ is the new input for the grid emissions with one value for each time slot $k$.
+To model the change in the emissions of the electricity grid over time, we need to change this input to be a time series. For the locations where data is not available at fine-grain, hour by hour for example, a pre-processing of the data is needed, for example, if the region it only provides daily data, one can assume that for the 24 hours of the day the grid emissions  will be the same value. It is also necessary to change the model, and Equation~\eqref{eq:fpgrid_timeseries} represents this modification where $gridCO2^d_k$ is the new input for the grid emissions with one value for each time slot $k$.
 
 
 \begin{equation} \label{eq:fpgrid_timeseries}
@@ -233,8 +232,9 @@ FPgrid_k^d = Pgrid_k^d\times \Delta t \times gridCO2^d_k
 The cloud infrastructure, the workload, grid emissions, and the execution environment are the same as in Section  \ref{sec:settings_ccgrid}. To evaluate the sensibility of the sizing process considering the solar irradiation data, that is intermittent, we perform the sizing process using the solar irradiation from 30 years (1980 to 2009), that is, for each year the corresponding irradiation data is used for the sizing process, generating a total of 30 instances. To isolate only the effect of the solar irradiation in the sizing process, all the other values are fixed for the 30 instances (workload, parameters, \ch{CO2} emissions from using the grid and manufacturing the renewable infrastructure).
 
 
-The data for simulating the solar power production --- Global Solar Horizontal Irradiation (in Wh/m$^{2}$) --- was collected from the MERRA-2 project~\cite{GELARO2017MERRA2}, since it provides information for anywhere on earth.
+% aqui é pra parte de
 
+The data for simulating the solar power production --- Global Solar Horizontal Irradiation (in Wh/m$^{2}$) --- was collected from the MERRA-2 project~\cite{GELARO2017MERRA2}, since it provides information for anywhere on earth.
 
 
 In the experiment section we will present the results of considering the average and median irradiation of 30 years (PV module expected life time) and how the sizing will perform in the future, considering the long life time of the renewable infrastructure and the difficulty to predict climate conditions. To assess the results, we will compare with the optimal solution, that is, the solution that knows in advance all the climate condition of the next years.
@@ -498,19 +498,29 @@ On the previous sections we showed the results only in terms of the environmenta
 
 \subsection{Updates in the model}
 
-To perform this new analysis, we need some modification in our modeling. The first modification regards buying electricity from the regular grid, and it is modeled by Equation~\eqref{eq:pricegrid}, where $costGrid^d$ is an input that represents the costs of buying electricity at each location. 
+To perform this new analysis, we need some modification in our modeling. The first modification regards buying electricity from the regular grid, and it is modeled by Equation~\eqref{eq:pricegrid}, where $costGrid^d$ is an input that represents the costs of buying electricity at each location (in dolars per kWh). 
 
 \begin{equation} \label{eq:pricegrid}
  PriceGrid^d_k = Pgrid^d_k \times costGrid^d
 \end{equation}
 
-To measure the price of the electricity of the renewable sources, we can use the Levelized Cost of Energy (LCOE). This metric compares the total costs of manufacturing and operating the electricity infrastructure (for example the PV panel) with the total energy it can deliver in its life time, therefore the metric is in \$ per kWh. Similar to the \ch{CO2} emissions of renewable sources, the price will also be different per location, as the total amount of irradiation received differs.  Equation~\eqref{eq:pricepv} models the costs of consuming energy from the solar panels, where $PVLCOE^d$ represents the specific LCOE at the location of data center $d$. 
+To measure the price of the electricity of the renewable sources, we can use the Levelized Cost of Energy (LCOE). This metric compares the total costs of manufacturing and operating the electricity infrastructure (for example the PV panel) with the total energy it can deliver in its life time, therefore the metric is in \$ per kWh. Similar to the \ch{CO2} emissions of renewable sources, the price will also be different per location, as the total amount of irradiation received differs.  Equation~\eqref{eq:pricepv} models the costs of consuming energy from the solar panels, where $PVLCOE^d$ represents the specific LCOE at the location of data center $d$ (in dolars per kWh).
 
 \begin{equation} \label{eq:pricepv}
   PricePV^d_k = PPV^d_k \times PVLCOE^d
 \end{equation}
 
-For the batteries, the metric Levelized Cost of Storage (LCOS) is similar to the LCOE, and it represents how much it costs to discharge energy of the battery considering all the costs in its lifetime. Equation~\eqref{eq:pricebat} models the costs of the energy used from the batteries using its LCOS as input ($BatLCOS$).
+
+For the wind turbines, we also use the LCOE to compute its price, and Equation models the costs of using energy from the WT, where $WTLCOE^d$ represents the specific LCOE at the location of data center $d$ (in dolars per kWh).
+
+
+\begin{equation} \label{eq:pricewt}
+  PriceWT^d_k = PWT^d_k \times WTLCOE^d
+\end{equation}
+
+
+
+For the batteries, the metric Levelized Cost of Storage (LCOS) is similar to the LCOE, and it represents how much it costs to discharge energy of the battery considering all the costs in its lifetime. Equation~\eqref{eq:pricebat} models the costs of the energy used from the batteries using its LCOS as input ($BatLCOS$ in dolars per kWh of electricity discharged).
 
 \begin{equation} \label{eq:pricebat}
    PriceBat^d_k = Pdch^d_k \times BatLCOS
@@ -520,8 +530,9 @@ For the batteries, the metric Levelized Cost of Storage (LCOS) is similar to the
 We can also modify our objective function to minimize the price of operating the cloud platform instead of its environmental impact, and Equation~\eqref{eq:objective_price} model this new objective.
 
 \begin{equation} \label{eq:objective_price}
-\text{minimize }\sum_{k=0}^{K-1} \sum_{d=1}^D PriceGrid^d_k  + PriceBat^d_k + PricePV^d+k
+\text{minimize }\sum_{k=0}^{K-1} \sum_{d=1}^D PriceGrid^d_k  + PriceBat^d_k + PricePV^d+ PriceWT^d_k
 \end{equation}
+
 
 \subsection{Experiments}
 
@@ -578,34 +589,42 @@ For the price of solar panel electricity, we use the tool ``Comparative Photovol
   \end{tabular}  
 \end{table}
 
+
+For computing the LCOE (dolars per MWh) of wind turbines, we also used the modeling from NREL~\cite{nrel_wt_costs_2021}. Equations~\eqref{eq:wt_lcoe} represents how to calculate the LCOE for WT, where CapEx is the capital expenditures (dollars per kilowatt) --- represents the initial investment cost in the infrastructure, OpEx is the operation expendutures (dolars per kilowatt per year), FCR is the fixed charge rate (\%) --- the amount of revenue per dollar of investment that must be collected annualy from customers to pay the carrying charges on that investment, such as return on debt and equity, income and property tax, book depreciation and insurance. We used the default values for a Distributed Single-Turbine (Large): Capex = 3540; Fcr = 5.42; OpEx = 35. For the net anual energy production (in MWh/MW/year), it also depends on the location where the wind turbine is installed: Canberra = 1138.5; Seoul  = 829.57; Paris = 2065.38 ; Virginia = 1289.12; Dubai = 1217.64; Singapore = 754.0; Pune =  869.19 ; Johannesburg = 1143.32; and São Paulo = 881.95.
+
+% ref FCR pp. 22-24 of Short W et al, 1995. Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies. National Renewable Energy Laboratory. NREL/TP-462-5173. (PDF 6.6 MB)
+
+\begin{equation} \label{eq:wt_lcoe}
+  LCOE_{wt} = \frac{ (CapEx \times FCR) + OpEx}{ \frac{AEP_{net}}{1000}   }
+\end{equation}
+
 For the batteries, the metric Levelized Cost of Storage (LCOS) is similar to the LCOE, and it can represents how much it costs to discharge energy of the battery considering all the costs in its lifetime. We used values from a technical report of the US Department of Energy \cite{battery_lcos_2022}, where each kilowatt hour of energy discharged has a price of 20 cents. For the grid electricity prices, we used the source from Petrolprices.org. Finally, Table \ref{tab:price_electricity_sources} presents the cost in dolars per kWh of using the electrical grid and PV panels.
 
 \begin{table}[H]
   
   \caption{Price of different sources of energy (USD per kWh) at each location }\label{tab:price_electricity_sources} \centering
-
+  
   \begin{tabular}{|l|r|r|r|}
-   \hline
-    
-  \textbf{Location} &   \textbf{Grid} & \textbf{PV}  \\
+  \hline    
+  \textbf{Location} &   \textbf{Grid} & \textbf{PV} & \textbf{WT} \\
   \hline
-  Johannesburg & 0.074 & 0.0385   \\
+  Johannesburg & 0.074 & 0.0385 &  0.1984   \\
   \hline
-  Pune      &  0.104   & 0.0406   \\
+  Pune      &  0.104   & 0.0406 & 0.2610    \\
   \hline
-  Canberra  & 0.331    &  0.0445  \\
+  Canberra  & 0.331    &  0.0445 & 0.1993   \\
   \hline
-  Dubai   & 0.101      & 0.0390   \\
+  Dubai   & 0.101      & 0.0390 &   0.1863  \\
   \hline
-  Singapore & 0.272    & 0.0557   \\
+  Singapore & 0.272    & 0.0557 & 0.3009    \\
   \hline     
-  Seoul      & 0.092   & 0.0525   \\
+  Seoul      & 0.092   & 0.0525 & 0.2735    \\
   \hline
-  Virginia   & 0.150   &  0.0498  \\
+  Virginia   & 0.150   &  0.0498 &  0.1760  \\
   \hline
-  São Paulo  & 0.144   &  0.0453  \\
+  São Paulo  & 0.144   &  0.0453 & 0.2572   \\
   \hline 
-  Paris      & 0.340   &  0.0643  \\
+  Paris      & 0.340   &  0.0643 & 0.1098   \\
   \hline  
 
 \end{tabular}
@@ -623,21 +642,17 @@ Table~\ref{tab:total_price} illustrates the total costs for the data center oper
   \begin{tabular}{|l|r|}
    \hline
     
-  \textbf{Scenario} &   \textbf{Total costs (millions of \$)} \\
+  \textbf{Scenario} &   \textbf{Total costs (millions of \$)} \\    
   \hline
-  Minimum cost (PV + Bat + WT + grid) & 36.926   \\
+  Minimum cost (PV + WT+ Bat + grid) & 47.73    \\
   \hline
-  Minimum cost (PV + Bat  + grid)   & 37.889 \\
+  Minimum cost (PV + Bat + grid)      & 50.86     \\
+  \hline    
+  Only grid   & 75.39                             \\
   \hline
-  Minimum \ch{CO2} (PV + Bat + WT + grid)  & 45.667 \\
+  Minimum \ch{CO2} (PV + Bat + grid) & 78.92       \\
   \hline
-  Minimum \ch{CO2} (PV + Bat + grid)   & 50.054 \\
-  \hline
-  Only renewable infra (PV + Bat + WT ) & 51.104  \\
-  \hline     
-  Only renewable infra (PV + Bat)     & 52.694 \\
-  \hline
-  Only grid   & 75.378\\
+  Minimum \ch{CO2} (PV +WT+  Bat + grid) & 118.31 \\
   \hline
   
 \end{tabular}  
@@ -649,21 +664,19 @@ Table~\ref{tab:total_price} illustrates the total costs for the data center oper
   \caption{Total emissions (tons of CO2 for different scenarios }\label{tab:total_co2_scenarios} \centering
   
   \begin{tabular}{|l|r|}
-   \hline
-    
+  \hline
   \textbf{Scenario} &   \textbf{Total CO2 emissions (tons)} \\
   \hline
-  Minimum \ch{CO2} (PV + Bat + WT + grid)  & 27821.1\\
+  Minimum \ch{CO2} (PV + WT +  Bat + grid)  & 24373.88 \\
   \hline
-  Minimum \ch{CO2} (PV + Bat + grid)   & 29541.7 \\
+  Minimum \ch{CO2} (PV +  Bat + grid)  & 37778.79 \\    
   \hline
-  Only renewable infra (PV + Bat)     & 42316.25 \\
+  Minimum cost (PV + WT+ Bat  + grid) &  129713.08 \\
   \hline
-  Minimum cost (PV + Bat + WT + grid) &  101170.9\\
+  Minimum cost (PV + Bat  + grid)   & 131597.65 \\
   \hline
-  Minimum cost (PV + Bat  + grid)   & 101930.9 \\
+  Only grid & 201211.31  \\
   \hline
-
 \end{tabular}  
 
 \end{table}
@@ -792,43 +805,71 @@ A^d = lowboundpv^d
 
 \subsubsection{Settings}
 
-We consider ten generations of servers. Table~\ref{tab:servers_specs} lists the difference in terms of hardware characteristics and power consumption of each generation. 
+
+We consider ten generations of servers. Table~\ref{tab:servers_specs} lists the difference in terms of hardware characteristics, power consumption, and carbon footprint of manufacturing each generation. For the \ch{CO2} of manufacturing the servers, the methodology from~\ref{gupta2022_ACT} is used, that presents how to compute the carbon footprint of servers considering the RAM, storage (HD and SSDs) and CPU.
+
 
 \begin{table}[H]
-
+  \small
   \caption{Servers specifications for different generations} \centering
   \label{tab:servers_specs} 
-  \begin{tabular}{|l|r|r|r|r|r|}
+  \begin{tabular}{|l|r|r|r|r|r|r|}
    \hline
     
-  \textbf{Gen.} & \textbf{CPU} &   \textbf{CPU Cores} & \textbf{P idle}  & \textbf{P Core} & \textbf{Nodes} \\
+  \textbf{Gen.} & \textbf{CPU} &   \textbf{CPU Cores} & \textbf{P idle}  & \textbf{P Core} & \textbf{Nodes} & \textbf{kg \ch{CO2} eq.} \\
   \hline
-    1 & Intel Xeon E5-2630 & 20 & 52 & 7.5 & 1 \\
+    1 & Intel Xeon E5-2630 & 20 & 52 & 7.5 & 1 & - \\
   \hline
-    2 & Intel Xeon E5-2699 v3& 36 & 39 & 6.44 & 1  \\
+    2 & Intel Xeon E5-2699 v3& 36 & 39 & 6.44 & 1 & 577.2  \\
   \hline
-    3 & Intel Xeon E5-2699 v3 & 36 & 40.1 & 6.3 & 1 \\
+    3 & Intel Xeon E5-2699 v3 & 36 & 40.1 & 6.3 & 1 & 577.2\\
   \hline
-     4 & Intel Xeon E5-2698 V4 &  40 & 43.5 & 7.1375 & 1 \\
+     4 & Intel Xeon E5-2698 V4 &  40 & 43.5 & 7.1375 & 1 & 569.4\\
   \hline
-    5 & Intel Xeon Platinum 8180 & 56 & 48.9 & 6.68 & 1 \\
+    5 & Intel Xeon Platinum 8180 & 56 & 48.9 & 6.68 & 1 & 578.6\\
   \hline
-    6 & Intel Xeon Platinum 8180 & 56 & 50.3 & 6.9 & 1 \\
+    6 & Intel Xeon Platinum 8180 & 56 & 50.3 & 6.9 & 1 & 578.6\\
   \hline
-    7 & AMD EPYC 7742  & 64 & 66.1 & 2.71 & 1 \\
+    7 & AMD EPYC 7742  & 64 & 66.1 & 2.71 & 1 & 587.2 \\
   \hline
-    8 & AMD EPYC 7742  & 384 & 228 & 2.375 & 6 \\
+    8 & AMD EPYC 7742  & 384 & 228 & 2.375 & 6 & 587.2\\
   \hline
-    9 & AMD EPYC 7763 & 128 & 75.6 & 3 & 1 \\
+    9 & AMD EPYC 7763 & 128 & 75.6 & 3 & 1    & 590.3 \\
   \hline
-    10 & AMD EPYC 9654 & 192 & 126 & 3.65 & 1 \\
+    10 & AMD EPYC 9654 & 192 & 126 & 3.65 & 1 & 614.9 \\
   \hline
 \end{tabular}  
 \end{table}
 
-In this experiment, it is considered that the cost of manufacturing a new server is 800 kg of \ch{CO2} eq and that the expected life time of the server is 4 years. The carbon costs will be amortized during the life time of the server, that is, every year there is a costs of 200 kg of \ch{CO2} eq. If the server is used after the fourth year, there is no more carbon costs to pay. Furthermore, if the server is replaced before the end of its expected life time (4 years), there is also costs in terms of \ch{CO2}  eq to pay. 
 
-For example, a new server was built in year 2014. In that year, the cost of the server is 200 kg of \ch{CO2} eq. If the DC operator decides to replace the server in the year 2015, there is a cost of 600kg \ch{CO2} eq to pay; if the server is replaced in year 2016, 400kg of \ch{CO2} eq to pay; if it is replaced on 2017, there is a cost of 200kg of \ch{CO2} eq to pay; and finally, after the year 2018 it is considered that all the emissions of the server have been amortized, that is, replacing the server will not generate costs in terms of \ch{CO2} eq.
+
+All the servers are based on the Dell R740 for the HD and SSD values (HD with 3.84 TB and SSD with 400GB), with same values for \ch{CO2} as in ~\ref{gupta2022_ACT} and they have 256 GB of RAM (16 modules of 16 GB DDR4 10 nm). For the CPU, the \ch{CO2} depends on the die are size and the processor size (in nanometers). The data for the die area size and processor size was collected from the website x86guide.net, and Table~\ref{tab:cpu_specs} presents the values of die area and processor size. For the first generation, it is considered that the server have been used more than its expected life time and all its \ch{CO2} footprint have been paid.
+
+\begin{table}[H]
+  \small
+  \caption{CPU specifications in terms of die area and processor size} \centering
+  \label{tab:cpu_specs} 
+  \begin{tabular}{|l|r|r|}
+   \hline
+    
+  \textbf{CPU}  & \textbf{Die area (cm²)} & \textbf{Processor size (nm)} \\
+  \hline
+    Intel Xeon E5-2699 v3& 6.62  & 20  \\
+  \hline
+    Intel Xeon E5-2698 V4 & 4.56 & 14\\
+  \hline
+    Intel Xeon Platinum 8180 & 6.94 & 14\\
+  \hline
+    AMD EPYC 7742  & 5.92 & 7 \\
+  \hline
+    AMD EPYC 7763 & 6.45   & 7 \\
+  \hline
+    AMD EPYC 9654 & 8.66 & 5 \\
+  \hline
+\end{tabular}  
+\end{table}
+
+In this experiment, it is considered that the expected life time of the server is 4 years. The carbon costs will be amortized during the life time of the server. For example, if the manufacturing emissions of a server is 800 kg of \ch{CO2} eq., every year there is a costs of 200 kg of \ch{CO2} eq. If the server is used after the fourth year, there is no more carbon costs to pay. Furthermore, if the server is replaced before the end of its expected life time (4 years), there is also costs in terms of \ch{CO2}  eq to pay. For example, a new server was built in year 2014. In that year, the cost of the server is 200 kg of \ch{CO2} eq. If the DC operator decides to replace the server in the year 2015, there is a cost of 600kg \ch{CO2} eq to pay; if the server is replaced in year 2016, 400kg of \ch{CO2} eq to pay; if it is replaced on 2017, there is a cost of 200kg of \ch{CO2} eq to pay; and finally, after the year 2018 it is considered that all the emissions of the server have been amortized, that is, replacing the server will not generate costs in terms of \ch{CO2} eq.
 
 It will be considered 10 years of operation of the cloud federation. The LP is solved for each year in sequence, and for each year it can decide to manufacture new servers to be added to the current DC infrastructure, or to replace older servers. After each year, the number of new servers manufactured and the number of servers replaced are extracted from the solution and used as input for the next year. 
 
