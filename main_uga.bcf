@@ -2240,9 +2240,13 @@
     <bcf:citekey order="55">HADDAD2021100505</bcf:citekey>
     <bcf:citekey order="56">era5_wind_2022</bcf:citekey>
     <bcf:citekey order="57">GELARO2017MERRA2</bcf:citekey>
-    <bcf:citekey order="58">pv_lcoe_calc</bcf:citekey>
-    <bcf:citekey order="59">nrel_wt_costs_2021</bcf:citekey>
-    <bcf:citekey order="60">battery_lcos_2022</bcf:citekey>
+    <bcf:citekey order="58">era5_wind_2022</bcf:citekey>
+    <bcf:citekey order="59">pv_lcoe_calc</bcf:citekey>
+    <bcf:citekey order="60">nrel_wt_costs_2021</bcf:citekey>
+    <bcf:citekey order="61">nrel_economic_wt_1995</bcf:citekey>
+    <bcf:citekey order="62">battery_lcos_2022</bcf:citekey>
+    <bcf:citekey order="63">gupta2022_ACT</bcf:citekey>
+    <bcf:citekey order="64">gupta2022_ACT</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

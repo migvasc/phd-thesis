@@ -27,13 +27,10 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Average solar irradiation from 1980 to 2019 per location.\relax }}{71}{figure.caption.27}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces PV Area sizing when the WT are and are not included \relax }}{76}{figure.caption.31}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Battery capacity sizing when the WT are and are not included \relax }}{76}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Different values for the solar irradiation input from 1980 to 2019. The data in yellow represents the median and in purple the average of the 30 years. \relax }}{79}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces PV sizing with different granularity for grid \ch {CO2} emissions data\relax }}{83}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Battery sizing with different granularity for grid \ch {CO2} emissions data \relax }}{84}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Different PV sizing using irradiation from 30 years (1980 - 2009).\relax }}{85}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Different battery sizing using irradiation from 30 years (1980 - 2009).\relax }}{85}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Sizing with information of the current year.\relax }}{102}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Sizing knowing all information of the 10 years.\relax }}{102}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Different energy production for 1 PV panel at each location for the years 1980 to 2019.\relax }}{77}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Different energy production for 1 wind turbine at each location for the years 1980 to 2019.\relax }}{77}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Sizing with information of the current year.\relax }}{97}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Sizing knowing all information of the 10 years.\relax }}{98}{figure.caption.48}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {french}{}

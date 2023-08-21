@@ -1,21 +1,22 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'main_uga.blg'
-[67] biber:322> INFO - === Thu Aug 10, 2023, 21:58:37
-[74] Biber.pm:415> INFO - Reading 'main_uga.bcf'
-[106] Biber.pm:943> INFO - Found 42 citekeys in bib section 0
-[113] Biber.pm:4256> INFO - Processing section 0
-[113] Utils.pm:75> INFO - Globbing data source 'references.bib'
-[113] Utils.pm:91> INFO - Globbed data source 'references.bib' to references.bib
-[118] Biber.pm:4455> INFO - Looking for bibtex format file 'references.bib' for section 0
-[120] bibtex.pm:1653> INFO - LaTeX decoding ...
-[157] bibtex.pm:1471> INFO - Found BibTeX data source 'references.bib'
-[334] Utils.pm:293> WARN - Entry 'pv_lcoe_calc' (references.bib): Invalid format '2021-8' of date field 'date' - ignoring
-[341] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_XvlG/references.bib_251502.utf8, line 333, warning: undefined macro "F"
-[341] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_XvlG/references.bib_251502.utf8, line 343, warning: undefined macro "F"
-[373] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[373] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[373] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[373] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[402] bbl.pm:652> INFO - Writing 'main_uga.bbl' with encoding 'UTF-8'
-[423] bbl.pm:755> INFO - Output to main_uga.bbl
-[423] Biber.pm:128> INFO - WARNINGS: 3
+[34] biber:322> INFO - === Sat Aug 12, 2023, 15:56:52
+[41] Biber.pm:415> INFO - Reading 'main_uga.bcf'
+[76] Biber.pm:943> INFO - Found 44 citekeys in bib section 0
+[83] Biber.pm:4256> INFO - Processing section 0
+[84] Utils.pm:75> INFO - Globbing data source 'references.bib'
+[84] Utils.pm:91> INFO - Globbed data source 'references.bib' to references.bib
+[89] Biber.pm:4455> INFO - Looking for bibtex format file 'references.bib' for section 0
+[90] bibtex.pm:1653> INFO - LaTeX decoding ...
+[131] bibtex.pm:1471> INFO - Found BibTeX data source 'references.bib'
+[133] Utils.pm:293> WARN - Duplicate entry key: 'nrel_economic_wt_1995' in file 'references.bib', skipping ...
+[314] Utils.pm:293> WARN - Entry 'pv_lcoe_calc' (references.bib): Invalid format '2021-8' of date field 'date' - ignoring
+[329] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_pO1O/references.bib_239636.utf8, line 333, warning: undefined macro "F"
+[329] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_pO1O/references.bib_239636.utf8, line 343, warning: undefined macro "F"
+[363] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[363] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[363] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[363] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[394] bbl.pm:652> INFO - Writing 'main_uga.bbl' with encoding 'UTF-8'
+[417] bbl.pm:755> INFO - Output to main_uga.bbl
+[417] Biber.pm:128> INFO - WARNINGS: 4

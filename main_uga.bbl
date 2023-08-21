@@ -863,6 +863,7 @@
       \strng{authorbibnamehash}{7d22bb15e8d4a53a961553c1c128f0de}
       \strng{authornamehash}{346839e320ca8c7bc46e489135c387ca}
       \strng{authorfullhash}{3bb75fa1e3a92a694666eb7335e0f13e}
+      \field{extraname}{1}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labelnamesource}{author}
@@ -882,6 +883,79 @@
       \verb https://doi.ieeecomputersociety.org/10.1109/HPCA51647.2021.00076
       \endverb
       \keyw{technological innovation;energy consumption;software algorithms;carbon dioxide;computer architecture;hardware;software}
+    \endentry
+    \entry{gupta2022_ACT}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=f0849c97164c16fd75df73410c5db135}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Udit},
+           giveni={U\bibinitperiod}}}%
+        {{hash=4dde1b977702426cc4b845d76b2d8c37}{%
+           family={Elgamal},
+           familyi={E\bibinitperiod},
+           given={Mariam},
+           giveni={M\bibinitperiod}}}%
+        {{hash=76ba74a3d31777450d05e36e66036524}{%
+           family={Hills},
+           familyi={H\bibinitperiod},
+           given={Gage},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d90be86528d6d9b7a31cc9057e674a58}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Gu-Yeon},
+           giveni={G\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=24ae660e31ad1fd2c67a30f517342c52}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Hsien-Hsin\bibnamedelima S.},
+           giveni={H\bibinithyphendelim H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d423f545c47a8c65a465fcd5649bcbbc}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ecfcd63e3355514161783ebe821cd42d}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Carole-Jean},
+           giveni={C\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, New York}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{59e0db2826e4bef251c2690c2eec11be}
+      \strng{fullhash}{c3bc3328b21937f3b36fee73551aaaed}
+      \strng{bibnamehash}{3235a8f5a8553a7673ce31972325e8bf}
+      \strng{authorbibnamehash}{3235a8f5a8553a7673ce31972325e8bf}
+      \strng{authornamehash}{59e0db2826e4bef251c2690c2eec11be}
+      \strng{authorfullhash}{c3bc3328b21937f3b36fee73551aaaed}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 49th Annual International Symposium on Computer Architecture}
+      \field{isbn}{9781450386104}
+      \field{series}{ISCA '22}
+      \field{title}{ACT: Designing Sustainable Computer Systems with an Architectural Carbon Modeling Tool}
+      \field{year}{2022}
+      \field{pages}{784\bibrangedash 799}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/3470496.3527408
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3470496.3527408
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3470496.3527408
+      \endverb
+      \keyw{mobile,energy,sustainable computing,manufacturing,computer architecture}
     \endentry
     \entry{hadary2020protean}{inproceedings}{}
       \true{moreauthor}
@@ -1751,6 +1825,47 @@
       \field{year}{2018}
       \field{pages}{548\bibrangedash 559}
       \range{pages}{12}
+    \endentry
+    \entry{nrel_economic_wt_1995}{article}{}
+      \name{author}{3}{}{%
+        {{hash=830049fa6c5d570158fb3c3b90f62037}{%
+           family={Short},
+           familyi={S\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod}}}%
+        {{hash=88e9879416b144a99fbb38cae8ee87be}{%
+           family={Packey},
+           familyi={P\bibinitperiod},
+           given={D\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b61c9fb94f2b18f3c84bf7ddb2fd5b26}{%
+           family={Holt},
+           familyi={H\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d7b94fdd2361abc147fbc9afe89fed5}
+      \strng{fullhash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
+      \strng{bibnamehash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
+      \strng{authorbibnamehash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
+      \strng{authornamehash}{4d7b94fdd2361abc147fbc9afe89fed5}
+      \strng{authorfullhash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{A manual for the economic evaluation of energy efficiency and renewable energy technologies}
+      \field{year}{1995}
+      \verb{doi}
+      \verb 10.2172/35391
+      \endverb
+      \verb{urlraw}
+      \verb https://www.osti.gov/biblio/35391
+      \endverb
+      \verb{url}
+      \verb https://www.osti.gov/biblio/35391
+      \endverb
     \endentry
     \entry{SONG2022326}{article}{}
       \name{author}{4}{}{%
