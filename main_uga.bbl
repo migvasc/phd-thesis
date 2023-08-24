@@ -1831,31 +1831,33 @@
         {{hash=830049fa6c5d570158fb3c3b90f62037}{%
            family={Short},
            familyi={S\bibinitperiod},
-           given={W},
+           given={W.},
            giveni={W\bibinitperiod}}}%
-        {{hash=88e9879416b144a99fbb38cae8ee87be}{%
+        {{hash=e287603da2e74f75c203930a141f5706}{%
            family={Packey},
            familyi={P\bibinitperiod},
-           given={D\bibnamedelima J},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
         {{hash=b61c9fb94f2b18f3c84bf7ddb2fd5b26}{%
            family={Holt},
            familyi={H\bibinitperiod},
-           given={T},
+           given={T.},
            giveni={T\bibinitperiod}}}%
       }
       \strng{namehash}{4d7b94fdd2361abc147fbc9afe89fed5}
-      \strng{fullhash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
-      \strng{bibnamehash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
-      \strng{authorbibnamehash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
+      \strng{fullhash}{404b1e585198404656489466e2bef5de}
+      \strng{bibnamehash}{404b1e585198404656489466e2bef5de}
+      \strng{authorbibnamehash}{404b1e585198404656489466e2bef5de}
       \strng{authornamehash}{4d7b94fdd2361abc147fbc9afe89fed5}
-      \strng{authorfullhash}{b2ffc0925a2e3a9caaecb95d5ffbf514}
+      \strng{authorfullhash}{404b1e585198404656489466e2bef5de}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{title}{A manual for the economic evaluation of energy efficiency and renewable energy technologies}
+      \field{journaltitle}{NASA STI/Recon Technical Report N}
+      \field{month}{03}
+      \field{title}{A Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies NREL/TP-462-5173 ON: DE95000211; TRN: 95:003272}
+      \field{volume}{95}
       \field{year}{1995}
       \verb{doi}
       \verb 10.2172/35391
@@ -1946,6 +1948,66 @@
       \verb{url}
       \verb https://www.osti.gov/biblio/1907623
       \endverb
+    \endentry
+    \entry{googleborg_2020}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=8ba51193c1d242961e20f566577b31a2}{%
+           family={Tirmazi},
+           familyi={T\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=77446bb2592ddafdd206d28272305ba9}{%
+           family={Barker},
+           familyi={B\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1f47b49081ae07726c5988cf1ead914b}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Nan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=77fb2fd5d409f352c07c176fb4404630}{%
+           family={Haque},
+           familyi={H\bibinitperiod},
+           given={Md\bibnamedelima Ehtesam},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=387eca050ddf876e6883fc6b6a1495e8}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Zhijing\bibnamedelima Gene},
+           giveni={Z\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ae4b8fa8c5628beeb183f814b5bbfcae}{%
+           family={Hand},
+           familyi={H\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a83a7faf335240fc7128d5b36cdef519}{%
+           family={Harchol-Balter},
+           familyi={H\bibinithyphendelim B\bibinitperiod},
+           given={Mor},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5f3c579f3b21ba42d76c7a3ee89b6ca2}{%
+           family={Wilkes},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heraklion, Crete}%
+      }
+      \strng{namehash}{48b096812f33a39ce13b2659d9912d5b}
+      \strng{fullhash}{bfc3e211a9d8ce98f8c3854880c3e513}
+      \strng{bibnamehash}{11cdc26896bf009abaaab370717727fd}
+      \strng{authorbibnamehash}{11cdc26896bf009abaaab370717727fd}
+      \strng{authornamehash}{48b096812f33a39ce13b2659d9912d5b}
+      \strng{authorfullhash}{bfc3e211a9d8ce98f8c3854880c3e513}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{EuroSys'20}
+      \field{title}{Borg: the Next Generation}
+      \field{year}{2020}
     \endentry
     \entry{velho2013simgridparameters}{article}{}
       \name{author}{4}{}{%
@@ -2049,12 +2111,6 @@
       \field{title}{2022 Grid Energy Storage Technology Cost and Performance Assessment}
       \field{type}{techreport}
       \field{year}{2022}
-      \verb{urlraw}
-      \verb https://www.pnnl.gov/sites/default/files/media/file/Final\%20-\%20ESGC\%20Cost\%20Performance\%20Report\%2012-11-2020.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.pnnl.gov/sites/default/files/media/file/Final%5C%20-%5C%20ESGC%5C%20Cost%5C%20Performance%5C%20Report%5C%2012-11-2020.pdf
-      \endverb
     \endentry
     \entry{solar_co2}{article}{}
       \name{author}{3}{}{%

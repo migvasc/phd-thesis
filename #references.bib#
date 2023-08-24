@@ -753,3 +753,12 @@ month = {8}
 
 }
 
+
+@techreport{wtlanduse_2009,
+  title={Land use requirements of modern wind power plants in the United States. NREL/TP-6A2-45834},
+  year={2009},
+  author = {Denholm, P and Hand, M and Jackson, M and Ong, S},
+  institution={National Renewable Energy Lab.(NREL), Golden, CO (United States)}
+}
+
+

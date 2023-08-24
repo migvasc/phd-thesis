@@ -901,7 +901,6 @@ Regarding the wind turbines, we saw that including them in the renewable infrast
 As said in chapter x, solar irradiation has a lower variance, and the result of the sizing process is not that different, we saw in table 3 that if we used sample estimation tecniques, for example, the average or median of 30 years, to do the sizing and run for the future, we got an error of 3\% in comparison with the optimal scenario. The wind speed is way more intermittent, and we saw that using the average and median are nto that precise, the error grows to up 13\% in comparison to the optimal scneario. On the other hand, even in the worse case, the reduction in total co2 emissions by using the wind is X more than using only solar power.
 % TODO completar com cenarios q tem os valores la do ano ...
 
-
 In what concerns the sensitivity of the model to the grid emissions input, we saw that the initial modeling that uses the average value  of the year is robust: using the hour by hour value reduces the total \ch{CO2} emissions  by less than 1\% --- as seen on Table X. This result presents a positive outcome, considering that not every location provide fine-grain value of the carbon intensity of its electricity grid.
 
 
@@ -917,6 +916,7 @@ The flexibility in the scheduling can even help to reduce the error of sizing ca
 We see in Table~\ref {tab:total_price} that the hybrid configuration is already cheaper than using power only from the electrical grid --- the solution that aimed to minimize the cost of the cloud operation for 1 year is around 40\% cheaper and emits 35\% less \ch{CO2} as seen in Table~\ref{tab:total_co2_scenarios_costs}. We also see that using a combination of solar panels and wind turbines allows to reduce costs. On the other hand, the solution that result in the smaller environmental impact is the most expensive ( Minimum \ch{CO2} PV + WT + Bat + grid ) : it presents a reduction of 88\% in \ch{CO2} emissions than the grid only scenario (that is 36.27\% cheaper than the hybrid configuration minimizing the emissions. The scenario where the renewable infrastructure is only composed by PV panels is the best in terms of costs and environmental impact: it has a price close to the grid only scenario --- only 4\% more expensive --- and has a reduction of 81\% in \ch{CO2} emissions.
 
 % Talk about new servers ...
+
 
 
 For sizing the servers of new generations, know about the configurations is impossible, the climate we may predict with certain error ...

@@ -61,41 +61,41 @@
 \contentsline {section}{\numberline {4.6}Summary}{64}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Long-term evaluation of sizing the DC operation}{67}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{67}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{69}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{70}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Updates in the model}{70}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Experiments}{71}{subsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{71}{subsubsection.5.2.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2.2}Results}{72}{subsubsection.5.2.2.2}%
-\contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{72}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Updates in the model}{72}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Experiments}{74}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{74}{subsubsection.5.3.2.1}%
-\contentsline {subsubsection}{\numberline {5.3.2.2}Results}{74}{subsubsection.5.3.2.2}%
-\contentsline {section}{\numberline {5.4}Validating sensibility of the Linear Program to uncertainties}{76}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Updates in the model}{78}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}Intermittency of renewable sources}{78}{subsubsection.5.4.1.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.2}Fine-grain values of grid emission data (hour by hour)}{78}{subsubsection.5.4.1.2}%
-\contentsline {subsection}{\numberline {5.4.2}Experiments}{79}{subsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.1}Settings}{79}{subsubsection.5.4.2.1}%
-\contentsline {paragraph}{\numberline {5.4.2.1.1}Intermittency of renewable sources}{79}{paragraph.5.4.2.1.1}%
-\contentsline {paragraph}{\numberline {5.4.2.1.2}Fine-grain values of grid emission data (hour by hour)}{79}{paragraph.5.4.2.1.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.2}Results}{80}{subsubsection.5.4.2.2}%
-\contentsline {paragraph}{\numberline {5.4.2.2.1}Intermittency of renewable sources}{80}{paragraph.5.4.2.2.1}%
-\contentsline {paragraph}{\numberline {5.4.2.2.2}Fine-grain values of grid emission data (hour by hour)}{82}{paragraph.5.4.2.2.2}%
-\contentsline {section}{\numberline {5.5}Flexibility in the scheduling to reduce carbon emissions}{82}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Updates in the model}{82}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Experiments}{83}{subsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.2.1}Settings}{83}{subsubsection.5.5.2.1}%
+\contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{73}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Updates in the model}{73}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Experiments}{75}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{75}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}Results}{75}{subsubsection.5.3.2.2}%
+\contentsline {section}{\numberline {5.4}Validating sensibility of the Linear Program to uncertainties}{77}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Updates in the model}{79}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}Intermittency of renewable sources}{79}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}Fine-grain values of grid emission data (hour by hour)}{79}{subsubsection.5.4.1.2}%
+\contentsline {subsection}{\numberline {5.4.2}Experiments}{80}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Settings}{80}{subsubsection.5.4.2.1}%
+\contentsline {paragraph}{\numberline {5.4.2.1.1}Intermittency of renewable sources}{80}{paragraph.5.4.2.1.1}%
+\contentsline {paragraph}{\numberline {5.4.2.1.2}Fine-grain values of grid emission data (hour by hour)}{80}{paragraph.5.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Results}{81}{subsubsection.5.4.2.2}%
+\contentsline {paragraph}{\numberline {5.4.2.2.1}Intermittency of renewable sources}{81}{paragraph.5.4.2.2.1}%
+\contentsline {paragraph}{\numberline {5.4.2.2.2}Fine-grain values of grid emission data (hour by hour)}{83}{paragraph.5.4.2.2.2}%
+\contentsline {section}{\numberline {5.5}Flexibility in the scheduling to reduce carbon emissions}{83}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Updates in the model}{83}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Experiments}{84}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}Settings}{84}{subsubsection.5.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.5.2.2}Results}{84}{subsubsection.5.5.2.2}%
-\contentsline {section}{\numberline {5.6}Monetary costs of reducing the carbon emissions}{84}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Updates in the model}{84}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Experiments}{86}{subsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.2.1}Settings}{86}{subsubsection.5.6.2.1}%
+\contentsline {section}{\numberline {5.6}Monetary costs of reducing the carbon emissions}{85}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Updates in the model}{85}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Experiments}{87}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}Settings}{87}{subsubsection.5.6.2.1}%
 \contentsline {subsubsection}{\numberline {5.6.2.2}Results}{89}{subsubsection.5.6.2.2}%
 \contentsline {section}{\numberline {5.7}Adding or replacing servers considering new generations}{90}{section.5.7}%
 \contentsline {subsection}{\numberline {5.7.1}Updates in the model}{90}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Experiments}{94}{subsection.5.7.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{94}{subsubsection.5.7.2.1}%
+\contentsline {subsection}{\numberline {5.7.2}Experiments}{95}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{95}{subsubsection.5.7.2.1}%
 \contentsline {subsubsection}{\numberline {5.7.2.2}Results}{96}{subsubsection.5.7.2.2}%
 \contentsline {section}{\numberline {5.8}Discussion}{99}{section.5.8}%
 \contentsline {section}{\numberline {5.9}Summary}{101}{section.5.9}%
