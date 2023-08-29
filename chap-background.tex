@@ -11,7 +11,62 @@ In this chapter we provide background knowledge to the reader to understand the 
 
 Related work from the previous papers:
 
+Reducing the total energy consumption and carbon footprint of DCs is a
+major goal for Cloud Computing platforms. Virtualization allows DCs to
+employ intelligent resource allocation and scheduling algorithms to
+optimize how the underlying computing resources are used and to reduce
+the number of utilized physical resources. In particular, DCs can apply VM
+consolidation techniques in order to relocate the VMs into the
+smallest number of physical machines and turn off the idle
+machines. \cite{10.1145/3470972} present a systematic literature
+review on such techniques.
 
+Large hosting and Cloud Computing providers have DCs distributed on
+different geographic locations---some of them on different time
+zones---in order to provide services with low latency and high
+availability. Scheduling algorithms can take advantage of this to
+mitigate the intermittent availability of renewable energy by
+redistributing the workload based on renewable energy
+availability. This idea is known in the literature as the
+``follow-the-renewables'' \cite{shuja2016sustainable}. 
+
+\cite{XU2020191} present a comprehensive overview of the classical
+techniques used for reducing the energy consumption on DCs. They also
+introduce a workflow shifting algorithm that redistributes the
+workload among different DCs located in different time zones. The
+objective of their algorithm is to minimize the total carbon emission
+while ensuring the average response time of the requests. In their
+work, jobs are initiated in the selected DCs instead of migrated after
+starting its execution, and there is no server consolidation.
+
+
+Minimization of energy consumption, costs, and environmental impact
+while ensuring the workload performance were studied
+by~\cite{ALI2021110907}. They proposed a solution that manages
+geographic distributed DCs with heterogeneous servers in a distributed
+fashion. The solution has two main algorithms that use greedy
+heuristics: the first performs the allocation of the incoming workload
+to the servers of the DCs according to a defined policy (lower energy
+prices or more available green power); and the second either migrate
+the workload only among the servers inside a DC (intra-DC migration)
+to reduce the number of utilized servers, or migrate the workload
+among different DCs (inter-DC migration) according to an arbitrary
+policy (use the DCs with lower electricity price, or more green power
+available). The migrations in the second algorithm can result in a
+decrease in performance, given that a task could be migrated to a
+server that is not as powerful as the one where it was running before
+being migrated, and the proposed solution considers this metric.
+
+``Follow-the-renewables'' is an interesting solution for mitigating
+the intermittency of renewable energy availability, but it also has
+limitations. First, the process of migrating a VM between different
+DCs consumes energy itself. The scheduling algorithm must consider
+this energy consumption before deciding if the migration is
+advantageous. Second, the network communications links between the DCs
+can suffer from contention, which may increase the execution time of
+the jobs, migration duration, and costs. An efficient scheduling
+algorithm must consider those factors to decrease the carbon footprint
+of the DCs operations.
 
 Cloud infrastructures became a critical component of society in the
 last decade, from private life to big company development. The energy

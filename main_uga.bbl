@@ -209,15 +209,18 @@
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{9}
+      \field{month}{8}
       \field{title}{NREL Comparative PV LCOE Calculator}
-      \field{version}{2.0.0}
+      \field{version}{2.0.1}
+      \field{year}{2021}
+      \field{dateera}{ce}
       \verb{urlraw}
       \verb https://www.nrel.gov/pv/lcoe-calculator/
       \endverb
       \verb{url}
       \verb https://www.nrel.gov/pv/lcoe-calculator/
       \endverb
-      \warn{\item Entry 'pv_lcoe_calc' (references.bib): Invalid format '2021-8' of date field 'date' - ignoring}
     \endentry
     \entry{batteries_baumman}{article}{}
       \name{author}{4}{}{%
@@ -483,6 +486,97 @@
       \verb 10.1016/j.suscom.2017.12.004
       \endverb
       \keyw{Workload analysis,Workload generation,Classification,Large scale,Google dataset,Reproducible experiments}
+    \endentry
+    \entry{wtlanduse_2009}{report}{}
+      \name{author}{4}{}{%
+        {{hash=79c0e8cfe7da85021f22069544a056f8}{%
+           family={Denholm},
+           familyi={D\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c48f531807d0772fe6f454bb6cfca281}{%
+           family={Hand},
+           familyi={H\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=918e9ac75c3eec8e61828e6cfd061203}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ae9cc96ddc88c2e630f2d354fb38a54b}{%
+           family={Ong},
+           familyi={O\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Renewable Energy Lab.(NREL), Golden, CO (United States)}%
+      }
+      \strng{namehash}{f4fe2761e3eaf68d9fad7cdb164ff516}
+      \strng{fullhash}{c7f86ff7d5e9e044b443d52178c31117}
+      \strng{bibnamehash}{c7f86ff7d5e9e044b443d52178c31117}
+      \strng{authorbibnamehash}{c7f86ff7d5e9e044b443d52178c31117}
+      \strng{authornamehash}{f4fe2761e3eaf68d9fad7cdb164ff516}
+      \strng{authorfullhash}{c7f86ff7d5e9e044b443d52178c31117}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Land use requirements of modern wind power plants in the United States. NREL/TP-6A2-45834}
+      \field{type}{techreport}
+      \field{year}{2009}
+    \endentry
+    \entry{10.1145/3470972}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5f28cca31c78a5dc07478c220fd1de28}{%
+           family={Dias},
+           familyi={D\bibinitperiod},
+           given={Alexandre\bibnamedelimb H.\bibnamedelimi T.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=0228041f173671c30612405091fac6d2}{%
+           family={Correia},
+           familyi={C\bibinitperiod},
+           given={Luiz.\bibnamedelimi H.\bibnamedelimi A.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ed654ffcc0c2d84b7092299fe88432fe}{%
+           family={Malheiros},
+           familyi={M\bibinitperiod},
+           given={Neumar},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{538b1cad62f0cd38a5c88c0847a1e1b2}
+      \strng{fullhash}{1a01693bc8a4302673af7d2f1ca76f8e}
+      \strng{bibnamehash}{1a01693bc8a4302673af7d2f1ca76f8e}
+      \strng{authorbibnamehash}{1a01693bc8a4302673af7d2f1ca76f8e}
+      \strng{authornamehash}{538b1cad62f0cd38a5c88c0847a1e1b2}
+      \strng{authorfullhash}{1a01693bc8a4302673af7d2f1ca76f8e}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Comput. Surv.}
+      \field{month}{10}
+      \field{number}{8}
+      \field{title}{A Systematic Literature Review on Virtual Machine Consolidation}
+      \field{volume}{54}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1145/3470972
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3470972
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3470972
+      \endverb
     \endentry
     \entry{feldmann2021implications}{inproceedings}{}
       \true{moreauthor}
@@ -1340,6 +1434,41 @@
       \field{pages}{116798}
       \range{pages}{1}
     \endentry
+    \entry{CNN2021_crisehidrica}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7697315fb92e353765a3e1285670edee}{%
+           family={Landim},
+           familyi={L\bibinitperiod},
+           given={Raquel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{7697315fb92e353765a3e1285670edee}
+      \strng{fullhash}{7697315fb92e353765a3e1285670edee}
+      \strng{bibnamehash}{7697315fb92e353765a3e1285670edee}
+      \strng{authorbibnamehash}{7697315fb92e353765a3e1285670edee}
+      \strng{authornamehash}{7697315fb92e353765a3e1285670edee}
+      \strng{authorfullhash}{7697315fb92e353765a3e1285670edee}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{journaltitle}{CNN Brasil}
+      \field{month}{8}
+      \field{title}{Inflação sofre impacto da crise hídrica, a pior dos últimos 91 anos no Brasil}
+      \field{urlday}{24}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cnnbrasil.com.br/economia/inflacao-sofre-impacto-da-crise-hidrica-a-pior-dos-ultimos-91-anos-no-brasil/
+      \endverb
+      \verb{url}
+      \verb https://www.cnnbrasil.com.br/economia/inflacao-sofre-impacto-da-crise-hidrica-a-pior-dos-ultimos-91-anos-no-brasil/
+      \endverb
+    \endentry
     \entry{masanet2020recalibrating}{article}{}
       \name{author}{5}{}{%
         {{hash=f60849884bee24169fdade67f4446732}{%
@@ -1868,6 +1997,54 @@
       \verb{url}
       \verb https://www.osti.gov/biblio/35391
       \endverb
+    \endentry
+    \entry{shuja2016sustainable}{article}{}
+      \name{author}{5}{}{%
+        {{hash=da1294658642c9bb86f2724a108a8135}{%
+           family={Shuja},
+           familyi={S\bibinitperiod},
+           given={Junaid},
+           giveni={J\bibinitperiod}}}%
+        {{hash=12a2bdd5a21b830affa3f042add044de}{%
+           family={Gani},
+           familyi={G\bibinitperiod},
+           given={Abdullah},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f88fe5dd342b5ce546d485d6c1e11372}{%
+           family={Shamshirband},
+           familyi={S\bibinitperiod},
+           given={Shahaboddin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ab1c24e8acf962bba13fef9137302a3a}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Raja\bibnamedelima Wasim},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=bd113f1a448073aabbe8df7696de8023}{%
+           family={Bilal},
+           familyi={B\bibinitperiod},
+           given={Kashif},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{365429eb2eb56acb837bb470b8363085}
+      \strng{fullhash}{6df2555d0b51c40158a0aaa2ea174250}
+      \strng{bibnamehash}{6df2555d0b51c40158a0aaa2ea174250}
+      \strng{authorbibnamehash}{6df2555d0b51c40158a0aaa2ea174250}
+      \strng{authornamehash}{365429eb2eb56acb837bb470b8363085}
+      \strng{authorfullhash}{6df2555d0b51c40158a0aaa2ea174250}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable and Sustainable Energy Reviews}
+      \field{title}{Sustainable cloud data centers: a survey of enabling techniques and technologies}
+      \field{volume}{62}
+      \field{year}{2016}
+      \field{pages}{195\bibrangedash 214}
+      \range{pages}{20}
     \endentry
     \entry{SONG2022326}{article}{}
       \name{author}{4}{}{%

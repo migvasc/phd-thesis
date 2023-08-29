@@ -14,37 +14,37 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Number of underestimated live migrations and the ratio of the overestimation, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{26}{table.caption.9}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Accuracy measurements, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. The M.A.P.E. value is in percentage (\%), and the R.M.S.E. in seconds. \relax }}{27}{table.caption.10}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Number of VM live migrations performed, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. \relax }}{28}{table.caption.11}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Comparison of energy consumption (MWh), where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{29}{table.caption.12}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Extra seconds during migrations compared to the case when there is no congestion, where ``W'' stands for ``Workload'', ``G'' for Google and, ``A'' for Azure. ``avg.'' for the average of the observations, ``max.'' for the maximum value, ``abs.'' for the absolute value, and ``rel.'' for the relative value.\relax }}{30}{table.caption.13}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Wasted energy in the migrations (Wh) in comparison to the perfect scenario where the migration process have full access to the network links. In the table ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{31}{table.caption.14}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Number of underestimated live migrations and the ratio of the overestimation, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{28}{table.caption.9}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Accuracy measurements, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. The M.A.P.E. value is in percentage (\%), and the R.M.S.E. in seconds. \relax }}{29}{table.caption.10}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Number of VM live migrations performed, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. \relax }}{30}{table.caption.11}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Comparison of energy consumption (MWh), where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{31}{table.caption.12}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Extra seconds during migrations compared to the case when there is no congestion, where ``W'' stands for ``Workload'', ``G'' for Google and, ``A'' for Azure. ``avg.'' for the average of the observations, ``max.'' for the maximum value, ``abs.'' for the absolute value, and ``rel.'' for the relative value.\relax }}{32}{table.caption.13}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Wasted energy in the migrations (Wh) in comparison to the perfect scenario where the migration process have full access to the network links. In the table ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{33}{table.caption.14}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Main notations for the IT model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)\relax }}{40}{table.caption.15}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Main notations for the Electrical part model of each $DC^d$ ($1\leq d\leq D$) during each time step $k$ ($0\leq k<K$)\relax }}{42}{table.caption.16}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Emissions (in $g\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq.kWh^{-1}$) for both PV usage and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.\relax }}{53}{table.caption.19}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Total emissions for the different scenarios.\relax }}{55}{table.caption.23}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Average DC load throughout the year \relax }}{58}{table.caption.24}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Results of the sustainability metrics for the experiments\relax }}{59}{table.caption.25}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Evaluating sizing for different years using the MAPE metric (values are in \%) \relax }}{60}{table.caption.26}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Main notations for the IT model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)\relax }}{42}{table.caption.15}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Main notations for the Electrical part model of each $DC^d$ ($1\leq d\leq D$) during each time step $k$ ($0\leq k<K$)\relax }}{44}{table.caption.16}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Emissions (in $g\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq.kWh^{-1}$) for both PV usage and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.\relax }}{55}{table.caption.19}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Total emissions for the different scenarios.\relax }}{57}{table.caption.23}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Average DC load throughout the year \relax }}{60}{table.caption.24}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Results of the sustainability metrics for the experiments\relax }}{61}{table.caption.25}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Evaluating sizing for different years using the MAPE metric (values are in \%) \relax }}{62}{table.caption.26}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Total emissions for the different scenarios.\relax }}{73}{table.caption.28}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Total emissions (tons of \ch {CO2} for different scenarios \relax }}{75}{table.caption.29}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Computed number of WT for each location\relax }}{76}{table.caption.30}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Comparison of local electricity grid access to information \relax }}{81}{table.caption.35}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Average emissions (in $g\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq.kWh^{-1}$) from using the regular grid at the different years.\relax }}{82}{table.caption.36}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Emissions (in kt \ch {CO2}-eq) for the different scenarios\relax }}{82}{table.caption.37}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Emissions (in kt \ch {CO2}-eq) for the different scenarios\relax }}{82}{table.caption.38}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Difference in total emissions (tons of \ch {CO2}) between using avg. co2 of the year vs co2 per hour for the different years. Values greater than zero represents that using co2 values per hour increased the total emissions.\relax }}{83}{table.caption.39}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Initial results regarding total carbon emissions ( tons of \ch {CO2} eq) for different values of $\alpha $ and $\beta $)\relax }}{85}{table.caption.40}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces Parameters used in the LCOE PV calculator\relax }}{88}{table.caption.41}%
-\contentsline {table}{\numberline {5.11}{\ignorespaces Price of different sources of energy (USD per kWh) at each location. Source for the grid electricity prices: Petrolprices.org. \relax }}{89}{table.caption.42}%
-\contentsline {table}{\numberline {5.12}{\ignorespaces Total costs (millions of \$) for different scenarios \relax }}{89}{table.caption.43}%
-\contentsline {table}{\numberline {5.13}{\ignorespaces Total emissions (tons of \ch {CO2} eq. for different scenarios \relax }}{90}{table.caption.44}%
-\contentsline {table}{\numberline {5.14}{\ignorespaces Servers specifications for different generations\relax }}{95}{table.caption.45}%
-\contentsline {table}{\numberline {5.15}{\ignorespaces CPU specifications in terms of die area and processor size. Source: x86guide.net\relax }}{95}{table.caption.46}%
-\contentsline {table}{\numberline {5.16}{\ignorespaces Total emissions for the different scenarios.\relax }}{99}{table.caption.49}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Total emissions for the different scenarios.\relax }}{75}{table.caption.28}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Total emissions (tons of \ch {CO2} for different scenarios \relax }}{78}{table.caption.31}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Computed number of WT for each location\relax }}{79}{table.caption.32}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Comparison of local electricity grid access to information \relax }}{84}{table.caption.37}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Average emissions (in $g\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq.kWh^{-1}$) from using the regular grid at the different years.\relax }}{84}{table.caption.38}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Emissions (in kt \ch {CO2}-eq) for the different scenarios --- renewable infra has PV panels and WT\relax }}{87}{table.caption.41}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Emissions (in kt \ch {CO2}-eq) for the different scenarios --- renewable infra only have PV panels\relax }}{87}{table.caption.42}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Difference in total emissions (tons of \ch {CO2}) between using avg. co2 of the year vs co2 per hour for the different years. Values greater than zero represents that using co2 values per hour increased the total emissions.\relax }}{87}{table.caption.43}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Reductions of total carbon emissions ( \% ) in comparison to the scenario where is not possible to delay the workload.\relax }}{89}{table.caption.44}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces Parameters used in the LCOE PV calculator\relax }}{92}{table.caption.45}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces Price of different sources of energy (USD per kWh) at each location. Source for the grid electricity prices: Petrolprices.org. \relax }}{93}{table.caption.46}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces Total costs (millions of \$) for different scenarios \relax }}{94}{table.caption.47}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces Total emissions (tons of \ch {CO2} eq. for different scenarios \relax }}{94}{table.caption.48}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces Servers specifications for different generations\relax }}{101}{table.caption.52}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces CPU specifications in terms of die area and processor size. Source: x86guide.net\relax }}{101}{table.caption.53}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces Total emissions for the different scenarios.\relax }}{102}{table.caption.56}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {french}{}
