@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  29 AUG 2023 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  30 AUG 2023 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2749,7 +2749,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [95 <./images/pv_sizing_co2_costs.pdf> <./images/bat_sizing_co2_costs.pdf> <./
 images/wt_sizing_co2_costs.pdf>] [96] [97] [98] [99]
-Overfull \hbox (10.97699pt too wide) in paragraph at lines 869--890
+Overfull \hbox (10.97699pt too wide) in paragraph at lines 868--889
  [][] 
  []
 
@@ -2758,20 +2758,25 @@ Overfull \hbox (10.97699pt too wide) in paragraph at lines 869--890
 File: images/dc_evolution_year_by_year.pdf Graphic file (type pdf)
 <use images/dc_evolution_year_by_year.pdf>
 Package pdftex.def Info: images/dc_evolution_year_by_year.pdf  used on input li
-ne 928.
+ne 927.
 (pdftex.def)             Requested size: 394.78203pt x 631.63756pt.
 
 
-LaTeX Warning: Float too large for page by 17.03728pt on input line 931.
+LaTeX Warning: Float too large for page by 17.03728pt on input line 930.
 
 <images/dc_evolution_optimal.pdf, id=1516, 1084.05pt x 1734.48pt>
 File: images/dc_evolution_optimal.pdf Graphic file (type pdf)
 <use images/dc_evolution_optimal.pdf>
 Package pdftex.def Info: images/dc_evolution_optimal.pdf  used on input line 93
-5.
+4.
 (pdftex.def)             Requested size: 394.78203pt x 631.63756pt.
 
-LaTeX Warning: Float too large for page by 17.03728pt on input line 938.
+LaTeX Warning: Float too large for page by 17.03728pt on input line 937.
+
+
+Overfull \hbox (22.94366pt too wide) in paragraph at lines 943--953
+ [][] 
+ []
 
 [102] [103 <./images/dc_evolution_year_by_year.pdf>] [104 <./images/dc_evolutio
 n_optimal.pdf>] [105] [106] [107] [108]) (./chap-conclusion.tex [109] [110
@@ -2912,9 +2917,9 @@ lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share
 s/type1/urw/bookman/ubkli8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
 r8a.pfb>
-Output written on main_uga.pdf (138 pages, 3117841 bytes).
+Output written on main_uga.pdf (138 pages, 3119664 bytes).
 PDF statistics:
- 2118 PDF objects out of 2487 (max. 8388607)
+ 2120 PDF objects out of 2487 (max. 8388607)
  402 named destinations out of 1000 (max. 500000)
  93656 words of extra memory for PDF output out of 106986 (max. 10000000)
 
