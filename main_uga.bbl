@@ -1469,6 +1469,43 @@
       \verb https://www.cnnbrasil.com.br/economia/inflacao-sofre-impacto-da-crise-hidrica-a-pior-dos-ultimos-91-anos-no-brasil/
       \endverb
     \endentry
+    \entry{NREL_2012_capacityfactor}{report}{}
+      \name{author}{3}{}{%
+        {{hash=6c5f7c5c927dbf14f442ff0f1e3a0116}{%
+           family={Madaeni},
+           familyi={M\bibinitperiod},
+           given={Seyed\bibnamedelima Hossein},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=5f2bfb04e40cab8a82ee5ccde4bc6455}{%
+           family={Sioshansi},
+           familyi={S\bibinitperiod},
+           given={Ramteen},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1373aa1ae1bb9eab0b8f1f483a6c2ba0}{%
+           family={Denholm},
+           familyi={D\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Renewable Energy Lab.(NREL), Golden, CO (United States)}%
+      }
+      \strng{namehash}{662ebf03bebf1bfb545e45299e9f14a4}
+      \strng{fullhash}{9c5081e2376b63add3459b42966e4754}
+      \strng{bibnamehash}{9c5081e2376b63add3459b42966e4754}
+      \strng{authorbibnamehash}{9c5081e2376b63add3459b42966e4754}
+      \strng{authornamehash}{662ebf03bebf1bfb545e45299e9f14a4}
+      \strng{authorfullhash}{9c5081e2376b63add3459b42966e4754}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Comparison of Capacity Value Methods for Photovoltaics in the Western United States. NREL/TP-6A20-54704}
+      \field{type}{techreport}
+      \verb{doi}
+      \verb 10.2172/1046871
+      \endverb
+    \endentry
     \entry{masanet2020recalibrating}{article}{}
       \name{author}{5}{}{%
         {{hash=f60849884bee24169fdade67f4446732}{%

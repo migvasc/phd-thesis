@@ -2246,18 +2246,19 @@
     <bcf:citekey order="61">nrel_lifecycle_2021</bcf:citekey>
     <bcf:citekey order="62">HADDAD2021100505</bcf:citekey>
     <bcf:citekey order="63">era5_wind_2022</bcf:citekey>
-    <bcf:citekey order="64">GELARO2017MERRA2</bcf:citekey>
-    <bcf:citekey order="65">era5_wind_2022</bcf:citekey>
-    <bcf:citekey order="66">CNN2021_crisehidrica</bcf:citekey>
-    <bcf:citekey order="67">nrel_economic_wt_1995</bcf:citekey>
-    <bcf:citekey order="68">battery_lcos_2022</bcf:citekey>
-    <bcf:citekey order="69">pv_lcoe_calc</bcf:citekey>
-    <bcf:citekey order="70">nrel_wt_costs_2021</bcf:citekey>
-    <bcf:citekey order="71">nrel_economic_wt_1995</bcf:citekey>
-    <bcf:citekey order="72">battery_lcos_2022</bcf:citekey>
-    <bcf:citekey order="73">gupta2022_ACT</bcf:citekey>
+    <bcf:citekey order="64">NREL_2012_capacityfactor</bcf:citekey>
+    <bcf:citekey order="65">GELARO2017MERRA2</bcf:citekey>
+    <bcf:citekey order="66">era5_wind_2022</bcf:citekey>
+    <bcf:citekey order="67">CNN2021_crisehidrica</bcf:citekey>
+    <bcf:citekey order="68">nrel_economic_wt_1995</bcf:citekey>
+    <bcf:citekey order="69">battery_lcos_2022</bcf:citekey>
+    <bcf:citekey order="70">pv_lcoe_calc</bcf:citekey>
+    <bcf:citekey order="71">nrel_wt_costs_2021</bcf:citekey>
+    <bcf:citekey order="72">nrel_economic_wt_1995</bcf:citekey>
+    <bcf:citekey order="73">battery_lcos_2022</bcf:citekey>
     <bcf:citekey order="74">gupta2022_ACT</bcf:citekey>
-    <bcf:citekey order="75">wtlanduse_2009</bcf:citekey>
+    <bcf:citekey order="75">gupta2022_ACT</bcf:citekey>
+    <bcf:citekey order="76">wtlanduse_2009</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -31,9 +31,6 @@ More specifically, the chapter presents the following contributions:
 The remainder of the chapter is organized as follows. Considering that we are extending the model of the previous chapter to evaluate different scenarios, each scenario will have its own Section --- Sections~\ref{sec:lifecicle}, ~\ref{sec:add_wt}, ~\ref{sec:sensitivity}, ~\ref{sec:flexibility}, ~\ref{sec:costs}, and  ~\ref{sec:new_servers}, and in each section, the reader will find the necessary modifications in the modeling, the experiments performed and the results of the experiments. After presenting the evaluated scenarios, we will show the discussion at Section~\ref{sec:long_term_discussion}. Finally, Section~\ref{sec:long_term_conclusion} concludes the chapter.
 
 
-
-
-
 \section{Life-cycle of the renewable infrastructure}
 \label{sec:lifecicle}
 \subsection{Updates in the model}
@@ -58,6 +55,14 @@ Considering that now the information used for computing the batteries' emissions
 \begin{equation} \label{eq:b_initial_level}
   \forall t \in SUNRISE^d :  B^d_t =  0.2 \times Bat^d
 \end{equation}
+
+Finally, the objective function also needs to be modified in order to include the new life cycle emissions of the batteries. Equation~\ref{eq:new_obj_co2_lca} models the new objective function.
+
+\begin{equation} \label{eq:new_obj_co2_lca}
+  \text{minimize }\sum_{k=0}^{K-1} \sum_{d=1}^D ( FPgrid^d_k +  FPpv^d_k  + FPbat^d_k) 
+\end{equation}
+
+
 
 \subsection{Experiments}
 \label{sec:ex_lca_pv}
@@ -156,9 +161,9 @@ To model the carbon footprint of the wind turbines, their whole life cycle also 
    FPwt^d_k =  wtCO2LC^d \times Pwt^d_{k}\times \Delta t
 \end{equation}
 
-Finally, the objective function also needs to be modified in order to include the carbon emissions of using WTs. Equation~\ref{eq:new_obj_co2} models the new objective function.
+Finally, the objective function also needs to be modified in order to include the carbon emissions of using WTs. Equation~\ref{eq:new_obj_co2_wt} models the new objective function.
 
-\begin{equation} \label{eq:new_obj_co2}
+\begin{equation} \label{eq:new_obj_co2_wt}
   \text{minimize }\sum_{k=0}^{K-1} \sum_{d=1}^D ( FPgrid^d_k +  FPpv^d_k +  FPwt^d_k + FPbat^d_k) 
 \end{equation}
 
@@ -189,7 +194,7 @@ To evaluate the impact of including WT, we compare the sizing for using only PVs
 \end{table}
 
 
-Table~\ref{tab:results_wt} presents the number of WTs manufactured at each data center location, as said in Section \label{sec:ex_model_wt}, we use a linear number for the wind turbines to avoid increasing the computational complexity of the problem. The decision-maker could decide whether to round the value up or down based on its budget constraints.
+Table~\ref{tab:results_wt} presents the number of WTs manufactured at each data center location, as said in Section \ref{sec:ex_model_wt}, we use a linear number for the wind turbines to avoid increasing the computational complexity of the problem. The decision-maker could decide whether to round the value up or down based on its budget constraints.
 
 
 \begin{table}[h]
@@ -221,6 +226,41 @@ Table~\ref{tab:results_wt} presents the number of WTs manufactured at each data 
 \end{tabular}  
 \end{table}
 
+The Capacity Factor metric can be used to better analyse the potential of a location to generate renewable power. This metrics measures a ratio of the real energy produced by the device in comparison to its maximum energy output~\cite{NREL_2012_capacityfactor}. In our experiments, we use the rated power of 150 W for 1 square meter solar panel, and we used climate conditions from the years 1980 to 2019 to estimate the Capacity Factor. Table~\ref{tab:capacity_factor} presents the results for both the PV and wind turbines
+
+
+\begin{table}[h]
+  
+  \caption{Capacity Factor (in \%) for solar panels and wind turbines at each location}\label{tab:capacity_factor} \centering
+  
+  \begin{tabular}{|l|r|r|}
+  \hline    
+  \textbf{Location} &   \textbf{PV} & \textbf{WT}  \\
+  \hline
+  Johannesburg & 25.55 & 12.96  \\
+  \hline
+  Pune        &  24.26   & 10.04    \\
+  \hline
+  Canberra    & 22.08    & 12.97  \\
+  \hline
+  Dubai      & 25.28      & 13.98   \\
+  \hline
+  Singapore & 17.68    & 8.58   \\
+  \hline     
+  Seoul      & 18.81   &  9.41   \\
+  \hline
+  Virginia   & 19.83   &  14.68 \\
+  \hline
+  São Paulo  & 21.74   &  10.06    \\
+  \hline 
+  Paris      & 15.37   &  23.51   \\
+  \hline  
+
+\end{tabular}
+\end{table}
+
+
+
 
 
 Finally, to assess the impact of including the WT regarding the sizing of both PV and batteries, we present in Figure~\ref{fig:wind_pv} and Figure~\ref{fig:wind_bat}  the dimensioning for both equipment considering and not considering manufacturing WT. It is possible to observe that the inclusion of wind turbines has a significative reduction in the total solar panels area, and for some locations --- such as São Paulo and Paris --- the optimal is to use only wind turbines. The batteries are also reduced, given that the wind can blow in the night as well, so no extra energy needs to be charged in the batteries from the solar panels to be used for night computations.
@@ -238,6 +278,7 @@ Finally, to assess the impact of including the WT regarding the sizing of both P
   {\epsfig{file = images/bat_sizing_after_wt.pdf, width = .8\textwidth}}
   \caption{Battery capacity sizing when the WT are and are not included }
   \label{fig:wind_bat}
+
 \end{figure}
 
 
@@ -247,7 +288,7 @@ Finally, to assess the impact of including the WT regarding the sizing of both P
 To assess the sensibility of the linear program to the inputs, we will evaluate it considering different scenarios in terms of solar irradiation, wind speed, and grid emissions data. The renewable sources are intermittent by nature, and this variation can impact the sizing processing, resulting in an over or under-sizing of the renewable infrastructure. To illustrate the intermittency of both wind speed and solar irradiation, we present in Figure~\ref{fig:pv_boxplots} boxplots of the total energy one solar panel produced per year during the years 1980 to 2019, and in Figure~\ref{fig:wt_boxplots} for a single wind turbine. Those figures illustrate the intermittency of renewable power production over the years, and one may also observe the potential for using one source or another: for example, Paris has the lowest solar power production considering one solar panel, and on the other hand, it has the highest wind power production. 
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   {\epsfig{file = images/energy_pv.pdf, width = .8\textwidth}}
   \caption{Different energy production for 1 PV panel at each location for the years 1980 to 2019.}
@@ -255,7 +296,7 @@ To assess the sensibility of the linear program to the inputs, we will evaluate 
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   {\epsfig{file = images/energy_wt.pdf, width = .8\textwidth}}
   \caption{Different energy production for 1 wind turbine at each location for the years 1980 to 2019.}
@@ -666,53 +707,33 @@ For the batteries, we used values from a technical report of the US Department o
 
 \subsubsection{Results}
 
-Table~\ref{tab:total_price} illustrates the data center operator's total costs (in dollars) considering multiple scenarios. The \textit{Minimum Costs} scenario refers to solving the LP using the objective of Equation~\eqref{eq:objective_price}; the \textit{Minimum \ch{CO2}} refers to solving the LP using the objective of Equation~\eqref{eq:FPALL}, and for both cases the reader will find in parentheses the configuration of the renewable infrastructure used.; and \textit{Only grid} represents the case where there is no renewable infrastructure in the DCs and they only use power from the local electricity grid.
-
+Table~\ref{tab:total_price_and_co2} illustrates the data centers operation's total costs (in dollars), environmental impact (\ch{CO2} emissions), and how much power from the grid was used to supply the cloud federation  operation considering multiple scenarios. The \textit{Minimum Costs} scenario refers to solving the LP using the objective of Equation~\eqref{eq:objective_price}; the \textit{Minimum \ch{CO2}} refers to solving the LP using the objective of Equation~\eqref{eq:FPALL}, and for both cases the reader will find in parentheses the configuration of the renewable infrastructure used; and \textit{Only grid} represents the case where there is no renewable infrastructure in the DCs and they only use power from the local electricity grid.
 
 \begin{table}[h]
   
-  \caption{Total costs (millions of \$) for different scenarios }\label{tab:total_price} \centering
-  \begin{tabular}{|l|r|}
+  \caption{Total costs (millions of \$) and emissions (tons of \ch{CO2} eq.)  for different scenarios }\label{tab:total_price_and_co2} \centering
+  \begin{tabular}{|l|r|r|r|}
    \hline  
-  \textbf{Scenario} &   \textbf{Total costs (millions of \$)} \\    
+  \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{ t \ch{CO2} eq. } & \textbf{Grid usage (\%)}  \\    
   \hline
-  Minimum cost (PV + WT+ Bat + grid) & 47.73    \\
+  Min. cost (PV + WT + Bat + grid) & 47.73 & 129713.08 & 49.03   \\
   \hline
-  Minimum cost (PV + Bat + grid)      & 50.87     \\ 
-  \hline    
-  Only grid   & 75.39                             \\
+  Min. cost (PV + Bat + grid)      & 50.87   & 131597.65 & 51.56 \\
   \hline
-  Minimum \ch{CO2} (PV + Bat + grid) & 78.92       \\
+  Min. cost (WT + Bat + grid)      & 64.66  &  201525.93 & 85.89 \\
   \hline
-  Minimum \ch{CO2} (PV +WT+  Bat + grid) & 118.31 \\
+  Min. \ch{CO2} (PV + Bat + grid) & 78.92 & 37778.79 & 16.90  \\
   \hline
-  
-\end{tabular}  
+  Min. \ch{CO2} (WT + Bat + grid) & 281.29  &   58263.38 & 22.43 \\
+  \hline
+  Min. \ch{CO2} (PV +WT+  Bat + grid) & 118.31 &  24373.88 & 5.83 \\
+  \hline
+    Only grid   & 75.39        & 201211.31      & 100.00                \\
+  \hline
+  \end{tabular}  
 \end{table}
 
-In order to allow a better evaluation of the environmental impact of minimizing the monetary costs, the emissions of the evaluated scenarios (in tons of \ch{CO2} eq.) are presented in Table~\ref{tab:total_co2_scenarios_costs}.
 
-\begin{table}[h]
-
-  \caption{Total emissions (tons of \ch{CO2} eq. for different scenarios }\label{tab:total_co2_scenarios_costs} \centering
-  
-  \begin{tabular}{|l|r|}
-  \hline
-  \textbf{Scenario} &   \textbf{Total emissions (tons of \ch{CO2} eq)} \\
-  \hline
-  Minimum \ch{CO2} (PV + WT +  Bat + grid)  & 24373.88 \\
-  \hline
-  Minimum \ch{CO2} (PV +  Bat + grid)  & 37778.79 \\    
-  \hline
-  Minimum cost (PV + WT+ Bat  + grid) &  129713.08 \\
-  \hline
-  Minimum cost (PV + Bat  + grid)   & 131597.65 \\
-  \hline
-  Only grid & 201211.31  \\
-  \hline
-\end{tabular}  
-
-\end{table}
 
 Finally, Figures ~\ref{fig:pv_co2_costs},  ~\ref{fig:bat_co2_costs}, and ~\ref{fig:wt_co2_costs}, show the difference in the renewable infrastructure sizing when the objective function is to minimize the costs and the carbon emissions of the cloud federation operation.
 
@@ -923,11 +944,14 @@ All the servers are based on the Dell R740 for the HD and SSD values (HD with 3.
 Two scenarios will be considered in the experiments. In the first, the LP is solved year by year, and it only has access to the current year's climate conditions, workload, and server configuration. After the LP is solved for the year $x$, the results in terms of new servers manufactured and older ones replaced will be used as input to the year $x +1$. In the second scenario, the nine years of operation are solved at once, therefore the LP has access to all the information about future workload, climate conditions and servers configurations. The first scenario represents an approach more realistic that has the potential to be taken by the decision maker, considering that it is hard to have accurate values for workload, climate conditions and server configurations in the long term, and the second scenario is only used as baseline --- it represents the optimal solution.
 
 
-To obtain the area of solar panels, capacity of batteries and the number of wind turbines, the sizing process was realized using the average irradiation and wind speed from 1980 to 2019, as in Section~\ref{sec:settings_wt}. Finally, we assume that for each year there is an increase of 10\% in the workload, that is, the number of the needed number of CPU cores to process the tasks at each time slot increases 10\% year after year.
+To obtain the area of solar panels, capacity of batteries and the number of wind turbines, the sizing process was realized using the average irradiation and wind speed from 1980 to 2019, as in Section~\ref{sec:settings_wt}. The wind speed data and solar irradiation used for the 10 years DC operation are from the years 2010 to 2019. Finally, we assume that for each year there is an increase of 10\% in the workload, that is, the number of the needed number of CPU cores to process the tasks at each time slot increases 10\% year after year.
 
 \subsubsection{Results}
 
-Figure \ref{fig:dc_evolution_year_by_year} presents the result of the DCs evolution when the decision is made year by year, that is, at each year the cloud-federation operator has information about the configurations of the current generation's server, and the decision is made to manufacture these new servers to add or to replace older ones. Figure \ref{fig:dc_evolution_optimal} presents the optimal solution, when all the information about the workload, servers specifications, climate conditions, is known in advance for the 10 years. We observe that the optimal solution make very few changes in the servers, because it knows in advance when is the right moment to add/replace the servers. However, in real-life the first approach where the decision is made year by year is more close to what the cloud-federation operator would do. Finally, in terms of total \ch{CO2} emissions, the optimal solution is 9.7\% better than the solution that only has information about the current year, as can be seen in Table~\ref{tab:emissions_sizing}.
+Figure \ref{fig:dc_evolution_year_by_year} presents the result of the DCs evolution when the decision is made year by year, that is, at each year the cloud-federation operator has information about the configurations of the current generation's server, and the decision is made to manufacture these new servers to add or to replace older ones. Figure \ref{fig:dc_evolution_optimal} presents the optimal solution, when all the information about the workload, servers specifications, and climate conditions, is known in advance for the ten years. In both figures, each bar represents the computational capacity of the data center (in number of CPU cores) over the years, and the colors represent which server's generation the cores belong to (more recent generations have darker colors). One can also observe when new servers are added --- when the bar's height of the corresponding generation increases --- and when servers from older generations are replaced for newer ones --- when the bar's height of the corresponding generation decreases.
+
+
+We observe that the optimal solution make very few changes in the servers, because it knows in advance when is the right moment to add/replace the servers. However, in real-life the first approach where the decision is made year by year is more close to what the cloud-federation operator would do. Finally, in terms of total \ch{CO2} emissions, the optimal solution is 9.7\% better than the solution that only has information about the current year, as can be seen in Table~\ref{tab:emissions_sizing}.
 
 \begin{figure}
 \centering
@@ -960,6 +984,26 @@ Figure \ref{fig:dc_evolution_year_by_year} presents the result of the DCs evolut
 \end{tabular}
 \end{table}
 
+
+
+To better understand how the data centers are being used over time, we present in Figures~\ref{fig:dcu_evolution} the average data center usage over the years, and the average ratio of the workload each data center received throguh the years ~\ref{fig:w_ratio_evolution} .
+
+
+\begin{figure}
+\centering
+  \includegraphics[width=.8\linewidth]{images/dcu.pdf}
+  \caption{Data Center Utilization  (DCU) comparison for the scenario where the decision to add new servers is made knowing all the information of the 10 years in advance and year by year.}
+  \label{fig:dcu_evolution}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=.8\linewidth]{images/w_ratio.pdf}
+  \caption{Data Center Utilization  (DCU) comparison for the scenario where the decision to add new servers is made knowing all the information of the 10 years in advance and year by year.}
+  \label{fig:w_ratio_evolution}
+\end{figure}
+
+
 %%% Add dcu, workload ratio e outras paradas ...
 %%% co2 de servidores por ano ...
 
@@ -968,10 +1012,15 @@ Figure \ref{fig:dc_evolution_year_by_year} presents the result of the DCs evolut
 \label{sec:long_term_discussion}
 
 In this section, the reader will be presented to an analysis of the experiments and their results. The scope of the study is how to reduce the environmental impact that comes from the long-term operation of a cloud federation --- in terms of \ch{CO2} emissions --- by adding locally installed renewable infrastructure: solar panels, wind turbines, and batteries (to deal with intermittency). One must not neglect that the renewable infrastructure also emits carbon during its whole lifetime. We made the modifications in our modeling --- that initially only considered emissions from manufacturing --- and, as expected, there was an increase in the total emissions --- around 8\%. It is also possible to observe that the area of PVs was reduced in most of the locations --- Figure ~\ref{fig:pv_lca}, with the exception of Johannesburg. This could be explained by the fact that Johannesburg is the location that receives the most solar irradiation throughout the year, so it could compensate for the decrease of PV area in the other locations. Regarding the batteries, the reduction in Pune, Seoul, and Singapore could be justified by the smaller PV area, as there will be less energy to store.
+
 On the other hand, we see an increase in the battery capacity for the other locations. This could be justified by having a smaller PV area so the renewable energy cannot be wasted. Finally, including the life cycle aspect makes our modeling more adequate to real life, and the emissions are still better than the scenario where only power from the local electricity grid is used in terms of carbon footprint --- 81\% in the scenario with PV and batteries.  
 
-% talk abou tadding wind turbines
-Regarding the wind turbines, we saw that including them in the renewable infrastructure has a significative positive impact on the carbon footprint of operating the cloud federation: a 34\% reduction in \ch{CO2} emissions in comparison to only using solar panels and batteries. Nevertheless, the number of necessary wind turbines to manufacture is quite high, and this is a problem considering the land area requirements of wind turbines. One study from NREL that evaluated the land area requirements in the United States reports that the average capacity density (relation between wind power production and required land area) is 3.0 ± 1.7 MW/km² \cite{wtlanduse_2009}. Taking into account that in our experiments we considered wind turbines with a rated power of 1.5MW, this implies that for each square kilometer it is possible to install from one up to three wind turbines. This would not be possible for data centers located in urban centers that are highly populated. For example, in the case of Paris --- the one with the lowest number of wind turbines --- we would need from 7 to 23 km², and in the case of Seoul --- the one with the highest number of wind turbines --- it would require 36 to 110 km².
+
+% Talk abou tadding wind turbines
+
+Regarding the wind turbines, we saw that including them in the renewable infrastructure has a significative positive impact on the carbon footprint of operating the cloud federation: a 34\% reduction in \ch{CO2} emissions in comparison to only using solar panels and batteries. This reduction could be justified by the fact that renewable power is produced even when the sun is not shining and throghout the whole year, which results in a reduction in the required PV area and batteries capacity that can be observed in Figures~\ref{fig:wind_pv} and ~\ref{fig:wind_bat}  --- in the previous chapter we saw the dimensions of PV and batteries needed to deal with the low solar irradiation during winter.
+
+Nevertheless, the number of necessary wind turbines to manufacture is quite high, and this is a problem considering the land area requirements of wind turbines. One study from NREL that evaluated the land area requirements in the United States reports that the average capacity density (relation between wind power production and required land area) is 3.0 ± 1.7 MW/km² \cite{wtlanduse_2009}. Taking into account that in our experiments we considered wind turbines with a rated power of 1.5MW, this implies that for each square kilometer it is possible to install from one up to three wind turbines. This would not be possible for data centers located in urban centers that are highly populated. For example, in the case of Paris --- the one with the lowest number of wind turbines --- we would need from 7 to 23 km², and in the case of Seoul --- the one with the highest number of wind turbines --- it would require 36 to 110 km².  In comparison to solar panels, we observe that for all the evaluated locations --- with the exception of Paris --- the wind turbines have a lower potential for power generation --- as seen in the Capacity Factor values of Table~\ref{tab:capacity_factor}. Taking into account these points, it may be more interesting for the cloud federation operator to buy power from wind farms located near its data centers than to install wind turbines on them.
 
 % talk about sizing sensitivity
 As said in Chapter~\ref{chap:ccgrid}, solar irradiation has a lower variance than wind speed, reflecting on the sizing process's quality. We saw that in the comparison of the optimal scenario --- for the renewable infrastructure that only considered PV panels and batteries, the sizing process that used simple estimation techniques (average and median values) had precise results, being up to 3\% worse than the optimal scenario (Table ~\ref{tab:co2_10y_pv_only}). For the scenario where we also included WT in the renewable infrastructure, we saw in Table ~\ref{tab:co2_10y_pv_only}) that it became less precise --- up to 12\% worse than the optimal. On the other hand, even in the worst case, the reduction in total \ch{CO2} emissions by using the wind is significant: the worst scenario for PV + WT + Bat has a 17\% lower carbon footprint than the scenario with PV + Bat.
@@ -979,12 +1028,15 @@ As said in Chapter~\ref{chap:ccgrid}, solar irradiation has a lower variance tha
 % Granularity of emissions
 In what concerns the sensitivity of the model to the grid emissions input, we saw that the initial modeling that uses the average value of the year is robust: using the hour-by-hour value reduces the total \ch{CO2} emissions by less than 1\% --- as seen on Table~\ref{tab:co2_grid_granularities_years}. This result presents a positive outcome, considering that not every location provides a fine-grain value of the carbon intensity of its electricity grid.
 
-% talk about flexibility in the scheduling
+
+% Talk about flexibility in the scheduling
+
 On the topic of exploring the flexibility in the scheduling of the workload to reduce carbon emissions, it is possible to extract the following information from the results. The first is that the reduction of the carbon footprint seems to have a limit ( around 4\%). This can be justified by the fact that there is little difference in the climate conditions during the interval of one week, or that the DC, which would reduce the carbon emissions, is already at peak capacity and cannot receive more workload. The second interesting observation is that by delaying a small portion of the workload (for example 10\% to 20\%)  the reduction is already really close to the maximum possible reduction value. Finally, this approach can be used to reduce the impact of renewable sources' intermittency in the sizing process --- as we saw differences from 1\% to 12\% in comparison to the optimal scenario on Section~\ref{sec:sensitivity} --- and in the context of cloud federations that emits from tens to hundreds of kilotons of \ch{CO2} eq, a reduction of 4\% is not negligible.
 
 % Talk about costs
 
-Concerning the costs of reducing the environmental impact of the cloud operation --- one of the most important variables for the decision-makers --- we see in Table~\ref {tab:total_price} that the hybrid configuration is already cheaper than using power only from the electrical grid --- the solution that aimed to minimize the cost of the cloud operation for one year is around 40\% cheaper and emits 35\% less \ch{CO2} as seen in Table~\ref{tab:total_co2_scenarios_costs}. We also see that combining solar panels and wind turbines allows us to reduce costs further. On the other hand, the solution that results in the lowest environmental impact ( Minimum \ch{CO2} PV + WT + Bat + grid ) is the most expensive: it presents a reduction of 88\% in \ch{CO2} emissions than the grid only scenario but is 36.27\% more expensive. The scenario where the renewable infrastructure is only composed of PV panels is the best in terms of costs and environmental impact: it has a price close to the grid-only scenario --- only 4\% more expensive --- and has a reduction of 81\% in \ch{CO2} emissions.
+Concerning the costs of reducing the environmental impact of the cloud operation --- one of the most important variables for the decision-makers --- we see in Table~\ref {tab:total_price_and_co2} that the hybrid configuration that used solar panels and wind turbiness is the cheapest ---  around 40\% cheaper and emits 35\% less \ch{CO2} in comparison with using only the grid.  On the other hand, the solution that results in the lowest environmental impact ( Minimum \ch{CO2} PV + WT + Bat + grid ) is the second most expensive: it presents a reduction of 88\% in \ch{CO2} emissions than the grid only scenario but is 36.27\% more expensive. The results allows comparing the benefiits of wether only using wind turbines or solar panels as well. We observe that only using wind power as renewable source (\textit{Min. \ch{CO2} (WT + Bat + grid)}) results in the most expensive scenario and the third best in terms of environmental impact --- in comparison with only using power from the grid it is 72\% more expensive and emits 71\% less. The scenario where the renewable infrastructure is only composed of PV panels (\textit{Min. CO 2 (PV + Bat + grid)}) is the best in terms of costs and environmental impact: it has a price close to the grid-only scenario --- only 4\% more expensive --- and has a reduction of 81\% in \ch{CO2} emissions. One can also observe that in terms of costs, the cloud federation will be less independent from the grid: using from 49\% to 86\% of grid power to supply its energy demand. In contrast, when the objective is to minimize the environmental impact, the cloud federation will be more autonomous: consuming from 6\% to 22\% of grid power. Finally, we can also observe the counter-intuitive result that including renewable infrastructure can increase the carbon footprint. This occurs for the scenario where the objective is to mini,ze the costs and the renewable infrastructure consists of wind turbines and batteries: it is 14\% less expensive than using the grid, but it emits 0.16\% more (over 300 tons of \ch{CO2} eq.).
+
 
 % Talk about new servers
 
@@ -999,9 +1051,9 @@ Finally, all the modifications in the modeling does not change its computational
 
 \label{sec:long_term_conclusion}
 
-In this chapter, we studied the problem of reducing the long term environmental impact of cloud federations by integrating local renewable infrastructure in the sites where the data centers resides. We extended our initial modeling, presented in Chapter~\ref{chap:ccgrid} in the following points: considered the whole life cycle of the renewable infrastructure; integrated wind turbines in the model to further reduce the environmental impact, in particular when the sun is not shining;  evaluated how sensible the model is to the inputs of solar irradiation, wind speed and grid emission values; showed that allowing the workload to be delayed can reduce the carbon footprint of the cloud operation, and partially mitigate the erros of the sizing process caused by the intermittency of renewables, which is important given that once built it is not feasible to reduce the dimensions of the renewable infrasctucture;  conducted an analysis of the monetary costs of minimizing the cloud's  environmental impact, and illustrated that the renewable infrastructure indeed can reduce costs for the cloud operators; and, presented one approach for deciding when to manufacture new servers taking into account their carbon footprint, to deal with the workload increase over the years, where we showed that servers could be extended way longer than their expected life time. These modifications were carefully made to use linear variables and restrictions, therefore the problem remains optimally solved in polynomial time.
+In this chapter, we studied the problem of reducing the long term environmental impact of cloud federations by integrating local renewable infrastructure in the sites where the data centers resides. We extended our initial modeling, presented in Chapter~\ref{chap:ccgrid} in the following points: considered the whole life cycle of the renewable infrastructure; integrated wind turbines in the model to further reduce the environmental impact, in particular when the sun is not shining;  evaluated how sensible the model is to the inputs of solar irradiation, wind speed and grid emission values; showed that allowing the workload to be delayed can reduce the carbon footprint of the cloud operation, and partially mitigate the erros of the sizing process caused by the intermittency of renewables, which is important given that once built it is not feasible to reduce the dimensions of the renewable infrastructure;  conducted an analysis of the monetary costs of minimizing the cloud's  environmental impact, and illustrated that the renewable infrastructure indeed can reduce costs for the cloud operators; and, presented one approach for deciding when to manufacture new servers taking into account their carbon footprint, to deal with the workload increase over the years, where we showed that servers could be extended way longer than their expected life time. These modifications were carefully made to use linear variables and restrictions, therefore the problem remains optimally solved in polynomial time.
 
-All these scenarios may further help the decision-makers in the quest of reducing the environmental impact of their clouds federation, for example, we saw that the renewable infrasctructure that included wind turbines had the lowest environmental impact, however, in comparison to PV panels, wind turbines require a large land area --- PVs could be installed on the rooftops --- and are more expensive, therefore their adoption needs to be thoroughly examined --- in particular if the data centers resides on large urban areas.
+All these scenarios may further help the decision-makers in the quest of reducing the environmental impact of their clouds federation, for example, we saw that the renewable infrastructure that included wind turbines had the lowest environmental impact, however, in comparison to PV panels, wind turbines require a large land area --- PVs could be installed on the rooftops --- and are more expensive, therefore their adoption needs to be thoroughly examined --- in particular if the data centers resides on large urban areas.
 
 
 As future work there are many research trajectories that can be explored, for example: i) including degradation of the renewable infrastructure; ii) the monetary costs of servers for the decision of buying new generations to replace older ones; iii) degradation and failure of specific hardware components of the servers, and the monetary costs and environmental impact of fixing and replacing them; iv) flexibility in the scheduling could reduce the number of servers needed.
