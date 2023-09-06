@@ -1,25 +1,71 @@
-In this chapter we provide background knowledge to the reader to understand the work performed at the remaining chapters of this thesis, notably Chapters and. This chapter contains background knowledge about scheduling problems and algorithms, as well as a brief introduction to machine learning, with emphasis on regression problems. Furthermore, to increase the presentation flow and quality of this chapter, many recent and related works are also presented in a intertwined manner along the text of this chapter.
+This chapter lays the foundational knowledge required for the reader to comprehend the subsequent chapters of this thesis. First, it will be presented the general scenario of cloud computing in Section~\ref{sec:cloud}. Then, an introduction to scheduling in the scenario of clouds will be shown in Section~\ref{sec:scheduling_cloud}. Finally, the question of the environmental impact and exisitng approaches will be discussed in Section~\ref{sec:carbon_responsive}, as well as state-of-the arts studies that were used in this thesis as inspiration and baselines.
 
-\begin{itemize}
-    \item scheduling
-    \item follow the renewables
-    \item consolidation
-    \item sizing / capacity planning
-\end{itemize}
+\section{Cloud computing}
+
+\label{sec:cloud}
+
+Cloud computing was introduced by the industry to address the most significant problems of e-commerce found at the time. Before the on-demand access to computational resources provided by cloud computing, when a user or company wanted to deploy their service or application it would be necessary to buy his own computational infrastructure, and in the situation of a sudden peak of requests, it might not be possible to not scale at time to handle the computational load demand. Despite its revolutionary aspects of information technology, cloud computing is not classified as a new paradigm in computer science research. As a matter of fact, it is the evolution of research into different fields of computer science, such as clusters, grids, autonomous computing, ubiquitous computing. 
+
+One of the critical elements that enables cloud computing is the virtualization technology: the computational resources of a physical machine are converted to virtual resources that can be shared among many users and applications --- also know as multitenancy.  The main ideas from virtualization originates from the late 1950's and beginning of 1960's with the multiprogramming paradigm, and today the reserach on virtual machines (VMs) and containers continue to investigate the compromises outlined in the literature of multiprogramming in terms of portability --- allowing the virutal resource to execute in any hardware,  performance --- the impact of additional virtual layer in the application execution in comparison to the gains regarding the multitenancy, and security --- how to isolate the interaction between different applications and the applications and the computational resources \cite{randall2020_virtualization}.
+
+Cloud computing platforms generally support services in three distinct levels: IaaS (Infrastructure as a Service), PaaS (Platform as a Service) and SaaS (Software as a Service) \citep{fos08}. In the first level, Infrastructure as a Service (IaaS), the platforms grants the user access to hardware resources (such as processing and storage) and charge them for their usage. Services as Amazon EC2 (Elastic Cloud Computing) Service and Amazon S3 (Simple Storage Service) are examples of IaaS clouds.   At the second level, Platform as a Service (PaaS), the provider supports complete development, testing, and deployment environment for the application developer, which usually means that the developer will have to follow a specific fixed development model and accept restrictions on how to model the software in exchange for the scalability provided. An example is the Google App Engine.  Finally, at the third level, Software as a Service (SaaS), specific applications are offered to users via the Internet and the rate is proportional to the use of the application. We can cite as examples as Google Docs office applications.
+
+Modern cloud computing platforms are composed by multiple data centers geographically distributed over the world --- also denominated cloud federations or multi-clouds. Figures illustrates the locations of the cloud data centers from Microsoft's Azure that in total consists of hundred of physical servers. The need for such geographically distributed infrastructre comes from meeting the demand of the huge number of users and reducing the response time for their aplications, as well for security and redundancy reasons, for example, if a data center on a region goes down by a power problem or hacking attack, other region could temporarily receive the computational load. Finally, this distributed infrastructre enables exploring differents approaches to reduce the environmental impact of operating the data centers, and more deatils of these strategies will be given in Section~\ref{sec:carbon_responsive}.
 
 
+\begin{figure}[h]
+\centering
+  \includegraphics[width=\linewidth]{images/azure_cloud_infra.png}
+  \caption{Locations of Microsoft's Azure Data centers.}
+  \label{fig:dc_locations}
+\end{figure}
 
-Related work from the previous papers:
 
-Reducing the total energy consumption and carbon footprint of DCs is a
-major goal for Cloud Computing platforms. Virtualization allows DCs to
-employ intelligent resource allocation and scheduling algorithms to
-optimize how the underlying computing resources are used and to reduce
-the number of utilized physical resources. In particular, DCs can apply VM
-consolidation techniques in order to relocate the VMs into the
-smallest number of physical machines and turn off the idle
-machines. \cite{10.1145/3470972} present a systematic literature
-review on such techniques.
+\section{Measuring the environmental impact of cloud computing platforms}
+
+- metrics
+
+- falar dos 3 escopos la 
+
+
+\section{Scheduling for cloud computing platforms}
+\label{sec:scheduling_cloud}
+
+Scheduling problems are combinatorial optimization problems where, given the description of the characteristics of a computational resource set ($\alpha$) and a task set ($\beta$), the objective is to find an allocation (in time) of resources to tasks that minimize some optimization criteria ($\gamma$). These problems are denoted, generally, using the $\alpha$ $\vert$ $\beta$ $\vert$ $\gamma$ notation, introduced by Graham \citep{graham}. 
+
+The most common criterion studied in problems of high-performance computing is called makespan (also denoted by $C_{\max}$), which indicates the time when the last task that makes up an application finishes its execution. When the available computational resources are identical and known previously, and we are interested in minimizing makespan---typically the case in scheduling problems in cluster clusters and computational grids---the problem is strongly NP-complete \citep{Garey}. This problem is denoted by $P\,\vert\,\vert\,C_{\max}$ in Graham's notation.
+
+For the research problem explored in this thesis, $\alpha$ represents the computational resources (memory and CPU) from the servers of the data centers as well as their information about availability of low-carbon intensive power sources, $\beta$ represents the VM requirements in terms of execution time,  deadline, memory and CPU, and $\gamma$ represents the reduction of carbon-intensive energy consumption.
+
+It is known---from the work of \citet {graham} and \citet {Garey}---that the class of greedy algorithms known as list algorithms provides fast and efficient heuristics for scheduling tasks on parallel computers. These algorithms have a $2 -1 /m$ approximation guarantee for the worst case, but are remarkably effective in practice, especially when the ratio of the number of tasks to the number of available computational resources is large. Among the most commonly used list algorithms are the Longest Processing Time first (LPT) and Shortest Processing Time first (SPT),  for homogeneous platforms, and the Heterogeneous Earliest Finish Time (HEFT) algorithm, for heterogeneous platforms.
+
+
+% TODO exemplos de coisas com scheduling, falar da consolidacao, migrar as vms sem preemption live migration ...
+
+
+In particular, DCs can apply VM consolidation techniques in order to relocate the VMs into the smallest number of physical machines and turn off the idle
+machines. \cite{10.1145/3470972} present a systematic literature review on such techniques.
+
+
+The greedy algorithms were adopted in the solutions proposed in this thesis as well as most of the related works used as baseline and inspiration. The justification for such decision is that despite not providing the optimal solution, they can provided an acceptable solution in a reasonable amount of time, which is important considering the size of the workload with millions of tasks and restrictions as deadline, response time, and others. In the next section the reader will be presented to these strategies.
+
+
+\section{Carbon-Responsible Computing}
+
+\label{sec:carbon_responsive}
+
+Many efforts from both academia and industry are being made to reduce the environmental impact of information technology. The term Carbon-Responsive Computing was created to describe the strategies that explores moving the computational workload both in the time and spation dimensions aiming to reduce the carbon footprint of the operation~\cite{schooler2021carbonaware}.
+
+There are three levels for Carbon-Responsive computing. In the first, Carbon-aware computing, the system knows the carbon intensity of the electricity used by its workloads or IT equipments. On the second, Carbon-responsive computing, the information about the carbon intensity is taken into account to make decisons. On the final stage, Carbon-resilient computing, it is studied how to manage and integrate carbon-responsive elements and what modifications are needed in the infrastructure for both IT and power supply.
+
+In this thesis, it is presented a study of the Carbon-Aware strategy follow-the-renewables --- presented in Section~\ref{sec:followtherenewables}, and the Carbon-Reslient computing strategy of sizing the renewable infrastructure --- discussed at Section~\ref{sec:sizing}.
+
+\subsection{Follow-the-renewables}
+
+\label{sec:followtherenewables}
+
+What is follow the renewables ???
+
 
 Large hosting and Cloud Computing providers have DCs distributed on
 different geographic locations---some of them on different time
@@ -29,6 +75,8 @@ mitigate the intermittent availability of renewable energy by
 redistributing the workload based on renewable energy
 availability. This idea is known in the literature as the
 ``follow-the-renewables'' \cite{shuja2016sustainable}. 
+
+
 
 \cite{XU2020191} present a comprehensive overview of the classical
 techniques used for reducing the energy consumption on DCs. They also
@@ -57,6 +105,11 @@ decrease in performance, given that a task could be migrated to a
 server that is not as powerful as the one where it was running before
 being migrated, and the proposed solution considers this metric.
 
+
+
+- falar do nemesis e scorpius
+
+
 ``Follow-the-renewables'' is an interesting solution for mitigating
 the intermittency of renewable energy availability, but it also has
 limitations. First, the process of migrating a VM between different
@@ -68,51 +121,10 @@ the jobs, migration duration, and costs. An efficient scheduling
 algorithm must consider those factors to decrease the carbon footprint
 of the DCs operations.
 
-Cloud infrastructures became a critical component of society in the
-last decade, from private life to big company development. The energy
-efficiency of these platforms has been widely studied and improved by
-academics and Cloud providers \cite{muralidhar2020energy}. This
-progress, however, did not lead to a reduction of global Cloud energy
-consumption. In~\cite{masanet2020recalibrating}, authors estimate the
-growth of Data Centers (DCs) needs between 2010 and 2018 to a 10-fold
-increase in IP traffic, a 25-fold increase in storage capacity, and a
-6-fold increase of DCs workload. The impact of this explosion of
-usages has thus been limited by efficiency improvement of platforms to
-an energy increase of only 6\%. Projections over the following years
-are, however, quite pessimistic. In~\cite{koot2021usage}, authors
-consider different scenarios for the period 2016--2030, with
-predictions ranging between a wavering balance and a significant
-increase in electricity needs.
 
+\subsection{Sizing the renewables infrastructure}
 
-These predictions consider big trends in IT, but they do not embrace
-unpredictable events, such as the COVID pandemic, and particularly the
-lockdown periods, that overturned the global Information Technologies
-(IT) usages \cite{feldmann2021implications}.
-
-
-Another approach to reducing the environmental impact of cloud
-computing energy needs consists of studying DCs' energy sources. Most
-Cloud providers have made commitments to renewable energy usage in
-recent years. According to a Greenpeace report, \cite{greenpeace2017},
-many DCs were already fully supplied by renewable energy in
-2017. However, they are not the majority of cases. A typical example
-is the IT infrastructures of Virginia, which are named the ``Ground
-zero for the Dirty Internet'', with 2\% of renewable energy power
-plants against 37\% of coal. They are known to host 70\% of US
-internet traffic. Green computing is still chimerical.
-
-
-A critical question on renewable energy production facilities is their
-intermittency. Hydroelectric dams and, to a certain extent, offshore
-windmills can provide constant energy. However, they are not
-appropriate for on-site electricity production for a DC. Onshore
-windmills and solar farms are more likely to be deployed with minimal
-constraints. The on-site electricity production is thus determined by
-local weather. In contrast to wind speed, which can be difficult to
-predict, solar irradiance follows daily and yearly
-patterns. Photovoltaic (PV) panels are thus more appropriate for
-predictable on-site renewable energy production facilities.
+\label{sec:sizing}
 
 
 Most sizing research focuses on a single DC. There are two approaches, either to consider that the DC can use the electrical grid as a fallback or to consider how to size a DC only with on-site renewable sources.
@@ -151,7 +163,6 @@ Overall, most studies focus on sizing individual DCs. This is similar in the con
 The Carbon Explorer framework is an example of a study that explores sizing multiple DCs \cite{acun2022holistic}. The framework explores three solutions to achieve 100\% renewable operation of DCs distributed over the United States of America: i) only use renewable energy; ii) use renewable energy and energy storage; and iii) use renewable energy and schedule the workload. These DCs already have access to local solar power, wind power, or both. The carbon emissions from manufacturing PVs, wind turbines, batteries, and servers are considered. An exhaustive search is used to find the solutions. The work concludes that 100\% renewable operation may not be the optimal solution when considering the geographic location of the DC, and the carbon emissions from the manufacturing phase. Furthermore, the authors say that choosing the optimal solution is still an open research question for future work.
 
 
-
 Our approach focuses on optimally sizing of geo-distributed DCs across the globe, which has not yet been studied to the best of our knowledge. Furthermore, in contrast to the Carbon Explorer framework, our solution allows using the regular electrical grid when opportune, given it may be supplied by a low-carbon intensive source. Finally, contrary to most studies using a MILP, our model uses a linear program formulation.
 
 
@@ -160,7 +171,9 @@ Our approach focuses on optimally sizing of geo-distributed DCs across the globe
 
 %% Add about ACT: designing sustainable computer systems with an architectural carbon modeling tool -  https://doi.org/10.1145/3470496.3527408
 
+% TODO:: add as reviews la de coisas verde q o daniel mandou
 
 \section{Summary}
+
 
 In this chapter we presented a brief overview of the scheduling theory in the context of High Performance Computing, with emphasis on parallel job scheduling problems, list scheduling and backfilling algorithms. We also made a short introduction to machine learning, with emphasis on regression problems. Finding optimal solutions for parallel job scheduling problems is notoriously hard and, although there are many approximation algorithms with proven performance guarantees, many practitioners end up adopting simple heuristics, such as EASY Backfilling, to schedule parallel jobs. The content present in this chapter must be sufficient for the reader to follow the remaining chapters of this thesis. In the remaining chapters we present the main contributions of the thesis, starting by presenting the ways we explored simulation and machine learning to learn simple parallel job scheduling heuristics. 
