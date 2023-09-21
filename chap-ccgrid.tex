@@ -16,7 +16,17 @@ In this chapter, we explore the adoption of both strategies, sizing the PVs and 
 
 \end{itemize}
 
+
+
+The work of this chapter was done in collaboration with the following members of the DATAZERO\cite{datazero} research team: Georges da Costa, Jean-Marc Nicod and Veronika Rehn-Sonigo, and it resulted in the following publication:  \textit{\textbf{Vasconcelos, M.}, Cordeiro, D., Costa, G. D., Dufossé, F., Nicod, J.-M., and Rehn-Sonigo, V. (2023). Optimal sizing of a globally distributed low carbon cloud federation. In The 23rd IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing}. The text of the present chapter is an adaptation of this publication.
+
+
 The remainder of the chapter is organized as follows: Section~\ref{sec:problemStatement_ccgrid} defines the problem addressed, the assumptions, the models, and the objective function. Details about the problem constraints and how to optimally solve the problem are given in Section~\ref{sec:optimalresolution_ccgrid}. Comprehensive experiments, presented in Section~\ref{sec:experiments_ccgrid}, are discussed in Section~\ref{sec:analysis-discussion_ccgrid} before we conclude in Section~\ref{sec:conclusion_ccgrid}. 
+
+
+
+
+
 
 \section{Problem statement}
 \label{sec:problemStatement_ccgrid}
@@ -271,7 +281,7 @@ where all variables are positive real variables.
 
 In this section, we present the settings and the results of the
 experiments.  More details for reproducing the experiments can be
-found in the public available software artifact.  % TODO, check how to cite the artifiact in the thesis...
+found in the public available software artifact \cite{artifact_ccgrid}.  % TODO, check how to cite the artifiact in the thesis...
 
 \subsection{Settings}
 
@@ -285,15 +295,20 @@ The servers are homogeneous and based on equipment of real cloud infrastructure:
 
 Each data center is equipped with 23,200 servers (and a total of 278,400 cores). This number represents what can be seen in production data centers of major cloud players: Microsoft operates over 4 million servers distributed over 200 DCs~\cite{roach2021_microsoftazure}. The total power consumption from the servers of each data center when idle is 2.25\,MW, and their maximum power consumption is 5.1\,MW.
 
-For the current experiments, we considered a network with a 48-ary fat-tree topology for the interconnection of the servers inside the DCs, that is, the network switches have 48 ports, and the total number of switches is 2,880. The power consumption of the switches was based on real measurements by~\citet{Hlavacs2009_energy_network_devices}: the HP ProCurve 2810-48G was selected, with 48 ports and approximately 52W per device. In total, the power consumption of the network equipment is 149.76\,kW for each DC.
+For the current experiments, we considered a network with a 48-ary fat-tree topology for the interconnection of the servers inside the DCs, that is, the network switches have 48 ports, and the total number of switches is 2,880. The power consumption of the switches was based on real measurements by~\citet{Hlavacs2009_energy_network_devices}: the HP ProCurve 2810-48G was selected, with 48 ports and approximately 52W per device. In total, the network equipment power consumption is 149.76\,kW for each DC.
 
 The locations of the data centers were based on the real cloud infrastructure of Microsoft Azure\footnote{Azure global infrastructure: \url{https://infrastructuremap.microsoft.com/}.}, and different regions in different continents, hemispheres, and time zones were selected. Figure~\ref{fig:dc_location} presents the details of the locations.
 
 
-\begin{figure}[htbp]
-\begin{picture}(200,200)
+\begin{figure}[!htbp]
+%\vspace{22pt}
+
+\begin{picture}(300,300)
+
 \put(0,0){
-\includegraphics[width=\textwidth]{images/locations.pdf}}
+\includegraphics[width=\textwidth]{images/locations.pdf}
+
+}
 
 \put(45,160){Virginia, USA}
 \put(60,70){São Paulo, BR}
@@ -306,6 +321,7 @@ The locations of the data centers were based on the real cloud infrastructure of
 \put(330,50){Canberra, AU}
 
 \end{picture}
+
 \caption{Selected locations for the data centers.}
 \label{fig:dc_location}
 \end{figure}
@@ -413,11 +429,11 @@ In order to assess the optimal solution of the LP, we compared it with two other
   \hline
   \textbf{Scenarios} & \textbf{Emissions ($t\,\ch{CO2}-eq$)}   \\
   \hline
-  Electrical grid                    & 201211.3    \\
+  Electrical grid                    & 201 211.3    \\
   \hline
-  PV and batteries  &                  42370.6 \\ 
+  PV and batteries  &                  42 370.6 \\ 
   \hline
-  PV, batteries, and grid            &  29600.6   \\
+  PV, batteries, and grid            &  29 600.6   \\
   \hline
 
 

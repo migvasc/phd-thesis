@@ -2317,6 +2317,47 @@
       \verb https://news.microsoft.com/innovation-stories/microsofts-virtual-datacenter-grounds-the-cloud-in-reality/
       \endverb
     \endentry
+    \entry{RUIZDUARTE2023_operation_dcs_renewables}{article}{}
+      \name{author}{2}{}{%
+        {{hash=80761cb6800e3ca610c60a97a84966b8}{%
+           family={{Ruiz Duarte}},
+           familyi={R\bibinitperiod},
+           given={José\bibnamedelima Luis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7de0b2509312e23140ec521aeaa8ba89}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Neng},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{2df123eadddc9c74ff52a3535d27b6af}
+      \strng{fullhash}{2df123eadddc9c74ff52a3535d27b6af}
+      \strng{bibnamehash}{2df123eadddc9c74ff52a3535d27b6af}
+      \strng{authorbibnamehash}{2df123eadddc9c74ff52a3535d27b6af}
+      \strng{authornamehash}{2df123eadddc9c74ff52a3535d27b6af}
+      \strng{authorfullhash}{2df123eadddc9c74ff52a3535d27b6af}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2210-5379}
+      \field{journaltitle}{Sustainable Computing: Informatics and Systems}
+      \field{title}{Operations of data centers with onsite renewables considering greenhouse gas emissions}
+      \field{volume}{40}
+      \field{year}{2023}
+      \field{pages}{100903}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.suscom.2023.100903
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2210537923000586
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2210537923000586
+      \endverb
+      \keyw{Green data center,Greenhouse gas emission,Onsite renewable,Sustainable operations}
+    \endentry
     \entry{sheme2018_batsize}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=cf96ae96df5976045d140c965f2ce687}{%
@@ -2662,6 +2703,62 @@
       \field{title}{Borg: the Next Generation}
       \field{year}{2020}
     \endentry
+    \entry{artifact_ccgrid}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=48fbbc858e6a2b545f5beecef37efda7}{%
+           family={Vasconcelos},
+           familyi={V\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e378e417f28022ff7482c85a45f2da51}{%
+           family={Cordeiro},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2f623ee8953214cb42240cfccb621f93}{%
+           family={Da\bibnamedelima Costa},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Georges},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d3fb077c694c6b4b0beaf632461259fb}{%
+           family={Dufossé},
+           familyi={D\bibinitperiod},
+           given={Fanny},
+           giveni={F\bibinitperiod}}}%
+        {{hash=91b9d476e74a621d72bdcf23f3d0e3c4}{%
+           family={Nicod},
+           familyi={N\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3a2aeca1254de3dbe32140663eec281c}{%
+           family={Rehn-Sonigo},
+           familyi={R\bibinithyphendelim S\bibinitperiod},
+           given={Veronika},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{55aa97605cfd010cbe965e867d0b315e}
+      \strng{fullhash}{163d3fb6a737b005e33d005ec05b5ee2}
+      \strng{bibnamehash}{8c689c43e76c139cef3954eb500d159a}
+      \strng{authorbibnamehash}{8c689c43e76c139cef3954eb500d159a}
+      \strng{authornamehash}{55aa97605cfd010cbe965e867d0b315e}
+      \strng{authorfullhash}{163d3fb6a737b005e33d005ec05b5ee2}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Artifact: Optimal sizing of a globally distributed low carbon cloud federation. doi.org/10.25666/DATAUBFC-2023-02-03}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.25666/DATAUBFC-2023-02-03
+      \endverb
+      \verb{urlraw}
+      \verb https://search-data.ubfc.fr/FR-13002091000019-2023-02-03_Optimal-sizing-of-a-globally-distributed-low.html
+      \endverb
+      \verb{url}
+      \verb https://search-data.ubfc.fr/FR-13002091000019-2023-02-03_Optimal-sizing-of-a-globally-distributed-low.html
+      \endverb
+      \keyw{computer science,hardware &amp; architecture,informatique/matériels et infrastructures,operations research &amp; management science,recherche opérationnelle,data centres,centre de données,renewable energy,énergie renouvelable,energy storage,stockage d'énergie,linear program,programme linéaire,scheduling,ordonnancement,follow-the-sun,green computing,informatique durable,carbon footprint,empreinte carbone}
+    \endentry
     \entry{velho2013simgridparameters}{article}{}
       \name{author}{4}{}{%
         {{hash=1b725b3a688ab6a34e8e537d01c0d805}{%
@@ -2972,7 +3069,6 @@
       \keyw{Life cycle assessment,Silicon-based photovoltaics,Manufacturing,Renewable energy}
     \endentry
   \enddatalist
-  \missing{RUIZDUARTE2023_operation_dcs_renewable}
 \endrefsection
 \endinput
 

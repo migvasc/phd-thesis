@@ -19,8 +19,8 @@
 \contentsline {chapter}{\numberline {2}Background and Related Work}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Cloud computing}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Scheduling for cloud computing platforms}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Carbon-Responsible Computing}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Follow-the-renewables}{9}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.3}Carbon-Responsive Computing}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Follow-the-renewables}{10}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Sizing the renewable infrastructure}{13}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Measuring the environmental impact of cloud computing platforms}{17}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Summary}{19}{section.2.5}%
@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {3.2}The NEMESIS modeling}{23}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Cloud Modeling}{25}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}VM live migration model}{27}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}\uppercase {Planning the migrations}}{28}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Planning the migrations}{28}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Energy cost of migrations}{31}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Experiments}{32}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Workload}{33}{subsection.3.4.1}%
@@ -39,41 +39,41 @@
 \contentsline {subsection}{\numberline {3.5.2}Analysis of the VM live migrations performed}{39}{subsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.2.1}Total and brown energy consumption of the cloud platform}{40}{subsubsection.3.5.2.1}%
 \contentsline {subsubsection}{\numberline {3.5.2.2}Wasted resources in the migrations}{41}{subsubsection.3.5.2.2}%
-\contentsline {section}{\numberline {3.6}\uppercase {Summary}}{44}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Summary}{44}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Sizing the renewable infrastructure to greener the DC operation}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Problem statement}{49}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Addressed problem}{49}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Models and notations}{51}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}IT part model}{51}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}IT part model}{53}{subsubsection.4.2.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2.2}Workload model}{53}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}Electrical part model}{54}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Electrical part model}{55}{subsubsection.4.2.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.2.4}Footprint model}{56}{subsubsection.4.2.2.4}%
-\contentsline {subsection}{\numberline {4.2.3}Objective function}{57}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Objective function}{58}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Optimal resolution}{58}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Constraints to address the workload}{59}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Constraints to reach the power demand}{59}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Constraints on batteries}{59}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Linear program}{60}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Experiments}{61}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Settings}{61}{subsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Cloud infrastructure}{61}{subsubsection.4.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.2}Workload}{63}{subsubsection.4.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.4.1.3}Photovoltaic power production}{63}{subsubsection.4.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.4.1.4}Carbon footprint}{65}{subsubsection.4.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.4.1.5}Execution environment}{65}{subsubsection.4.4.1.5}%
+\contentsline {subsection}{\numberline {4.3.3}Constraints on batteries}{60}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Linear program}{61}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Experiments}{62}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Settings}{62}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Cloud infrastructure}{62}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Workload}{64}{subsubsection.4.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Photovoltaic power production}{64}{subsubsection.4.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.4.1.4}Carbon footprint}{64}{subsubsection.4.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.4.1.5}Execution environment}{66}{subsubsection.4.4.1.5}%
 \contentsline {subsection}{\numberline {4.4.2}Results}{66}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Analysis and Discussion}{72}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Summary}{76}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Long-term evaluation of sizing the DC operation}{79}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{79}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{82}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Updates in the model}{82}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Updates in the model}{83}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Experiments}{84}{subsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{84}{subsubsection.5.2.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2.2}Results}{85}{subsubsection.5.2.2.2}%
 \contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{86}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Updates in the model}{86}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.1}Updates in the model}{87}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Experiments}{88}{subsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{88}{subsubsection.5.3.2.1}%
 \contentsline {subsubsection}{\numberline {5.3.2.2}Results}{89}{subsubsection.5.3.2.2}%

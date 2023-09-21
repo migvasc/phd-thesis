@@ -12,6 +12,10 @@ In this chapter, the reader will find an extension of this work with an analysis
     \item a scheduling algorithm for the live-migration of the jobs that uses the estimation algorithm and has the same or lower brown energy consumption than the baselines, with no network congestion
 \end{itemize}
 
+
+
+The work of this chapter resulted in the following publication:  \textit{\textbf{Vasconcelos, M. F. S.}, Cordeiro, D., and Dufossé, F. (2022). Indirect network impact on the energy consumption in multi-clouds for follow-the-renewables approaches. In Proceedings of the 11th International Conference on Smart Cities and Green ICT Systems — SMARTGREENS, pages 44–55. INSTICC, SciTePress}. The text of the present chapter is an adaptation of this publication.
+
 This chapter is organized as follows. In Section~\ref{sec:nemesis} the model of \cite{NEMESIS}, the fundation of this work is summarized. Section~\ref{sec:modeling_smargreens} details the new scheduling method for the migrations, while Section~\ref{sec:simulations_smargreens} is devoted to simulations parameters. Results are detailed in Section~\ref{sec:results_smargreens}. Finally, Section~\ref{sec:conclusion_smargreens} summarizes the chapter.
 
 
@@ -115,7 +119,7 @@ The duration of the migration is an essential information for the scheduling dec
 \end{algorithmic}
 \end{algorithm}
 
-\section{\uppercase{Planning the migrations}}
+\section{Planning the migrations}
 \label{sec:modeling_smargreens}
 
 Algorithms \ref{alg:general} and \ref{alg:detailed} plan the VM migrations considering the network topology and the bandwidth usage. They are inspired in the migration planning of NEMESIS, with the following modifications: i) the available bandwidth of the links is considered (it changes based on the number of migrations that uses the same network link); ii) migrations can be performed in parallel between different DCs respecting the links bandwidth constraint; iii) the intra-DC migrations (for the server consolidation) are sequentially distributed in time (do not execute simultaneously) ; iv) the real number of links that interconnects the origin and the target server is used as input for the estimation algorithm of the migration duration. 
@@ -305,11 +309,11 @@ We define an underestimated migration as a VM live migration process whose durat
   \hline
   \textbf{Algorithm} & \textbf{W}  & \textbf{Inter} & \textbf{Intra}   \\
   \hline
-  NEMESIS  & G & 245 (4.4\%)   & 3393 (95.7\%) \\
+  NEMESIS  & G & 245 (4.4\%)   & 3 393 (95.7\%) \\
   \hline
   c-NEMESIS & G & 0 (0\%)  & 61 (2.9\%) \\
   \hline
-  NEMESIS & A & 140 (3.6\%)   &  3324 (94.1\%)   \\
+  NEMESIS & A & 140 (3.6\%)   &  3 324 (94.1\%)   \\
   \hline
   c-NEMESIS & A & 24 (0.1\%)   & 49 (3.8\%) \\
   \hline  
@@ -353,21 +357,21 @@ Table \ref{tab:amount_migs} presents the number of live migrations performed dur
   \hline
   \textbf{Algorithm} & \textbf{W}  & \textbf{Inter} & \textbf{Intra}   \\
   \hline
-  NEMESIS  & G & 5617  & 3545 \\
+  NEMESIS  & G & 5 617  & 3 545 \\
   \hline
-  c-NEMESIS & G & 18056  & 2074 \\
+  c-NEMESIS & G & 18 056  & 2 074 \\
   \hline
-  FollowMe@S Intra  & G & 0  & 560862 \\
+  FollowMe@S Intra  & G & 0  & 560 862 \\
   \hline
-  FollowMe@S Inter  & G & 96464 & 0 \\
+  FollowMe@S Inter  & G & 96 464 & 0 \\
   \hline
-  NEMESIS & A & 3863 & 3532 \\
+  NEMESIS & A & 3 863 & 3 532 \\
   \hline
-  c-NEMESIS & A & 17479  & 1300 \\
+  c-NEMESIS & A & 17 479  & 1 300 \\
   \hline
-  FollowMe@S Intra  & A & 0  & 177086 \\
+  FollowMe@S Intra  & A & 0  & 177 086 \\
   \hline
-  FollowMe@S Inter   & A & 93388 & 0 \\
+  FollowMe@S Inter   & A & 93 388 & 0 \\
   \hline
 \end{tabular}
 \end{table}
@@ -444,17 +448,17 @@ more than 10 times longer in comparison with the perfect scenario.
   \hline
   c-NEMESIS & G & 0.22  & 0.88 & 1.0 & 1.05  & 4331.93 \\
   \hline
-  FollowMe@S Intra & G & 113.94  & 1028.51 &  6.37  & 40.82  & 64525098.3 \\
+  FollowMe@S Intra & G & 113.94  & 1 028.51 &  6.37  & 40.82  & 64 525 098.3 \\
   \hline
-  FollowMe@S Inter & G & 215.18  & 4875.8 & 10.67 & 155.5  & 22058949.9\\
+  FollowMe@S Inter & G & 215.18  & 4 875.8 & 10.67 & 155.5  & 22 058 949.9\\
   \hline
-  NEMESIS  & A & 11.62  & 62.96 & 1.59 & 3.98  & 86235.46 \\
+  NEMESIS  & A & 11.62  & 62.96 & 1.59 & 3.98  & 86 235.46 \\
   \hline
-  c-NEMESIS & A &  0.23 & 6.14   & 1.0 & 1.32  & 4224.43\\
+  c-NEMESIS & A &  0.23 & 6.14   & 1.0 & 1.32  & 4 224.43\\
   \hline
-  FollowMe@S Intra & A & 91.08  & 938.48 & 4.39 & 25.56  & 16384188.8  \\
+  FollowMe@S Intra & A & 91.08  & 938.48 & 4.39 & 25.56  & 16 384 188.8  \\
   \hline
-  FollowMe@S Inter & A & 186.56  & 8047.89 & 7.8 & 157.24  & 18531893.3 \\
+  FollowMe@S Inter & A & 186.56  & 8 047.89 & 7.8 & 157.24  & 18 531 893.3 \\
   \hline
 
 \end{tabular}
@@ -479,24 +483,24 @@ Using the extra seconds spend in the migrations, a lower bound for the wasted en
   \hline
   c-NEMESIS & G & 35.42  & 24.67 \\
   \hline
-  FollowMe@S Intra & G & 473971.6 & 367434.6 \\
+  FollowMe@S Intra & G & 473 971.6 & 367 434.6 \\
   \hline
-  FollowMe@S Inter & G & 153829.96  & 125613.5  \\
+  FollowMe@S Inter & G & 153 829.96  & 125 613.5  \\
   \hline
   NEMESIS  & A & 539.59  & 491.06 \\
   \hline
   c-NEMESIS & A &  39.31 & 24.06   \\
   \hline
-  FollowMe@S Intra & A & 163128.14  & 93298.9  \\
+  FollowMe@S Intra & A & 163 128.14  & 93 298.9  \\
   \hline
-  FollowMe@S Inter & A & 175086.3  & 105528.8 \\
+  FollowMe@S Inter & A & 175 086.3  & 105 528.8 \\
   \hline
 
 \end{tabular}
 \end{table}
 
 
-\section{\uppercase{Summary}} \label{sec:conclusion_smargreens}
+\section{Summary} \label{sec:conclusion_smargreens}
 
 
 Reducing the environmental impact of the operation of cloud computing platforms, in particular the carbon footprint generated from the country-like the energy consumption, is a complex and challenging problem currently being addressed from multiple angles. In this chapter, we focus on the strategy ``follow-the-renewables'', and studied the indirect impact on the energy consumption caused by the additional load generated in the network. The experiments were based on real-world data for the cloud infrastructure, workloads, and photovoltaic power production.
@@ -506,11 +510,3 @@ This chapter demonstrates that the indirect network impact on the energy consump
 The proposed estimation algorithm for the duration of the live migrations that uses as input information about the communication network of the data centers (network links latency, bandwidth and topology) is accurate. By using this estimation algorithm and using as input the network characteristics of the cloud, the migration planning of c-NEMESIS was able to increase the number of migrations by a least 3-fold without network congestion, while maintaining or reducing the brown energy consumption in comparison to other state-of-the-art works.
 
 As future research directions, the network usage by the workload and how it will compete for network resources with the live migrations needs further investigation. It is also possible to extend the proposed solutions for other virtualization techniques as containers by updating the estimation algorithm with a model for container live migration. Finally, there are approaches that explore turning off the network devices to save energy. This technique reduces the available network links in the cloud platform and the network traffic will be re-routed, and it is necessary to analyze if the energy savings are more significant than the impacts caused by the network congestion.
-
-%\section{Methodology}
-
-%\section{Experimental Results}
-
-%\section{Conclusions and future directions}
-
-% \section{Summary}

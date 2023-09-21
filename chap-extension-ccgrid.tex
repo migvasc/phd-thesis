@@ -24,11 +24,13 @@ More specifically, the chapter presents the following contributions:
 \item we will how much we can reduce the carbon footprint using the flexibility of the scheduling --- delaying batch tasks
 \item we will show an analysis of how expensive (in dollars) is to reduce the cloud federation footprint and the gains in both monetary and emissions savings
 \item we will present an analysis of when is viable to add new servers (that may replace servers from older generations) in terms of carbon footprint
-
-
+  
 \end{itemize}
 
+The work of this chapter is a direct extension of the work of the Chapter \ref{chap:ccgrid}, and it was also done in collaboration with the following members of the DATAZERO\cite{datazero} research team: Georges da Costa, Jean-Marc Nicod and Veronika Rehn-Sonigo. Partial results were presented in the form of a short presentation:   \textit{\textbf{Vasconcelos, M.}, Cordeiro, D., Costa, G. D., Dufossé, F., Nicod, J.-M., and Rehn-Sonigo, V. (2023). Long-term evaluation for sizing low-carbon cloud data centers. In ComPAS 2023 Conférence francophone en informatique, Jul 2023, Annecy, France}. The results will be published in a scientifical journal --- the publicaton was at the writing phase at the time this thesis was written. 
+
 The remainder of the chapter is organized as follows. Considering that we are extending the model of the previous chapter to evaluate different scenarios, each scenario will have its own Section --- Sections~\ref{sec:lifecicle}, ~\ref{sec:add_wt}, ~\ref{sec:sensitivity}, ~\ref{sec:flexibility}, ~\ref{sec:costs}, and  ~\ref{sec:new_servers}, and in each section, the reader will find the necessary modifications in the modeling, the experiments performed and the results of the experiments. After presenting the evaluated scenarios, we will show the discussion at Section~\ref{sec:long_term_discussion}. Finally, Section~\ref{sec:long_term_conclusion} concludes the chapter.
+
 
 
 \section{Life-cycle of the renewable infrastructure}
@@ -102,9 +104,9 @@ Table~\ref{tab:emissions_LCA} presents the \ch{CO2} emissions considering the wh
   \hline
   \textbf{Scenarios} & \textbf{Emissions ($t\,\ch{CO2}-eq$)}   \\
   \hline  
-    \ch{CO2} from manufacturing   & 34559.03    \\  
+    \ch{CO2} from manufacturing   & 34 559.03    \\  
   \hline
-    \ch{CO2} from the whole life cycle       & 37828.49    \\
+    \ch{CO2} from the whole life cycle       & 37 828.49    \\
   \hline
 
 
@@ -197,9 +199,9 @@ To evaluate the impact of including WT, we compare the sizing for using only PVs
   \hline    
   \textbf{Scenario} &   \textbf{Total emissions ($t\,\ch{CO2}-eq$)} \\
   \hline    
-  PV + Bat + WT + Grid  & 24977.89 \\    
+  PV + Bat + WT + Grid  & 24 977.89 \\    
   \hline
-  PV + Bat + Grid       & 37828.49 \\    
+  PV + Bat + Grid       & 37 828.49 \\    
   \hline
 \end{tabular}  
 \end{table}
@@ -765,19 +767,19 @@ Table~\ref{tab:total_price_and_co2} illustrates the data centers operation's tot
    \hline  
   \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{ $t\,\ch{CO2}-eq$ } & \textbf{Grid usage (\%)}  \\    
   \hline
-  Min. cost (PV + WT + Bat + grid) & 47.73 & 129713.08 & 49.03   \\
+  Min. cost (PV + WT + Bat + grid) & 47.73 & 129 713.08 & 49.03   \\
   \hline
-  Min. cost (PV + Bat + grid)      & 50.87   & 131597.65 & 51.56 \\
+  Min. cost (PV + Bat + grid)      & 50.87   & 131 597.65 & 51.56 \\
   \hline
-  Min. cost (WT + Bat + grid)      & 64.66  &  201525.93 & 85.89 \\
+  Min. cost (WT + Bat + grid)      & 64.66  &  201 525.93 & 85.89 \\
   \hline
-  Min. \ch{CO2} (PV + Bat + grid) & 78.92 & 37778.79 & 16.90  \\
+  Min. \ch{CO2} (PV + Bat + grid) & 78.92 & 37 778.79 & 16.90  \\
   \hline
-  Min. \ch{CO2} (WT + Bat + grid) & 281.29  &   58263.38 & 22.43 \\
+  Min. \ch{CO2} (WT + Bat + grid) & 281.29  &   58 263.38 & 22.43 \\
   \hline
-  Min. \ch{CO2} (PV +WT+  Bat + grid) & 118.31 &  24373.88 & 5.83 \\
+  Min. \ch{CO2} (PV +WT+  Bat + grid) & 118.31 &  24 373.88 & 5.83 \\
   \hline
-    Only grid   & 75.39        & 201211.31      & 100.00                \\
+    Only grid   & 75.39        & 201 211.31      & 100.00                \\
   \hline
   \end{tabular}  
 \end{table}
@@ -793,19 +795,19 @@ Table~\ref{tab:total_price_and_co2} illustrates the data centers operation's tot
    \hline  
   \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{ $t\,\ch{CO2}-eq$ } & \textbf{Grid usage (\%)}  \\    
   \hline
-  Min. cost (PV + WT + Bat + grid) & 36.76   & 141001.67  & 55.5   \\
+  Min. cost (PV + WT + Bat + grid) & 36.76   & 141 001.67  & 55.5   \\
   \hline
-  Min. cost (PV + Bat + grid)      & 38.34   & 145193.64 & 59.69 \\
+  Min. cost (PV + Bat + grid)      & 38.34   & 145 193.64 & 59.69 \\
   \hline
-  Min. cost (WT + Bat + grid)      & 51.08   &  204568.07 & 87.79 \\
+  Min. cost (WT + Bat + grid)      & 51.08   &  204 568.07 & 87.79 \\
   \hline
-  Min. \ch{CO2} (PV + Bat + grid) & 72.8     & 37828.49       & 16.90  \\
+  Min. \ch{CO2} (PV + Bat + grid) & 72.8     & 37 828.49       & 16.90  \\
   \hline
-  Min. \ch{CO2} (WT + Bat + grid) & 277.52    &  58263.38 & 22.43 \\
+  Min. \ch{CO2} (WT + Bat + grid) & 277.52    &  58 263.38 & 22.43 \\
   \hline
-  Min. \ch{CO2} (PV +WT+  Bat + grid) & 117.31 &  24977.89  & 5.83 \\
+  Min. \ch{CO2} (PV +WT+  Bat + grid) & 117.31 &  24 977.89  & 5.83 \\
   \hline
-  Only grid   & 56.66        & 222876.62      & 100.00   \\
+  Only grid   & 56.66        & 222 876.62      & 100.00   \\
   \hline
   \end{tabular}  
 \end{table}
@@ -822,21 +824,21 @@ Table~\ref{tab:total_price_and_co2} illustrates the data centers operation's tot
    \hline  
   \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{  $t\,\ch{CO2}-eq$ }    & \textbf{Carbon tax} &\textbf{ \ch{CO2} red. (\%)}  \\    
   \hline
-   PV + WT + Bat + grid & 52.62 & 126944.19 & 119 & 9.9  \\
+   PV + WT + Bat + grid & 52.62 & 126 944.19 & 119 & 9.9  \\
   \hline
-  PV + WT + Bat + grid & 43.53 & 136048.94 & 49 & 3.5   \\
+  PV + WT + Bat + grid & 43.53 & 136 048.94 & 49 & 3.5   \\
   \hline
-  PV + WT + Bat + grid & 37.74 & 140382.56 & 7 & 0.4   \\    
+  PV + WT + Bat + grid & 37.74 & 140 382.56 & 7 & 0.4   \\    
   \hline
-  PV + WT + Bat + grid & 36.76   & 141001.67  & 0 & -   \\
+  PV + WT + Bat + grid & 36.76   & 141 001.67  & 0 & -   \\
   \hline
-  Grid only & 82.62 & 216855.76 & 119 & 2.7  \\
+  Grid only & 82.62 & 216 855.76 & 119 & 2.7  \\
   \hline
-  Grid only & 67.44 & 216866.90 & 49  & 2.7 \\
+  Grid only & 67.44 & 216 866.90 & 49  & 2.7 \\
   \hline
-  Grid only & 58.22 & 222876.62 & 7 & 0.0  \\
+  Grid only & 58.22 & 222 876.62 & 7 & 0.0  \\
   \hline
-  Grid only   & 56.66  & 222876.62      & 0.0 & -  \\
+  Grid only   & 56.66  & 222 876.62      & 0.0 & -  \\
   \hline
   \end{tabular}  
 \end{table}
@@ -1093,9 +1095,9 @@ We observe that the optimal solution make very few changes in the servers, becau
   \hline
   \textbf{Scenarios} & \textbf{Emissions ($t\,\ch{CO2}-eq$)}   \\
   \hline  
-   Sizing with all the information of the 10  (optimal solution)  &   240154.86    \\  
+   Sizing with all the information of the 10  (optimal solution)  &   240 154.86    \\  
   \hline
-    Sizing with information of the current year                   &   266035.35     \\
+    Sizing with information of the current year                   &   266 035.35     \\
   \hline
 
 \end{tabular}
@@ -1153,7 +1155,6 @@ On the topic of exploring the flexibility in the scheduling of the workload to r
 % Talk about costs
 
 Concerning the costs of reducing the environmental impact of the cloud operation --- one of the most important variables for the decision-makers --- we see in Table~\ref {tab:total_price_and_co2} that the hybrid configuration that used solar panels and wind turbiness is the cheapest ---  around 40\% cheaper and emits 35\% less \ch{CO2} in comparison with using only the grid.  On the other hand, the solution that results in the lowest environmental impact (\textit{Minimum \ch{CO2} PV + WT + Bat + grid}) is the second most expensive: it presents a reduction of 88\% in \ch{CO2} emissions than the grid only scenario but is 36.27\% more expensive. The results allows comparing the benefiits of wether only using wind turbines or solar panels as well. We observe that only using wind power as renewable source (\textit{Min. \ch{CO2} (WT + Bat + grid)}) results in the most expensive scenario and the third best in terms of environmental impact --- in comparison with only using power from the grid it is 72\% more expensive and emits 71\% less. The scenario where the renewable infrastructure is only composed of PV panels (\textit{Min. CO 2 (PV + Bat + grid)}) is the best in terms of costs and environmental impact: it has a price close to the grid-only scenario --- only 4\% more expensive --- and has a reduction of 81\% in \ch{CO2} emissions. One can also observe that in terms of costs, the cloud federation will be less independent from the grid: using from 49\% to 86\% of grid power to supply its energy demand. In contrast, when the objective is to minimize the environmental impact, the cloud federation will be more autonomous: consuming from 6\% to 22\% of grid power. Finally, we can also observe the counter-intuitive result that including renewable infrastructure can increase the carbon footprint. This occurs for the scenario where the objective is to minize the costs and the renewable infrastructure consists of wind turbines and batteries: it is 14\% less expensive than using the grid, however it emits 0.16\% more (over 300 tons of \ch{CO2}-eq).
-
 
 % Talk about new servers
 
