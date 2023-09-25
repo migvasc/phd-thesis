@@ -1061,6 +1061,7 @@
       \strng{authorbibnamehash}{7628ecff54896cb076074261828e6623}
       \strng{authornamehash}{7628ecff54896cb076074261828e6623}
       \strng{authorfullhash}{7628ecff54896cb076074261828e6623}
+      \field{extraname}{1}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labelnamesource}{author}
@@ -1072,6 +1073,35 @@
       \endverb
       \verb{url}
       \verb www.greenpeace.org/international/publication/6826/clicking-clean-2017/
+      \endverb
+    \endentry
+    \entry{clicking_clean_virginia}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7628ecff54896cb076074261828e6623}{%
+           family={Greenpeace},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Greenpeace}%
+      }
+      \strng{namehash}{7628ecff54896cb076074261828e6623}
+      \strng{fullhash}{7628ecff54896cb076074261828e6623}
+      \strng{bibnamehash}{7628ecff54896cb076074261828e6623}
+      \strng{authorbibnamehash}{7628ecff54896cb076074261828e6623}
+      \strng{authornamehash}{7628ecff54896cb076074261828e6623}
+      \strng{authorfullhash}{7628ecff54896cb076074261828e6623}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Clicking Clean Virginia}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.greenpeace.org/usa/reports/click-clean-virginia/
+      \endverb
+      \verb{url}
+      \verb https://www.greenpeace.org/usa/reports/click-clean-virginia/
       \endverb
     \endentry
     \entry{gupta2021_chasingcarbon}{inproceedings}{}
@@ -1573,6 +1603,35 @@
       \verb 10.1109/CSE.2009.244
       \endverb
     \endentry
+    \entry{IEA_2022}{report}{}
+      \name{author}{1}{}{%
+        {{hash=18fdbec513c87989c7580f31bb7f03ab}{%
+           family={{IEA}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IEA, Paris}%
+      }
+      \strng{namehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{fullhash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{bibnamehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{authorbibnamehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{authornamehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{authorfullhash}{18fdbec513c87989c7580f31bb7f03ab}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Centres and Data Transmission Networks}
+      \field{type}{techreport}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.iea.org/reports/data-centres-and-data-transmission-networks
+      \endverb
+      \verb{url}
+      \verb https://www.iea.org/reports/data-centres-and-data-transmission-networks
+      \endverb
+    \endentry
     \entry{KHODAYARSERESHT2023_energycarbonaware_vm}{article}{}
       \name{author}{4}{}{%
         {{hash=d60e91cceb8b1333d9c6ebf29e68f5a5}{%
@@ -1799,6 +1858,14 @@
       \field{labeltitlesource}{title}
       \field{title}{2023 Meta Sustainability Report}
       \field{year}{2023}
+    \endentry
+    \entry{azure_dcs_location}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://datacenters.microsoft.com/globe/explore}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{Microsoft Datacenters}
     \endentry
     \entry{muralidhar2020energy}{article}{}
       \name{author}{3}{}{%

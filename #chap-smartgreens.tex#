@@ -16,7 +16,7 @@ In this chapter, the reader will find an extension of this work with an analysis
 
 The work of this chapter resulted in the following publication:  \textit{\textbf{Vasconcelos, M. F. S.}, Cordeiro, D., and Dufossé, F. (2022). Indirect network impact on the energy consumption in multi-clouds for follow-the-renewables approaches. In Proceedings of the 11th International Conference on Smart Cities and Green ICT Systems — SMARTGREENS, pages 44–55. INSTICC, SciTePress}. The text of the present chapter is an adaptation of this publication.
 
-This chapter is organized as follows. In Section~\ref{sec:nemesis} the model of \cite{NEMESIS}, the fundation of this work is summarized. Section~\ref{sec:modeling_smargreens} details the new scheduling method for the migrations, while Section~\ref{sec:simulations_smargreens} is devoted to simulations parameters. Results are detailed in Section~\ref{sec:results_smargreens}. Finally, Section~\ref{sec:conclusion_smargreens} summarizes the chapter.
+This chapter is organized as follows. In Section~\ref{sec:nemesis} the model of \cite{NEMESIS}, the fundation of this work is summarized. Section~\ref{sec:modeling_smargreens} details the new scheduling method for the migrations, while Section~\ref{sec:simulations_smargreens} is devoted to simulations parameters. Results are detailed in Section~\ref{sec:results_smargreens}. Finally, Section~\ref{sec:conclusion_smargreens} summarize the chapter.
 
 
 \section{The NEMESIS modeling}

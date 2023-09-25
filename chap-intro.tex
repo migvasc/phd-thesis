@@ -1,37 +1,43 @@
 
-Cloud infrastructures became a critical component of society in the
-last decade, from private life to big company development. The energy
-efficiency of these platforms has been widely studied and improved by
-academics and Cloud providers \cite{muralidhar2020energy}. This
-progress, however, did not lead to a reduction of global Cloud energy
-consumption. In~\cite{masanet2020recalibrating}, authors estimate the
-growth of Data Centers (DCs) needs between 2010 and 2018 to a 10-fold
-increase in IP traffic, a 25-fold increase in storage capacity, and a
-6-fold increase of DCs workload. The impact of this explosion of
-usages has thus been limited by efficiency improvement of platforms to
-an energy increase of only 6\%. Projections over the following years
-are, however, quite pessimistic. In~\cite{koot2021usage}, authors
-consider different scenarios for the period 2016--2030, with
-predictions ranging between a wavering balance and a significant
-increase in electricity needs.
+Cloud computing has revolutionized the industrial and academic world of Information Technology with its ability to provide large amounts of computing resources on demand. Most of the applications and services we use every day that feature more and more users, such as social networking, e-mail, video games, and video streaming, are supported by cloud computing platforms.
+
+Despite all its benefits, the data centers (DCs) that host cloud computing platforms already consume approximately 1\% of the global final electricity generated \cite{IEA_2022}. Efforts from both academy and industry alike are trying to mitigate this problem: during the period from 2010 and 2018, there was a 10-fold increase in IP traffic, a 25-fold increase in storage capacity, and a 6-fold increase in DCs workload, however, the energy consumption only increased 6\% thanks to improvements in efficiency \cite{masanet2020recalibrating}. However, some studies predict that the energy demand will keep increasing: in~\cite{koot2021usage}, authors consider different scenarios for the period 2016--2030, with predictions ranging between a wavering balance and a significant increase in electricity needs.
 
 
-These predictions consider big trends in IT, but they do not embrace
-unpredictable events, such as the COVID pandemic, and particularly the
-lockdown periods, that overturned the global Information Technologies
-(IT) usages \cite{feldmann2021implications}.
+The energy efficiency of these platforms has been widely studied and improved by academics and Cloud providers \cite{muralidhar2020energy}. This progress, however, did not lead to a reduction of global Cloud energy consumption.
+
+In~\cite{masanet2020recalibrating}, authors estimate the growth of Data Centers (DCs) needs between 2010 and 2018 to a 10-fold increase in IP traffic,
+
+a 25-fold increase in storage capacity, and a 6-fold increase of DCs workload.
+
+The impact of this explosion of usages has thus been limited by efficiency improvement of platforms to an energy increase of only 6\%.
+
+Projections over the following years are, however, quite pessimistic.
+
+% The results show that the Microsoft Cloud is between 22 and 93 percent more energy efficient than
+% traditional enterprise datacenters, depending on the specific comparison being made. When taking into
+% account our renewable energy purchases, the Microsoft Cloud is between 72 and 98 percent more
+% carbon efficient
+
+In~\cite{koot2021usage}, authors consider different scenarios for the period 2016--2030, with predictions ranging between a wavering balance and a significant increase in electricity needs.
+
+% falar mais do artigo do masanet, desse dos improvmentes, e da previsao para os prox anos ...
+
+Falar que pode ser fonte de emissioes...
+
+diversos dcs ja fizeram comitmens, e diversos ja estao integrando, falar dos tech reports ...
 
 
-Another approach to reducing the environmental impact of cloud
-computing energy needs consists of studying DCs' energy sources. Most
-Cloud providers have made commitments to renewable energy usage in
-recent years. According to a Greenpeace report, \cite{greenpeace2017},
-many DCs were already fully supplied by renewable energy in
-2017. However, they are not the majority of cases. A typical example
-is the IT infrastructures of Virginia, which are named the ``Ground
-zero for the Dirty Internet'', with 2\% of renewable energy power
-plants against 37\% of coal. They are known to host 70\% of US
-internet traffic. Green computing is still chimerical.
+This massive electricity consumption is a source of pollution and greenhouse gas emissions, since most of the energy used comes from non-renewable sources (brown energy) \citep{greenpeace2017}. In fact, during 2019, about 70\% of the Internet's data traffic was handled by the DCs located in a region called ``Data Center Alley'', located in Northern Virginia - USA, which was only supplied by less than 5\% of renewable energy (green energy)  \citep{clicking_clean_virginia}.
+
+
+A possible solution to reduce costs and the negative impacts on global warming is to use green energy. Indeed, in recent years, major cloud technology companies such as Amazon AWS, Apple, and Microsoft have been involved in projects to deploy photovoltaic (PV) panels, also denominated solar panels,  in their data centers \citep{greenpeace2017}. However, solar energy is not available all the time, and variables such as the time of the day, climate, season, and the geographic location of the data center are responsible for its intermittency.
+
+
+Large hosting and Cloud Computing providers have DCs distributed in different geographic locations (multi-clouds)---some of them in different time zones---to provide services with low latency and high availability. Scheduling algorithms can take advantage of this to mitigate the intermittent availability of renewable energy by redistributing the workload based on renewable energy availability. This idea is known in the literature as the ``follow-the-renewables'' \cite{shuja2016sustainable}, and can be implemented in cloud platforms by using live migrations. One example of a project that used follow-the-renewables for studying a network of DCs powered only by green energy was the Green Star Network % \cite{greenstarnetwork}.
+
+Furthermore, the adoption of follow-the-renewables needs to consider the impact of migrating the VMs in terms of network congestion and energy consumption, since the duration of a migration can be impacted by congestion in the network, which results in unnecessary computation on both the origin and the target server. For the first, it can be turned off or allocated to another computation only after the migration finishes. For the latter, it will only start executing the new VM after the end of the migration process.
+
 
 
 A critical question on renewable energy production facilities is their
@@ -46,14 +52,92 @@ patterns. Photovoltaic (PV) panels are thus more appropriate for
 predictable on-site renewable energy production facilities.
 
 
+Recently, the adoption of energy storage devices (ESDs) in DCs to store renewable energy \cite{wang2012_EDCS} is also being studied. These devices are already used in DCs as a temporary backup for power outages. The green energy from the ESDs could be used when there is no production of green power, or the demand is greater than the production. Nevertheless, this approach also presents some challenges for deciding when to use or recharge the batteries, given the characteristics of the ESDs such as the self-discharge rate (they lose stored energy over time when not used), aging (their maximum capacity decreases over time), and limited charge and discharge rates (the speed at which energy can be extracted or recharged from/into the ESDs).
+
+
+
+In this thesis, we study how to encourage collaboration between such set of
+heterogeneous users and organizations. We model variants of this problem as multi-
+objective scheduling problems and, using different theoretical tools, we study how
+the individual behaviour of these users impacts both the performance perceived by
+them and the global efficiency of the platform.
+
+
+
+%Server Consolidation is an approach that consists of redistributing the tasks among the servers of a DC to minimize the number of powered-on servers, and thus the overall DC's power consumption, since the servers represent almost 50\% of a DC's total energy consumption \cite{power_to_the_people}. A systematic literature review of this approach is presented at \cite{10.1145/3470972}. However, it also presents some challenges: turning on or off servers is not instantaneous and costs energy, and it could violate Quality of Service requirements, i.e., the levels of availability, reliability, and performance offered by these cloud computing platforms \cite{qos}.
+
+
+% Recently, the adoption of energy storage devices (ESDs) in DCs to store renewable energy \cite{EDCS} is also being studied. These devices are already used in DCs as a temporary backup for power outages. The green energy from the ESDs could be used when there is no production of green power, or the demand is greater than the production. Nevertheless, this approach also presents some challenges for deciding when to use or recharge the batteries, given the characteristics of the ESDs such as the self-discharge rate (they lose stored energy over time when not used), aging (their maximum capacity decreases over time), and limited charge and discharge rates (the speed at which energy can be extracted or recharged from/into the ESDs).
+
+
+% This research project incorporates these approaches, follow-the-renewables, server consolidation and the adoption of ESDs in DCs, in the scheduling decision for the virtual machines submitted to geographically distributed cloud computing platforms, i.e., the decision of when and where (which server and data center) each VM will be executed, aiming at minimizing the carbon emissions and, therefore, the costs and the environmental impact caused by cloud computing platforms. VM arrivals are considered unpredictable, and no assumptions will be made regarding future submissions. Every data center has its solar farm---installation with multiple solar panels---and batteries to store renewable energy. The scheduling algorithm will be online to address the dynamic behavior of virtual machine submissions, the intermittent availability of solar energy, and the challenges of using batteries.
+
+
+% Virtual machine scheduling is an NP-Complete problem, and has the following restrictions for the problem that it is being studied in this research project:  i) a finite number of data centers, as well as the servers and computing resources of each server (memory and CPU); ii) the number and frequency of VMs submissions is not known a priori; iii) VMs have execution deadlines; iv) solar power generation is intermittent; v) batteries used to store solar energy discharge over time and lose capacity due to aging; vi) and migrating virtual machines between data centers has electricity and network costs.
+
+
+% Regarding the adoption of solar panels and batteries, their manufacturing and operation have a significant carbon footprint: batteries have an ideal level of charge that can improve their lifetime, which can reduce the replacement frequency, but on the other hand, causes them to be oversized \cite{batteries_baumman}, and their recycles rates still need to improve \cite{bateries_RAHMAN}; and considering the current state-of-the-art PVs, if they produce 40\% of the global electricity by 2050, they will consume about 5\% of today’s ${CO_2}$ budget \cite{solar}.
+
+
+% The idea is to determine the number of PVs for efficiently supplying the cloud and the battery dimensioning for smoothing solar energy production during the day and for night computations. This problem is barely addressed in the literature, while green energy is ubiquitous in cloud supply.
+
+
+
+% This Ph.D.\ has two main objectives. The first objective is to develop a multi-objective scheduling algorithm for the virtual machines submitted to cloud computing platforms, considering that the data centers have batteries and solar panels, aiming at reducing non-renewable energy consumption.
+
+
+% Regarding the criteria to be optimized by the multi-objective algorithm, the main ones are the minimization of carbon footprint emissions by the cloud platform (g \ch{CO2} eq/kWh) and the quality of service, in terms of avoiding generating network congestion and high latency for the applications when using follow-the-renewables approaches.
+
+
+% The second objective, corresponds to the dimensioning of PVs and batteries according to the DCs sizes and their demand (size of the workloads), aiming at brown energy reduction and a purely financial criterion, and the environmental impact will also be taken into account for the dimensioning.
+
+
+% More specifically, these secondary objectives will be considered:
+
+
+% \begin{itemize}
+
+% \item Develop models for: i) batteries, including charge and discharge rates, self-discharge and aging of the batteries; ii) solar panels degradation;
+
+% \item Develop scheduling heuristics for virtual machines that are submitted to data centers;
+  
+% \item Develop algorithms to decide when to use or recharge the batteries;
+
+% \item Estimate, using the developed models, the dimensions of solar panels and batteries given as input the size of the data center and the volume of virtual machine requests it receives, targeting a reduction in the non-renewable energy consumption and the environmental impact of manufacturing these devices.
+
+% \end{itemize}
+
+% The proposed multi-objective algorithm should provide a more significant reduction in carbon footprint than the state-of-the-art approaches.
+
+
+
+
+
+
+These predictions consider big trends in IT, but they do not embrace
+unpredictable events, such as the COVID pandemic, and particularly the
+lockdown periods, that overturned the global Information Technologies
+(IT) usages \cite{feldmann2021implications}.
+
+Another approach to reducing the environmental impact of cloud
+computing energy needs consists of studying DCs' energy sources.
+
+Most Cloud providers have made commitments to renewable energy usage in
+recent years. According to a Greenpeace report, \cite{greenpeace2017},
+many DCs were already fully supplied by renewable energy in
+2017.
+
+
+However, they are not the majority of cases. A typical example
+is the IT infrastructures of Virginia, which are named the ``Ground
+zero for the Dirty Internet'', with 2\% of renewable energy power
+plants against 37\% of coal. They are known to host 70\% of US
+internet traffic. Green computing is still chimerical.
+
 
 %%% Intro da parte la da qualificacao ...
 
-
-
-
 \begin{itemize}
-
   
    \item consumo de energia aumentando
    \item workload e evolucao de hardware (masanet)
@@ -67,21 +151,17 @@ predictable on-site renewable energy production facilities.
 
 \end{itemize}
 
-   
-\section{Contributions}
+\section{Structure of the thesis and contributions}
 
-In this thesis we explore scheduling, sizing. More specifically, this thesis proposes the following broad sets of contributions:
+This thesis is structured into six chapters, which include this introductory chapter. An overview of the content of each chapter and their respective contributions is described in what follows.
 
-\begin{enumerate}
-    \item algorithms for network aware and impact of live migrations without this consideration;
-    
-    \item sizing
-    
-    \item long term sizing
-    
-\end{enumerate}
+In Chapter \ref{chap:background} the reader is introduced to the concepts required to comprehend the research done in this thesis. In particular, the chapter contains a description of the general scenario of cloud computing, scheduling algorithms for cloud computing, the definition of carbon-responsive strategies, and how one can measure the environmental impact of cloud computing platforms. In addition, the related works used as inspiration or baseline for our proposed solutions are present in this chapter as well.
 
-\section{Content}
+Chapter \ref{chap:smartgreens} presents an analysis of the adoption of the carbon-aware strategy ``follow-the-renewables'' and the impact it has in terms of energy consumption and network congestion. The proposed solution consists of an algorithm that considers the network topology and usage for scheduling the migration of the workload. Through computational experiments with real-world data for the workload, cloud infrastructure, and a simulator that uses realistic models validated by the scientific community for both the energy consumption and network usage, the results shows that proposed solution outperforms the baselines considering the energy consumption, non-renewable energy consumption and network congestion. 
 
-The remainder of this thesis is organized as follows: ....
+Chapter \ref{chap:ccgrid} introduces another Carbon-Responsive strategy to reduce the carbon footprint of operating cloud computing plattforms: sizing the renewable infrastructure. This strategy involves determining the required area of on-site solar panels and capacity of the batteries to supply the DCs power demand. The proposed solution consists of a Linear Program formulation that adresses both the workload scheduling using follow-the-renewables and the sizing of the on-site renewable infrastructure. By modeling these two sub-problems as one problem it is possible to evaluate whether is more effective to execute the workload in other geographic location or to increase the area of solar panels and capacity of the batteries to achieve the goal of reducing the \ch{CO2} emissions. The model only uses linear variables, enabling it to be optimally solved in polynomial time --- essential for the scale of cloud computing platforms that have millions of servers and executes hundred of millions of computational tasks daily. Others important aspects of the modeling is that it considers the characteristic of each DC geographic locations in terms of cooling needs and the energy mix of the local electricity grid (that may have a share of renewable energy sources), and the fact that manufacturing solar panels and batteries have a environmental impact is also taken into account. The results demonstrates that the hybrid configuration that combines both the on-site renewable infrastructure and using the regular grid outperforms in terms of \ch{CO2} emissions the strategies of having a DC only supplied by energy produced from its local renewable infrastructure --- a reduction of approximately 30\% --- and only using power from the regular electrical grid --- a reduction of approximately 85\%.
 
+In Chapter \ref{chap:ccgrid-extension}, the model introduced in Chapter \ref{chap:ccgrid} is extended to evaluate how to minimize the carbon emissions of the cloud data center operations considering the long-term. The following modifications and analysis were performed: the environmental impact of whole life cycle of the renewable infrastructure (from manufacturing, operation and recycling) is taken into account to make the model closer to the real-world; an analysis of the benefits and challenges of including wind turbines in the on-site renewable infrastructure; an assessment of the model's sensitivity to the inputs, in particular climate condiitons and grid emissions data; an anaylisis of how much the \ch{CO2} emissions can be reduced by adopting the flexibility of delaying a part of the workload, which could be used to mitiate the impacts of over-sizing the renewable infrastructure; a discussion of the monetary costs (in dolars) associated with on-site renewable infrastructure, as well as the trade-offs between minimizing the carbon footprint and reducing the costs for the DCs; and deciding to manufacture new servers over the years that may be more energy-efficient, considering that manufacturing them also emmits carbon. This modeling may be used to guide decision-makers in their efforts to reduce the carbon footprint of cloud data centers.
+
+
+Finally, Chapter \ref{chap-conclusion} presents a discussion of the main contributions of this thesis and possible future research trajectories as well.
