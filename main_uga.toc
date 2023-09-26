@@ -14,101 +14,100 @@
 \contentsline {chapter}{{Contents}}{xv}{section*.5}%
 \vspace \bigskipamount 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Structure of the thesis and contributions}{5}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Background and Related Work}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Cloud computing}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Scheduling for cloud computing platforms}{11}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Carbon-Responsive Computing}{13}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Follow-the-renewables}{14}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Sizing the renewable infrastructure}{17}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Measuring the environmental impact of cloud computing platforms}{21}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Summary}{23}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Impact of the follow-the-renewables approaches in energy consumption}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{25}{section.3.1}%
-\contentsline {section}{\numberline {3.2}The NEMESIS modeling}{27}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Cloud Modeling}{29}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}VM live migration model}{31}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Planning the migrations}{32}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Energy cost of migrations}{35}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Experiments}{36}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Workload}{37}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Green energy traces}{39}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Results}{40}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Accuracy of the estimation algorithm}{42}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Analysis of the VM live migrations performed}{43}{subsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.1}Total and brown energy consumption of the cloud platform}{44}{subsubsection.3.5.2.1}%
-\contentsline {subsubsection}{\numberline {3.5.2.2}Wasted resources in the migrations}{45}{subsubsection.3.5.2.2}%
-\contentsline {section}{\numberline {3.6}Summary}{48}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Sizing the renewable infrastructure to greener the DC operation}{51}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{51}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Problem statement}{53}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Addressed problem}{53}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Models and notations}{55}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}IT part model}{57}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Workload model}{57}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}Electrical part model}{59}{subsubsection.4.2.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.2.4}Footprint model}{60}{subsubsection.4.2.2.4}%
-\contentsline {subsection}{\numberline {4.2.3}Objective function}{62}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Optimal resolution}{62}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Constraints to address the workload}{63}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Constraints to reach the power demand}{63}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Constraints on batteries}{64}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Linear program}{65}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Experiments}{66}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Settings}{66}{subsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Cloud infrastructure}{66}{subsubsection.4.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.2}Workload}{68}{subsubsection.4.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.4.1.3}Photovoltaic power production}{68}{subsubsection.4.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.4.1.4}Carbon footprint}{68}{subsubsection.4.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.4.1.5}Execution environment}{70}{subsubsection.4.4.1.5}%
-\contentsline {subsection}{\numberline {4.4.2}Results}{70}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Analysis and Discussion}{76}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Summary}{80}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Long-term evaluation of sizing the DC operation}{83}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{83}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{86}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Updates in the model}{87}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Experiments}{88}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{88}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Results}{89}{subsubsection.5.2.2.2}%
-\contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{90}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Updates in the model}{91}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Experiments}{92}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{92}{subsubsection.5.3.2.1}%
-\contentsline {subsubsection}{\numberline {5.3.2.2}Results}{93}{subsubsection.5.3.2.2}%
-\contentsline {section}{\numberline {5.4}Sensibility of the LP to uncertainties}{95}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Updates in the model}{97}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}Intermittency of renewable sources}{97}{subsubsection.5.4.1.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.2}Fine-grain values of grid emission data (hour by hour)}{97}{subsubsection.5.4.1.2}%
-\contentsline {subsection}{\numberline {5.4.2}Experiments}{98}{subsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.1}Settings}{98}{subsubsection.5.4.2.1}%
-\contentsline {paragraph}{\numberline {5.4.2.1.1}Intermittency of renewable sources}{98}{paragraph.5.4.2.1.1}%
-\contentsline {paragraph}{\numberline {5.4.2.1.2}Fine-grain values of grid emission data (hour by hour)}{99}{paragraph.5.4.2.1.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.2}Results}{102}{subsubsection.5.4.2.2}%
-\contentsline {paragraph}{\numberline {5.4.2.2.1}Intermittency of renewable sources}{102}{paragraph.5.4.2.2.1}%
-\contentsline {paragraph}{\numberline {5.4.2.2.2}Fine-grain values of grid emission data (hour by hour)}{103}{paragraph.5.4.2.2.2}%
-\contentsline {section}{\numberline {5.5}Scheduling flexibility to reduce \ch {CO2} emissions}{104}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Updates in the model}{104}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Experiments}{105}{subsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.2.1}Settings}{105}{subsubsection.5.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.5.2.2}Results}{106}{subsubsection.5.5.2.2}%
-\contentsline {section}{\numberline {5.6}Monetary costs of reducing the carbon emissions}{106}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Updates in the model}{106}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Experiments}{108}{subsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.2.1}Settings}{108}{subsubsection.5.6.2.1}%
-\contentsline {subsubsection}{\numberline {5.6.2.2}Results}{110}{subsubsection.5.6.2.2}%
-\contentsline {section}{\numberline {5.7}Adding or replacing servers considering new generations}{113}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Updates in the model}{113}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Experiments}{117}{subsection.5.7.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{118}{subsubsection.5.7.2.1}%
-\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{120}{subsubsection.5.7.2.2}%
-\contentsline {section}{\numberline {5.8}Discussion}{123}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Summary}{127}{section.5.9}%
-\contentsline {chapter}{\numberline {6}General Discussion}{129}{chapter.6}%
-\contentsline {chapter}{\numberline {7}General Discussion}{131}{chapter.7}%
-\contentsline {section}{\numberline {7.1}General Remarks and Future Research Directions}{131}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Work Dissemination}{131}{section.7.2}%
+\contentsline {section}{\numberline {1.1}Structure of the thesis and contributions}{4}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Background and Related Work}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cloud computing}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Scheduling for cloud computing platforms}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Carbon-Responsive Computing}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Follow-the-renewables}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Sizing the renewable infrastructure}{15}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Measuring the environmental impact of cloud computing platforms}{19}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Summary}{21}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Impact of the follow-the-renewables approaches in energy consumption}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{23}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The NEMESIS modeling}{25}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Cloud Modeling}{27}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}VM live migration model}{29}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Planning the migrations}{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Energy cost of migrations}{33}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Experiments}{35}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Workload}{35}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Green energy traces}{37}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Results}{38}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Accuracy of the estimation algorithm}{40}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Analysis of the VM live migrations performed}{42}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}Total and brown energy consumption of the cloud platform}{43}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}Wasted resources in the migrations}{44}{subsubsection.3.5.2.2}%
+\contentsline {section}{\numberline {3.6}Summary}{46}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Sizing the renewable infrastructure to greener the DC operation}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{49}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Problem statement}{51}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Addressed problem}{51}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Models and notations}{53}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}IT part model}{55}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Workload model}{55}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Electrical part model}{57}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}Footprint model}{58}{subsubsection.4.2.2.4}%
+\contentsline {subsection}{\numberline {4.2.3}Objective function}{60}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Optimal resolution}{60}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Constraints to address the workload}{61}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Constraints to reach the power demand}{61}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Constraints on batteries}{62}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Linear program}{63}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Experiments}{64}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Settings}{64}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Cloud infrastructure}{64}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Workload}{66}{subsubsection.4.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Photovoltaic power production}{66}{subsubsection.4.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.4.1.4}Carbon footprint}{66}{subsubsection.4.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.4.1.5}Execution environment}{68}{subsubsection.4.4.1.5}%
+\contentsline {subsection}{\numberline {4.4.2}Results}{68}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Analysis and Discussion}{74}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Summary}{78}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Long-term evaluation of sizing the DC operation}{81}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{81}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{84}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Updates in the model}{85}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Experiments}{86}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{86}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Results}{87}{subsubsection.5.2.2.2}%
+\contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{88}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Updates in the model}{89}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Experiments}{90}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{90}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}Results}{91}{subsubsection.5.3.2.2}%
+\contentsline {section}{\numberline {5.4}Sensibility of the LP to uncertainties}{93}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Updates in the model}{95}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}Intermittency of renewable sources}{95}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}Fine-grain values of grid emission data (hour by hour)}{95}{subsubsection.5.4.1.2}%
+\contentsline {subsection}{\numberline {5.4.2}Experiments}{96}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Settings}{96}{subsubsection.5.4.2.1}%
+\contentsline {paragraph}{\numberline {5.4.2.1.1}Intermittency of renewable sources}{96}{paragraph.5.4.2.1.1}%
+\contentsline {paragraph}{\numberline {5.4.2.1.2}Fine-grain values of grid emission data (hour by hour)}{97}{paragraph.5.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Results}{100}{subsubsection.5.4.2.2}%
+\contentsline {paragraph}{\numberline {5.4.2.2.1}Intermittency of renewable sources}{100}{paragraph.5.4.2.2.1}%
+\contentsline {paragraph}{\numberline {5.4.2.2.2}Fine-grain values of grid emission data (hour by hour)}{101}{paragraph.5.4.2.2.2}%
+\contentsline {section}{\numberline {5.5}Scheduling flexibility to reduce \ch {CO2} emissions}{102}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Updates in the model}{102}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Experiments}{103}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}Settings}{103}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}Results}{104}{subsubsection.5.5.2.2}%
+\contentsline {section}{\numberline {5.6}Monetary costs of reducing the carbon emissions}{104}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Updates in the model}{104}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Experiments}{106}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}Settings}{106}{subsubsection.5.6.2.1}%
+\contentsline {subsubsection}{\numberline {5.6.2.2}Results}{108}{subsubsection.5.6.2.2}%
+\contentsline {section}{\numberline {5.7}Adding or replacing servers considering new generations}{111}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Updates in the model}{111}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Experiments}{115}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{116}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{118}{subsubsection.5.7.2.2}%
+\contentsline {section}{\numberline {5.8}Discussion}{121}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Summary}{125}{section.5.9}%
+\contentsline {chapter}{\numberline {6}General Discussion}{127}{chapter.6}%
+\contentsline {section}{\numberline {6.1}General Remarks and Future Research Directions}{127}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Work Dissemination}{127}{section.6.2}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.60}%
+\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.61}%
 \babel@toc {french}{}
 \babel@toc {english}{}

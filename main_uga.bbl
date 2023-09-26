@@ -624,80 +624,6 @@
       \verb https://doi.org/10.1145/3470972
       \endverb
     \endentry
-    \entry{feldmann2021implications}{inproceedings}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{10}{}{%
-        {{hash=a2f03739ecbec5fd41971c58f390f197}{%
-           family={Feldmann},
-           familyi={F\bibinitperiod},
-           given={Anja},
-           giveni={A\bibinitperiod}}}%
-        {{hash=c1447471c280ee11a92c0cfa378ad0a1}{%
-           family={Gasser},
-           familyi={G\bibinitperiod},
-           given={Oliver},
-           giveni={O\bibinitperiod}}}%
-        {{hash=429e252ba409980e9479f2b7a86bba3b}{%
-           family={Lichtblau},
-           familyi={L\bibinitperiod},
-           given={Franziska},
-           giveni={F\bibinitperiod}}}%
-        {{hash=3709a29d134119431c7773e6cfcb2bf5}{%
-           family={Pujol},
-           familyi={P\bibinitperiod},
-           given={Eric},
-           giveni={E\bibinitperiod}}}%
-        {{hash=fe7f28262bc406ec8fddd6d4a99ff82b}{%
-           family={Poese},
-           familyi={P\bibinitperiod},
-           given={Igmar},
-           giveni={I\bibinitperiod}}}%
-        {{hash=653cf3c51dfdabf4af3f26b58cdd52fe}{%
-           family={Dietzel},
-           familyi={D\bibinitperiod},
-           given={Christoph},
-           giveni={C\bibinitperiod}}}%
-        {{hash=d7951d6cfd9bc35f93a52957063e67eb}{%
-           family={Wagner},
-           familyi={W\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=523f5f6d90894490f1dac6c2d649dbd7}{%
-           family={Wichtlhuber},
-           familyi={W\bibinitperiod},
-           given={Matthias},
-           giveni={M\bibinitperiod}}}%
-        {{hash=8737fe432b34bf0da4c9051179c3ae13}{%
-           family={Tapiador},
-           familyi={T\bibinitperiod},
-           given={Juan},
-           giveni={J\bibinitperiod}}}%
-        {{hash=cd7d19d6b432a34fba27fab0c4b9ca39}{%
-           family={Vallina-Rodriguez},
-           familyi={V\bibinithyphendelim R\bibinitperiod},
-           given={Narseo},
-           giveni={N\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {VDE}%
-      }
-      \strng{namehash}{756b507eec48cf9a3586058b59d55f35}
-      \strng{fullhash}{e4b56e677da22cbd2b8f74613abda804}
-      \strng{bibnamehash}{307d5051db7871cdca75f9b162386dfc}
-      \strng{authorbibnamehash}{307d5051db7871cdca75f9b162386dfc}
-      \strng{authornamehash}{756b507eec48cf9a3586058b59d55f35}
-      \strng{authorfullhash}{e4b56e677da22cbd2b8f74613abda804}
-      \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Broadband Coverage in Germany; 15th ITG-Symposium}
-      \field{title}{The Lockdown Effect: Implications of the COVID-19 Pandemic on the Internet Traffic}
-      \field{year}{2021}
-      \field{pages}{1\bibrangedash 5}
-      \range{pages}{5}
-    \endentry
     \entry{fos08}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=b3de47ef35033479285225648125a148}{%
@@ -742,41 +668,6 @@
       \field{year}{2008}
       \field{pages}{1\bibrangedash 10}
       \range{pages}{10}
-    \endentry
-    \entry{power_to_the_people}{article}{}
-      \name{author}{1}{}{%
-        {{hash=99dfe7b286ec44aadcb04aaf4e75446f}{%
-           family={Frazelle},
-           familyi={F\bibinitperiod},
-           given={Jessie},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{99dfe7b286ec44aadcb04aaf4e75446f}
-      \strng{fullhash}{99dfe7b286ec44aadcb04aaf4e75446f}
-      \strng{bibnamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
-      \strng{authorbibnamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
-      \strng{authornamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
-      \strng{authorfullhash}{99dfe7b286ec44aadcb04aaf4e75446f}
-      \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{{ACM} Queue}
-      \field{number}{2}
-      \field{title}{{Power to the People}}
-      \field{volume}{18}
-      \field{year}{2020}
-      \field{pages}{5\bibrangedash 18}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.1145/3400899.3402527
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3400899.3402527
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3400899.3402527
-      \endverb
     \endentry
     \entry{Garey}{book}{}
       \name{author}{2}{}{%
@@ -1005,7 +896,7 @@
            familyi={G\bibinitperiod}}}%
       }
       \list{organization}{1}{%
-        {Meta}%
+        {Google}%
       }
       \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
@@ -1046,35 +937,6 @@
       \field{pages}{1563\bibrangedash 1581}
       \range{pages}{19}
     \endentry
-    \entry{greenpeace2017}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=7628ecff54896cb076074261828e6623}{%
-           family={{Greenpeace}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Greenpeace International}%
-      }
-      \strng{namehash}{7628ecff54896cb076074261828e6623}
-      \strng{fullhash}{7628ecff54896cb076074261828e6623}
-      \strng{bibnamehash}{7628ecff54896cb076074261828e6623}
-      \strng{authorbibnamehash}{7628ecff54896cb076074261828e6623}
-      \strng{authornamehash}{7628ecff54896cb076074261828e6623}
-      \strng{authorfullhash}{7628ecff54896cb076074261828e6623}
-      \field{extraname}{1}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Clicking Clean}}
-      \field{year}{2017}
-      \verb{urlraw}
-      \verb www.greenpeace.org/international/publication/6826/clicking-clean-2017/
-      \endverb
-      \verb{url}
-      \verb www.greenpeace.org/international/publication/6826/clicking-clean-2017/
-      \endverb
-    \endentry
     \entry{clicking_clean_virginia}{misc}{}
       \name{author}{1}{}{%
         {{hash=7628ecff54896cb076074261828e6623}{%
@@ -1090,7 +952,6 @@
       \strng{authorbibnamehash}{7628ecff54896cb076074261828e6623}
       \strng{authornamehash}{7628ecff54896cb076074261828e6623}
       \strng{authorfullhash}{7628ecff54896cb076074261828e6623}
-      \field{extraname}{2}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labelnamesource}{author}
@@ -1626,10 +1487,10 @@
       \field{type}{techreport}
       \field{year}{2022}
       \verb{urlraw}
-      \verb https://www.iea.org/reports/data-centres-and-data-transmission-networks
+      \verb https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks
       \endverb
       \verb{url}
-      \verb https://www.iea.org/reports/data-centres-and-data-transmission-networks
+      \verb https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks
       \endverb
     \endentry
     \entry{KHODAYARSERESHT2023_energycarbonaware_vm}{article}{}
@@ -1751,6 +1612,35 @@
       \verb https://www.cnnbrasil.com.br/economia/inflacao-sofre-impacto-da-crise-hidrica-a-pior-dos-ultimos-91-anos-no-brasil/
       \endverb
     \endentry
+    \entry{Mack_2011_moorelaw}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2e96dd8f70de7a4408cff3eae9fe4a68}{%
+           family={Mack},
+           familyi={M\bibinitperiod},
+           given={Chris\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e96dd8f70de7a4408cff3eae9fe4a68}
+      \strng{fullhash}{2e96dd8f70de7a4408cff3eae9fe4a68}
+      \strng{bibnamehash}{2e96dd8f70de7a4408cff3eae9fe4a68}
+      \strng{authorbibnamehash}{2e96dd8f70de7a4408cff3eae9fe4a68}
+      \strng{authornamehash}{2e96dd8f70de7a4408cff3eae9fe4a68}
+      \strng{authorfullhash}{2e96dd8f70de7a4408cff3eae9fe4a68}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Semiconductor Manufacturing}
+      \field{number}{2}
+      \field{title}{Fifty Years of Moore's Law}
+      \field{volume}{24}
+      \field{year}{2011}
+      \field{pages}{202\bibrangedash 207}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/TSM.2010.2096437
+      \endverb
+    \endentry
     \entry{NREL_2012_capacityfactor}{report}{}
       \name{author}{3}{}{%
         {{hash=6c5f7c5c927dbf14f442ff0f1e3a0116}{%
@@ -1866,38 +1756,6 @@
       \field{howpublished}{\url{https://datacenters.microsoft.com/globe/explore}}
       \field{note}{Accessed: 2023-09-25}
       \field{title}{Microsoft Datacenters}
-    \endentry
-    \entry{muralidhar2020energy}{article}{}
-      \name{author}{3}{}{%
-        {{hash=f1b7e1db6a041f0af097df7b53404042}{%
-           family={Muralidhar},
-           familyi={M\bibinitperiod},
-           given={Rajeev},
-           giveni={R\bibinitperiod}}}%
-        {{hash=41c254a23f97a65c9d5b3b147959aea8}{%
-           family={Borovica-Gajic},
-           familyi={B\bibinithyphendelim G\bibinitperiod},
-           given={Renata},
-           giveni={R\bibinitperiod}}}%
-        {{hash=029e03ba4e08a5605b31a31f86375741}{%
-           family={Buyya},
-           familyi={B\bibinitperiod},
-           given={Rajkumar},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{4a457e34dca9f7f53a1e864fc3b81477}
-      \strng{fullhash}{46b9bba802aeeb22ff4be30c9f07fcbe}
-      \strng{bibnamehash}{46b9bba802aeeb22ff4be30c9f07fcbe}
-      \strng{authorbibnamehash}{46b9bba802aeeb22ff4be30c9f07fcbe}
-      \strng{authornamehash}{4a457e34dca9f7f53a1e864fc3b81477}
-      \strng{authorfullhash}{46b9bba802aeeb22ff4be30c9f07fcbe}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2007.09976}
-      \field{title}{Energy Efficient Computing Systems: Architectures, Abstractions and Modeling to Techniques and Standards}
-      \field{year}{2020}
     \endentry
     \entry{schooler2021carbonaware}{article}{}
       \name{author}{3}{}{%
@@ -2348,6 +2206,39 @@
       \verb{doi}
       \verb 10.3390/en14175577
       \endverb
+    \endentry
+    \entry{owidenergy}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a6d904a648976069036f5eddb4ad0151}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={Hannah},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c0e5ce1b546c571edc443f6a4f166170}{%
+           family={Roser},
+           familyi={R\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d528e1b7e7d09105d46db7009f56f94c}{%
+           family={Rosado},
+           familyi={R\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3342d04ac4f2f53e15e445f4ee591b5}
+      \strng{fullhash}{7755c495f4afbe8f7670bc703508202b}
+      \strng{bibnamehash}{7755c495f4afbe8f7670bc703508202b}
+      \strng{authorbibnamehash}{7755c495f4afbe8f7670bc703508202b}
+      \strng{authornamehash}{c3342d04ac4f2f53e15e445f4ee591b5}
+      \strng{authorfullhash}{7755c495f4afbe8f7670bc703508202b}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Our World in Data}
+      \field{note}{\url{https://ourworldindata.org/energy}. Accessed: 2023-09-26}
+      \field{title}{Energy}
+      \field{year}{2022}
     \endentry
     \entry{roach2021_microsoftazure}{article}{}
       \name{author}{1}{}{%
