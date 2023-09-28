@@ -66,23 +66,23 @@
 \contentsline {section}{\numberline {4.6}Summary}{78}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Long-term evaluation of sizing the DC operation}{81}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{81}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{84}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{85}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Updates in the model}{85}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Experiments}{86}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{86}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Results}{87}{subsubsection.5.2.2.2}%
-\contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{88}{section.5.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{87}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Results}{88}{subsubsection.5.2.2.2}%
+\contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{89}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Updates in the model}{89}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Experiments}{90}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{90}{subsubsection.5.3.2.1}%
+\contentsline {subsection}{\numberline {5.3.2}Experiments}{91}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{91}{subsubsection.5.3.2.1}%
 \contentsline {subsubsection}{\numberline {5.3.2.2}Results}{91}{subsubsection.5.3.2.2}%
-\contentsline {section}{\numberline {5.4}Sensibility of the LP to uncertainties}{93}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Sensibility of the LP to uncertainties}{94}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Updates in the model}{95}{subsection.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.1.1}Intermittency of renewable sources}{95}{subsubsection.5.4.1.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.2}Fine-grain values of grid emission data (hour by hour)}{95}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}Fine-grain values of grid emission data (hour by hour)}{96}{subsubsection.5.4.1.2}%
 \contentsline {subsection}{\numberline {5.4.2}Experiments}{96}{subsection.5.4.2}%
 \contentsline {subsubsection}{\numberline {5.4.2.1}Settings}{96}{subsubsection.5.4.2.1}%
-\contentsline {paragraph}{\numberline {5.4.2.1.1}Intermittency of renewable sources}{96}{paragraph.5.4.2.1.1}%
+\contentsline {paragraph}{\numberline {5.4.2.1.1}Intermittency of renewable sources}{97}{paragraph.5.4.2.1.1}%
 \contentsline {paragraph}{\numberline {5.4.2.1.2}Fine-grain values of grid emission data (hour by hour)}{97}{paragraph.5.4.2.1.2}%
 \contentsline {subsubsection}{\numberline {5.4.2.2}Results}{100}{subsubsection.5.4.2.2}%
 \contentsline {paragraph}{\numberline {5.4.2.2.1}Intermittency of renewable sources}{100}{paragraph.5.4.2.2.1}%
@@ -90,24 +90,25 @@
 \contentsline {section}{\numberline {5.5}Scheduling flexibility to reduce \ch {CO2} emissions}{102}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Updates in the model}{102}{subsection.5.5.1}%
 \contentsline {subsection}{\numberline {5.5.2}Experiments}{103}{subsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.2.1}Settings}{103}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}Settings}{104}{subsubsection.5.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.5.2.2}Results}{104}{subsubsection.5.5.2.2}%
 \contentsline {section}{\numberline {5.6}Monetary costs of reducing the carbon emissions}{104}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Updates in the model}{104}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.1}Updates in the model}{105}{subsection.5.6.1}%
 \contentsline {subsection}{\numberline {5.6.2}Experiments}{106}{subsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.2.1}Settings}{106}{subsubsection.5.6.2.1}%
-\contentsline {subsubsection}{\numberline {5.6.2.2}Results}{108}{subsubsection.5.6.2.2}%
-\contentsline {section}{\numberline {5.7}Adding or replacing servers considering new generations}{111}{section.5.7}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}Settings}{107}{subsubsection.5.6.2.1}%
+\contentsline {subsubsection}{\numberline {5.6.2.2}Results}{109}{subsubsection.5.6.2.2}%
+\contentsline {section}{\numberline {5.7}Adding or replacing servers considering new hardware and future workload}{111}{section.5.7}%
 \contentsline {subsection}{\numberline {5.7.1}Updates in the model}{111}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Experiments}{115}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.2}Experiments}{116}{subsection.5.7.2}%
 \contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{116}{subsubsection.5.7.2.1}%
-\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{118}{subsubsection.5.7.2.2}%
-\contentsline {section}{\numberline {5.8}Discussion}{121}{section.5.8}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{119}{subsubsection.5.7.2.2}%
+\contentsline {section}{\numberline {5.8}Discussion}{120}{section.5.8}%
 \contentsline {section}{\numberline {5.9}Summary}{125}{section.5.9}%
-\contentsline {chapter}{\numberline {6}General Discussion}{127}{chapter.6}%
-\contentsline {section}{\numberline {6.1}General Remarks and Future Research Directions}{127}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Work Dissemination}{127}{section.6.2}%
+\contentsline {chapter}{\numberline {6}General Discussion}{129}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Summary of contributions}{129}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Research Directions}{130}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Work Dissemination}{131}{section.6.3}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.61}%
+\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.63}%
 \babel@toc {french}{}
 \babel@toc {english}{}

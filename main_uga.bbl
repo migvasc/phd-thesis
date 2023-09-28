@@ -222,6 +222,43 @@
       \verb https://www.nrel.gov/pv/lcoe-calculator/
       \endverb
     \endentry
+    \entry{datacenter_as_computer}{book}{}
+      \name{author}{3}{}{%
+        {{hash=b7b397ec8054ed0ab9f02f1e5685b8d0}{%
+           family={Barroso},
+           familyi={B\bibinitperiod},
+           given={Luiz\bibnamedelima André},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d0ee53538ef1b87d7815e8deead18d5e}{%
+           family={Clidaras},
+           familyi={C\bibinitperiod},
+           given={Jimmy},
+           giveni={J\bibinitperiod}}}%
+        {{hash=531728f47c89524d0805ea3cedc9b049}{%
+           family={Hölzle},
+           familyi={H\bibinitperiod},
+           given={Urs},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{d245bd8e386a9e6ba677dfe994c094f3}
+      \strng{fullhash}{58a4401eb688706d29f0674d955905d7}
+      \strng{bibnamehash}{58a4401eb688706d29f0674d955905d7}
+      \strng{authorbibnamehash}{58a4401eb688706d29f0674d955905d7}
+      \strng{authornamehash}{d245bd8e386a9e6ba677dfe994c094f3}
+      \strng{authorfullhash}{58a4401eb688706d29f0674d955905d7}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Datacenter as a Computer: An Introduction to the Design of Warehouse-Scale Machines, Second Edition}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.2200/S00516ED2V01Y201306CAC024
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.2200/S00516ED2V01Y201306CAC024
+      \endverb
+    \endentry
     \entry{batteries_baumman}{article}{}
       \name{author}{4}{}{%
         {{hash=6eb57666cda87c956dc705a8eea4004b}{%
@@ -492,6 +529,121 @@
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/S0743731514001105
       \endverb
+    \endentry
+    \entry{cisco_global_cloud_index_2012}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7b1d1185b835814de783483f686e9825}{%
+           family={Cisco},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Cisco}%
+      }
+      \strng{namehash}{7b1d1185b835814de783483f686e9825}
+      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
+      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2012-2017. White Paper.}
+      \field{year}{2013}
+    \endentry
+    \entry{cisco_global_cloud_index_2013}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7b1d1185b835814de783483f686e9825}{%
+           family={Cisco},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Cisco}%
+      }
+      \strng{namehash}{7b1d1185b835814de783483f686e9825}
+      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
+      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2013-2018. White Paper.}
+      \field{year}{2014}
+    \endentry
+    \entry{cisco_global_cloud_index_2014}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7b1d1185b835814de783483f686e9825}{%
+           family={Cisco},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Cisco}%
+      }
+      \strng{namehash}{7b1d1185b835814de783483f686e9825}
+      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
+      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
+      \field{extraname}{3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2014-2019. White Paper.}
+      \field{year}{2015}
+    \endentry
+    \entry{cisco_global_cloud_index_2015}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7b1d1185b835814de783483f686e9825}{%
+           family={Cisco},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Cisco}%
+      }
+      \strng{namehash}{7b1d1185b835814de783483f686e9825}
+      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
+      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
+      \field{extraname}{4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2015-2020. White Paper.}
+      \field{year}{2016}
+    \endentry
+    \entry{cisco_global_cloud_index_2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7b1d1185b835814de783483f686e9825}{%
+           family={Cisco},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Cisco}%
+      }
+      \strng{namehash}{7b1d1185b835814de783483f686e9825}
+      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
+      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
+      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
+      \field{extraname}{5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2016-2021. White Paper.}
+      \field{year}{2018}
     \endentry
     \entry{DACOSTA2018_grog}{article}{}
       \name{author}{3}{}{%
@@ -1750,8 +1902,20 @@
       \field{year}{2023}
     \endentry
     \entry{azure_dcs_location}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://datacenters.microsoft.com/globe/explore}}
       \field{note}{Accessed: 2023-09-25}
@@ -2533,6 +2697,46 @@
       \verb 10.1016/j.future.2022.06.008
       \endverb
     \endentry
+    \entry{spec_power}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{SPEC Power ssj2008 benchmark}
+    \endentry
+    \entry{spec_2014}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/results/res2014q4/power_ssj2008-20140930-00675.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{SPECpower\_ssj2008 results for Fujitsu FUJITSU Server PRIMERGY RX2540 M1}
+    \endentry
+    \entry{spec_2017}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/results/res2017q3/power_ssj2008-20170621-00763.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{SPECpower\_ssj2008 results for Huawei Technologies Co., Ltd Fusion Server 2288H V5}
+    \endentry
+    \entry{spec_2016}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/results/res2016q2/power_ssj2008-20160412-00725.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{SPECpower\_ssj2008 results for Huawei Technologies Co., Ltd Fusion Server RH2288H V3}
+    \endentry
+    \entry{spec_2013}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/results/res2013q4/power_ssj2008-20130902-00625.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{SPECpower\_ssj2008 results for Huawei Technologies Co., Ltd RH2288H V2-8 Rack Server}
+    \endentry
     \entry{nrel_wt_costs_2021}{article}{}
       \name{author}{2}{}{%
         {{hash=e0b5bab2de5954339ac14f8f66ee2282}{%
@@ -2942,6 +3146,38 @@
       \field{pages}{187\bibrangedash 198}
       \range{pages}{12}
       \keyw{energy storage,power provisioning,cost reduction,datacenters}
+    \endentry
+    \entry{ref_xeon_e5_2660v2}{misc}{}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.x86-guide.net/en/cpu/Intel-Xeon-E5-2660-v2-cpu-no4850.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{X86 CPU's guide - Intel Xeon E5-2660 v2}
+    \endentry
+    \entry{ref_xeon_e5_2698v4}{misc}{}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.x86-guide.net/fr/cpu/Intel-Xeon-E5-2698-v4-cpu-no5825.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{X86 CPU's guide - Intel Xeon E5-2698 v4}
+    \endentry
+    \entry{ref_xeon_e5_2699v3}{misc}{}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.x86-guide.net/fr/cpu/Intel-Xeon-E5-2699-v3-cpu-no5828.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{X86 CPU's guide - Intel Xeon E5-2699 v3}
+    \endentry
+    \entry{ref_xeon_platinum_8180}{misc}{}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.x86-guide.net/fr/cpu/Intel-Xeon-Platinum-8180-cpu-no6323.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{X86 CPU's guide - Intel Xeon Platinum 8180}
     \endentry
     \entry{XU2020191}{article}{}
       \name{author}{2}{}{%
