@@ -45,9 +45,9 @@
 \contentsline {table}{\numberline {5.13}{\ignorespaces Price of different sources of energy (USD per kWh) at each location. Source for the grid electricity prices: Petrolprices.org. \relax }}{109}{table.caption.50}%
 \contentsline {table}{\numberline {5.14}{\ignorespaces Total costs (millions of \$) and emissions ($t\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq$) for different scenarios. \relax }}{110}{table.caption.51}%
 \contentsline {table}{\numberline {5.15}{\ignorespaces Total costs (millions of \$) and emissions ($t\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq$) for different scenarios. \relax }}{110}{table.caption.52}%
-\contentsline {table}{\numberline {5.16}{\ignorespaces Servers specifications for different generations. Values are inspired in results from the SpecPower benchmark \cite {spec_2014,spec_2017,spec_2016,spec_2013}.\relax }}{117}{table.caption.56}%
-\contentsline {table}{\numberline {5.17}{\ignorespaces Forecasted and real anual growth of the workload (in \%) reported by Cisco \cite {cisco_global_cloud_index_2012,cisco_global_cloud_index_2013,cisco_global_cloud_index_2014,cisco_global_cloud_index_2015,cisco_global_cloud_index_2018}.\relax }}{117}{table.caption.57}%
-\contentsline {table}{\numberline {5.18}{\ignorespaces CPU specifications in terms of die area and processor size. Values retrived from x86guide.net \cite {ref_xeon_e5_2660v2,ref_xeon_e5_2698v4,ref_xeon_e5_2699v3,ref_xeon_platinum_8180}.\relax }}{117}{table.caption.58}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces Forecasted and real anual growth of the workload (in \%) reported by Cisco \cite {cisco_global_cloud_index_2012,cisco_global_cloud_index_2013,cisco_global_cloud_index_2014,cisco_global_cloud_index_2015,cisco_global_cloud_index_2018}.\relax }}{117}{table.caption.56}%
+\contentsline {table}{\numberline {5.17}{\ignorespaces Servers specifications for different generations. Values are inspired in results from the SpecPower benchmark \cite {spec_2014,spec_2017,spec_2016,spec_2013}.\relax }}{117}{table.caption.57}%
+\contentsline {table}{\numberline {5.18}{\ignorespaces CPU specifications in terms of die area and processor size. Values retrived from x86guide.net \cite {ref_xeon_e5_2660v2,ref_xeon_e5_2698v4,ref_xeon_e5_2699v3,ref_xeon_platinum_8180}.\relax }}{118}{table.caption.58}%
 \contentsline {table}{\numberline {5.19}{\ignorespaces Total emissions for the different approaches to manufacture new servers.\relax }}{119}{table.caption.62}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -28,7 +28,6 @@ Finally, the model was carefully conceived to use only linear variables, which a
 As mentioned in Section~\ref{sec:conclusion_smargreens}, to further assess the impact of the follow-the-renewables strategies, we also need to take into account the network usage by the workload --- that  reduces the avaialable bandwitdh for the migration process. The model can also be analyzed for the container virtualization technology, since they are usually smaller in comparison to VMs, it coud result in more workload being migrated.
 
 
-
 - Usar outros recursos ...
 - Definir onde podem ser instalado dcs ...
 - Reciclar os servidores

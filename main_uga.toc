@@ -100,14 +100,14 @@
 \contentsline {section}{\numberline {5.7}Adding or replacing servers considering new hardware and future workload}{111}{section.5.7}%
 \contentsline {subsection}{\numberline {5.7.1}Updates in the model}{111}{subsection.5.7.1}%
 \contentsline {subsection}{\numberline {5.7.2}Experiments}{116}{subsection.5.7.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{116}{subsubsection.5.7.2.1}%
-\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{119}{subsubsection.5.7.2.2}%
-\contentsline {section}{\numberline {5.8}Discussion}{120}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Summary}{125}{section.5.9}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{117}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{118}{subsubsection.5.7.2.2}%
+\contentsline {section}{\numberline {5.8}Discussion}{119}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Summary}{124}{section.5.9}%
 \contentsline {chapter}{\numberline {6}General Discussion}{129}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Summary of contributions}{129}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Research Directions}{130}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Work Dissemination}{131}{section.6.3}%
+\contentsline {section}{\numberline {6.2}Future Research Directions}{132}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Work Dissemination}{133}{section.6.3}%
 \vspace \bigskipamount 
 \contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.63}%
 \babel@toc {french}{}

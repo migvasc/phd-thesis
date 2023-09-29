@@ -339,7 +339,7 @@ The difference between the total and brown energy consumed with the green energy
 The scheduling policies and how the algorithms adopt the ``follow-the-renewables'' strategy justify the difference between the total and brown energy consumption, and the relative value of renewable energy used. The algorithms WSNB and FollowMe@S Intra that presented the highest brown energy consumption applied ``follow-the-renewables'' at the initial scheduling of the workload, and didn't migrate the VMs in execution to other DCs as the green energy availability changed over time --- as did by the algorithms FollowMe@S Inter, NEMESIS and c-NEMESIS. To further understand the difference in these results, the next section will analyze the live migrations' impact on the total and brown energy consumption.
 
 \subsubsection{Wasted resources in the migrations}
-
+\label{sec:wasted_resources_smartgreens}
 To evaluate the wastage of resources in terms of network and energy, all the live migrations performed in the algorithms are compared with a perfect scenario: all the migrations are performed individually and isolated, having full access to the network.
 
 Table \ref{ tab:wasted_seconds } presents statistics about the extra time (in seconds) it took to migrate the VMs in the simulations in comparison with the perfect scenario. The absolute value is the absolute difference in seconds. For example, on average, the live migrations performed by the NEMESIS algorithm were 10.11 seconds longer compared to the perfect scenario for the Google workload. The relative value is the ratio of the difference. For example, in the FollowMe@S Inter with the Google workload, the migration duration was more than 10 times longer in comparison with the perfect scenario.
