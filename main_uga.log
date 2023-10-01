@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  29 SEP 2023 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  1 OCT 2023 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2596,20 +2596,20 @@ Overfull \hbox (10.94998pt too wide) in paragraph at lines 39--39
 Underfull \vbox (badness 1009) has occurred while \output is active []
 
  [86]
-<images/pv_daily_ghi_avg.pdf, id=1391, 722.7pt x 722.7pt>
+<images/pv_daily_ghi_avg.pdf, id=1392, 722.7pt x 722.7pt>
 File: images/pv_daily_ghi_avg.pdf Graphic file (type pdf)
 <use images/pv_daily_ghi_avg.pdf>
 Package pdftex.def Info: images/pv_daily_ghi_avg.pdf  used on input line 91.
 (pdftex.def)             Requested size: 315.82681pt x 315.82759pt.
 
 [87 <./images/pv_daily_ghi_avg.pdf>]
-<images/pv_sizing_after_lca.pdf, id=1406, 722.7pt x 289.08pt>
+<images/pv_sizing_after_lca.pdf, id=1407, 722.7pt x 289.08pt>
 File: images/pv_sizing_after_lca.pdf Graphic file (type pdf)
 <use images/pv_sizing_after_lca.pdf>
 Package pdftex.def Info: images/pv_sizing_after_lca.pdf  used on input line 125
 .
 (pdftex.def)             Requested size: 315.82681pt x 126.33102pt.
-<images/bat_sizing_after_lca.pdf, id=1407, 722.7pt x 289.08pt>
+<images/bat_sizing_after_lca.pdf, id=1408, 722.7pt x 289.08pt>
 File: images/bat_sizing_after_lca.pdf Graphic file (type pdf)
 <use images/bat_sizing_after_lca.pdf>
 Package pdftex.def Info: images/bat_sizing_after_lca.pdf  used on input line 13
@@ -2629,13 +2629,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [92]
-<images/pv_sizing_after_wt.pdf, id=1461, 722.7pt x 289.08pt>
+<images/pv_sizing_after_wt.pdf, id=1462, 722.7pt x 289.08pt>
 File: images/pv_sizing_after_wt.pdf Graphic file (type pdf)
 <use images/pv_sizing_after_wt.pdf>
 Package pdftex.def Info: images/pv_sizing_after_wt.pdf  used on input line 283.
 
 (pdftex.def)             Requested size: 315.82681pt x 126.33102pt.
-<images/bat_sizing_after_wt.pdf, id=1462, 722.7pt x 289.08pt>
+<images/bat_sizing_after_wt.pdf, id=1463, 722.7pt x 289.08pt>
 File: images/bat_sizing_after_wt.pdf Graphic file (type pdf)
 <use images/bat_sizing_after_wt.pdf>
 Package pdftex.def Info: images/bat_sizing_after_wt.pdf  used on input line 291
@@ -2645,12 +2645,12 @@ Package pdftex.def Info: images/bat_sizing_after_wt.pdf  used on input line 291
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [93 <./images/pv_sizing_after_wt.pdf> <./images/bat_sizing_after_wt.pdf>]
-<images/energy_pv.pdf, id=1479, 722.7pt x 433.62pt>
+<images/energy_pv.pdf, id=1480, 722.7pt x 433.62pt>
 File: images/energy_pv.pdf Graphic file (type pdf)
 <use images/energy_pv.pdf>
 Package pdftex.def Info: images/energy_pv.pdf  used on input line 306.
 (pdftex.def)             Requested size: 315.82681pt x 189.49655pt.
-<images/energy_wt.pdf, id=1480, 722.7pt x 433.62pt>
+<images/energy_wt.pdf, id=1481, 722.7pt x 433.62pt>
 File: images/energy_wt.pdf Graphic file (type pdf)
 <use images/energy_wt.pdf>
 Package pdftex.def Info: images/energy_wt.pdf  used on input line 314.
@@ -2670,14 +2670,14 @@ Overfull \hbox (31.525pt too wide) in paragraph at lines 370--394
 Underfull \vbox (badness 5667) has occurred while \output is active []
 
  [98]
-<images/co2_emissions_sp.pdf, id=1525, 578.16pt x 505.89pt>
+<images/co2_emissions_sp.pdf, id=1526, 578.16pt x 505.89pt>
 File: images/co2_emissions_sp.pdf Graphic file (type pdf)
 <use images/co2_emissions_sp.pdf>
 Package pdftex.def Info: images/co2_emissions_sp.pdf  used on input line 433.
 (pdftex.def)             Requested size: 394.78203pt x 345.4287pt.
 
 [99 <./images/co2_emissions_sp.pdf>]
-<images/co2_emissions_seoul.pdf, id=1537, 578.16pt x 505.89pt>
+<images/co2_emissions_seoul.pdf, id=1538, 578.16pt x 505.89pt>
 File: images/co2_emissions_seoul.pdf Graphic file (type pdf)
 <use images/co2_emissions_seoul.pdf>
 Package pdftex.def Info: images/co2_emissions_seoul.pdf  used on input line 443
@@ -2730,20 +2730,20 @@ Overfull \hbox (24.43912pt too wide) in paragraph at lines 787--808
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/pv_sizing_co2_costs.pdf, id=1628, 722.7pt x 289.08pt>
+<images/pv_sizing_co2_costs.pdf, id=1629, 722.7pt x 289.08pt>
 File: images/pv_sizing_co2_costs.pdf Graphic file (type pdf)
 <use images/pv_sizing_co2_costs.pdf>
 Package pdftex.def Info: images/pv_sizing_co2_costs.pdf  used on input line 816
 .
 (pdftex.def)             Requested size: 315.82681pt x 126.33102pt.
 [109]
-<images/bat_sizing_co2_costs.pdf, id=1633, 722.7pt x 289.08pt>
+<images/bat_sizing_co2_costs.pdf, id=1634, 722.7pt x 289.08pt>
 File: images/bat_sizing_co2_costs.pdf Graphic file (type pdf)
 <use images/bat_sizing_co2_costs.pdf>
 Package pdftex.def Info: images/bat_sizing_co2_costs.pdf  used on input line 82
 4.
 (pdftex.def)             Requested size: 315.82681pt x 126.33102pt.
-<images/wt_sizing_co2_costs.pdf, id=1634, 722.7pt x 361.35pt>
+<images/wt_sizing_co2_costs.pdf, id=1635, 722.7pt x 361.35pt>
 File: images/wt_sizing_co2_costs.pdf Graphic file (type pdf)
 <use images/wt_sizing_co2_costs.pdf>
 Package pdftex.def Info: images/wt_sizing_co2_costs.pdf  used on input line 831
@@ -2758,14 +2758,14 @@ Underfull \vbox (badness 2573) has occurred while \output is active []
 
  [117]
 [118]
-<images/cloud_federation_evolution_lifetime.png, id=1747, 1084.05pt x 867.24pt>
+<images/cloud_federation_evolution_lifetime.png, id=1748, 1084.05pt x 867.24pt>
 
 File: images/cloud_federation_evolution_lifetime.png Graphic file (type png)
 <use images/cloud_federation_evolution_lifetime.png>
 Package pdftex.def Info: images/cloud_federation_evolution_lifetime.png  used o
 n input line 1064.
 (pdftex.def)             Requested size: 394.78203pt x 315.81877pt.
-<images/dc_evolution_year_by_year.pdf, id=1748, 1084.05pt x 1734.48pt>
+<images/dc_evolution_year_by_year.pdf, id=1749, 1084.05pt x 1734.48pt>
 File: images/dc_evolution_year_by_year.pdf Graphic file (type pdf)
 <use images/dc_evolution_year_by_year.pdf>
 Package pdftex.def Info: images/dc_evolution_year_by_year.pdf  used on input li
@@ -2775,7 +2775,7 @@ ne 1072.
 
 LaTeX Warning: Float too large for page by 29.03728pt on input line 1075.
 
-<images/dc_evolution_optimal.pdf, id=1749, 1084.05pt x 1734.48pt>
+<images/dc_evolution_optimal.pdf, id=1750, 1084.05pt x 1734.48pt>
 File: images/dc_evolution_optimal.pdf Graphic file (type pdf)
 <use images/dc_evolution_optimal.pdf>
 Package pdftex.def Info: images/dc_evolution_optimal.pdf  used on input line 10
@@ -2805,19 +2805,19 @@ Overfull \hbox (10.94998pt too wide) in paragraph at lines 47--47
 [][][][][][][][] 
  []
 
-(./chap-conclusion.tex
-
-LaTeX Warning: Reference `sec:wasted_resources_smartgreens' on page 129 undefin
-ed on input line 12.
-
-[129
+(./chap-conclusion.tex [129
 
 
-] [130] [131] [132] [133])) [134]
+] [130] [131] [132]
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+ [133]
+[134])) [135] [136
+
+
+]
 chapter without number
 [1
-
-
 
 
 
@@ -2876,18 +2876,15 @@ Package rerunfilecheck Info: File `main_uga.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main_uga.run.xml'.
 \openout1 = `main_uga.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 52910 strings out of 481239
- 1068142 string characters out of 5920378
- 1912670 words of memory out of 5000000
+ 52912 strings out of 481239
+ 1068158 string characters out of 5920378
+ 1912746 words of memory out of 5000000
  66258 multiletter control sequences out of 15000+600000
  821158 words of font info for 496 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2936,9 +2933,9 @@ fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/bookman/ubkli8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
 c/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 >
-Output written on main_uga.pdf (162 pages, 3831979 bytes).
+Output written on main_uga.pdf (164 pages, 3836239 bytes).
 PDF statistics:
- 2502 PDF objects out of 2984 (max. 8388607)
- 463 named destinations out of 1000 (max. 500000)
+ 2517 PDF objects out of 2984 (max. 8388607)
+ 465 named destinations out of 1000 (max. 500000)
  90130 words of extra memory for PDF output out of 106986 (max. 10000000)
 
