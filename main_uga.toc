@@ -11,7 +11,7 @@
 \contentsline {chapter}{\nonumberline Abstract / \foreignlanguage {french}{Résumé}}{vii}{chapter*.2}%
 \babel@toc {french}{}
 \babel@toc {english}{}
-\contentsline {chapter}{{Contents}}{xv}{section*.5}%
+\contentsline {chapter}{{Contents}}{xiii}{section*.5}%
 \vspace \bigskipamount 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Structure of the thesis and contributions}{4}{section.1.1}%
@@ -103,7 +103,7 @@
 \contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{117}{subsubsection.5.7.2.1}%
 \contentsline {subsubsection}{\numberline {5.7.2.2}Results}{118}{subsubsection.5.7.2.2}%
 \contentsline {section}{\numberline {5.8}Discussion}{120}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Summary}{124}{section.5.9}%
+\contentsline {section}{\numberline {5.9}Summary}{125}{section.5.9}%
 \contentsline {chapter}{\numberline {6}General Discussion}{129}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Summary of contributions}{129}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Future Research Directions}{132}{section.6.2}%

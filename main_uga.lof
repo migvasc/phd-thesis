@@ -38,8 +38,8 @@
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Battery capacity to minimize costs in comparison to minimizing carbon emissions. \relax }}{110}{figure.caption.53}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Number of wind turbines to minimize costs in comparison to minimizing carbon emissions.\relax }}{111}{figure.caption.54}%
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Comparison between the optimal and greedy approaches to decide manufacturing new servers in terms of total CPU cores of the cloud federation and the generation of servers.\relax }}{119}{figure.caption.57}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Solution for the greedy approach to decide manufacture servers --- when there is only access to information of the current year's server.\relax }}{126}{figure.caption.58}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Solution for the optimal approach to decide manufacture servers --- when there is only access to information of the servers off all the years in advance.\relax }}{127}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Solution for the greedy approach to decide manufacture servers --- when there is only access to information of the current year's server.\relax }}{127}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Solution for the optimal approach to decide manufacture servers --- when there is only access to information of the servers off all the years in advance.\relax }}{128}{figure.caption.59}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {french}{}
