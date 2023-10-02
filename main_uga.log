@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  1 OCT 2023 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  2 OCT 2023 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main_uga
+**main_uga.tex
 (./main_uga.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
@@ -2788,15 +2788,7 @@ LaTeX Warning: Float too large for page by 29.03728pt on input line 1082.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [120 <./images/cloud_federation_evolution_lifetime.png (PNG copy)>] [121] [122
-]
-
-LaTeX Warning: Reference `tab:total_price_and_co2' on page 123 undefined on inp
-ut line 1153.
-
-
-Underfull \vbox (badness 2326) has occurred while \output is active []
-
- [123]
+] [123]
 [124]) [125] [126] [127 <./images/dc_evolution_year_by_year.pdf>] [128 <./image
 s/dc_evolution_optimal.pdf>]
 chapter 6.
@@ -2809,7 +2801,7 @@ Overfull \hbox (10.94998pt too wide) in paragraph at lines 47--47
 
 
 ] [130] [131] [132]
-Underfull \vbox (badness 4752) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [133]
 [134])) [135] [136
@@ -2872,23 +2864,19 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `main_uga.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'main_uga.run.xml'.
 \openout1 = `main_uga.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 52912 strings out of 481239
- 1068158 string characters out of 5920378
- 1912746 words of memory out of 5000000
- 66258 multiletter control sequences out of 15000+600000
- 821158 words of font info for 496 fonts, out of 8000000 for 9000
+ 52905 strings out of 481239
+ 1068076 string characters out of 5920378
+ 1912748 words of memory out of 5000000
+ 66257 multiletter control sequences out of 15000+600000
+ 820530 words of font info for 492 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,21n,107p,10099b,3495s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,21n,107p,10103b,3495s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2933,9 +2921,9 @@ fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/bookman/ubkli8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
 c/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 >
-Output written on main_uga.pdf (164 pages, 3836239 bytes).
+Output written on main_uga.pdf (164 pages, 3835448 bytes).
 PDF statistics:
- 2517 PDF objects out of 2984 (max. 8388607)
+ 2515 PDF objects out of 2984 (max. 8388607)
  465 named destinations out of 1000 (max. 500000)
  90130 words of extra memory for PDF output out of 106986 (max. 10000000)
 
