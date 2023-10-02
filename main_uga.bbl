@@ -530,98 +530,6 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0743731514001105
       \endverb
     \endentry
-    \entry{cisco_global_cloud_index_2012}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=7b1d1185b835814de783483f686e9825}{%
-           family={Cisco},
-           familyi={C\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Cisco}%
-      }
-      \strng{namehash}{7b1d1185b835814de783483f686e9825}
-      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
-      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
-      \field{extraname}{1}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2012-2017. White Paper.}
-      \field{year}{2013}
-    \endentry
-    \entry{cisco_global_cloud_index_2013}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=7b1d1185b835814de783483f686e9825}{%
-           family={Cisco},
-           familyi={C\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Cisco}%
-      }
-      \strng{namehash}{7b1d1185b835814de783483f686e9825}
-      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
-      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
-      \field{extraname}{2}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2013-2018. White Paper.}
-      \field{year}{2014}
-    \endentry
-    \entry{cisco_global_cloud_index_2014}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=7b1d1185b835814de783483f686e9825}{%
-           family={Cisco},
-           familyi={C\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Cisco}%
-      }
-      \strng{namehash}{7b1d1185b835814de783483f686e9825}
-      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
-      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
-      \field{extraname}{3}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2014-2019. White Paper.}
-      \field{year}{2015}
-    \endentry
-    \entry{cisco_global_cloud_index_2015}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=7b1d1185b835814de783483f686e9825}{%
-           family={Cisco},
-           familyi={C\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Cisco}%
-      }
-      \strng{namehash}{7b1d1185b835814de783483f686e9825}
-      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
-      \strng{bibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
-      \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
-      \field{extraname}{4}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Cisco Global Cloud Index: Forecast and Methodology, 2015-2020. White Paper.}
-      \field{year}{2016}
-    \endentry
     \entry{cisco_global_cloud_index_2018}{misc}{}
       \name{author}{1}{}{%
         {{hash=7b1d1185b835814de783483f686e9825}{%
@@ -637,7 +545,6 @@
       \strng{authorbibnamehash}{7b1d1185b835814de783483f686e9825}
       \strng{authornamehash}{7b1d1185b835814de783483f686e9825}
       \strng{authorfullhash}{7b1d1185b835814de783483f686e9825}
-      \field{extraname}{5}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
       \field{labelnamesource}{author}
@@ -1729,6 +1636,45 @@
       \field{pages}{116798}
       \range{pages}{1}
     \endentry
+    \entry{krakauer2017prediction_accuracy}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d36dc85fb3ed2fe808c8658ff9009fc6}{%
+           family={Krakauer},
+           familyi={K\bibinitperiod},
+           given={Nir\bibnamedelima Y.},
+           giveni={N\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=08d55cc0aec943e4a4b6c32c6b881e78}{%
+           family={Cohan},
+           familyi={C\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc5a9ac0251cefc0ccd31897d799290b}
+      \strng{fullhash}{bc5a9ac0251cefc0ccd31897d799290b}
+      \strng{bibnamehash}{bc5a9ac0251cefc0ccd31897d799290b}
+      \strng{authorbibnamehash}{bc5a9ac0251cefc0ccd31897d799290b}
+      \strng{authornamehash}{bc5a9ac0251cefc0ccd31897d799290b}
+      \strng{authorfullhash}{bc5a9ac0251cefc0ccd31897d799290b}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2079-9276}
+      \field{journaltitle}{Resources}
+      \field{number}{3}
+      \field{title}{Interannual Variability and Seasonal Predictability of Wind and Solar Resources}
+      \field{volume}{6}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.3390/resources6030029
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2079-9276/6/3/29
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2079-9276/6/3/29
+      \endverb
+    \endentry
     \entry{CNN2021_crisehidrica}{article}{}
       \name{author}{1}{}{%
         {{hash=7697315fb92e353765a3e1285670edee}{%
@@ -2729,13 +2675,21 @@
       \field{note}{Accessed: 2023-09-25}
       \field{title}{SPECpower\_ssj2008 results for Huawei Technologies Co., Ltd Fusion Server RH2288H V3}
     \endentry
-    \entry{spec_2013}{misc}{}
+    \entry{spec_2019}{misc}{}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/results/res2013q4/power_ssj2008-20130902-00625.html}}
+      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/results/res2019q3/power_ssj2008-20190717-00987.html}}
       \field{note}{Accessed: 2023-09-25}
-      \field{title}{SPECpower\_ssj2008 results for Huawei Technologies Co., Ltd RH2288H V2-8 Rack Server}
+      \field{title}{SPECpower\_ssj2008 results for Lenovo Global Technology Think System SR655}
+    \endentry
+    \entry{spec_2021}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.spec.org/power_ssj2008/results/res2021q1/power_ssj2008-20210309-01077.html}}
+      \field{note}{Accessed: 2023-09-25}
+      \field{title}{SPECpower\_ssj2008 results for Lenovo Global Technology ThinkSystem SR645}
     \endentry
     \entry{nrel_wt_costs_2021}{article}{}
       \name{author}{2}{}{%
@@ -3147,29 +3101,21 @@
       \range{pages}{12}
       \keyw{energy storage,power provisioning,cost reduction,datacenters}
     \endentry
-    \entry{ref_xeon_e5_2660v2}{misc}{}
+    \entry{ref_amd_epyc_7742}{misc}{}
       \field{sortinit}{X}
       \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.x86-guide.net/en/cpu/Intel-Xeon-E5-2660-v2-cpu-no4850.html}}
+      \field{howpublished}{\url{https://www.x86-guide.net/fr/cpu/AMD-EPYC-7742-cpu-no7747.html}}
       \field{note}{Accessed: 2023-09-25}
-      \field{title}{X86 CPU's guide - Intel Xeon E5-2660 v2}
+      \field{title}{X86 CPU's guide - AMD EPYC 7742}
     \endentry
-    \entry{ref_xeon_e5_2698v4}{misc}{}
+    \entry{ref_amd_epyc_7763}{misc}{}
       \field{sortinit}{X}
       \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.x86-guide.net/fr/cpu/Intel-Xeon-E5-2698-v4-cpu-no5825.html}}
+      \field{howpublished}{\url{https://www.x86-guide.net/fr/cpu/AMD-EPYC-7763-cpu-no8262.html}}
       \field{note}{Accessed: 2023-09-25}
-      \field{title}{X86 CPU's guide - Intel Xeon E5-2698 v4}
-    \endentry
-    \entry{ref_xeon_e5_2699v3}{misc}{}
-      \field{sortinit}{X}
-      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.x86-guide.net/fr/cpu/Intel-Xeon-E5-2699-v3-cpu-no5828.html}}
-      \field{note}{Accessed: 2023-09-25}
-      \field{title}{X86 CPU's guide - Intel Xeon E5-2699 v3}
+      \field{title}{X86 CPU's guide - AMD EPYC 7763}
     \endentry
     \entry{ref_xeon_platinum_8180}{misc}{}
       \field{sortinit}{X}

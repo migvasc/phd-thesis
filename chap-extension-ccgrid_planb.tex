@@ -119,8 +119,7 @@ Table~\ref{tab:emissions_LCA} presents the \ch{CO2} emissions considering the wh
 Finally, to better assess the impact of considering the emissions from the whole life cycle in the sizing process, we compare its results with the sizing process that only considers the emissions from the manufacturing phase --- Figures~\ref{fig:pv_lca} and ~\ref{fig:bat_lca}.
 
 
-
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   {\epsfig{file = images/pv_sizing_after_lca.pdf, width = .8\textwidth}}
   \caption{PV Area sizing when considering carbon footprint of manufacturing vs whole life cycle. }
@@ -128,7 +127,7 @@ Finally, to better assess the impact of considering the emissions from the whole
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   {\epsfig{file = images/bat_sizing_after_lca.pdf, width = .8\textwidth}}
   \caption{Battery capacity sizing when considering carbon footprint of manufacturing vs whole life cycle.  }
@@ -139,9 +138,7 @@ Finally, to better assess the impact of considering the emissions from the whole
 
 \section{Including wind turbines to the renewable infrastructure}
 \label{sec:add_wt}
-
-
-In this section, we evaluate the impact on the carbon footprint of adding wind turbines (WT) as power source to the on-site renewable infrastructure. Wind turbines may complement the photovoltaic power production to reduce the total emissions of the cloud federation operation, in particular during the night and seasons with lower solar irradiation as the winter. On the other hand, solar irradiation presents a lower variance than wind speed \cite{krakauer2017prediction_accuracy}.
+In this section, we evaluate the impact of adding another renewable power source, wind turbines (WT), and to what extent they complement the photovoltaic power production to reduce the total emissions of the cloud federation operation, in particular during the night and seasons with lower solar irradiation as the winter.
 
 \subsection{Updates in the model}
 \label{sec:ex_model_wt}
@@ -425,7 +422,7 @@ Table~\ref{tab:grid_emissions_hist} presents the sources of the data, the time s
 \end{table}
 
 
-To illustrate the variations of the grid emission over time, we present two scenarios to the reader: one with a significative presence of renewables in the local electricity grid (São Paulo) and another with a low presence (Seoul). It will be possible to observe the differences between day and night, seasons, and years.
+To illustrate the variation of the grid emission over time, we present two scenarios to the reader: one with a significative presence of renewables in the local electricity grid (São Paulo) and another with a low presence (Seoul). It will be possible to observe the variance between day and night, seasons, and years.
 
 
 Figure~\ref{fig:co2_sp} illustrates the local electricity grid emissions over time for São Paulo, and each subplot represents one bimester. The differences between day and night might be justified by using solar energy, as well as the difference between seasons. However, it is also possible to observe a difference among the years --- 2021 is the year with the highest carbon footprint of the grid. The higher emissions of the year 2021 are justified by the hydric crisis that occurred during that period --- the greatest of the previous 91 years, since a large share of São Paulo's electricity demand is supplied by hydroelectric power, and coal power plants were used to meet the power demand~\cite{CNN2021_crisehidrica}. %This illustrates the uncertainty of the grid emissions value: not only do the climate conditions affect its value, but external factors such as bad public policies also play a role.
@@ -892,11 +889,14 @@ Equation~\eqref{eq:power_servers_gen} presents the new modeling of the power con
    P^d_k  = PUE^d \times \big(Pintranet^d + PServers^d\big)
 \end{equation}
 
+
 Regarding the carbon footprint of the servers, it is assumed that it is amortized over the server lifetime and the LP considers the annual value. For example, if manufacturing a server emits 800 kg of \ch{CO2}-eq and its expected lifetime of 4 years, 25\% (200 kg of \ch{CO2}-eq) of its manufacturing emissions will be accounted on the 1st year of operation, other 25\% at the second year and so on. After the fourth year, the server can still remain in the cloud platform, and its carbon emissions will come only from the power consumption --- all the carbon emissions from manufacturing have been amortized. On the other hand, if the server is replaced in the second year of operation, the 75\% remaining of its emissions from manufacturing will also be taken into account. Equation~\eqref{eq:co2_new_servers} illustrates the footprint of building additional servers at a given data center $d$, where $serversCO2$ is an input with the total \ch{CO2} emitted from manufacturing the server (in $g\,\ch{CO2}-eq$), and $\epsilon$ the share of the emissions by year ---  $\epsilon$ is equal to 0.25 on the previous example.
+
 
 \begin{equation} \label{eq:co2_new_servers}
 FPns^d = NS^d \times (serversCO2 \times \epsilon)	
 \end{equation}
+
 
 Equation~\eqref{eq:co2_rep_servers} illustrates the footprint of replacing servers from previous generations at a given data center $d$, where $repCO2_{gen}$ is the emissions (in kg of \ch{CO2} eq) from replacing the old servers that depend on the server age ($age_{gen}$) in years. The function that computes the value of  $repCO2_{gen}$  is defined in Equation~\eqref{eq:amortizedCO2}. 
 
@@ -962,55 +962,82 @@ In the second scenario, the 5 years of operation are solved at once, therefore t
 
 The two approaches --- greedy approach and the optimal --- are compared using the metric total carbon emissions --- originated from manufacturing the servers, life cycle of the renewable infrastructure, and power consumed from the local grid.
 
+Finally, the sizing process using the greed approach relies on forecasts of future workload as input, which might differ from the real workload growth. To measure its environmental impact, we rerun the linear program using the inputs of the real workload growth. In this second execution, the variables within the linear program for server manufacturing retain the values from the initial solution based on forecasted workload.
+
 
 \subsubsection{Settings}
 
-We consider 5 years of operation and four generations of servers. For the workload growth, we assumed 22\% per year as reported by Cisco for the period 2017 to 2021~\cite{cisco_global_cloud_index_2018} --- for each year we use an input were the number of requested CPU cores per time slot to execute the workload is 22\% higher than the previous year. Regarding the servers configuration, for each year from 2017 to 2021 we selected the server that had the highest score in the SPEC Power benchmark~\cite{spec_power} --- a benchmark that assess servers regarding both performance and energy --- to represent the state-of-the-art. Table~\ref{tab:servers_specs} lists the difference in terms of hardware characteristics, power consumption, and the carbon footprint of manufacturing each server for the different generations.  It is worth  that in some cases, the same CPU was used in the servers that had the highest score for multiple years (as the Intel Xeon Platinum 8180 and the AMD EPYC 7742). For the \ch{CO2} of manufacturing the servers, the methodology from the work of ~\citet{gupta2022_ACT} is used, which presents how to compute the carbon footprint of servers considering the integrated circuits of  RAM, storage (HD and SSDs) and CPU.
+We consider 5 years of operation --- from 2013 to 2017 ---  and four generations of servers. For the workload, we use forecast of the workload growth to generate the inputs. For each year, an input is generated in which the number of requested CPU cores per time slot is x\% higher than the previous year, where $x$ represents forecasted workload growth. The same process isdone using the real workload growth to generate inputs. Table~\ref{tab:workload_forecast_and_real_growth} presents the valeus used to generate the input of the workload.  Regarding the servers configuration, for each year from 2013 to 2017 we selected the server that had the highest score in the SPEC Power benchmark~\cite{spec_power} --- a benchmark that assess servers regarding both performance and energy --- to represent the state-of-the-art. Table~\ref{tab:servers_specs} lists the difference in terms of hardware characteristics, power consumption, and the carbon footprint of manufacturing each server for the different generations.  It is worth  that in some cases, the same CPU was used in the servers that had the highest score for multiple years (as the Intel Intel Xeon E5-2699 v3). For the \ch{CO2} of manufacturing the servers, the methodology from the work of ~\citet{gupta2022_ACT} is used, which presents how to compute the carbon footprint of servers considering the integrated circuits of  RAM, storage (HD and SSDs) and CPU.
+
+
+\begin{table}[h]
+  \caption{Forecasted and real anual growth of the workload (in \%) reported by Cisco \cite{cisco_global_cloud_index_2012,cisco_global_cloud_index_2013,cisco_global_cloud_index_2014,cisco_global_cloud_index_2015,cisco_global_cloud_index_2018}.} \centering
+  \label{tab:workload_forecast_and_real_growth} 
+  \begin{tabular}{|l|r|r|}
+  \hline    
+    \textbf{Year} & \textbf{Forecasted growth (\%)} &   \textbf{Real growth (\%)}  \\
+  \hline
+   2013     & 29.54 & 43.41 \\
+  \hline
+   2014    & 22.59 & 31.86 \\
+  \hline
+   2015 &    26.50 & 38.60 \\
+  \hline
+  2016   & 28.35 & 31.80 \\
+  \hline
+  2017   & 25.69 & 24.01 \\
+  \hline  
+\end{tabular}  
+\end{table}
+
+
 
 
 \begin{table}[h]
   \small
-  \caption{Servers specifications for different generations. Values are inspired in results from the SpecPower benchmark \cite{spec_2014,spec_2017,spec_2016,spec_2019,spec_2021}.} \centering
+  \caption{Servers specifications for different generations. Values are inspired in results from the SpecPower benchmark \cite{spec_2014,spec_2017,spec_2016,spec_2013}.} \centering
   \label{tab:servers_specs} 
   \begin{tabular}{|l|r|r|r|r|r|}
   \hline    
   \textbf{Years} & \textbf{CPU} &   \textbf{Cores} & \textbf{Pidle}  & \textbf{Pcore}  & \textbf{$kg\,\ch{CO2}e$}  \\
   \hline
-  < 2016      & Intel Xeon E5-2660V2 & 20 & 52 & 7.5  & -   \\
+   2012     & Intel Xeon E5-2630 & 20 & 52 & 7.5  & -            \\
   \hline
-  2017, 2018  & Intel Xeon Platinum 8180 & 56 & 48.9 & 6.68  & 578.6   \\
+   2013    & Intel Xeon E5-2660V2 & 20 & 52 & 7.5  & 1 385.7     \\
   \hline
-  2019,2020   & AMD EPYC 7742  & 64 & 66.1 & 2.71  & 587.2 \\
+   2014, 2015 & Intel Xeon E5-2699 v3 & 36 & 40.1 & 6.3  & 577.2  \\
   \hline
-  2021        & AMD EPYC 7763 & 128 & 75.6 & 3     & 590.3 \\
+  2016   & Intel Xeon E5-2698 V4 &  40 & 43.5 & 7.1375  & 569.4  \\
   \hline
+  2017  & Intel Xeon Platinum 8180 & 56 & 48.9 & 6.68  & 578.6   \\
+  \hline  
 \end{tabular}  
 \end{table}
 
-All the servers are based on the Dell R740 for the HD and SSD values (HD with 3.84 TB and SSD with 400GB), with the same values for \ch{CO2} as in the work from ~\citet{gupta2022_ACT}, and they have 256 GB of RAM (16 modules of 16 GB DDR4 10 nm). For the CPU, the \ch{CO2} depends on the die area size, the processor size (in nanometers), and the number of chips in the server. Table~\ref{tab:cpu_specs} presents the specifications of the CPUs used to compute their carbon footprint, and it is assumed that each server has two chips. For the first generation (year 2013), it is considered that the servers have been used more than their expected lifetime, and all their \ch{CO2} footprint has been paid. Finally, according to ~\citet{datacenter_as_computer}, the typical lifespan of servers is three to four years. Therefore we consider the server expected lifetime to be four years.
+All the servers are based on the Dell R740 for the HD and SSD values (HD with 3.84 TB and SSD with 400GB), with the same values for \ch{CO2} as in the work from ~\citet{gupta2022_ACT}, and they have 256 GB of RAM (16 modules of 16 GB DDR4 10 nm). The only exception is the server from the year 2013 that has RAM of type DDDR3, which justifies the higher emissions to manufacture it:  DDR3 30 nm emits 230 g of $\ch{CO2}-eq$ per gigabyte while DDR4 10 nm emits 65 g $\ch{CO2}-eq$ per gigabyte.   For the CPU, the \ch{CO2} depends on the die area size, the processor size (in nanometers), and the number of chips in the server. Table~\ref{tab:cpu_specs} presents the specifications of the CPUs used to compute their carbon footprint, and it is assumed that each server has two chips. For the first generation (year 2013), it is considered that the servers have been used more than their expected lifetime, and all their \ch{CO2} footprint has been paid. Finally, according to ~\citet{datacenter_as_computer}, the typical lifespan of servers is three to four years. Therefore we consider the server expected lifetime to be four years.
 
 
 \begin{table}[h]
   \small
-  \caption{CPU specifications in terms of die area and processor size. Values retrived from x86guide.net \cite{ref_amd_epyc_7742,ref_amd_epyc_7763,ref_xeon_platinum_8180}.} \centering
+  \caption{CPU specifications in terms of die area and processor size. Values retrived from x86guide.net \cite{ref_xeon_e5_2660v2,ref_xeon_e5_2698v4,ref_xeon_e5_2699v3,ref_xeon_platinum_8180}.} \centering
   \label{tab:cpu_specs} 
   \begin{tabular}{|l|r|r|}
    \hline
 
   \textbf{Model}  & \textbf{CPU die area (cm²)} & \textbf{Processor size (nm) } \\
-  %  \hline
-   % Intel Xeon E5-2660V2 & 3.41  & 20  \\
-   % \hline
-   %Intel Xeon E5-2699 v3& 6.62  & 20  \\
-   % \hline
-   % Intel Xeon E5-2698 V4 & 4.56 & 14\\
+    \hline
+    Intel Xeon E5-2660V2 & 3.41  & 20  \\
+    \hline
+    Intel Xeon E5-2699 v3& 6.62  & 20  \\
+    \hline
+    Intel Xeon E5-2698 V4 & 4.56 & 14\\
     \hline
     Intel Xeon Platinum 8180 & 6.94 & 14\\
-    \hline
-    AMD EPYC 7742  & 5.92 & 7 \\
-   \hline
-    AMD EPYC 7763 & 6.45   & 7 \\
-%    \hline
+%  \hline
+  %  AMD EPYC 7742  & 5.92 & 7 \\
+ % \hline
+  %  AMD EPYC 7763 & 6.45   & 7 \\
+ % \hline
   %  AMD EPYC 9654 & 8.66 & 5 \\
   \hline
 \end{tabular}  
@@ -1073,6 +1100,7 @@ We observe that the optimal solution make very few changes in the servers, becau
  % \label{fig:dcu_evolution}
 %\end{figure}
 
+
 %\begin{figure}
 %\centering
  % \includegraphics[width=.8\linewidth]{images/w_ratio.pdf}
@@ -1083,9 +1111,7 @@ We observe that the optimal solution make very few changes in the servers, becau
 
 %%% Add dcu, workload ratio e outras paradas ...
 
-
 %%% co2 de servidores por ano                ...
-
 
 %% Add figura de q o otimo considerando varios anos aleatorios n muda as emissoes ....
 
@@ -1105,7 +1131,7 @@ Nevertheless, the number of necessary wind turbines to manufacture is quite high
 
 % talk about sizing sensitivity
 
-As said in Section~\ref{sec:add_wt}, solar irradiation has a lower variance than wind speed, impacting the sizing process's quality. We saw that in the comparison of the optimal scenario for the renewable infrastructure that only considered PV panels and batteries, the sizing process that used simple estimation techniques (average and median values) had precise results, being up to 3\% worse than the optimal scenario (Table ~\ref{tab:co2_10y_pv_only}). On the other hand, the scenario that only consider wind turbines and batteries as the green power infrastructure (Table ~\ref{tab:co2_10y_wt_only}) was significatively worse when comparing with the optimal solution ---  around 11\% --- and presented more than 2 times the carbon emissions of only using solar panels --- which can be justified by the lower potential to generate wind power on the selected locations as seen in Table~\ref{tab:capacity_factor}. For the scenario with a hybrid configuration of solar panels and batteries, it is possible to observe in Table ~\ref{tab:co2_10y_pv_only}) that it became less precise --- up to 12\% worse than the optimal --- as it is affected by the uncertainties of solar irradiation and wind speed. Nevertheless, even in the worst case, the reduction in total \ch{CO2} emissions by using the hybrid configuration with PVs and WTs is significant: the worst scenario for PV + WT + Bat has a 17\% lower carbon footprint than the scenario with PV + Bat.
+As said in Chapter~\ref{chap:ccgrid}, solar irradiation has a lower variance than wind speed, impacting the sizing process's quality. We saw that in the comparison of the optimal scenario for the renewable infrastructure that only considered PV panels and batteries, the sizing process that used simple estimation techniques (average and median values) had precise results, being up to 3\% worse than the optimal scenario (Table ~\ref{tab:co2_10y_pv_only}). On the other hand, the scenario that only consider wind turbines and batteries as the green power infrastructure (Table ~\ref{tab:co2_10y_wt_only}) was significatively worse when comparing with the optimal solution ---  around 11\% --- and presented more than 2 times the carbon emissions of only using solar panels --- which can be justified by the lower potential to generate wind power on the selected locations as seen in Table~\ref{tab:capacity_factor}. For the scenario with a hybrid configuration of solar panels and batteries, it is possible to observe in Table ~\ref{tab:co2_10y_pv_only}) that it became less precise --- up to 12\% worse than the optimal --- as it is affected by the uncertainties of solar irradiation and wind speed. Nevertheless, even in the worst case, the reduction in total \ch{CO2} emissions by using the hybrid configuration with PVs and WTs is significant: the worst scenario for PV + WT + Bat has a 17\% lower carbon footprint than the scenario with PV + Bat.
 
 % Granularity of emissions
 

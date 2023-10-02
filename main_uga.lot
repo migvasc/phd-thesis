@@ -19,7 +19,7 @@
 \contentsline {table}{\numberline {3.2}{\ignorespaces Accuracy measurements, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. The M.A.P.E. value is in percentage (\%), and the R.M.S.E. in seconds. \relax }}{41}{table.caption.12}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces Number of VM live migrations performed, where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure. \relax }}{42}{table.caption.13}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces Comparison of energy consumption (MWh), where ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{43}{table.caption.14}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Extra seconds during migrations compared to the case when there is no congestion, where ``W'' stands for ``Workload'', ``G'' for Google and, ``A'' for Azure. ``avg.'' for the average of the observations, ``max.'' for the maximum value, ``abs.'' for the absolute value, and ``rel.'' for the relative value.\relax }}{45}{table.caption.15}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Extra seconds during migrations compared to the case when there is no congestion, where ``W'' stands for ``Workload'', ``G'' for Google and, ``A'' for Azure. ``avg.'' for the average of the observations, ``max.'' for the maximum value, ``abs.'' for the absolute value, and ``rel.'' for the relative value.\relax }}{44}{table.caption.15}%
 \contentsline {table}{\numberline {3.6}{\ignorespaces Wasted energy in the migrations (Wh) in comparison to the perfect scenario where the migration process have full access to the network links. In the table ``W'' stands for ``Workload'', ``G'' for Google, and ``A'' for Azure.\relax }}{46}{table.caption.16}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Main notations for the IT model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)\relax }}{54}{table.caption.17}%
@@ -44,11 +44,9 @@
 \contentsline {table}{\numberline {5.12}{\ignorespaces Parameters used in the LCOE PV calculator.\relax }}{108}{table.caption.49}%
 \contentsline {table}{\numberline {5.13}{\ignorespaces Price of different sources of energy (USD per kWh) at each location. Source for the grid electricity prices: Petrolprices.org. \relax }}{109}{table.caption.50}%
 \contentsline {table}{\numberline {5.14}{\ignorespaces Total costs (millions of \$) and emissions ($t\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq$) for different scenarios. \relax }}{110}{table.caption.51}%
-\contentsline {table}{\numberline {5.15}{\ignorespaces Total costs (millions of \$) and emissions ($t\tmspace +\thinmuskip {.1667em}\ch {CO2}-eq$) for different scenarios. \relax }}{110}{table.caption.52}%
-\contentsline {table}{\numberline {5.16}{\ignorespaces Forecasted and real anual growth of the workload (in \%) reported by Cisco \cite {cisco_global_cloud_index_2012,cisco_global_cloud_index_2013,cisco_global_cloud_index_2014,cisco_global_cloud_index_2015,cisco_global_cloud_index_2018}.\relax }}{117}{table.caption.56}%
-\contentsline {table}{\numberline {5.17}{\ignorespaces Servers specifications for different generations. Values are inspired in results from the SpecPower benchmark \cite {spec_2014,spec_2017,spec_2016,spec_2013}.\relax }}{117}{table.caption.57}%
-\contentsline {table}{\numberline {5.18}{\ignorespaces CPU specifications in terms of die area and processor size. Values retrived from x86guide.net \cite {ref_xeon_e5_2660v2,ref_xeon_e5_2698v4,ref_xeon_e5_2699v3,ref_xeon_platinum_8180}.\relax }}{118}{table.caption.58}%
-\contentsline {table}{\numberline {5.19}{\ignorespaces Total emissions for the different approaches to manufacture new servers.\relax }}{119}{table.caption.62}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces Servers specifications for different generations. Values are inspired in results from the SpecPower benchmark \cite {spec_2014,spec_2017,spec_2016,spec_2019,spec_2021}.\relax }}{117}{table.caption.55}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces CPU specifications in terms of die area and processor size. Values retrived from x86guide.net \cite {ref_amd_epyc_7742,ref_amd_epyc_7763,ref_xeon_platinum_8180}.\relax }}{118}{table.caption.56}%
+\contentsline {table}{\numberline {5.17}{\ignorespaces Total emissions for the different approaches to manufacture new servers.\relax }}{120}{table.caption.60}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {french}{}

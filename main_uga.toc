@@ -23,7 +23,7 @@
 \contentsline {subsection}{\numberline {2.3.2}Sizing the renewable infrastructure}{15}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Measuring the environmental impact of cloud computing platforms}{19}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Summary}{21}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Impact of the follow-the-renewables approaches in energy consumption}{23}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Follow-the-renewables and their impact on the network and energy consumption}{23}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Introduction}{23}{section.3.1}%
 \contentsline {section}{\numberline {3.2}The NEMESIS modeling}{25}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Cloud Modeling}{27}{subsection.3.2.1}%
@@ -33,13 +33,13 @@
 \contentsline {section}{\numberline {3.4}Experiments}{35}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Workload}{35}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Green energy traces}{37}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Results}{38}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Results}{37}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Accuracy of the estimation algorithm}{40}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Analysis of the VM live migrations performed}{42}{subsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.1}Total and brown energy consumption of the cloud platform}{43}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}Total and brown energy consumption of the cloud platform}{42}{subsubsection.3.5.2.1}%
 \contentsline {subsubsection}{\numberline {3.5.2.2}Wasted resources in the migrations}{44}{subsubsection.3.5.2.2}%
 \contentsline {section}{\numberline {3.6}Summary}{46}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Sizing the renewable infrastructure to greener the DC operation}{49}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Sizing the renewable infrastructure of cloud data centers}{49}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{49}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Problem statement}{51}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Addressed problem}{51}{subsection.4.2.1}%
@@ -64,13 +64,13 @@
 \contentsline {subsection}{\numberline {4.4.2}Results}{68}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Analysis and Discussion}{74}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Summary}{78}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Long-term evaluation of sizing the DC operation}{81}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Long term evaluation of sizing cloud data centers}{81}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{81}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Life-cycle of the renewable infrastructure}{85}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Updates in the model}{85}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Experiments}{86}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{87}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Results}{88}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Settings}{86}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Results}{87}{subsubsection.5.2.2.2}%
 \contentsline {section}{\numberline {5.3}Including wind turbines to the renewable infrastructure}{89}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Updates in the model}{89}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Experiments}{91}{subsection.5.3.2}%
@@ -102,13 +102,13 @@
 \contentsline {subsection}{\numberline {5.7.2}Experiments}{116}{subsection.5.7.2}%
 \contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{117}{subsubsection.5.7.2.1}%
 \contentsline {subsubsection}{\numberline {5.7.2.2}Results}{118}{subsubsection.5.7.2.2}%
-\contentsline {section}{\numberline {5.8}Discussion}{119}{section.5.8}%
+\contentsline {section}{\numberline {5.8}Discussion}{120}{section.5.8}%
 \contentsline {section}{\numberline {5.9}Summary}{124}{section.5.9}%
 \contentsline {chapter}{\numberline {6}General Discussion}{129}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Summary of contributions}{129}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Future Research Directions}{132}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Work Dissemination}{134}{section.6.3}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.63}%
+\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.61}%
 \babel@toc {french}{}
 \babel@toc {english}{}
