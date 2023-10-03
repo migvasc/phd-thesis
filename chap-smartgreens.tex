@@ -346,28 +346,29 @@ Table \ref{ tab:wasted_seconds } presents statistics about the extra time (in se
 
 
 \begin{table*}[!ht]
+  \small
 
 \caption{Extra seconds during migrations compared to the case when there is no congestion, where ``W'' stands for ``Workload'', ``G'' for Google and, ``A'' for Azure. ``avg.'' for the average of the observations, ``max.'' for the maximum value, ``abs.'' for the absolute value, and ``rel.'' for the relative value.} \label{ tab:wasted_seconds } \centering
 \begin{tabular}{|l|c|r|r|r|r|r|}
   \hline  
-  \textbf{Algorithm} & \textbf{W}  & \textbf{avg. abs.} &  \textbf{max. abs.} & \textbf{avg. rel.} &  \textbf{max. rel.} &  \textbf{Total seconds} \\
+  \textbf{Algorithm} & \textbf{W}  & \textbf{avg. abs.} &  \textbf{max. abs.} & \textbf{avg. rel.} &  \textbf{max. rel.} &  \textbf{Total sec.} \\
   
   \hline
-  NEMESIS  & G & 10.11  & 56.98 & 1.53 & 3.98  & 92915.7 \\
+  NEMESIS  & G & 10.11  & 56.98 & 1.53 & 3.98  & 92 915\\
   \hline
-  c-NEMESIS & G & 0.22  & 0.88 & 1.0 & 1.05  & 4331.93 \\
+  c-NEMESIS & G & 0.22  & 0.88 & 1.0 & 1.05  & 4 331 \\
   \hline
-  FollowMe@S Intra & G & 113.94  & 1 028.51 &  6.37  & 40.82  & 64 525 098.3 \\
+  FollowMe@S Intra & G & 113.94  & 1 028.51 &  6.37  & 40.82  & 64 525 098 \\
   \hline
-  FollowMe@S Inter & G & 215.18  & 4 875.8 & 10.67 & 155.5  & 22 058 949.9\\
+  FollowMe@S Inter & G & 215.18  & 4 875.8 & 10.67 & 155.5  & 22 058 949\\
   \hline
-  NEMESIS  & A & 11.62  & 62.96 & 1.59 & 3.98  & 86 235.46 \\
+  NEMESIS  & A & 11.62  & 62.96 & 1.59 & 3.98  & 86 235 \\
   \hline
-  c-NEMESIS & A &  0.23 & 6.14   & 1.0 & 1.32  & 4 224.43\\
+  c-NEMESIS & A &  0.23 & 6.14   & 1.0 & 1.32  & 4 224\\
   \hline
-  FollowMe@S Intra & A & 91.08  & 938.48 & 4.39 & 25.56  & 16 384 188.8  \\
+  FollowMe@S Intra & A & 91.08  & 938.48 & 4.39 & 25.56  & 16 384 188  \\
   \hline
-  FollowMe@S Inter & A & 186.56  & 8 047.89 & 7.8 & 157.24  & 18 531 893.3 \\
+  FollowMe@S Inter & A & 186.56  & 8 047.89 & 7.8 & 157.24  & 18 531 893 \\
   \hline
 
 \end{tabular}
