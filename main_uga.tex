@@ -79,6 +79,18 @@
 \input{titlepage}
 \cleardoublepage
 
+
+
+%%%% COMMANDS FOR TODO NOTES
+
+\input{defColor}
+\newcommand{\tdmv}[1]{\todo[noinline, backgroundcolor=orange!20, bordercolor=orange, textcolor=purple]{{Miguel: #1}}{}}
+\newcommand{\tdfd}[1]{\todo[noinline, backgroundcolor=blue!20, bordercolor=blue, textcolor=blue]{Fanny: #1}}
+\newcommand{\tddc}[1]{\todo[noinline,backgroundcolor=teal!20, bordercolor=teal, textcolor=teal]{{Daniel: #1}}{}}
+
+
+
+
 %=== SET DOUBLE SPACING AFTER TITLE PAGE =====================================
 \doublespacing
 
