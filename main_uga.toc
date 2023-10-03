@@ -11,7 +11,7 @@
 \contentsline {chapter}{\nonumberline Abstract / \foreignlanguage {french}{Résumé}}{vii}{chapter*.2}%
 \babel@toc {french}{}
 \babel@toc {english}{}
-\contentsline {chapter}{{Contents}}{xiii}{section*.5}%
+\contentsline {chapter}{{Contents}}{xvii}{section*.5}%
 \vspace \bigskipamount 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Structure of the thesis and contributions}{4}{section.1.1}%
@@ -77,31 +77,31 @@
 \contentsline {subsubsection}{\numberline {5.3.2.1}Settings}{91}{subsubsection.5.3.2.1}%
 \contentsline {subsubsection}{\numberline {5.3.2.2}Results}{91}{subsubsection.5.3.2.2}%
 \contentsline {section}{\numberline {5.4}Sensibility of the LP to uncertainties}{94}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Updates in the model}{95}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}Intermittency of renewable sources}{95}{subsubsection.5.4.1.1}%
+\contentsline {subsection}{\numberline {5.4.1}Updates in the model}{96}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}Intermittency of renewable sources}{96}{subsubsection.5.4.1.1}%
 \contentsline {subsubsection}{\numberline {5.4.1.2}Fine-grain values of grid emission data (hour by hour)}{96}{subsubsection.5.4.1.2}%
-\contentsline {subsection}{\numberline {5.4.2}Experiments}{96}{subsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.1}Settings}{96}{subsubsection.5.4.2.1}%
+\contentsline {subsection}{\numberline {5.4.2}Experiments}{97}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Settings}{97}{subsubsection.5.4.2.1}%
 \contentsline {paragraph}{\numberline {5.4.2.1.1}Intermittency of renewable sources}{97}{paragraph.5.4.2.1.1}%
-\contentsline {paragraph}{\numberline {5.4.2.1.2}Fine-grain values of grid emission data (hour by hour)}{97}{paragraph.5.4.2.1.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.2}Results}{100}{subsubsection.5.4.2.2}%
-\contentsline {paragraph}{\numberline {5.4.2.2.1}Intermittency of renewable sources}{100}{paragraph.5.4.2.2.1}%
-\contentsline {paragraph}{\numberline {5.4.2.2.2}Fine-grain values of grid emission data (hour by hour)}{101}{paragraph.5.4.2.2.2}%
-\contentsline {section}{\numberline {5.5}Scheduling flexibility to reduce \ch {CO2} emissions}{102}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Updates in the model}{102}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Experiments}{103}{subsection.5.5.2}%
+\contentsline {paragraph}{\numberline {5.4.2.1.2}Fine-grain values of grid emission data (hour by hour)}{98}{paragraph.5.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Results}{101}{subsubsection.5.4.2.2}%
+\contentsline {paragraph}{\numberline {5.4.2.2.1}Intermittency of renewable sources}{101}{paragraph.5.4.2.2.1}%
+\contentsline {paragraph}{\numberline {5.4.2.2.2}Fine-grain values of grid emission data (hour by hour)}{102}{paragraph.5.4.2.2.2}%
+\contentsline {section}{\numberline {5.5}Scheduling flexibility to reduce \ch {CO2} emissions}{103}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Updates in the model}{103}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Experiments}{104}{subsection.5.5.2}%
 \contentsline {subsubsection}{\numberline {5.5.2.1}Settings}{104}{subsubsection.5.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.5.2.2}Results}{104}{subsubsection.5.5.2.2}%
-\contentsline {section}{\numberline {5.6}Monetary costs of reducing the carbon emissions}{104}{section.5.6}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}Results}{105}{subsubsection.5.5.2.2}%
+\contentsline {section}{\numberline {5.6}Monetary costs of reducing the carbon emissions}{105}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}Updates in the model}{105}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Experiments}{106}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.2}Experiments}{107}{subsection.5.6.2}%
 \contentsline {subsubsection}{\numberline {5.6.2.1}Settings}{107}{subsubsection.5.6.2.1}%
 \contentsline {subsubsection}{\numberline {5.6.2.2}Results}{109}{subsubsection.5.6.2.2}%
-\contentsline {section}{\numberline {5.7}Adding or replacing servers considering new hardware and future workload}{111}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Updates in the model}{111}{subsection.5.7.1}%
+\contentsline {section}{\numberline {5.7}Adding or replacing servers considering new hardware and future workload}{112}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Updates in the model}{112}{subsection.5.7.1}%
 \contentsline {subsection}{\numberline {5.7.2}Experiments}{116}{subsection.5.7.2}%
 \contentsline {subsubsection}{\numberline {5.7.2.1}Settings}{117}{subsubsection.5.7.2.1}%
-\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{118}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}Results}{119}{subsubsection.5.7.2.2}%
 \contentsline {section}{\numberline {5.8}Discussion}{120}{section.5.8}%
 \contentsline {section}{\numberline {5.9}Summary}{125}{section.5.9}%
 \contentsline {chapter}{\numberline {6}General Discussion}{129}{chapter.6}%

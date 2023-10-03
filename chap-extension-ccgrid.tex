@@ -247,7 +247,7 @@ Table~\ref{tab:results_wt} presents the number of WTs manufactured at each data 
 The Capacity Factor metric can be used to better analyse the potential of a location to generate renewable power. This metrics measures a ratio of the real energy produced by the device in comparison to its maximum energy output~\cite{NREL_2012_capacityfactor}. In our experiments, we use the rated power of 150 W for 1 square meter solar panel, and we used climate conditions from the years 1980 to 2019 to estimate the Capacity Factor. Table~\ref{tab:capacity_factor} presents the results for both the PV and wind turbines
 
 
-\begin{table}[h]
+\begin{table}[H]
   
   \caption{Capacity Factor (in \%) for solar panels and wind turbines at each location.}\label{tab:capacity_factor} \centering
   
@@ -300,12 +300,15 @@ Finally, to assess the impact of including the WT regarding the sizing of both P
 \section{Sensibility of the LP to  uncertainties}
 \label{sec:sensitivity}
 
-To assess the sensibility of the linear program to the inputs, we evaluate it considering different scenarios in terms of solar irradiation, wind speed, and grid emissions data. The renewable sources are intermittent by nature, and this variation can impact the sizing process, resulting in an over or under-sizing of the renewable infrastructure. To illustrate the intermittency of both wind speed and solar irradiation, we present in Figure~\ref{fig:pv_boxplots} boxplots of the total energy one solar panel produced per year during the years 1980 to 2019, and in Figure~\ref{fig:wt_boxplots} for a single wind turbine. Those figures illustrate the intermittency of renewable power production over the years, and one may also observe the potential for using one source or another: for example, Paris has the lowest solar power production considering one solar panel, and on the other hand, it has the highest wind power production. 
+To assess the sensibility of the linear program to the inputs, we evaluate it considering different scenarios in terms of solar irradiation, wind speed, and grid emissions data. The renewable sources are intermittent by nature, and this variation can impact the sizing process, resulting in an over or under-sizing of the renewable infrastructure.
+
+
+In order to illustrate the intermittency of both wind speed and solar irradiation, we present in Figure~\ref{fig:pv_boxplots} boxplots of the total energy one solar panel produced per year during the years 1980 to 2019, and in Figure~\ref{fig:wt_boxplots} for a single wind turbine. Those figures illustrate the intermittency of renewable power production over the years, and one may also observe the potential for using one source or another: for example, Paris has the lowest solar power production considering one solar panel, and on the other hand, it has the highest wind power production. 
 
 
 \begin{figure}[H]
   \centering
-  {\epsfig{file = images/energy_pv.pdf, width = .8\textwidth}}
+  {\epsfig{file = images/energy_pv.pdf, width = \textwidth}}
   \caption{Different energy production for 1 PV panel at each location for the years 1980 to 2019.}
   \label{fig:pv_boxplots}
 \end{figure}
@@ -313,7 +316,7 @@ To assess the sensibility of the linear program to the inputs, we evaluate it co
 
 \begin{figure}[H]
   \centering
-  {\epsfig{file = images/energy_wt.pdf, width = .8\textwidth}}
+  {\epsfig{file = images/energy_wt.pdf, width = \textwidth}}
   \caption{Different energy production for 1 wind turbine at each location for the years 1980 to 2019.}
   \label{fig:wt_boxplots}
 \end{figure}

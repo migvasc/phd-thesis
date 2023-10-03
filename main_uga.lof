@@ -29,15 +29,15 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces PV Area sizing when considering carbon footprint of manufacturing vs whole life cycle. \relax }}{88}{figure.caption.31}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Battery capacity sizing when considering carbon footprint of manufacturing vs whole life cycle. \relax }}{88}{figure.caption.32}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces PV Area sizing when the WT are and are not included. \relax }}{93}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Battery capacity sizing when the WT are and are not included. \relax }}{93}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Different energy production for 1 PV panel at each location for the years 1980 to 2019.\relax }}{94}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Battery capacity sizing when the WT are and are not included. \relax }}{94}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Different energy production for 1 PV panel at each location for the years 1980 to 2019.\relax }}{95}{figure.caption.38}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Different energy production for 1 wind turbine at each location for the years 1980 to 2019.\relax }}{95}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces São Paulo's hour by hour grid emissions for the years 2018, 2019, 2020 and 2021.\relax }}{99}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Seoul's hour by hour grid emissions for the years 2018, 2019, 2020 and 2021.\relax }}{100}{figure.caption.43}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces PV Area to minimize costs in comparison to minimizing carbon emissions. \relax }}{110}{figure.caption.52}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Battery capacity to minimize costs in comparison to minimizing carbon emissions. \relax }}{110}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces São Paulo's hour by hour grid emissions for the years 2018, 2019, 2020 and 2021.\relax }}{100}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Seoul's hour by hour grid emissions for the years 2018, 2019, 2020 and 2021.\relax }}{101}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces PV Area to minimize costs in comparison to minimizing carbon emissions. \relax }}{111}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Battery capacity to minimize costs in comparison to minimizing carbon emissions. \relax }}{111}{figure.caption.53}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Number of wind turbines to minimize costs in comparison to minimizing carbon emissions.\relax }}{111}{figure.caption.54}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Comparison between the optimal and greedy approaches to decide manufacturing new servers in terms of total CPU cores of the cloud federation and the generation of servers.\relax }}{119}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Comparison between the optimal and greedy approaches to decide manufacturing new servers in terms of total CPU cores of the cloud federation and the generation of servers.\relax }}{120}{figure.caption.57}%
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Solution for the greedy approach to decide manufacture servers --- when there is only access to information of the current year's server.\relax }}{127}{figure.caption.58}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Solution for the optimal approach to decide manufacture servers --- when there is only access to information of the servers off all the years in advance.\relax }}{128}{figure.caption.59}%
 \addvspace {10\p@ }
