@@ -8,10 +8,12 @@
 \babel@toc {french}{}
 \babel@toc {english}{}
 \contentsline {chapter}{\nonumberline Acknowledgments}{v}{chapter*.1}%
-\contentsline {chapter}{\nonumberline Abstract / \foreignlanguage {french}{Résumé}}{vii}{chapter*.2}%
+\contentsline {chapter}{\nonumberline Abstract / \foreignlanguage {french}{Résumé} / \foreignlanguage {portuguese}{Resumo}}{vii}{chapter*.2}%
 \babel@toc {french}{}
 \babel@toc {english}{}
-\contentsline {chapter}{{Contents}}{xvii}{section*.5}%
+\babel@toc {portuguese}{}
+\babel@toc {english}{}
+\contentsline {chapter}{{Contents}}{xix}{section*.6}%
 \vspace \bigskipamount 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Structure of the thesis and contributions}{4}{section.1.1}%
@@ -109,6 +111,6 @@
 \contentsline {section}{\numberline {6.2}Future Research Directions}{132}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Work Dissemination}{134}{section.6.3}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.64}%
+\contentsline {chapter}{\nonumberline Bibliography}{A1}{chapter*.62}%
 \babel@toc {french}{}
 \babel@toc {english}{}
