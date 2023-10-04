@@ -354,7 +354,7 @@ For both scenarios, the cloud infrastructure, the workload, and the execution en
 
 \paragraph{Intermittency of renewable sources}
 
-To evaluate the sensibility of the sizing process considering the uncertainty of the renewable sources production, we compare --- in terms of \ch{CO2} emissions ---  the operation of the cloud federation using the optimal renewable infrastructure (where all the climate conditions are known in advance) with a renewable infrastructure dimensioned using simple forecasting techniques (average and median from the past). The scenarios are described as follows. First, the average and the median values of solar irradiation and wind speed per time slot were collected from 1980 to 2009. Second, the sizing process was executed for these two data sets. Then, the cloud was operated for ten years (2010 to 2019) using the dimensions computed in the previous step, but with the climate condition of each respective year. Finally, the results in terms of \ch{CO2} emissions were compared to the optimal renewable infrastructure for the period of 2010 to 2019.
+To evaluate the sensibility of the sizing process considering the uncertainty of the renewable sources production, we compare --- in terms of \ch{CO2} emissions ---  the operation of the cloud federation using the optimal renewable infrastructure (where all the climate conditions are known in advance) with a renewable infrastructure dimensioned using simple forecasting techniques (average and median from the past). The scenarios are described as follows. First, we collected average and median solar irradiation and wind speed values per time slot from 1980 to 2009 to create inputs for the sizing process. Second, we executed the sizing process using the inputs of climate conditions generated in the previous step. Then, the cloud was operated for ten years (2010 to 2019) using the dimensions (PV area, number of wind turbines, and capacity of batteries) computed by the sizing process step, but with the climate condition of each respective year. Finally, the results in terms of \ch{CO2} emissions were compared to the optimal renewable infrastructure from 2010 to 2019.
 
 We also evaluate the adoption of PV only and WT only in the sizing, to assess which has higher impact on the sizing process. The evaluation follows the same steps described in the previous paragraph.
 
@@ -364,7 +364,7 @@ The data for the solar irradiation was collected from the MERRA-2 project~\cite{
 
 In order to evaluate what is the impact of using a fixed value for the grid emissions --- an average of the year ---  or a fine grain value --  hour by hour time series ---  we perform the sizing with these two scenarios and compare them in terms of \ch{CO2} emissions and dimensions of the renewable infrastructure for the years 2018, 2019, 2020 and 2021.
 
-For the scenario of hour-by-hour grid emissions, we used data sources provided by Electricity Map. For the locations: Pune, Canberra, Seoul, Virginia, São Paulo, and Paris, the data source provides \ch{CO2} intensity of the grid hour by hour for the duration of 1 year. For Johannesburg and Singapore regions, the information of the \ch{CO2} emissions was in the granularity of months. Therefore, we generated a time series with a total duration of one year with the same value of \ch{CO2} per hour for each corresponding month. For Dubai, we only found data for the year average grid \ch{CO2} emissions, and we generated a time series in which the grid emissions is fixed for every hour of the year.
+For the scenario of hourly grid emissions, we used data sources provided by Electricity Map. For the locations: Pune, Canberra, Seoul, Virginia, São Paulo, and Paris, the data source provides \ch{CO2} intensity of the grid hour by hour for the duration of 1 year. For Johannesburg and Singapore regions, the information of the \ch{CO2} emissions was in the granularity of months. Therefore, we generated a time series with a total duration of one year with the same value of \ch{CO2} per hour for each corresponding month. For Dubai, we only found data for the year average grid \ch{CO2} emissions, and we generated a time series in which the grid emissions is fixed for every hour of the year.
 
 
 Table~\ref{tab:grid_emissions_hist} presents the sources of the data, the time span, and the granularity for the grid emissions of each data center location, and Table~\ref{tab:grid_emissions_avg_year} presents the average \ch{CO2} emissions of the year for these data sources --- the value used is the average of the time series of each location for the evaluated years.
@@ -383,7 +383,7 @@ Table~\ref{tab:grid_emissions_hist} presents the sources of the data, the time s
   \hline
   Canberra  & hour &  year & ElectricityMaps \\
   \hline
-  Dubai    & year & year & https://1p5ndc-pathways.climateanalytics.org/  \\
+  Dubai    & year & year & 1.5°C national pathway explorer  \\                       
   \hline
   Singapore & month & year & ElectricityMaps \\
   \hline     
@@ -470,11 +470,11 @@ Table~\ref{tab:co2_10y} presents the results in terms of \ch{CO2} emissions for 
         \hline
         \textbf{Sizing Scenario} &  \textbf{Emissions } & \textbf{Diff. to baseline (\%) } \\
        \hline        
-        Optimal sizing 2010 - 2019       &       408.767 &  -       \\
+        Optimal sizing 2010-2019       &       408.767 &  -       \\
         \hline     
-        Average irradiation 1980 - 2009  &       414.956 &  1.49    \\
+        Average irradiation 1980-2009  &       414.956 &  1.49    \\
         \hline
-        Median irradiation  1980 - 2009  &       422.928 &  3.35   \\
+        Median irradiation  1980-2009  &       422.928 &  3.35   \\
         \hline        
       \end{tabular}
       
@@ -509,11 +509,11 @@ Table~\ref{tab:co2_10y} presents the results in terms of \ch{CO2} emissions for 
         \hline        
         \textbf{Sizing Scenario} &  \textbf{Emissions } & \textbf{Diff. to baseline (\%) } \\
         \hline        
-        Optimal sizing 2010 - 2019  &       301.931 & - \\
+        Optimal sizing 2010-2019  &       301.931 & - \\
         \hline     
-        Average irrad. and wind speed  1980 - 2009  &      342.584 &  11.9 \\
+        Average irrad. and wind speed  1980-2009  &      342.584 &  11.9 \\
         \hline
-        Median irrad. and wind speed  1980 - 2009  &      340.784 &   11.4 \\
+        Median irrad. and wind speed  1980-2009  &      340.784 &   11.4 \\
         \hline        
       \end{tabular}      
     \end{table}
@@ -521,7 +521,7 @@ Table~\ref{tab:co2_10y} presents the results in terms of \ch{CO2} emissions for 
     
 \paragraph{Fine-grain values of grid emission data (hour by hour)}
 
-Table~\ref{tab:co2_grid_granularities_years} presents the increase in \ch{CO2} emissions (relative value in percent) of not having access to the fine-grain value of \ch{CO2} emissions (as hour-by-hour values).
+Table~\ref{tab:co2_grid_granularities_years} presents the increase in \ch{CO2} emissions (relative value in percent) of not having access to the fine-grain value of \ch{CO2} emissions (as hourly values).
 
 
 \begin{table}[H]
@@ -761,10 +761,10 @@ Finally, Table \ref{tab:price_electricity_sources} presents the cost in dollars 
 Table~\ref{tab:total_price_and_co2_grid_timeseries} illustrates the cloud operation's total costs (in dollars), environmental impact (\ch{CO2} emissions), and how much energy from the grid (relation to the total energy consumed by the cloud federation) was used to supply the cloud federation operation considering multiple scenarios. The \textit{Minimum Costs} scenario refers to solving the LP using the objective of Equation~\eqref{eq:objective_price} --- minimizing the monetary costs; the \textit{Minimum \ch{CO2}} refers to solving the LP using the objective of Equation~\eqref{eq:FPALL} --- minimize the carbon footprint, and for both cases the configuration of the renewable infrastructure used is written inside parenthesis; and \textit{Only grid} represents the case where there is no on-site renewable infrastructure in the DCs and they only use power from the local electricity grid.
 
 \begin{table}[h]
-  \caption{Total costs (millions of \$) and emissions ($t\,\ch{CO2}-eq$)  for different scenarios. }\label{tab:total_price_and_co2_grid_timeseries} \centering
+  \caption{Total costs (millions of \$), emissions ($t\,\ch{CO2}-eq$) and how much energy was used from the grid to supply the DCs with the Grid Usage metric (G.U.) for the different scenarios. }\label{tab:total_price_and_co2_grid_timeseries} \centering
   \begin{tabular}{|l|r|r|r|}
    \hline  
-  \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{ $t\,\ch{CO2}-eq$ } & \textbf{Grid usage (\%)}  \\    
+  \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{ $t\,\ch{CO2}-eq$ } & \textbf{G.U. (\%)}  \\    
   \hline
   Min. cost (PV + WT + Bat + grid) & 36.76   & 141 001.67  & 55.5   \\
   \hline
@@ -1112,7 +1112,7 @@ As said in Section~\ref{sec:add_wt}, solar irradiation has a lower variance than
 
 % Granularity of emissions
 
-In what concerns the sensitivity of the model to the grid emissions input, we saw that the initial modeling that uses the average value of the year is robust: using the hour-by-hour value reduces the total \ch{CO2} emissions by less than 1\% --- as seen on Table~\ref{tab:co2_grid_granularities_years}. This result presents a positive outcome, considering that not every location provides a fine-grain value of the carbon intensity of its electricity grid.
+In what concerns the sensitivity of the model to the grid emissions input, we saw that the initial modeling that uses the average value of the year is robust: using the hourly value reduces the total \ch{CO2} emissions by less than 1\% --- as seen on Table~\ref{tab:co2_grid_granularities_years}. This result presents a positive outcome, considering that not every location provides a fine-grain value of the carbon intensity of its electricity grid.
 
 % Talk about flexibility in the scheduling
 
