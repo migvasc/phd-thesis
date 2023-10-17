@@ -592,6 +592,199 @@
       \endverb
       \keyw{Workload analysis,Workload generation,Classification,Large scale,Google dataset,Reproducible experiments}
     \endentry
+    \entry{netzero_energy_system}{article}{}
+      \name{author}{32}{}{%
+        {{hash=436e25609a5e8f78d485f754f4af4176}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1037cf457b3e39b1c8933300305905ca}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Nathan\bibnamedelima S.},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=67baafcc7b403a8dfd9582966f5b8e94}{%
+           family={Shaner},
+           familyi={S\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9de27192ef6af0c1e5469cd5c85a4574}{%
+           family={Aggarwal},
+           familyi={A\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=584a2924ee0a4d8d308ae64ce14efd1c}{%
+           family={Arent},
+           familyi={A\bibinitperiod},
+           given={Doug},
+           giveni={D\bibinitperiod}}}%
+        {{hash=95527c4de7b97a4a7c46f59b025cb9a7}{%
+           family={Azevedo},
+           familyi={A\bibinitperiod},
+           given={Inês\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=09aa8fff817fcbbcfa0962991a65bc12}{%
+           family={Benson},
+           familyi={B\bibinitperiod},
+           given={Sally\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=bf75434816949e3f6fc42b1cbf6de56a}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9eca047f8a598e8b603310861e7b92f4}{%
+           family={Brouwer},
+           familyi={B\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3f48c9a89133be8bc637a5da8f367427}{%
+           family={Chiang},
+           familyi={C\bibinitperiod},
+           given={Yet-Ming},
+           giveni={Y\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=0d6e64f3bd54507012268362c1f3a64a}{%
+           family={Clack},
+           familyi={C\bibinitperiod},
+           given={Christopher\bibnamedelimb T.\bibnamedelimi M.},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fdf69b42dba818ed9d163f9cd5540bf3}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Armond},
+           giveni={A\bibinitperiod}}}%
+        {{hash=99eb49302cd6e578c947f180fbd53f9f}{%
+           family={Doig},
+           familyi={D\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9798996981982f9903ab35d3ca78162a}{%
+           family={Edmonds},
+           familyi={E\bibinitperiod},
+           given={Jae},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e48dadd9bb32f285312f1ad1fd817de7}{%
+           family={Fennell},
+           familyi={F\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d780c3f2c95e8f6d9493cfdf05b30bc7}{%
+           family={Field},
+           familyi={F\bibinitperiod},
+           given={Christopher\bibnamedelima B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=bf44a381d7382b7230a3fb2967480854}{%
+           family={Hannegan},
+           familyi={H\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=b8dbc5062fd92ca92030e69159bd3a6d}{%
+           family={Hodge},
+           familyi={H\bibinitperiod},
+           given={Bri-Mathias},
+           giveni={B\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3f645c8e3b2f9951cb9497c2a7e600db}{%
+           family={Hoffert},
+           familyi={H\bibinitperiod},
+           given={Martin\bibnamedelima I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=b1165b8f98870c75d8d0e0a9a47af4fa}{%
+           family={Ingersoll},
+           familyi={I\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=423079dda5d7ff47f5b4a68954dfe12c}{%
+           family={Jaramillo},
+           familyi={J\bibinitperiod},
+           given={Paulina},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7c907bacc6880d858c5b3a009d7bfc99}{%
+           family={Lackner},
+           familyi={L\bibinitperiod},
+           given={Klaus\bibnamedelima S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d2810fb1e30720d791101decb6aaeedc}{%
+           family={Mach},
+           familyi={M\bibinitperiod},
+           given={Katharine\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=171e5ae52b81467dcdfb8a132787d856}{%
+           family={Mastrandrea},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ce2e74dc922c9305e7af5ae711d49d9c}{%
+           family={Ogden},
+           familyi={O\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=65677a52ae24cbf929deba6081a05558}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Per\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=af5d13fe5d8328faaf34cd19a61e8597}{%
+           family={Sanchez},
+           familyi={S\bibinitperiod},
+           given={Daniel\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5682393135dd2da78818b7383c3b4d20}{%
+           family={Sperling},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=acd9fab1d25f7f3de9ab6a5e90ea6ebb}{%
+           family={Stagner},
+           familyi={S\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=65142781b7758ba13e01e7bb713a1856}{%
+           family={Trancik},
+           familyi={T\bibinitperiod},
+           given={Jessika\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=cc2bb3fa3a0d1aedebf5234a2a64b571}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chi-Jen},
+           giveni={C\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=4b32c4e5a2b1ebf84f710e072622479a}{%
+           family={Caldeira},
+           familyi={C\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{e542ef85210b05a62b9bd077b3fdfa55}
+      \strng{fullhash}{ebc32c44ccc89df3eeb9d502528c2680}
+      \strng{bibnamehash}{dad7600d4081b7285c8e4b4204162dac}
+      \strng{authorbibnamehash}{dad7600d4081b7285c8e4b4204162dac}
+      \strng{authornamehash}{e542ef85210b05a62b9bd077b3fdfa55}
+      \strng{authorfullhash}{ebc32c44ccc89df3eeb9d502528c2680}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6396}
+      \field{title}{Net-zero emissions energy systems}
+      \field{volume}{360}
+      \field{year}{2018}
+      \field{pages}{eaas9793}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1126/science.aas9793
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/science.aas9793
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/science.aas9793
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/science.aas9793
+      \endverb
+    \endentry
     \entry{wtlanduse_2009}{report}{}
       \name{author}{4}{}{%
         {{hash=79c0e8cfe7da85021f22069544a056f8}{%
@@ -727,6 +920,108 @@
       \field{year}{2008}
       \field{pages}{1\bibrangedash 10}
       \range{pages}{10}
+    \endentry
+    \entry{power_to_the_people}{article}{}
+      \name{author}{1}{}{%
+        {{hash=99dfe7b286ec44aadcb04aaf4e75446f}{%
+           family={Frazelle},
+           familyi={F\bibinitperiod},
+           given={Jessie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{fullhash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{bibnamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{authorbibnamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{authornamehash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \strng{authorfullhash}{99dfe7b286ec44aadcb04aaf4e75446f}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Queue}
+      \field{number}{2}
+      \field{title}{{Power to the People}}
+      \field{volume}{18}
+      \field{year}{2020}
+      \field{pages}{5\bibrangedash 18}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/3400899.3402527
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3400899.3402527
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3400899.3402527
+      \endverb
+    \endentry
+    \entry{curtailment_def_2021}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6b5e4aae986a86061bc5b87db27c7ede}{%
+           family={Frew},
+           familyi={F\bibinitperiod},
+           given={Bethany},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8f247121fb01b180fdf571066d1d2f71}{%
+           family={Sergi},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1373aa1ae1bb9eab0b8f1f483a6c2ba0}{%
+           family={Denholm},
+           familyi={D\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=99482fa6d0a05d91d667ed68ba6f0c9c}{%
+           family={Cole},
+           familyi={C\bibinitperiod},
+           given={Wesley},
+           giveni={W\bibinitperiod}}}%
+        {{hash=b2632bc3d7f00f5dd53568e535d2b036}{%
+           family={Gates},
+           familyi={G\bibinitperiod},
+           given={Nathaniel},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4ec563ecf752739231486516c81e0b93}{%
+           family={Levie},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3b81df1f191ba086e8f3bed28498faba}{%
+           family={Margolis},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{fdfb729096b44f8d6d5005517455a0a3}
+      \strng{fullhash}{3428ec0ffd018e1e1079d7ca32100277}
+      \strng{bibnamehash}{8dcc3d199383819b57e18de2bd43789b}
+      \strng{authorbibnamehash}{8dcc3d199383819b57e18de2bd43789b}
+      \strng{authornamehash}{fdfb729096b44f8d6d5005517455a0a3}
+      \strng{authorfullhash}{3428ec0ffd018e1e1079d7ca32100277}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2542-4351}
+      \field{journaltitle}{Joule}
+      \field{number}{5}
+      \field{title}{The curtailment paradox in the transition to high solar power systems}
+      \field{volume}{5}
+      \field{year}{2021}
+      \field{pages}{1143\bibrangedash 1167}
+      \range{pages}{25}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.joule.2021.03.021
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2542435121001446
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2542435121001446
+      \endverb
+      \keyw{solar photovoltaic generation,energy storage,curtailment,renewable energy,capacity expansion modeling,production cost modeling,ramping,minimum generation levels,minimum up-and-down time,operating reserves}
     \endentry
     \entry{Garey}{book}{}
       \name{author}{2}{}{%
