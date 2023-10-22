@@ -45,13 +45,15 @@ In this section, we present how we can model the carbon footprint from the whole
 
 \subsection{Updates in the model}
 
-To model the carbon footprint, taking into account the whole life cycle of the renewable infrastructure,  we use the emissions of the energy produced (or delivered in the case of batteries) in $g\,\ch{CO2}-eq.Wh^{-1}$ . Equation~\eqref{eq:fppv_lca} models the new footprint for the PV panels, and the main difference is the $pvCO2LC$ input that represents the life-cycle emissions.
+
+
+To model the carbon footprint, taking into account the whole life cycle of the renewable infrastructure,  we use the emissions of the energy produced (or delivered in the case of batteries) in $g\,\ch{CO2}\text{-}eq/kWh$. Equation~\eqref{eq:fppv_lca} models the new footprint for the PV panels, and the main difference is the $pvCO2LC$ input that represents the life-cycle emissions.
 
 \begin{equation} \label{eq:fppv_lca}
    FPpv^d_k =  pvCO2LC \times Pre_k^d \times \Delta t
 \end{equation}
 
-For the batteries, the initial modeling considered the emissions of manufacturing related to their capacity. Now, to account for all the life-cycle, the emissions relate to the energy delivered (discharged) by the batteries. Equation~\eqref{eq:fbat_lca} models the new footprint for batteries, where $batCO2LC$ represents the life-cycle emissions  ($g\,\ch{CO2}-eq.Wh^{-1}$).
+For the batteries, the initial modeling considered the emissions of manufacturing related to their capacity. Now, to account for all the life-cycle, the emissions relate to the energy delivered (discharged) by the batteries. Equation~\eqref{eq:fbat_lca} models the new footprint for batteries, where $batCO2LC$ represents the life-cycle emissions  ($g\,\ch{CO2}\text{-}eq/kWh$).
 
 \begin{equation} \label{eq:fbat_lca}
    FPbat^d_k =  Pdch^d_k \times batCO2LC \times \delta
@@ -91,7 +93,7 @@ The cloud infrastructure, the workload, grid emissions, and the execution enviro
   \label{fig:pv_ghi_avg}
 \end{figure}
 
-For the life-cycle \ch{CO2} emissions of the batteries and PVs, we used values from the National Laboratory of Renewable Energy (NREL) of the United States that performed an analysis with over 3000 published studies on the life-cycle of renewable infrastructures \cite{nrel_lifecycle_2021}: $43 g\,\ch{CO2}-eq.Wh^{-1}$ for the PVs and $33 g\,\ch{CO2}-eq.Wh^{-1}$ for the Lithium-Ion batteries.
+For the life-cycle \ch{CO2} emissions of the batteries and PVs, we used values from the National Laboratory of Renewable Energy (NREL) of the United States that performed an analysis with over 3000 published studies on the life-cycle of renewable infrastructures \cite{nrel_lifecycle_2021}: 43 $g\,\ch{CO2}\text{-}eq/kWh$ for the PVs and 33 $g\,\ch{CO2}\text{-}eq/kWh$ for the Lithium-Ion batteries.
 
 \subsubsection{Results}
 
@@ -103,7 +105,7 @@ Table~\ref{tab:emissions_LCA} presents the \ch{CO2} emissions considering the wh
 
 \begin{tabular}{|l|r|}
   \hline
-  \textbf{Scenarios} & \textbf{Emissions ($t\,\ch{CO2}-eq$)}   \\
+  \textbf{Scenarios} & \textbf{Emissions ($\mathbf{t\,\ch{CO2}\text{-}eq}$)}   \\
   \hline  
     \ch{CO2} from manufacturing   & 34 559.03    \\  
   \hline
@@ -168,7 +170,7 @@ Given that we are using additional renewable power infrastructure, it is also ne
 \end{equation}
 
 
-To model the carbon footprint of the wind turbines, their whole life cycle also needs to be taken into account. Equation~\eqref{eq:fp_using_wt} models the footprint of using the WT at the location of the data center $d$ at instant $k$, where $wtCO2LC$ is the input that represents its emissions for the life cycle (in $g\,\ch{CO2}-eq.Wh^{-1}$).
+To model the carbon footprint of the wind turbines, their whole life cycle also needs to be taken into account. Equation~\eqref{eq:fp_using_wt} models the footprint of using the WT at the location of the data center $d$ at instant $k$, where $wtCO2LC$ is the input that represents its emissions for the life cycle (in $g\,\ch{CO2}\text{-}eq/kWh$).
 
 \begin{equation}\label{eq:fp_using_wt}
    FPwt^d_k =  wtCO2LC^d \times Pwt^d_{k}\times \Delta t
@@ -187,7 +189,7 @@ In order to analyze the impact of including wind turbines in the renewable infra
 \subsubsection{Settings}
 \label{sec:settings_wt}
 
-The cloud infrastructure, the workload, grid emissions, and the execution environment are the same as in Section~\ref{sec:settings_ccgrid}. The solar irradiation values, and emissions from PV panels and batteries are the same as Section~\ref{sec:ex_lca_pv}. For the \ch{CO2} emissions of the wind turbines, it is considered that they emit $13 g\,\ch{CO2}-eq.Wh^{-1}$ taking into account its life cycle. The source for the values was the same as in Section~\ref{sec:ex_lca_pv}, the analysis from NREL that evaluated more than 3000 studies.
+The cloud infrastructure, the workload, grid emissions, and the execution environment are the same as in Section~\ref{sec:settings_ccgrid}. The solar irradiation values, and emissions from PV panels and batteries are the same as Section~\ref{sec:ex_lca_pv}. For the \ch{CO2} emissions of the wind turbines, it is considered that they emit 13 $1g\,\ch{CO2}\text{-}eq/kWh$ taking into account its life cycle. The source for the values was the same as in Section~\ref{sec:ex_lca_pv}, the analysis from NREL that evaluated more than 3000 studies.
 
 For the wind speed data, we used values from the ERA5 data source \cite{era5_wind_2022}---an average of the years 1980 to 2019. The data source contains values for the 100m v-component of wind (air horizontal speed towards the east) and the 100m u-component of wind (air horizontal speed towards the north)---both values are at 100 m of height. To transform these values into wind speed, we need to execute the following computation using Pitagora's theorem: $ w_s = \sqrt{ v^2 + u^2} $, where $w_s$ is the wind speed, $u$ the value of the u-component, and $v$ the value of the v-component.
 \subsubsection{Results}
@@ -196,10 +198,10 @@ For the wind speed data, we used values from the ERA5 data source \cite{era5_win
 To evaluate the impact of including WT, we compare the sizing for using only PVs and batteries and using PV, batteries and WT. Table~\ref{tab:total_wind_and_pv_co2} presents the results in terms of total emissions. When also considering the wind as a renewable power source, we observe a reduction of approximately 34\% in comparison with the scenario where no WT is used and green energy is only produced by the PVs.
 
 \begin{table}[h]  
-  \caption{Total emissions ($t\,\ch{CO2}-eq$) for different scenario. }\label{tab:total_wind_and_pv_co2} \centering  
+  \caption{Total emissions ($t\,\ch{CO2}\text{-}eq$) for different scenario. }\label{tab:total_wind_and_pv_co2} \centering  
   \begin{tabular}{|l|r|}
   \hline    
-  \textbf{Scenario} &   \textbf{Total emissions ($t\,\ch{CO2}-eq$)} \\
+  \textbf{Scenario} &   \textbf{Total emissions ($\mathbf{t\,\ch{CO2}\text{-}eq}$)} \\
   \hline    
   PV + Bat + WT + Grid  & 24 977.89 \\    
   \hline
@@ -389,7 +391,7 @@ Table~\ref{tab:grid_emissions_hist} presents the sources of the data, the time s
 
 
 \begin{table}[h]
-  \caption{Average emissions (in $g\,\ch{CO2}-eq.kWh^{-1}$) from using the regular grid at the different years.}\label{tab:grid_emissions_avg_year} \centering
+  \caption{Average emissions (in $g\,\ch{CO2}\text{-}eq/kWh$) from using the regular grid at the different years.}\label{tab:grid_emissions_avg_year} \centering
   \begin{tabular}{|l|r|r|r|r|}    
   \hline   
   \textbf{Location} &  \textbf{2021} & \textbf{2020} & \textbf{2019} & \textbf{2018}\\
@@ -746,10 +748,10 @@ Table~\ref{tab:total_price_and_co2_grid_timeseries} illustrates the cloud operat
 
 
 \begin{table}[h]
-  \caption{Total costs (millions of \$), emissions ($t\,\ch{CO2}-eq$) and how much energy was used from the grid to supply the DCs with the Grid Usage metric (G.U.) for the different scenarios. }\label{tab:total_price_and_co2_grid_timeseries} \centering
+  \caption{Total costs (millions of \$), emissions ($t\,\ch{CO2}\text{-}eq$) and how much energy was used from the grid to supply the DCs with the Grid Usage metric (G.U.) for the different scenarios. }\label{tab:total_price_and_co2_grid_timeseries} \centering
   \begin{tabular}{|l|r|r|r|}
    \hline  
-  \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{ $t\,\ch{CO2}-eq$ } & \textbf{G.U. (\%)}  \\    
+  \textbf{Scenario} &   \textbf{ Millions of \$}  &  \textbf{ $\mathbf{t\,\ch{CO2}\text{-}eq}$} & \textbf{G.U. (\%)}  \\    
   \hline
   Min. cost (PV + WT + Bat + grid) & 36.76   & 141 001.67  & 55.5   \\
   \hline
@@ -878,7 +880,7 @@ Equation~\eqref{eq:power_servers_gen} presents the new modeling of the power con
    P^d_k  = PUE^d \times \big(Pintranet^d + PServers^d\big)
 \end{equation}
 
-Regarding the carbon footprint of the servers, it is assumed that it is amortized over the server lifetime, and the LP considers the annual value. For example, if manufacturing a server emits 800 kg of \ch{CO2}-eq and its expected lifetime is 4 years, 25\% (200 kg of \ch{CO2}-eq) of its manufacturing emissions will be accounted for in the 1st year of operation, the other 25\% in the second year, and so on. After the fourth year, the server can still remain on the cloud platform, and its carbon emissions will come only from power consumption---all the carbon emissions from manufacturing have been amortized. On the other hand, if the server is replaced in the second year of operation, the remaining 75\%  of its emissions from manufacturing will also be taken into account. Equation~\eqref{eq:co2_new_servers} illustrates the footprint of building additional servers at a given data center $d$, where $serversCO2$ is an input with the total \ch{CO2} emitted from manufacturing the server (in $g\,\ch{CO2}-eq$), and $\epsilon$ the share of the emissions by year---$\epsilon$ is equal to 0.25 on the previous example.
+Regarding the carbon footprint of the servers, it is assumed that it is amortized over the server lifetime, and the LP considers the annual value. For example, if manufacturing a server emits 800 kg of \ch{CO2}-eq and its expected lifetime is 4 years, 25\% (200 kg of \ch{CO2}-eq) of its manufacturing emissions will be accounted for in the 1st year of operation, the other 25\% in the second year, and so on. After the fourth year, the server can still remain on the cloud platform, and its carbon emissions will come only from power consumption---all the carbon emissions from manufacturing have been amortized. On the other hand, if the server is replaced in the second year of operation, the remaining 75\%  of its emissions from manufacturing will also be taken into account. Equation~\eqref{eq:co2_new_servers} illustrates the footprint of building additional servers at a given data center $d$, where $serversCO2$ is an input with the total \ch{CO2} emitted from manufacturing the server (in $g\,\ch{CO2}\text{-}eq$), and $\epsilon$ the share of the emissions by year---$\epsilon$ is equal to 0.25 on the previous example.
 
 \begin{equation} \label{eq:co2_new_servers}
 FPns^d = NS^d \times (serversCO2 \times \epsilon)	
@@ -901,7 +903,7 @@ repCO2_{gen} =  \left\{
 \end{equation}
 
 
-We also have the carbon footprint of the servers that were manufactured in previous years. Equation~\eqref{eq:co2_existing_servers} illustrates the emissions of the \textbf{e}xisting \textbf{s}ervers where $esCO2_{gen}$ represents the emissions of operating the server of the generation $gen$ during that year (in $g\,\ch{CO2}-eq$) and its value is computed by the function in Equation~\eqref{eq:serverCO2}.
+We also have the carbon footprint of the servers that were manufactured in previous years. Equation~\eqref{eq:co2_existing_servers} illustrates the emissions of the \textbf{e}xisting \textbf{s}ervers where $esCO2_{gen}$ represents the emissions of operating the server of the generation $gen$ during that year (in $g\,\ch{CO2}\text{-}eq$) and its value is computed by the function in Equation~\eqref{eq:serverCO2}.
 
 
 \begin{equation} \label{eq:co2_existing_servers}
@@ -942,7 +944,9 @@ Finally, Equation~\eqref{eq:new_obj_co2_servers} presents the new objective func
 \subsection{Experiments}
 
 
-Two scenarios are considered in the experiments to assess the impact of the decision to manufacture new servers in terms of \ch{CO2} emissions. In the first scenario, the LP is solved only by having information on the current year's servers and the cloud workload growth forecast. This will generate a plan for the expected server lifetime---to consider all the carbon emissions from manufacturing. In other words, the LP is solved for four years -- starting from the year $x$---considering that it is only possible to manufacture the server of the current year that will be used together with the existing computational infrastructure or to replace older servers. Suppose a new, more computationally powerful and energy-efficient server is launched in the next year ($x+1$) or a new forecast for the workload growth for the following years is published. In that case, the initial plan of the previous year (year $x$) can be modified to consider information about the new server or a forecast of the workload growth. This will generate a new plan for the years $x+1$ to $x+5$. After the LP is solved for the year $x$, the results in terms of new servers manufactured and older ones replaced will be used as input to the year $x +1$. 
+Two scenarios are considered in the experiments to assess the impact of the decision to manufacture new servers in terms of \ch{CO2} emissions. In the first scenario, the LP is solved only by having information on the current year's servers and the cloud workload growth forecast. This will generate a plan for the expected server lifetime---to consider all the carbon emissions from manufacturing. In other words, the LP is solved for four years -- starting from the year $x$---considering that it is only possible to manufacture the server of the current year that will be used together with the existing computational infrastructure or to replace older servers. 
+
+Suppose a new, more computationally powerful and energy-efficient server is launched in the next year ($x+1$) or a new forecast for the workload growth for the following years is published. In that case, the initial plan of the previous year (year $x$) can be modified to consider information about the new server or a forecast of the workload growth. This will generate a new plan for the years $x+1$ to $x+5$. After the LP is solved for the year $x$, the results in terms of new servers manufactured and older ones replaced will be used as input to the year $x +1$. 
 
 In the second scenario, the five years of operation are solved at once. Therefore, the LP has access to all the information about future workloads (the real growth), and server configurations. The first scenario represents an approach more realistic that has the potential to be taken by the decision maker, considering that it is hard to have accurate values for workload and server configurations in the long term, and the second scenario is only used as a baseline---it represents the optimal solution.
 
@@ -958,7 +962,7 @@ We consider five years of operation and four generations of servers. For the wor
   \label{tab:servers_specs} 
   \begin{tabular}{|l|r|r|r|r|r|}
   \hline    
-  \textbf{Years} & \textbf{CPU} &   \textbf{Cores} & \textbf{Pidle}  & \textbf{Pcore}  & \textbf{$kg\,\ch{CO2}e$}  \\
+  \textbf{Years} & \textbf{CPU} &   \textbf{Cores} & \textbf{Pidle}  & \textbf{Pcore}  & \textbf{$\mathbf{kg\,\ch{CO2}\text{-}eq}$}  \\
   \hline
   < 2016      & Intel Xeon E5-2660V2 & 20 & 52 & 7.5  & -   \\
   \hline
@@ -1003,7 +1007,9 @@ All the servers are based on the Dell R740 for the HD and SSD values (HD with 3.
 To obtain the area of solar panels, the capacity of batteries, and the number of wind turbines, the sizing process was realized using the average irradiation and wind speed from 1980 to 2019, as in Section~\ref{sec:settings_wt}, and the server configurations of the year 1. For the remaining five years of operation, the wind speed data and solar irradiation used are from 2013 to 2017.
 \subsubsection{Results}
 
-Figure \ref{fig:dc_evolution_comparison} provides a comparison of both approaches---greedy and optimal methods---to deciding to manufacture new servers.   This comparison assesses the evolution of the cloud federation infrastructure in terms of computational power and which server generations are being used. The year 2016 represents the initial state of the cloud federation, which exclusively contains servers from the first generation. These servers had been in operation for a duration sufficient to offset all the carbon emissions associated with their manufacturing. The years 2017 to 2021 represent the five years of operation during which the two approaches for deciding whether to manufacture new servers are applied. Each bar in the figure represents the computational capacity of the cloud federation---quantified by the total number of CPU cores across all data centers. The colors denote the server generation of the CPU cores  (more recent generations have darker colors). One can also observe when new servers are added---the bar's height of the corresponding generation increases---and when servers from older generations are replaced with newer ones---the bar's height of the corresponding generation decreases. We also present the results of the decision to manufacture new servers for each DC in Figure \ref{fig:dc_evolution_year_by_year}---for the greedy approach---and Figure \ref{fig:dc_evolution_optimal}---the optimal solution.
+Figure \ref{fig:dc_evolution_comparison} provides a comparison of both approaches---greedy and optimal methods---to deciding to manufacture new servers.   This comparison assesses the evolution of the cloud federation infrastructure in terms of computational power and which server generations are being used. The year 2016 represents the initial state of the cloud federation, which exclusively contains servers from the first generation. These servers had been in operation for a duration sufficient to offset all the carbon emissions associated with their manufacturing. The years 2017 to 2021 represent the five years of operation during which the two approaches for deciding whether to manufacture new servers are applied. 
+
+Each bar in the figure represents the computational capacity of the cloud federation---quantified by the total number of CPU cores across all data centers. The colors denote the server generation of the CPU cores  (more recent generations have darker colors). One can also observe when new servers are added---the bar's height of the corresponding generation increases---and when servers from older generations are replaced with newer ones---the bar's height of the corresponding generation decreases. We also present the results of the decision to manufacture new servers for each DC in Figure \ref{fig:dc_evolution_year_by_year}---for the greedy approach---and Figure \ref{fig:dc_evolution_optimal}---the optimal solution.
 
 We observe that the optimal solution makes very few changes to the servers, because it knows in advance when the right moment is to add or replace them and how . However, in real life, the first approach, where the decision is made year by year, is closer to what the cloud-federation operator would do. Finally, in terms of total \ch{CO2} emissions, the optimal solution is 13.4\% better than the solution that only has information about the current year, as can be seen in Table~\ref{tab:emissions_sizing}.
 
@@ -1035,7 +1041,7 @@ We observe that the optimal solution makes very few changes to the servers, beca
 \caption{Total emissions for the different approaches to manufacture new servers.}\label{tab:emissions_sizing} \centering
 \begin{tabular}{|l|r|}
   \hline
-  \textbf{Scenarios} & \textbf{Emissions ($t\,\ch{CO2}-eq$)}   \\
+  \textbf{Scenarios} & \textbf{Emissions ($\mathbf{t\,\ch{CO2}\text{-}eq}$)}   \\
   \hline  
    Optimal solution  &   246 867.03 \\  
   \hline
@@ -1103,7 +1109,7 @@ In what concerns the sensitivity of the model to the grid emissions input, we sa
 % Talk about flexibility in the scheduling
 On the topic of exploring the flexibility in the scheduling of the workload to reduce carbon emissions, it is possible to extract the following information from the results. The first is that the reduction of the carbon footprint seems to have a limit (around 4\%). This can be justified by the fact that there is little difference in the climate conditions during the interval of one week, or that the DC, which would reduce carbon emissions, is already at peak capacity and cannot receive more workload. 
 
-The second interesting observation is that by delaying a small portion of the workload (for example, 10\% to 20\%)  the reduction is already really close to the maximum possible reduction value. Finally, this approach can be used to reduce the impact of renewable sources' intermittency in the sizing process---as we saw differences from 1\% to 12\% in comparison to the optimal scenario on Section~\ref{sec:sensitivity}---and in the context of cloud federations that emit from tens to hundreds of kilotons of $\ch{CO2}-eq$, a reduction of 4\% is not negligible.
+The second interesting observation is that by delaying a small portion of the workload (for example, 10\% to 20\%)  the reduction is already really close to the maximum possible reduction value. Finally, this approach can be used to reduce the impact of renewable sources' intermittency in the sizing process---as we saw differences from 1\% to 12\% in comparison to the optimal scenario on Section~\ref{sec:sensitivity}---and in the context of cloud federations that emit from tens to hundreds of kilotons of \ch{CO2}-eq, a reduction of 4\% is not negligible.
 
 % Talk about costs
 Concerning the costs of reducing the environmental impact of the cloud operation---one of the most important variables for the decision-makers---we see in Table~\ref {tab:total_price_and_co2_grid_timeseries} that the hybrid configuration that uses solar panels and wind turbines is the cheapest---around 35\% cheaper and emits 37\% less \ch{CO2} in comparison with using only the grid. On the other hand, the solution that results in the lowest environmental impact (\textit{Minimum \ch{CO2} PV + WT + Bat + grid}) is the second most expensive: it presents a reduction of a factor of 9 in \ch{CO2} emissions compared to the grid only scenario, but it costs double. 
@@ -1123,7 +1129,17 @@ Finally, all the modifications in the modeling do not change its computational c
 
 \label{sec:long_term_conclusion}
 
-In this chapter, we studied the problem of reducing the long-term environmental impact of cloud federations by integrating local renewable infrastructure at the sites where the data centers reside. We extended our initial modeling, presented in Chapter~\ref{chap:ccgrid} in the following points: considered the whole life cycle of the renewable infrastructure; integrated wind turbines in the model to further reduce the environmental impact, in particular when the sun is not shining;  evaluated how sensible the model is to the inputs of solar irradiation, wind speed and grid emission values; showed that allowing the workload to be delayed can reduce the carbon footprint of the cloud operation, and partially mitigate the error of the sizing process caused by the intermittency of renewables, which is important given that once built it is not feasible to reduce the dimensions of the renewable infrastructure;  conducted an analysis of the monetary costs of minimizing the cloud's  environmental impact, and illustrated that the renewable infrastructure indeed can reduce costs for the cloud operators; and, presented one approach for deciding when to manufacture new servers taking into account their carbon footprint, to deal with the workload increase over the years, where we showed that servers could be extended way longer than their expected lifetime. These modifications were carefully made to use linear variables and restrictions, therefore the problem remains optimally solved in polynomial time.
+In this chapter, we studied the problem of reducing the long-term environmental impact of cloud federations by integrating local renewable infrastructure at the sites where the data centers reside. We extended our initial modeling, presented in Chapter~\ref{chap:ccgrid} in the following points: 
+\begin{itemize}
+    \item considered the whole life cycle of the renewable infrastructure; 
+    \item integrated wind turbines in the model to further reduce the environmental impact, in particular when the sun is not shining;
+    \item evaluated how sensible the model is to the inputs of solar irradiation, wind speed and grid emission values;
+    \item showed that allowing the workload to be delayed can reduce the carbon footprint of the cloud operation, and partially mitigate the error of the sizing process caused by the intermittency of renewables, which is important given that once built it is not feasible to reduce the dimensions of the renewable infrastructure;
+    \item conducted an analysis of the monetary costs of minimizing the cloud's  environmental impact, and illustrated that the renewable infrastructure indeed can reduce costs for the cloud operators;
+    \item presented one approach for deciding when to manufacture new servers taking into account their carbon footprint, to deal with the workload increase over the years, where we showed that servers could be extended way longer than their expected lifetime. 
+\end{itemize}
+
+These modifications were carefully made to use linear variables and restrictions, therefore the problem remains optimally solved in polynomial time.
 
 All these scenarios may further help the decision-makers in their quest to reduce the environmental impact of their cloud federation. For example, we saw that the renewable infrastructure that included wind turbines had the lowest environmental impact, however, in comparison to PV panels, wind turbines require a large land area---PVs could be installed on the rooftops---and are more expensive, therefore their adoption needs to be thoroughly examined---in particular if the data centers reside in large urban areas. 
 

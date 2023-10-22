@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[0] Config.pm:307> INFO - Logfile is 'main_uuga.blg'
-[36] biber:322> INFO - === Thu Jul 27, 2023, 13:28:46
-[92] Utils.pm:309> ERROR - Cannot find 'main_uuga.bcf'!
-[92] Biber.pm:132> INFO - ERRORS: 1

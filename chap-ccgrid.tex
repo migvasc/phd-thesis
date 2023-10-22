@@ -202,14 +202,14 @@ For the carbon footprint of the PVs, to account for the different climate condit
    pvCO2^d =  \frac{FPpv_{1m2}}{expectedEpv^d} 
 \end{equation}
 
-where $FPpv_{1m2}$ is the emissions of manufacturing $1\,m^2$ PV in $g\,\ch{CO2}-eq$, and $expectedEpv^d$ is the expected energy production in $Wh$ that $1\,m^2$ of the PV during its lifetime at the location of $DC^d$. As a result, the unit of this metric is expressed in $g\,\ch{CO2}-eq.Wh^{-1}$, and so, the total emissions from the PVs are related to their power production, as shown in Equation~\eqref{eq:fppvdk}.
+where $FPpv_{1m2}$ is the emissions of manufacturing $1\,m^2$ PV in g\,\ch{CO2}-eq, and $expectedEpv^d$ is the expected energy production in $kWh$ that $1\,m^2$ of the PV during its lifetime at the location of $DC^d$. As a result, the unit of this metric is expressed in $g\,\ch{CO2}\text{-}eq/kWh$ , and so, the total emissions from the PVs are related to their power production, as shown in Equation~\eqref{eq:fppvdk}.
 
 \begin{equation} \label{eq:fppvdk}
    FPpv^d_k =  pvCO2^d \times Pre_k^d \times \Delta t
 \end{equation}
 
 
-Regarding the batteries' carbon footprint $FPbat^d$ of the $DC^d$, it is computed based on their capacity $BAT^d$ ($kWh$) and the carbon emissions of the manufacturing process $batCO2$ in $g\,\ch{CO2}-eq.kWh^{-1}$, as seen in Equation~\eqref{eq:fbat}. To be consistent with the calculation of $FPpv^d_k$, $batCO2$ is the share of the carbon footprint of the battery type chosen for a capacity of $1\,kWh$ over the time horizon of $\mathcal{H}$, assuming a battery has a lifetime of 10 years. Thus, given that we are considering one year of cloud operation, $batCO2$ is the tenth of the total carbon footprint of the considered battery. It is considered that the battery carbon footprint is homogeneous for all the locations, as the climate conditions do not influence it.
+Regarding the batteries' carbon footprint $FPbat^d$ of the $DC^d$, it is computed based on their capacity $BAT^d$ ($kWh$) and the carbon emissions of the manufacturing process $batCO2$ in $g\,\ch{CO2}\text{-}eq/kWh$ , as seen in Equation~\eqref{eq:fbat}. To be consistent with the calculation of $FPpv^d_k$, $batCO2$ is the share of the carbon footprint of the battery type chosen for a capacity of $1\,kWh$ over the time horizon of $\mathcal{H}$, assuming a battery has a lifetime of 10 years. Thus, given that we are considering one year of cloud operation, $batCO2$ is the tenth of the total carbon footprint of the considered battery. It is considered that the battery carbon footprint is homogeneous for all the locations, as the climate conditions do not influence it.
 
 \begin{equation} \label{eq:fbat}
    FPbat^d =  BAT^d \times batCO2
@@ -357,12 +357,12 @@ The data for simulating the solar power production---Global Solar Horizontal Irr
 
 \subsubsection{Carbon footprint}
 
-For PV panels, it is considered a lifetime of 30 years, and manufacturing 1 $m^2$ emits $250 kg\,\ch{CO2}-eq$, inspired from real measurements~\cite{YUE2014pv_carbon}. To compute the emissions in the form of $g\,\ch{CO2}-eq.kWh^{-1}$ as stated in Section~\ref{sec:footprintmodel_ccgrid}, we considered the total solar irradiation that was produced during the year 2021 multiplied by 30 (to account for the PV module lifetime of 30 years). For the electrical grid, we also considered the real-world data of the carbon footprint ($g\,\ch{CO2}-eq.kWh^{-1}$). Table~\ref{tab:carbonfootprint} lists the carbon emission values for each region.
+For PV panels, it is considered a lifetime of 30 years, and manufacturing 1 $m^2$ emits 250 kg of \ch{CO2}-eq, inspired from real measurements~\cite{YUE2014pv_carbon}. To compute the emissions in the form of $g\,\ch{CO2}\text{-}eq/kWh$ as stated in Section~\ref{sec:footprintmodel_ccgrid}, we considered the total solar irradiation that was produced during the year 2021 multiplied by 30 (to account for the PV module lifetime of 30 years). For the electrical grid, we also considered the real-world data of the carbon footprint ($g\,\ch{CO2}\text{-}eq/kWh$). Table~\ref{tab:carbonfootprint} lists the carbon emission values for each region.
  %TODO Add text saying that the pv emissions considers the grid....
 
 \begin{table}[h]
 
-  \caption{Emissions (in $g\,\ch{CO2}-eq.kWh^{-1}$) for both PV usage and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.}\label{tab:carbonfootprint} \centering
+  \caption{Emissions (in $g\,\ch{CO2}\text{-}eq/kWh$) for both PV usage and using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.}\label{tab:carbonfootprint} \centering
   \begin{tabular}{|l|r|r|}
     
   \hline
@@ -391,7 +391,7 @@ For PV panels, it is considered a lifetime of 30 years, and manufacturing 1 $m^2
 \end{tabular}  
 \end{table}
 
-Regarding the batteries, the emissions are only considered for the manufacturing step---$59 kg\,\ch{CO2}-eq$ per kWh and are the same for all the DCs locations. In our experiments, the considered lifetime of the batteries was ten years. Therefore, the input used is equal to $5.9 kg\,\ch{CO2}-eq$ per kWh, given that we simulated one year.
+Regarding the batteries, the emissions are only considered for the manufacturing step--- 59 kg of \ch{CO2}-eq per kWh and are the same for all the DCs locations. In our experiments, the considered lifetime of the batteries was ten years. Therefore, the input used is equal to 5.9 kg of \ch{CO2}-eq per kWh, given that we simulated one year.
 
 \subsubsection{Execution environment}
  
@@ -430,14 +430,14 @@ To analyze the sources of energy that supplied the DCs operation, we present in 
   \label{fig:power_ratio_hourly}
 \end{figure}
 
-In order to assess the optimal solution of the LP, we compared it with two other scenarios in terms of total carbon emissions ($t\,\ch{CO2}-eq$): i) the DCs are only supplied by power from the regular electrical grid, and ii) the DCs are only supplied by renewable power from the photovoltaic panels and batteries. Table~\ref{tab:emissions} presents the results. In comparison with the first scenario (only grid power), the reduction in the \ch{CO2} emissions was approximately 85\%, and it was approximately 30\% for the second scenario (only renewable power).
+In order to assess the optimal solution of the LP, we compared it with two other scenarios in terms of total carbon emissions (tons of \ch{CO2}-eq): i) the DCs are only supplied by power from the regular electrical grid, and ii) the DCs are only supplied by renewable power from the photovoltaic panels and batteries. Table~\ref{tab:emissions} presents the results. In comparison with the first scenario (only grid power), the reduction in the \ch{CO2} emissions was approximately 85\%, and it was approximately 30\% for the second scenario (only renewable power).
 
 
 \begin{table}[h]
 \caption{Total emissions for the different scenarios.}\label{tab:emissions} \centering
 \begin{tabular}{|p{5cm}|r|}
   \hline
-  \textbf{Scenarios} & \textbf{Emissions ($t\,\ch{CO2}-eq$)}   \\
+  \textbf{Scenarios} & \textbf{Emissions ($\mathbf{t\,\ch{CO2}\text{-}eq}$)}   \\
   \hline
   Electrical grid                    & 201 211.3    \\
   \hline
