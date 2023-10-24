@@ -2,6 +2,9 @@ Cloud computing is an essential component of our modern digital society, given t
 
 In this thesis, we studied strategies to reduce the environmental impact---in terms of carbon footprint---of operating and sizing cloud federations with data centers geographically distributed worldwide. More specifically, we explored two carbon-responsive strategies: ``follow-the-renewables'' and the sizing of the renewable infrastructure and IT equipment.
 
+This chapter begins by providing an overview of the main contributions made in this thesis, as detailed in Section~\ref{sec:conclusion_summary}. Then, we discuss in Section~\ref{sec:conclusion_future_research} potential opportunities for future research directions that build upon the insights derived from the work presented in this thesis. Finally, Section~\ref{sec:conclusion_dissemination} presents the various ways in which our work has been disseminated, including a list of scientific publications that have emerged from the research conducted in this thesis.
+
+
 \section{Summary of contributions }
 
 \label{sec:conclusion_summary}
@@ -18,7 +21,6 @@ The initial model proposed in Chapter~\ref{chap:ccgrid} focused on the operation
 
 The first key aspect of the proposed solution is that it solves both subproblems---sizing and operating---as a single problem, allowing us to evaluate decisions such as increasing the on-site renewable infrastructure dimensions of a data center or scheduling the workload to different geographic locations using the follow-the-renewables approach.
 
-
 Another key aspect of the model is that it considers the specific characteristics of the geographic locations of the DCs in terms of climate conditions---the capacity to generate renewable power, cooling needs, and the local grid electricity supply---that may already incorporate low-carbon-intensive power sources. Lastly, the proposed solution does not neglect that manufacturing the renewable infrastructure also presents an environmental impact. 
 
 Through experiments using real-world data for workload, climate conditions, server specifications, location of data centers, and grid energy mix,  we demonstrated that the hybrid solution, which combines the on-site renewable infrastructure and can use power from the local grid, is better in terms of carbon footprint than only operating the DCs using power from the local electricity grid or exclusively power from the on-site renewable infrastructure.
@@ -31,9 +33,8 @@ We also showed that workload scheduling can mitigate a part of the impact of the
 
 In terms of costs, we showed that adopting on-site renewable infrastructure is cheaper than operating the DCs exclusively with power from the local electricity grid. Additionally, the solution with solar panels and batteries is the best in both environmental and monetary aspects for the cloud operators. 
 
-For the decision to manufacture new servers considering their carbon footprint, we saw that the greedy approach---that makes the decision year by year with the information of the current year's server specification---is not that far from the optimal solution that knows in advance all the server specifications of the evaluated years: 13.4\% worse in terms of total carbon footprint. It is also worth noting that the servers are being used over their expected lifetime in the optimal solution. This fact can be used as inspiration for extending real-life server usage, since they are computationally powerful, and discarding them results in environmental impact.
+Our model also enables us to assess the potential carbon reduction by adopting servers from new generations that may be more power-efficient, while also considering the carbon footprint of manufacturing the servers. The model is flexible enough to compare one generation of servers to another or determine what would be the optimal solution given many generations of servers. In the optimal solution, the servers are used over their expected lifetime. This fact can be used as inspiration for extending real-life server usage, since they are computationally powerful, discarding them results in environmental impact, and waiting to replace the servers increases the chance of having a server generation that is more power-efficient and computationally powerful.
 
-% TODO: text da conclusao pra parte de sizing ...
 Finally, the model was thoughtfully designed to exclusively employ linear variables. This enables the model to be solved optimally in polynomial time and evaluate long-term scenarios in a reasonable amount of time. This efficiency reduces the energy consumption and associated carbon footprint of the sizing process itself. Decision-makers could adopt this model to guide their efforts to reduce the environmental impact of cloud computing platforms.
 \section{Future Research Directions}
 
@@ -44,7 +45,8 @@ As discussed in Section~\ref{sec:conclusion_smargreens}, to further assess the i
 
 We saw in Chapter~\ref{chap:smartgreens} that applying follow-the-renewables has significant potential for reducing the carbon emissions of the cloud operation. We didn't include it in our modeling for sizing and operating the globally distributed cloud data centers, given the high latency between the network links that connect these data centers, which would result in a long migration time. This analysis needs to be made to evaluate the potential of migrating the workload, given that the DCs located farther away might have more availability of low-carbon intensive sources. One possibility is to have a threshold for the migration time, or migrate only tasks with low priority as batch tasks.
 
-Regarding our proposed approach for sizing and operating cloud federations, one crucial point for the long term is the degradation of the renewable and IT infrastructure and the failure of IT equipment. Another possibility is to analyze the sizing process considering the usage of other types of hardware for computations, particularly graphical processors (GPUs) that are widely used for artificial intelligence applications.
+
+Regarding our proposed approach for sizing and operating cloud federations, one crucial point for the long term is the degradation of the renewable and IT infrastructure and the failure of IT equipment. For the decision to manufacture new servers, the model can be extended to a fine grain at the level of the IT equipment (for example, replacing only a disc that failed). The monetary cost analysis can also be applied to the decision to manufacture or replace new servers, provided that data on the hardware price is accessible. Another possibility is to analyze the sizing process considering the usage of other types of hardware for computations, particularly graphical processors (GPUs) that are widely used for artificial intelligence applications.
 
 We explored the sizing decision for existing cloud federations. Our proposed solution could also be extended to evaluate the placement of new data centers with the objective of minimizing the carbon footprint. For example, given a set of options for locations, their respective characteristics in terms of potential for generating renewable power, climate conditions, cooling needs, workload demand, and server specifications and their associated carbon footprint, it would be possible to perform a comparative analysis of the carbon footprint of each location. The results could be used to guide the decision on the location of the new data center.
 
@@ -58,9 +60,9 @@ The following two main publications emerged from the work performed during this 
 
 \begin{itemize}
 
-\item  \textit{\textbf{Vasconcelos, M.}, Cordeiro, D., Costa, G. D., Dufossé, F., Nicod, J.-M., and Rehn-Sonigo, V. (2023). Optimal sizing of a globally distributed low carbon cloud federation. In The 23rd IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing. DOI: 10.1109/CCGrid57682.2023.00028}.
+\item  \textit{\textbf{Miguel Felipe Silva Vasconcelos}, Daniel Cordeiro, Georges Da Costa, Fanny Dufossé, Jean-Marc Nicod, and Veronika Rehn-Sonigo. ``Optimal sizing of a globally distributed low carbon cloud federation''. In 2023 IEEE/ACM 23rd International Symposium on Cluster, Cloud and Internet Computing (CCGrid), Bangalore, India, 2023, pp. 203-215. DOI: 10.1109/CCGrid57682.2023.00028}.
   
-\item  \textit{\textbf{Vasconcelos, M. F. S.}, Cordeiro, D., and Dufossé, F. (2022). Indirect network impact on the energy consumption in multi-clouds for follow-the-renewables approaches. In Proceedings of the 11th International Conference on Smart Cities and Green ICT Systems — SMARTGREENS, pages 44–55. INSTICC, SciTePress. DOI: 10.5220/0011047000003203}. Candidate for the best paper award.
+\item  \textit{\textbf{Miguel Felipe Silva Vasconcelos}, Daniel Cordeiro and Fanny. ``Indirect network impact on the energy consumption in multi-clouds for follow-the-renewables approaches''. In Proceedings of the 11th International Conference on Smart Cities and Green ICT Systems — SMARTGREENS 2022, pages 44–55. INSTICC, SciTePress. DOI: 10.5220/0011047000003203}. Candidate for the best paper award.
 
 \end{itemize}
 
@@ -68,13 +70,13 @@ The work was also disseminated in the form of short summaries and presentations 
 
 \begin{itemize}
 
-\item \textit{\textbf{Vasconcelos, M.}, Cordeiro, D., Costa, G. D., Dufossé, F., Nicod, J.-M., and Rehn-Sonigo, V. (2023). Long-term evaluation for sizing low-carbon cloud data centers. In ComPAS 2023 Conférence francophone en informatique, Jul 2023, Annecy, France}.
+\item \textit{\textbf{Miguel Felipe Silva Vasconcelos}, Daniel Cordeiro, Georges Da Costa, Fanny Dufossé, Jean-Marc Nicod, and Veronika Rehn-Sonigo. ``Long-term evaluation for sizing low-carbon cloud data centers''. In ComPAS 2023 Conférence francophone en informatique, Jul 2023, Annecy, France}
 
-  \item  \textit{\textbf{Vasconcelos, M. F. S.} (2023). Towards low-carbon globally distributed clouds. In GreenDays 2023, ENS Lyon}.
+\item  \textit{\textbf{Miguel Felipe Silva Vasconcelos}. ``Towards low-carbon globally distributed clouds''. In GreenDays 2023, ENS Lyon}.
 
-\item  \textit{\textbf{Vasconcelos, M. F. S.}, Cordeiro, D., and Dufossé, F. (2022). Dimensioning of multi-clouds with follow-the-renewable approaches for environmental impact minimization. In 23ème congrès annuel de la Société Française de Recherche Opérationnelle et d’Aide à la Décision, INSA Lyon}.
+\item  \textit{\textbf{Miguel Felipe Silva Vasconcelos}, Daniel Cordeiro and Fanny Dufossé. ``Dimensioning of multi-clouds with follow-the-renewable approaches for environmental impact minimization''. In 23ème congrès annuel de la Société Française de Recherche Opérationnelle et d’Aide à la Décision (ROADEF 2022), INSA Lyon}.
 
-\item  \textit{\textbf{Vasconcelos, M. F. S.} (2022). Towards greener multi-clouds: scheduling with follow-the-renewables and dimensioning of solar panels and batteries. In 5th Workshop of the InterSCity Project (INCT of the Future Internet for Smart Cities), São Paulo.}
+\item  \textit{\textbf{Miguel Felipe Silva Vasconcelos}. ``Towards greener multi-clouds: scheduling with follow-the-renewables and dimensioning of solar panels and batteries''. In 5th Workshop of the InterSCity Project (INCT of the Future Internet for Smart Cities), São Paulo, 2022.}
 
 \end{itemize}
 
