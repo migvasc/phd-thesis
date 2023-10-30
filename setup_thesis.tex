@@ -1,4 +1,3 @@
-
 % --- ENCODING / FONTS ----------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -95,6 +94,11 @@
 % --- i18n, l10n -----------------------
 
 \usepackage[french,portuguese,english]{babel}  % load default language last
+    \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+    \addto\captionsenglish{\renewcommand{\refname}{References}}
+
+
+
 \usepackage[french,english]{isodate}  % load default language last
 
 
@@ -116,6 +120,7 @@
 		mincitenames=1,%,
 		sorting=none%
 	]{biblatex}
+
 \bibliography{references}
 
 

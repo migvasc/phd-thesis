@@ -40,12 +40,10 @@ The work of this chapter is a direct extension of the work of the Chapter \ref{c
 
 In this section we present how we can model the carbon footprint from the whole life cycle --- from manufacturing to recycling/discarding --- of the renewable infrastructure,  a mandatory step to make the model more realistic, in particular when focusing on the long-term operation of the cloud federation.
 
-
-
 \subsection{Updates in the model}
 
-To model the carbon footprint taking into account the whole life cycle of the renewable infrastructure,  we use the emissions of the energy produced (or
-delivered in the case of batteries) in $g\,\ch{CO2}-eq.Wh^{-1}$ . Equation~\eqref{eq:fppv_lca} models the new footprint for the PV panels, and the main difference is the $pvCO2LC$ input that represents the life-cycle emissions.
+The carbon footprint model (presented in Section~\ref{sec:footprintmodel_ccgrid} needs to be updated to model the \ch{CO2} emissions from the whole life cycle of the renewable infrastructure.  The previous model only considered the \ch{CO2} emissions from the manufacturing phase, and now we use the emissions of the energy produced (or
+delivered in the case of batteries) in $g\,\ch{CO2}-eq.Wh^{-1}$ during the whole life cycle---which includes operation and recycling or discarding. Equation~\eqref{eq:fppv_lca} models the new footprint for the PV panels, and the main difference is the $pvCO2LC$ input that represents the life-cycle emissions.
 
 \begin{equation} \label{eq:fppv_lca}
    FPpv^d_k =  pvCO2LC \times Pre_k^d \times \Delta t
@@ -143,7 +141,7 @@ In this section, we evaluate the impact of adding another renewable power source
 \subsection{Updates in the model}
 \label{sec:ex_model_wt}
 
-We consider a new variable $WT^d$ representing how many wind turbines will be built at each DC location. The number of wind turbines (WT) is an integer number (we cannot produce 1.2 WT for example). However, to avoid increasing the computational complexity of the LP by including integer variables, we made a relaxation in our modeling to allow the WT variable to be linear. 
+The electrical model (see~\ref{sec:electrical_model_ccgrid}) needs to be updated to include the new renewable infrastructure. We consider a new variable $WT^d$ representing how many wind turbines will be built at each DC location. The number of wind turbines (WT) is an integer number (we cannot produce 1.2 WT for example). However, to avoid increasing the computational complexity of the LP by including integer variables, we made a relaxation in our modeling to allow the WT variable to be linear. 
 
 The power production of the $WT^d$ wind turbines at location of data center $d$ at instant $k$ ($Pwt^d_{k}$) is modeled by Equation~\ref{eq:wt_power_prod}, where $V^d_k$ is the wind speed at location of data center $d$ at instant $k$; $Vici$ is the \textit{cut in} wind speed, that is, the wind turbines start producing power when the wind speed is greater or equal to $Vici$; $Vco$ is the \textit{cut out} wind speed, that is, the wind turbines stop producing power when the wind speed is greater than $Vco$; $Pr$ is the WT rated power production in W; and $Vr$ is the speed where the WT starts producing $Pr$ power. This model is based on \cite{HADDAD2021100505}.
 
