@@ -45,7 +45,22 @@ In this section, we present how we can model the carbon footprint from the whole
 
 \subsection{Updates in the model}
 
-The carbon footprint model (presented in Section~\ref{sec:footprintmodel_ccgrid} needs to be updated to model the \ch{CO2} emissions from the whole life cycle of the renewable infrastructure.  The previous model only considered the \ch{CO2} emissions from the manufacturing phase, and now we use the emissions of the energy produced (or delivered in the case of batteries) in $g\,\ch{CO2}-eq.Wh/kWh$ during the whole life cycle---which includes operation and recycling or discarding. Equation~\eqref{eq:fppv_lca} models the new footprint for the PV panels, and the main difference is the $pvCO2LC$ input that represents the life-cycle emissions ($g\,\ch{CO2}\text{-}eq/kWh$).
+The carbon footprint model (presented in Section~\ref{sec:footprintmodel_ccgrid} needs to be updated to model the \ch{CO2} emissions from the whole life cycle of the renewable infrastructure, and Table~\ref{tab:notations_lifecycle_model} presents the new notations used in the updated model.  The previous model only considered the \ch{CO2} emissions from the manufacturing phase, and now we use the emissions of the energy produced (or delivered in the case of batteries) in $g\,\ch{CO2}-eq.Wh/kWh$ during the whole life cycle---which includes operation and recycling or discarding. Equation~\eqref{eq:fppv_lca} models the new footprint for the PV panels, and the main difference is the $pvCO2LC$ input that represents the life-cycle emissions ($g\,\ch{CO2}\text{-}eq/kWh$).
+
+\begin{table}[!t]
+\caption{New notations for the updated carbon footprint model  for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)}
+\label{tab:notations_lifecycle_model}
+\begin{center}
+\begin{tabular}{l p{11cm}}
+
+% Notations & Meaning\\
+$pvCO2LC$ & Carbon footprint (in grams of \ch{CO2}-eq) to produce 1 kWh from a photovoltaic panel considering all the phases of its life cycle \\
+$batCO2LC$ & Carbon footprint (in grams of \ch{CO2}-eq) to deliver (or discharge) 1 kWh from a lithium-ion battery  considering all the phases of its life cycle \\
+$SUNRISE^d$ & A set with all the instants of time when the sun starts shining throughout the year (1 value per day) in the location of data center $d$ considering its time zone. \\
+$FPbat_k^d$ & Carbon emissions (in grams of \ch{CO2}-eq) of discharging energy from the battery of DC $d$ during time slot $k$ \\
+\end{tabular}
+\end{center}
+\end{table}
 
 
 \begin{equation} \label{eq:fppv_lca}
@@ -55,7 +70,7 @@ The carbon footprint model (presented in Section~\ref{sec:footprintmodel_ccgrid}
 For the batteries, the initial modeling considered the emissions of manufacturing related to their capacity. Now, to account for all the life cycle, the emissions relate to the energy delivered (discharged) by the batteries. Equation~\eqref{eq:fbat_lca} models the new footprint for batteries, where $batCO2LC$ represents the life-cycle emissions ($g\,\ch{CO2}\text{-}eq/kWh$).
 
 \begin{equation} \label{eq:fbat_lca}
-   FPbat^d_k =  Pdch^d_k \times batCO2LC \times \delta
+   FPbat^d_k =  Pdch^d_k \times batCO2LC \times \Delta t
  \end{equation}
 
 
@@ -70,6 +85,8 @@ Finally, the objective function also needs to be modified in order to include th
 \begin{equation} \label{eq:new_obj_co2_lca}
   \text{minimize }\sum_{k=0}^{K-1} \sum_{d=1}^D (FPgrid^d_k +  FPpv^d_k  + FPbat^d_k) 
 \end{equation}
+
+
 
 
 
@@ -145,7 +162,27 @@ In this section, we evaluate the impact on the carbon footprint of adding wind t
 \subsection{Updates in the model}
 \label{sec:ex_model_wt}
 
-The electrical model (see~\ref{sec:electrical_model_ccgrid}) needs to be updated to include the new renewable infrastructure. We consider a new variable $WT^d$ representing how many wind turbines will be built at each DC location. The number of wind turbines (WT) is an integer number (we cannot produce 1.2 WT for example). However, to avoid increasing the computational complexity of the LP by including integer variables, we made a relaxation in our modeling to allow the WT variable to be linear. 
+The electrical model (see~\ref{sec:electrical_model_ccgrid}) needs to be updated to include the new renewable infrastructure, and we show in Table~\ref{tab:notations_wt_model} the new notations used in the updated model. We consider a new variable $WT^d$ representing how many wind turbines will be built at each DC location. The number of wind turbines (WT) is an integer number (we cannot produce 1.2 WT for example). However, to avoid increasing the computational complexity of the LP by including integer variables, we made a relaxation in our modeling to allow the WT variable to be linear. 
+
+\begin{table}[t]
+\caption{New notations for the updated electrical and carbon footprint models  for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)}
+\label{tab:notations_wt_model}
+\begin{center}
+\begin{tabular}{l p{11cm}}
+
+% Notations & Meaning\\
+$WT^d$ & Number of Wind Turbines at DC $d$ \\
+$Pwt^d_k$ & Power generated from the wind turbines at DC $d$ during time slot $k$ \\
+$V^d_k$ & Wind speed (m/s) at the location of DC $d$ during time slot $k$ \\
+$Vici$ & Cut in wind speed (m/s), in which the WT starts producing power \\
+$Vco$ & Cut out wind speed (m/s), in which the WT does not generate more power \\
+$Pr$ & Rated power of the WT (in Watts) \\
+$wtCO2LC^d$ & Carbon emissions (in grams of \ch{CO2}-eq) of producing 1 kWh of energy from wind turbines taking into account all their life cycle \\
+$FPwt_k^d$ & Carbon emissions (in grams of \ch{CO2}-eq) of producing power from the wind turbines of DC $d$ during time slot $k$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
 
 The power production of the $WT^d$ wind turbines at the location of the data center $d$ at instant $k$ ($Pwt^d_{k}$) is modeled by Equation~\ref{eq:wt_power_prod}, where $V^d_k$ is the wind speed at location of the data center $d$ at instant $k$; $Vici$ is the \textit{cut in} wind speed, that is, the wind turbines start producing power when the wind speed is greater or equal to $Vici$; $Vco$ is the \textit{cut out} wind speed, that is, the wind turbines stop producing power when the wind speed is greater than $Vco$; $Pr$ is the rated power production in Watts of the wind turbine; and $Vr$ is the speed where the WT starts producing $Pr$ power. This model is based on \cite{HADDAD2021100505}.
 
@@ -548,6 +585,24 @@ One of the challenges in the sizing process is that once built, the dimensions o
 
 We need to update the workload model (see~\ref{sec:workload_model_ccgrid}) to evaluate the reduction in carbon emissions by delaying $\alpha$ percent of the workload up to $\beta$ time slots. We introduce two new variables to model this new feature. Let $alloc^d_k$ represent the required number of CPU cores to execute the workload allocated to the data center $d$ at the time slot $k$ and $delay_{k,i}^d$ be the required number of CPU cores to execute the workload of the data center $d$ that can be delayed from time slot $k$ up to $\beta$ time slots ($i$ is the index of the list of size $\beta$ for the delayed workload). 
 
+
+\begin{table}[t]
+\caption{New notations for the updated workload model  for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)}
+\label{tab:notations_wt_model}
+\begin{center}
+\begin{tabular}{l p{11cm}}
+
+% Notations & Meaning\\
+$\alpha$ & Ratio of the total workload that can be delayed (in percentage) \\
+$\beta$ & Number of time slots in which the execution of the workload can be delayed (the workload can be delayed up to $\beta$ time slots) \\
+$allocd_k$ & Number of CPU cores required to execute the workload that was not delayed at the location of DC $d$ during time slot $k$ \\
+$delay_{k,i}^d$ & Number of CPU cores required to execute the workload that was delayed at the location of DC $d$ from the time slot $k$ ($1 \leq i \leq \beta)$   \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
 This feature also requires new restrictions. Equation~\eqref{eq:alpha} models the flexibility of allowing $\alpha$ percent of the workload to be delayed, where $W_k$ is the input that represents the total CPU core demand to execute the workload at time slot k.
 
 
@@ -612,6 +667,31 @@ In the previous sections, we showed the results only in terms of the environment
 
 To perform this new analysis, we will introduce a new model: the monetary cost model. The first aspect modeled regards buying electricity from the regular grid, and it is modeled by Equation~\eqref{eq:pricegrid}, where $costGrid^d_k$ is an input that represents the costs of buying electricity at each location (in dollars per kWh) at time slot $k$.
 
+
+
+\begin{table}[t]
+\caption{Main notations for the monetary costs model  for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)}
+\label{tab:notations_wt_model}
+\begin{center}
+\begin{tabular}{l p{11cm}}
+
+% Notations & Meaning\\
+$PriceGrid^d_k$ & Total price of the electricity consumed from the grid of DC $d$ during time slot $k$  \\
+$costGrid^d_k$ & Price of buying electricity (in dollars per kWh) from the local electricity grid of DC $d$ during time slot $k$ \\
+$PricePV^d_k$ & Total price of the electricity consumed from the solar panels of DC $d$ during time slot $k$ \\
+$PVLCOE^d$ &Price of producing electricity (in dollars per kWh) from the solar panels of DC $d$ considering their Levelized Cost of Energy (LCOE) \\
+$PriceWT^d_k$ & Total price of the electricity consumed from the wind turbines of DC $d$ during time slot $k$ \\
+$WTLCOE^d$ & Price of producing electricity (in dollars per kWh) from the wind turbines of DC $d$ considering their Levelized Cost of Energy (LCOE) \\
+$PriceBat^d_k$ & Total price of the electricity discharged from the batteries of DC $d$ during time slot $k$ \\
+$BatLCOS^d$ & Price of discharging energy (in dollars per kWh) from the batteries of DC $d$ considering their Levelized Cost of Storage (LCOS) \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+
 \begin{equation} \label{eq:pricegrid}
  PriceGrid^d_k = Pgrid^d_k \times costGrid^d_k
 \end{equation}
@@ -633,7 +713,7 @@ For the wind turbines, we also use the LCOE to compute its price, and Equation~\
   PriceWT^d_k = PWT^d_k \times WTLCOE^d
 \end{equation}
 
-For the batteries, the metric Levelized Cost of Storage (LCOS) is similar to the LCOE, and it represents the cost per unit of energy discharged (dollars per kWh or MWh) that takes into account its whole life cycle: calendar and cycle life, Max Depth of Discharge limitations, and costs from operation and maintenance \cite{battery_lcos_2022}.  Equation~\eqref{eq:pricebat} models the costs of the energy used from the batteries using its LCOS as input ($BatLCOS$ in dollars per kWh of electricity discharged). To avoid oversizing the batteries, the restriction of Equation~\eqref{eq:b_initial_level} that makes the battery start empty at the beginning of the day is also used in this scenario.
+For the batteries, the metric Levelized Cost of Storage (LCOS) is similar to the LCOE, and it represents the cost per unit of energy discharged (dollars per kWh or MWh) that takes into account its whole life cycle: calendar and cycle life, Max Depth of Discharge limitations, and costs from operation and maintenance \cite{battery_lcos_2022}.  Equation~\eqref{eq:pricebat} models the costs of the energy used from the batteries using its LCOS as input ($BatLCOS$ in dollars per kWh of electricity discharged). To avoid oversizing the batteries, the restriction of Equation~\eqref{eq:b_initial_level} that makes the battery starts empty at the beginning of the day is also used in this scenario.
 
 \begin{equation} \label{eq:pricebat}
    PriceBat^d_k = Pdch^d_k \times BatLCOS
@@ -828,10 +908,12 @@ Finally, Figures ~\ref{fig:pv_co2_costs},  ~\ref{fig:bat_co2_costs}, and ~\ref{f
 \section{Adding or replacing servers considering new hardware and future workload }
 \label{sec:new_servers}
 
-In this section, we show the necessary modifications in our modeling to evaluate the decision to manufacture servers from new generations to match the cloud workload demand that increases year by year, considering that the servers also emit \ch{CO2} during their lifetime. It is assumed that the cloud federation will operate for the long term and that new servers will be launched during the lifetime of the cloud data centers. The decision-maker of the cloud federation will determine whether to add new servers to operate with the older ones from previous generations or to replace them, and can use forecasts of the cloud workload growth demand to guide the decision process.
+In this section, we show the necessary modifications in our modeling to evaluate the decision to manufacture servers from new generations to match the cloud workload demand that increases year by year, considering that the servers also emit \ch{CO2} during their lifetime. Table~\ref{tab:notations_add_replace_servers_model} presents the new notations used in the updated models. It is assumed that the cloud federation will operate for the long term and that new servers will be launched during the lifetime of the cloud data centers. The decision-maker of the cloud federation will determine whether to add new servers to operate with the older ones from previous generations or to replace them, and can use forecasts of the cloud workload growth demand to guide the decision process.
 \subsection{Updates in the model}
 
-To model this approach, the following modifications where performed in the IT model (see~\ref{sec:it_model_ccgrid}). Two new variables were created: $NS^d$, which represents the number of new servers to manufacture at the data center $d$; and $REP_{gen}^d$, the number of servers of the generation $gen$ to replace at the data center $d$. For replacing the servers from previous generations, it is considered that the data center computational capacity in the number of CPU cores cannot decrease, that is, the total number of CPU cores of the new servers needs to be greater or equal to the total number of CPU cores from the servers replaced. This constraint is modeled by Equation~\eqref{eq:dc_cpu_capacity}.
+To model this approach, the following modifications were performed in the IT model (see~\ref{sec:it_model_ccgrid}). Two new variables were created: $NS^d$, which represents the number of new servers to manufacture at the data center $d$; and $REP_{gen}^d$, the number of servers of the generation $gen$ to replace at the data center $d$. For replacing the servers from previous generations, it is considered that the data center computational capacity in the number of CPU cores cannot decrease, that is, the total number of CPU cores of the new servers needs to be greater or equal to the total number of CPU cores from the servers replaced. This constraint is modeled by Equation~\eqref{eq:dc_cpu_capacity}.
+
+
 
 \begin{equation} \label{eq:dc_cpu_capacity}
  NS^d \times cpucores_{newgen} \geq \sum_{oldergen}  REP_{oldergen}^d \times cpucores_{oldergen}
@@ -843,6 +925,34 @@ The number of servers replaced by a generation cannot be greater than the number
  REP_{gen}^d \leq ES_{gen}^d 
 \end{equation}
 
+
+\begin{table}[h]
+\caption{New notations for the IT, electrical and footprint models  for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)}
+\label{tab:notations_add_replace_servers_model}
+\begin{center}
+\begin{tabular}{l p{11cm}}
+
+% Notations & Meaning\\
+$NS^d$ & Number of new servers to be manufactured at DC $d$ \\
+$REP_{gen}^d$ & Number of servers from generation $gen$ to be replaced at DC $d$  \\
+$ES_{gen}^d$ & Number of servers from generation $gen$ that are in operation at DC $d$  \\
+$cpucores_{gen}$ & Number of CPU cores of the server from generation $gen$ \\
+$w_{k,gen}^d$ & Number of CPU cores allocated to the generation $gen$ servers to execute the workload of DC $d$ during the time slot $k$ \\
+$\gamma$ & Represents the ratio of the tasks that are service ($0 \leq \gamma \leq 1$) (and remaining $1 - \gamma$ that are batch type) \\
+$FPns^d$ & Carbon footprint (in kilograms of \ch{CO2}-eq) of manufacturing new servers at DC $d$ \\
+$FPrep^d$ &  Carbon footprint (in kilograms of \ch{CO2}-eq) of replacing servers at DC $d$ \\
+$FPes^d$ &  Carbon footprint (in kilograms of \ch{CO2}-eq) of the existing servers in operation at DC $d$ \\
+$\epsilon^d$ & Ratio of \ch{CO2}-eq emitted by year considering the server lifetime  ($0 \leq \epsilon \leq 1$) \\
+$serversCO2$ & Carbon footprint (in kilograms of \ch{CO2}-eq) of manufacturing one new server \\
+$age_{gen}$ & Age of the generation $gen$ servers in years \\
+$\mu$ & Ratio of the workload that will be executed in the servers of old generations ($0 \leq \mu \leq 1$) \\
+$lowboundbat^d$ & Capacity of the batteries (in kWh) of DC $d$ that is fixed during the sizing process \\
+$lowboundpv^d$ & Area of the solar panels (in m²) of DC $d$ that is fixed during the sizing process \\
+
+$lowboundwt^d$ & Number of wind turbines of DC $d$ that is fixed during the sizing process \\
+ \end{tabular}
+\end{center}
+\end{table}
 
 Given that a data center may have servers of different generations, it is also necessary to update the models regarding workload execution and power consumption. Now, we have a variable $w_{k,gen}^d$ that represents the workload that is executed on the servers of a generation $gen$ at the data center $d$ during a time slot $k$. We have two constraints for this variable: one for the servers that already exist in the DC, and another for the new servers that will be manufactured in the DC. Equation~\eqref{eq:workload_gen} models this constraint.
 
@@ -1124,9 +1234,9 @@ We observe that the optimal solution makes very few changes to the servers becau
   \hline
   \textbf{Scenarios} & \textbf{Emissions ($\mathbf{t\,\ch{CO2}\text{-}eq}$)}   \\
   \hline  
-   Optimal solution  &   246 867.03 \\  
+   Optimal solution  &   213 730.59  \\  
   \hline
-   Greedy approach   &   213 730.59  \\
+   Greedy approach   &  246 867.03  \\
   \hline
 \end{tabular}
 \end{table}
@@ -1165,7 +1275,7 @@ This section presents the reader with an analysis of the experiments and their r
 
 We made the modifications in our modeling---that initially only considered emissions from manufacturing---and, as expected, there was an increase in the total emissions---around 8\%. It is also possible to observe that the area of PVs was reduced in most of the locations---Figure ~\ref{fig:pv_lca}, except for Johannesburg. This could be explained by the fact that Johannesburg is the location that receives the most solar irradiation throughout the year, so it could compensate for the decrease in PV area in the other locations. Regarding the batteries, the reduction in Pune, Seoul, and Singapore could be justified by the smaller PV area, as there will be less energy to store.
 
-On the other hand, we see an increase in battery capacity at the other locations. This could be justified by having a smaller PV area so the renewable energy cannot be wasted. Finally, including the life cycle aspect makes our modeling more realistic, and the emissions are still better than the scenario where only power from the local electricity grid is used in terms of carbon footprint---81\% in the scenario with PV and batteries.  
+Finally, including the life cycle aspect makes our modeling more realistic, and the emissions are still better than the scenario where only power from the local electricity grid is used in terms of carbon footprint---81\% in the scenario with PV and batteries.  
 
 
 % Talk about adding wind turbines

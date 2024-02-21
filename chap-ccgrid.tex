@@ -5,7 +5,7 @@ In the previous chapter, we saw the adoption of the carbon-aware technique follo
 
 The scenario considered has some differences to better represent modern cloud providers. First, it is considered that the DCs are geographically distributed worldwide, representing real cloud providers such as Google and Microsoft (as seen in Figure~\ref{fig:dc_locations}). Many reasons justify the need for geographically distributed DCs: i) meet the demand for the ever-increasing number of users; ii) redundancy, for example, if there is a problem in some region, the workload can be shifted to another location; iii) reduce the latency or response time for the users. This geographic distribution also allows for a better harvest of renewable sources, since there are more variable climate conditions, solar irradiation levels are different between the countries, as are the speed and frequency of the  wind. Second, many locations in the world have the presence of low-carbon-intensive sources in their local electricity grid, therefore in reality, there is not only a green and brown classification (as seen in the previous chapter). The classification into brown and green made sense in the previous scenario since it was considered only a single country, and renewable energy was less carbon-intensive than the local electricity grid. Finally, energy storage devices can be used to store the overproduction of renewable energy and use it when opportune.
 
-One point that cannot be neglected is that manufacturing renewable infrastructure also presents an environmental impact: batteries have an ideal level of charge that can improve their lifetime, which can reduce the replacement frequency, but on the other hand, it causes them to be oversized \cite{batteries_baumman}, and their recycling rates still need to improve \cite{bateries_RAHMAN}; and considering the current state-of-the-art PVs, if they produce 40\% of the global electricity by 2050, they will consume about 5\% of today’s ${CO_2}$ budget \cite{solar_co2}.
+One point that cannot be neglected is that manufacturing renewable infrastructure also presents an environmental impact: batteries have an ideal level of charge that can improve their lifetime, which can reduce the replacement frequency, but on the other hand, it causes them to be oversized \cite{batteries_baumman}, and their recycling rates still need to improve \cite{bateries_RAHMAN}; and considering the current state-of-the-art PVs, if they produce 40\% of the global electricity by 2050, they will consume about 5\% of today’s \ch{CO2} budget \cite{solar_co2}.
 
 In this chapter, we explore the adoption of both strategies, sizing the PVs and batteries and scheduling with follow-the-renewables to reduce the carbon footprint of operating existing cloud platforms. More specifically, this chapter presents the following contributions:
 
@@ -75,8 +75,9 @@ In this section, we introduce how we modeled the optimization problem of reducin
 
 \begin{table}[!t]
 \caption{Main notations for the IT model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)\label{table:variablesIT}}
+\label{tab:notations_it_model}
 \begin{center}
-\begin{tabular}{l p{6cm}}
+\begin{tabular}{l p{11cm}}
 
 % Notations & Meaning\\
 
@@ -93,14 +94,7 @@ $Pidle^d$ & static power consumption of all the servers of $DC^d$ \\
 $Pintranet^d$ & power consumption of network devices of the $DC^d$  \\
 $P_k^d$ & the power demand to perform tasks on $DC^d$ during time slot $k$ \\ 
 $PUE^d$ & Power Usage Effectiveness of the data center $d$\\ 
-\\
-$\mathcal{T}$ & the workload to execute ($ = \{ T_i\ |\ 1\leq i\leq N\}$) \\
-$T_i$ & task $i$ of the workload $\mathcal{T}$ ($1\leq i\leq N$) \\
-$r_i$ & release date of tasks $T_i$\\
-$p_i$ & processing time of tasks $T_i$\\
-$c_i$ & number of CPU cores needed to execute task $T_i$\\ 
-$w_k$ & number of required CPU cores to execute all the tasks during the $k$th time slot \\
-$w_k^d$ & number of CPU cores needed to execute all the tasks during the $k$th time slot on $DC^d$\\ \\\end{tabular}
+\\\end{tabular}
 \end{center}
 \end{table}
 
@@ -109,11 +103,8 @@ $w_k^d$ & number of CPU cores needed to execute all the tasks during the $k$th t
 
 \subsubsection{IT model} 
 \label{sec:it_model_ccgrid}
-
 Let $\mathcal{H}$  be the decision horizon where task scheduling decisions can be taken. To do so, we propose discretizing $\mathcal{H}$ into $K$ indivisible time slots with a duration of $\Delta t$ such that $\mathcal{H} = K\times\Delta t$. To simplify the notations, we consider $\Delta t = 1 u.t.$ (unit of time). In our experiments, we will assume that $\Delta t = 1h$ such that $K = 8760\,h$ with $\mathcal{H} = 1$ year. 
 Let $k$ be the time slot index that addresses any instant $t$ such that $k\Delta t\leq t < (k+1)\Delta t$ with $0\leq k< K$. 
-
-
 
 Let $\mathcal{DC} = \{DC^d \ | \ d=1, \ldots, D\}$ be the set of data centers in the cloud federation. Considering a given data center $DC^d$, let $C^d$ be its number of CPU cores and $Pcore$ the energy used to power one core.
 
@@ -121,7 +112,7 @@ Let $\mathcal{DC} = \{DC^d \ | \ d=1, \ldots, D\}$ be the set of data centers in
 The power consumption of a cloud data center can be classified as static or dynamic~\cite{ahvar22_estimating_cloud_cons}. For the static part, the current model considers the idle power consumption $Pidle^d$ of the servers, the Power Usage Effectiveness (PUE) to represent the power consumption used to cool the DC infrastructure, and the power consumption of the network switches $Pintranet^d$ that interconnect the servers in each data center $DC^d$. Regarding the latter, cloud data centers usually adopt the fat-tree topology to interconnect servers in the DC~\cite{ahvar22_estimating_cloud_cons}. In this topology, one can compute the number of network switches needed to match the number of servers. The power consumption of the network switches is considered to be static based on actual measurements, which have shown that the consumption does not change significantly with device usage~\cite{Hlavacs2009_energy_network_devices}. Moreover, each geographic location has different cooling needs, therefore each DC has a specific $PUE^d$ value. 
 
 
-Finally, the dynamic part of the power consumption is represented by the additional power demand generated by using the CPU cores in each data center to execute the workload that requires $ w^d_k$ CPU cores assigned to the DC $d$ at time slot $k$ . Equation~\eqref{eq:power_cons} represents the power consumption of each DC for each step $k$ ($0\leq k<K$):
+Finally, the dynamic part of the power consumption is represented by the additional power demand generated by using the CPU cores in each data center to execute the workload that requires $ w^d_k$ CPU cores assigned to the DC $d$ at time slot $k$ . Equation~\eqref{eq:power_cons} represents the power consumption of each DC for each step $k$ ($0\leq k<K$).  Table~\ref{tab:notations_it_model} summarizes the main notations of the IT model.
 
 \begin{equation} \label{eq:power_cons}
    P^d_k  = PUE^d \times \big( Pidle^d + Pintranet^d + Pcore \times w^d_k\big)
@@ -131,7 +122,27 @@ Finally, the dynamic part of the power consumption is represented by the additio
 
 \subsubsection{Workload model}
 \label{sec:workload_model_ccgrid}
-Considering the workload that needs to be executed, let $\mathcal{T} = \{T_i \ | \ i=1, \ldots, N\}$ be the set of $N$ tasks that have to be finished in time during the time horizon $\mathcal{H}$. Each task $T_i$ has the following properties: i) release date $r_i$; ii)  processing time $p_i$;  and iii) it needs $c_i$ CPU cores at 100\% of usage to be executed. Let $w_k$ be the total number of CPU cores needed to compute tasks during the time slot $k$ in order to complete the workload in time. At each time step, $w_k$ is the sum of all cores required by the tasks executed in time slot $k$, and given that the tasks will be scheduled to the DCs,  $w_k^d$ is the sum of the number of cores used to execute the allocated workload in $\mathcal{DC}$ (with $1\leq d\leq D)$ and $0\leq k<K$) as shown by Equation~\eqref{eq:wk}:
+
+\begin{table}[!t]
+\caption{Main notations for the Workload model for each $DC^d$ ($1\leq d\leq D$) during time slot $k$ ($0\leq k< K$)}
+\label{tab:notations_workload_model}
+\begin{center}
+\begin{tabular}{l p{11cm}}
+% Notations & Meaning\\
+$\mathcal{T}$ & the workload to execute ($ = \{ T_i\ |\ 1\leq i\leq N\}$) \\
+$T_i$ & task $i$ of the workload $\mathcal{T}$ ($1\leq i\leq N$) \\
+$r_i$ & release date of tasks $T_i$\\
+$p_i$ & processing time of tasks $T_i$\\
+$c_i$ & number of CPU cores needed to execute task $T_i$\\ 
+$w_k$ & number of required CPU cores to execute all the tasks during the $k$th time slot \\
+$w_k^d$ & number of CPU cores needed to execute all the tasks during the $k$th time slot on $DC^d$\\ 
+\\\end{tabular}
+\end{center}
+\end{table}
+
+
+
+Considering the workload that needs to be executed, let $\mathcal{T} = \{T_i \ | \ i=1, \ldots, N\}$ be the set of $N$ tasks that have to be finished in time during the time horizon $\mathcal{H}$. Each task $T_i$ has the following properties: i) release date $r_i$; ii)  processing time $p_i$;  and iii) it needs $c_i$ CPU cores at 100\% of usage to be executed. Let $w_k$ be the total number of CPU cores needed to compute tasks during the time slot $k$ in order to complete the workload in time. At each time step, $w_k$ is the sum of all cores required by the tasks executed in time slot $k$, and given that the tasks will be scheduled to the DCs,  $w_k^d$ is the sum of the number of cores used to execute the allocated workload in $\mathcal{DC}$ (with $1\leq d\leq D)$ and $0\leq k<K$) as shown by Equation~\eqref{eq:wk}. Table~\ref{tab:notations_workload_model} summarizes the notations of the workload model.
 
 \begin{equation} \label{eq:wk}
     w_k = \sum_{T_i|r_i\leq k\Delta t<r_i+p_i} c_i = \sum_d w_k^d
@@ -144,8 +155,9 @@ Considering the workload that needs to be executed, let $\mathcal{T} = \{T_i \ |
 
 \begin{table}[t]
 \caption{Main notations for the Electrical model of each $DC^d$ ($1\leq d\leq D$) during each time step $k$ ($0\leq k<K$)\label{table:variablesElec}}
+\label{tab:notations_elec_model}
 \begin{center}
-\begin{tabular}{l p{6cm}}
+\begin{tabular}{l p{11cm}}
 %Notations & Meaning\\
 $I^d_k$ & solar irradiation at time slot $k$ [$Wh/m^2$] \\
 $Apv^d$ & surface area of photovoltaic panels of DC $DC^d$ [$m^2$] \\ 
@@ -155,7 +167,7 @@ $Pgrid_k^d$ & power consumed from the grid at time slot $k$ [$W$]\\
 $Pre_k^d$ & power generated from the PVs during the time slot $k$ [$W$] \\
 \\
 $BAT^d$ & battery capacity installed in $DC^d$ [$Wh$] \\
-$B_k^k$ & battery level of energy at the time $k\times\Delta t$ [$Wh$] \\
+$B_k^d$ & battery level of energy at the time $k\times\Delta t$ [$Wh$] \\
 $Pch_k^d$ & power charged in the batteries during the time slot $k$ [$W$]\\
 $Pdch_k^d$ & power discharged from the batteries during the time slot $k$ [$W$] \\
 $\eta_{ch}$ & efficiency of the charging process  \\
@@ -165,8 +177,7 @@ $\eta_{dch}$ & efficiency of the discharging process  \\
 \end{center}
 \end{table}
 
-
-The power supply of the whole cloud platform $\mathcal{DC}$ has three sources: i) the renewable energy generated by the solar panels (PVs) installed on each $DC^d$ site; ii)  the classical electrical grid $Pgrid_k^d$ of each country on which $DC^d\in\mathcal{D}$ is hosted---used as backup when the power from the renewable infrastructure is not enough; and iii) energy discharged from the energy storage devices. The storage devices are mandatory to mitigate the intermittency of solar power by storing the overproduction when the sun shines to provide energy during the night when the solar panels do not produce power. Lithium-Ion batteries have been chosen to play this role because of their good efficiency in terms of costs, power and energy density, charge and discharge rates, and self-discharge~\cite{wang2012_EDCS}. To model the fact that the cloud platform will not sell back energy to the grid, there is the constraint that the power from the grid ($Pgrid^d_k$) is always positive.
+The power supply of the whole cloud platform $\mathcal{DC}$ has three sources: i) the renewable energy generated by the solar panels (PVs) installed on each $DC^d$ site; ii) the classical electrical grid $Pgrid_k^d$ of each country on which $DC^d\in\mathcal{D}$ is hosted---used as backup when the power from the renewable infrastructure is not enough; and iii) energy discharged from the energy storage devices. The storage devices are mandatory to mitigate the intermittency of solar power by storing the overproduction when the sun shines to provide energy during the night when the solar panels do not produce power. Lithium-Ion batteries have been chosen to play this role because of their good efficiency in terms of costs, power and energy density, charge and discharge rates, and self-discharge~\cite{wang2012_EDCS}. To model the fact that the cloud platform will not sell back energy to the grid, there is the constraint that the power from the grid ($Pgrid^d_k$) is always positive. Table~\ref{tab:notations_elec_model} summarizes the main notations of the electrical model.
 
 Equation~\eqref{eq:predk} models the on-site renewable power production,  it depends on the solar irradiation $I^d_k$ received at the location of $DC^d$ during the time slot $k$, on the surface area of the solar panels $Apv^d$ and on the efficiency $\eta_{pv}$ of the PVs. 
 
@@ -175,7 +186,7 @@ Equation~\eqref{eq:predk} models the on-site renewable power production,  it dep
 \end{equation}
 
 
-Batteries are systematically installed next to the PVs for the reasons mentioned above. Let $B^d_k$ be the battery level of energy, that is, the amount of energy (in $Wh$) at time $k\time\Delta t$ stored in batteries of capacity $BAT^d$ installed in $DC^d$ ($B^d_0 = Binit^d$ being the amount of energy at the beginning the time horizon $\mathcal{H}$). The variable $Pch_k^d$ represents the power charged in the batteries of DC $d$ during the time slot $k$ (and $Pdch_k^d$ is the power discharged from the batteries). It is not possible to charge and discharge simultaneously: if $Pch^d_k$ is greater than zero, $Pdch^d_k$ equals zero and vice versa. Regarding the battery modeling, the charging and discharging processes have an efficiency $\eta_{ch}$ and $\eta_{dch}$ less than 1. Lithium-Ion batteries have a low value for daily self-discharge (0.5\,\% per day)~\cite{wang2012_EDCS}, thus this property was not modeled. Finally, to increase the battery's lifetime, it cannot be discharged more than its Maximum Depth of Discharge.
+Batteries are systematically installed next to the PVs for the reasons mentioned above. Let $B^d_k$ be the battery level of energy, that is, the amount of energy (in $Wh$) at time $k\times\Delta t$---the instant of time at the beginning of the time slot $k$---stored in batteries of capacity $BAT^d$ installed in $DC^d$ ($B^d_0 = Binit^d$ being the amount of energy at the beginning the time horizon $\mathcal{H}$). The variable $Pch_k^d$ represents the power charged in the batteries of DC $d$ during the time slot $k$ (and $Pdch_k^d$ is the power discharged from the batteries). It is not possible to charge and discharge simultaneously: if $Pch^d_k$ is greater than zero, $Pdch^d_k$ equals zero and vice versa. Regarding the battery modeling, the charging and discharging processes have an efficiency $\eta_{ch}$ and $\eta_{dch}$ less than 1. Lithium-Ion batteries have a low value for daily self-discharge (0.5\,\% per day)~\cite{wang2012_EDCS}, thus this property was not modeled. Finally, to increase the battery's lifetime, it cannot be discharged more than its Maximum Depth of Discharge.
 
 Equation~\eqref{eq:bdk} models the battery in terms of the level of energy:
 
@@ -186,7 +197,6 @@ with $0.2\times BAT^d \leq B^d_k\leq 0.8\times BAT^d$ for any time slot $k$ and 
 
 
 \subsubsection{Carbon footprint model} \label{sec:footprintmodel_ccgrid}
-
 
 In the current model, carbon emissions from operating the cloud platform originate from three sources: (i) consuming power from the regular electrical grid and manufacturing both (ii) the photovoltaic panels and (iii) the batteries. Equation~\eqref{eq:fpgrid} models the carbon footprint of the regular local electrical grid, defined by the carbon intensity of the power grid $gridCO2^d$ in the region of the data center $DC^d$  times the amount of energy used during the time slot $k$.
 
@@ -208,7 +218,7 @@ where $FPpv_{1m2}$ is the emissions of manufacturing $1\,m^2$ PV in g\,\ch{CO2}-
 \end{equation}
 
 
-Regarding the batteries' carbon footprint $FPbat^d$ of the $DC^d$, it is computed based on their capacity $BAT^d$ ($kWh$) and the carbon emissions of the manufacturing process $batCO2$ in $g\,\ch{CO2}\text{-}eq/kWh$ , as seen in Equation~\eqref{eq:fbat}. To be consistent with the calculation of $FPpv^d_k$, $batCO2$ is the share of the carbon footprint of the battery type chosen for a capacity of $1\,kWh$ over the time horizon of $\mathcal{H}$, assuming a battery has a lifetime of 10 years. Thus, given that we are considering one year of cloud operation, $batCO2$ is the tenth of the total carbon footprint of the considered battery. It is considered that the battery carbon footprint is homogeneous for all the locations, as the climate conditions do not influence it.
+Regarding the batteries' carbon footprint $FPbat^d$ of the $DC^d$, it is computed based on their capacity $BAT^d$ ($kWh$) and the carbon emissions of the manufacturing process $batCO2$ in $g\,\ch{CO2}\text{-}eq$ , as seen in Equation~\eqref{eq:fbat}. To be consistent with the calculation of $FPpv^d_k$, $batCO2$ is the share of the carbon footprint of the battery type chosen for a capacity of $1\,kWh$ over the time horizon of $\mathcal{H}$, assuming a battery has a lifetime of 10 years. Thus, given that we are considering one year of cloud operation, $batCO2$ is the tenth of the total carbon footprint of the considered battery. It is considered that the battery carbon footprint is homogeneous for all the locations, as the climate conditions do not influence it.
 
 \begin{equation} \label{eq:fbat}
    FPbat^d =  BAT^d \times batCO2
@@ -216,6 +226,26 @@ Regarding the batteries' carbon footprint $FPbat^d$ of the $DC^d$, it is compute
 
 
 These modifications regarding the lifetime of PVs and batteries were necessary because we are considering only one year of cloud operation. Suppose we use the total carbon emissions for manufacturing the PVs (lifetime of 30 years) and batteries (lifetime of 10 years) in our scenario of one year of operation. In that case, the solver will find a solution where there is little to no PV or batteries because using the regular electrical grid would be less carbon-intensive.
+
+
+\begin{table}[t]
+\caption{Main notations for the carbon footprint model of each $DC^d$ ($1\leq d\leq D$) during each time step $k$ ($0\leq k<K$)\label{table:variablesElec}}
+\label{tab:notations_elec_model}
+\begin{center}
+\begin{tabular}{l p{11cm}}
+
+%Notations & Meaning\\
+$gridCO2^d$ & Carbon intensity of the electricity grid in the region of the DC $d$ (in grams of \ch{CO2}-eq per kWh)\\
+$FPgrid_k^d$ & Carbon emissions (in grams of \ch{CO2}-eq) of consuming $Pgrid_k^d \times \Delta t$ kWh from the local electricity grid of the DC $d$ \\
+$FPpv_{1m2}$ & Carbon emissions (in grams of \ch{CO2}-eq) of manufacturing 1 $m^2$ solar panel \\
+$expectedEpv^d$ & Expected energy production that  1 $m^2$ solar panel will produce during its lifetime at the location of DC $d$ \\
+$pvCO2^d$   & Carbon intensity of producing power at the location of DC $d$ (in grams of \ch{CO2}-eq per kWh) \\
+$FPpv_k^d$  & Carbon emissions (in  grams of \ch{CO2}-eq) of generating $Pre_k^d\times \Delta t$ kWh from the solar panels at the DC $d$ \\
+$batCO2$    & Carbon emissions (in grams of \ch{CO2}-eq) of manufacturing a battery with 1 kWh capacity \\
+$FPbat^d$ & Carbon emissions (in grams of \ch{CO2}-eq) of manufacturing a battery with capacity of $Bat^d$ \\
+\end{tabular}
+\end{center}
+\end{table}
 
 
 \subsection{Objective function}
@@ -428,7 +458,7 @@ To analyze the sources of energy that supplied the DCs operation, we present in 
   \label{fig:power_ratio_hourly}
 \end{figure}
 
-In order to assess the optimal solution of the LP, we compared it with two other scenarios in terms of total carbon emissions (tons of \ch{CO2}-eq): i) the DCs are only supplied by power from the regular electrical grid, and ii) the DCs are only supplied by renewable power from the photovoltaic panels and batteries. Table~\ref{tab:emissions} presents the results. In comparison with the first scenario (only grid power), the reduction in the \ch{CO2} emissions was approximately 85\%, and it was approximately 30\% for the second scenario (only renewable power).
+Table~\ref{tab:emissions} presents the total \ch{CO2} emissions of the cloud operation using our approach and the two other scenarios---only using the on-site renewable infrastructure and exclusively using power from the grid. In comparison with the first scenario (only grid power), the reduction in the \ch{CO2} emissions was approximately 85\%, and it was approximately 30\% for the second scenario (only renewable power).
 
 
 \begin{table}[h]
@@ -448,10 +478,10 @@ In order to assess the optimal solution of the LP, we compared it with two other
 \end{tabular}
 \end{table}
 
-To further evaluate these scenarios, we present in Table~\ref{tab:dcutilization} results in terms of the average load each DC executed throughout the year (Data Center Utilization metric). Equation~\eqref{eq:dcload} represents how the metric was computed for each DC $d$. One may notice that the Johannesburg DC received no load in the scenario where only grid power is used. This is justified by two reasons: i) there is no restriction to the amount of workload the data centers need to receive in our initial modeling; and ii) Johannesburg has the most carbon-intensive electrical grid, so the LP decided to use all the DCs in all the other locations to minimize the carbon footprint of the global cloud operation.
+To further evaluate these scenarios, we present in Table~\ref{tab:dcutilization} results in terms of the average load each DC executed throughout the year (Data Center Utilization metric), and Equation~\eqref{eq:dcload} represents how this metric was computed for each DC $d$. One may notice that the Johannesburg DC received no load in the scenario where only grid power is used. This is justified by two reasons: i) there is no restriction to the amount of workload the data centers need to receive in our initial modeling; and ii) Johannesburg has the most carbon-intensive electrical grid, so the LP decided to use all the DCs in all the other locations to minimize the carbon footprint of the global cloud operation.
 
 \begin{equation}\label{eq:dcload}
-\frac{\sum_k w^d_k} {C^d \times K }
+DCU = \frac{\sum_k w^d_k} {C^d \times K }
 \end{equation}
 
 

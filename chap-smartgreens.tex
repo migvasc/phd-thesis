@@ -1,6 +1,6 @@
 \section{Introduction}
 
-The ``follow-the-renewables'' approach (the reader may consult Chapter 2 for more details) is an interesting strategy for mitigating the intermittency of renewable energy availability without the need to use energy storage devices. For example, when it is night in the location where a DC A resides, the workload could be migrated to another DC B where the sun is still shining to use solar power---as seen in Figure~\ref{fig:ex_follow_the_renewables}.
+The ``follow-the-renewables'' approach (the reader may consult Chapter~\ref{chap:background} for more details) is an interesting strategy for mitigating the intermittency of renewable energy availability without the need to use energy storage devices. For example, when it is night in the location where a DC A resides, the workload could be migrated to another DC B where the sun is still shining to use solar power---as seen in Figure~\ref{fig:ex_follow_the_renewables}.
 
 Despite its benefits, one cannot neglect the limitations of the follow-the-renewables strategy. First, the process of migrating a VM between different DCs consumes energy itself: it uses network devices (such as switches and routers) and a computational task for the live migration process. The scheduling algorithm must consider this energy consumption before deciding if the migration is advantageous. Second, the network communications links that connect the servers inside the DC and the different DCs can suffer from congestion, which may increase migration duration. This results in unnecessary computation and energy consumption on both the origin and the target servers: the server that is sending the VM needs to wait for the migration process to finish to free its resources and receive additional VMs, or it could be turned off as well to save energy; the server that is receiving the VM will only start executing the new VM after the end of the migration process. An efficient scheduling algorithm must consider those factors to decrease the carbon footprint of the DCs operations.
 
@@ -68,23 +68,23 @@ In this section, we present how we extended the NEMESIS algorithm to perform the
 \subsection{Estimating the duration of the live migration}
 \label{sec:estimating_mig_duration}
 
-The duration of the migration is essential information for the scheduling decision, as it can help avoid oversaturating the network links and generating network congestion. Algorithm~\ref{alg:estimation} is an extension of the NEMESIS algorithm, and it executes this estimation, where: \textit{linkLatency} is the latency of the link; \textit{routeSize} is the number of links that interconnects the host where the VM is originally running to the target host of the migration; \mbox{\textit{windowSize}} = 4,194,304 Bytes, is the TCP maximum window size; \textit{bandWidthRatio} = 0.97, represents the additional load caused by the headers of TCP/IP; \textit{bandwidth} = the minimum bandwidth among the links that interconnect the host of origin with the target host; $\alpha$ = 13.01, simulates the TCP slow start factor, that is, not all the bandwidth is instantly available for the communication; and $\gamma$ is used to represent the Bottleneck effect of the TCP protocol. The parameters used in Algorithm~\ref{alg:estimation} were based on the study from~\citet{velho2013simgridparameters}. 
-
-The difference between Algorithm~\ref{alg:estimation}  and NEMESIS is the \textit{routeSize} variable: NEMESIS used fixed values (5 for live migrations intra-DC, and 11 for live migrations inter-DC), and now it is assumed that the cloud operator has information about the network topology of his DCs, thus the real number of links that interconnect the two hosts is used.
+The duration of the migration is essential information for the scheduling decision, as it can help avoid oversaturating the network links and generating network congestion. Algorithm~\ref{alg:estimation} is an extension of the NEMESIS algorithm, and it executes this estimation, where: \textit{linkLatency} is the latency of the link; \textit{routeSize} is the number of links that interconnects the host where the VM is originally running to the target host of the migration; \mbox{\textit{windowSize}} = 4,194,304 Bytes, is the TCP maximum window size; \textit{bandWidthRatio} = 0.97, represents the additional load caused by the headers of TCP/IP; \textit{bandwidth} = the minimum bandwidth among the links that interconnect the host of origin with the target host; $\alpha$ = 13.01, simulates the TCP slow start factor, that is, not all the bandwidth is instantly available for the communication; and $\gamma$ is used to represent the Bottleneck effect of the TCP protocol; the computation of the value $throughputL$ models the TCP flow control---high network latency values can impact the available bandwidth. The parameters and computations used in Algorithm~\ref{alg:estimation} were based on the study from~\citet{velho2013simgridparameters}. The algorithm is also inspired in the VM live-migration model of the Simgrid framework, which has three phases~\cite{simgrid_live_migration}---which justifies the constant 3 in the last line of the algorithm which computes the total time to migrate.
 
 \begin{algorithm}[h]
 \begin{algorithmic}
 \caption{Estimation of the migration duration.}\label{alg:estimation}
-\State $theLatency \gets linkLatency \cdot routeSize$
+\State $theLatency \gets linkLatency \times routeSize$
 \State $transferLat \gets theLatency + \frac{\gamma}{bandwidth}$
-\State $throughputL \gets \frac{windowSize}{2 \cdot transferLatency}$
+\State $throughputL \gets \frac{windowSize}{2 \times transferLat}$
 \State $throughputB \gets bandwidth$
 \State $throughput \gets min(throughputL, throughputB)$
-\State $throughput \gets throughput 
-\cdot bandWidthRatio$
-\State $timeToMigrate \gets  3 \cdot \alpha \cdot transferLat + \frac{vmRamSize}{throughput}$ 
+\State $throughput \gets throughput \times bandWidthRatio$
+\State $timeToMigrate \gets  3 \times \alpha \times transferLat + \frac{vmRamSize}{throughput}$ 
 \end{algorithmic}
 \end{algorithm}
+
+
+The difference between Algorithm~\ref{alg:estimation}  and NEMESIS is the \textit{routeSize} variable: NEMESIS used fixed values (5 for live migrations intra-DC, and 11 for live migrations inter-DC), and now it is assumed that the cloud operator has information about the network topology of his DCs, thus the real number of links that interconnect the two hosts is used.
 
 \subsection{Planning the migrations}
 \label{sec:planning_migrations}
@@ -94,7 +94,7 @@ Algorithms~\ref{alg:general} and~\ref{alg:detailed} plan the VM migrations consi
 
 \begin{algorithm}[h]
 \begin{algorithmic}
-\caption{Migration planning at mulit-cloud level.}\label{alg:general}
+\caption{Migration planning at multi-cloud level.}\label{alg:general}
 
 \State $DCs$ \Comment{Sorted by increasing ERGE}
 \State $plannedTime \gets 0$
@@ -129,10 +129,10 @@ Algorithms~\ref{alg:general} and~\ref{alg:detailed} plan the VM migrations consi
 \State $VMs \gets$ list of VMs of $dc\_tx$
 \For{$vm$ in $VMs$}
     \State $origin \gets$ server where the $vm$ is running
-    \State $target \gets$ server from $dc\_rx$ being evaluated
+    \State $target \gets$ server from $dc\_rx$ being evaluated that has available computational resources (CPU and RAM) to host the VM
     \State $worth \gets brownMig < brownNotMig $
     \State $e\_time \gets $ estimate the migration time using Alg.~\ref{alg:estimation} 
-    \State $band\_ok \gets$ links between $source$ and $target$ can receive the additional load of the migration
+    \State $band\_ok \gets$ links between $origin$ and $target$ can receive the additional load of the migration
     \If{ $worth$ and $band\_ok$ }
     \State registers the planning of the migration and updates the link history   
     \EndIf
@@ -144,7 +144,7 @@ Algorithms~\ref{alg:general} and~\ref{alg:detailed} plan the VM migrations consi
 Algorithm~\ref{alg:general} is used to plan the migrations of the multi-cloud. Initially, the DCs are sorted by increasing order of expected remaining green energy (ERGE). Let $dc\_tx$  be the index of the position of the DC with the least available energy---initially at the beginning of the list, and it will be the candidate to send VMS, and $dc\_rx$ the index of the position of the DC with the most green energy---initially at the end of the list, and it is the candidate to receive the VMs. The main idea of the algorithms is to migrate VMs from the DCs that are expected to use brown energy to the DCs that are expected to have green energy. 
 
 In order to evaluate if it is possible to migrate VMs from $dc\_tx$ to $dc\_rx$ and if it is worth---the brown energy consumption will be reduced---Algorithm~\ref{alg:general} uses the Algorithm~\ref{alg:detailed}, which works as follows. 
-First, the algorithm extracts the information about the running VMs (grouped by the servers) of the DC $dc\_tx$. The planning starts at the beginning of the time slot. For each VM that can be migrated, the algorithm tries to find a server in the destination DC $dc\_rx$ with the following restrictions: i) it has available computational resources to host the VM (CPU and memory); ii) the links that interconnect the server of origin (where the VM is running) and the target server can receive the additional load of the migration without violating their bandwidth constraint; iii) the VM migration finishes during the current time slot (if the destination server is off, the time to turn the server on is taken into account); and iv) performing the migration reduces the expected brown energy consumption. 
+First, the algorithm extracts the information about the running VMs (grouped by the servers) of the DC $dc\_tx$. The planning starts at the beginning of the time slot. For each VM that can be migrated, the algorithm tries to find a server in the destination DC $dc\_rx$ with the following restrictions: i) it has available computational resources to host the VM (CPU and memory); ii) the links that interconnect the server of origin (where the VM is running) and the target server can receive the additional load of the migration without violating their bandwidth constraint; iii) the VM migration finishes during the current time slot (if the destination server is off, the time to turn the server on is taken into account); and iv) performing the migration reduces the expected brown energy consumption. The fourth restriction uses the original NEMESIS algorithm to compute the expected brown energy consumption when performing the migration ($brownMig$) and the expected brown energy consumption if the VM remains executing in the same server ($brownNotMig$).
 
 If all these restrictions are respected, the VM is planned to migrate, and the algorithm registers in the \textit{linkHistory} that the links that connect these two servers will be used until the instant when the VM migration is expected to finish in order to compute the available bandwidth of the network links.  If there are still remaining VMs that could be migrated from DC $dc\_tx$, the algorithm will try to migrate them to DC $dc\_rx -1 $, and so on, until all the VMs from DC $dc\_tx$ are planned to be migrated or all the DCs are processed. After finishing processing the DC $dc\_tx$, the algorithm repeats the same process for the DC $dc\_tx +1$ until all the DCs are processed.
 
@@ -289,13 +289,13 @@ In order to evaluate the estimation algorithm for the duration of the migrations
   \hline
   \textbf{Algorithm} & \textbf{W}  & \textbf{M.A.P.E.} & \textbf{R.M.S.E.}\\
   \hline
-  c-NEMESIS  & G & 0.70  & 0.395 \\
-  \hline
   NEMESIS & G & 32.895 & 18.56 \\
   \hline
-  c-NEMESIS  & A & 0.649  & 0.432 \\
+  c-NEMESIS  & G & 0.70  & 0.395 \\
   \hline
   NEMESIS & A & 34.01 & 20.03 \\
+  \hline
+  c-NEMESIS  & A & 0.649  & 0.432 \\
   \hline
 \end{tabular}
 \end{table}

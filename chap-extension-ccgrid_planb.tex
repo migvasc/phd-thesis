@@ -57,7 +57,7 @@ For the batteries, the initial modeling considered the emissions of manufacturin
  \end{equation}
 
 
-Considering that now the information used for computing the batteries' emissions is the power discharged, we need to add a restriction for the batteries being used only for night computations, otherwise the solver may compute a solution where the batteries will be oversized to store all the excess of renewable energy during summer to supply during winter, resulting in GWh of capacity --- which is a problem considering the other environmental impact of batteries as their recycle rates needs yet to improve \cite{batteries_baumman}. Equation~\eqref{eq:b_initial_level}  models this restriction, where $SUNRISE^d$ is the set with all the instants of times where the sun starts shining throughout the year in each location considering its time zone.
+Considering that now the information used for computing the batteries' emissions is the power discharged, we need to add a restriction for the batteries being used only for night computations, otherwise the solver may compute a solution where the batteries will be oversized to store all the excess of renewable energy during summer to supply during winter, resulting in GWh of capacity---which is a problem considering the other environmental impact of batteries as their recycle rates needs yet to improve \cite{batteries_baumman}. Equation~\eqref{eq:b_initial_level}  models this restriction, where $SUNRISE^d$ is the set with all the instants of times where the sun starts shining throughout the year in each location considering its time zone.
 
 \begin{equation} \label{eq:b_initial_level}
   \forall t \in SUNRISE^d :  B^d_t =  0.2 \times Bat^d
@@ -70,12 +70,8 @@ Finally, the objective function also needs to be modified in order to include th
 \end{equation}
 
 
-
 \subsection{Experiments}
-To evaluate the impact of taking into account the emissions from the whole life cycle in terms of carbon footprint and dimensions of the renewable infrastructure, we perform the sizing and use the previous model --- which considered only the emissions from manufacturing --- as baseline. 
-
-
-
+To evaluate the impact of taking into account the emissions from the whole life cycle in terms of carbon footprint and dimensions of the renewable infrastructure, we perform the sizing and use the previous model --- which considered only the emissions from manufacturing---as baseline. 
 
 \label{sec:ex_lca_pv}
 
